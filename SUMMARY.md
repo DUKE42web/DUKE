@@ -14,7 +14,7 @@
 
 * [Page 2](page-2.md)
 
-## Website <a href="#Website" id="Website"></a>
+## Website
 
 * [Creating Components](Website/creating-components/README.md)
   * [Intro](Website/creating-components/intro.md)

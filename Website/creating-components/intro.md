@@ -25,8 +25,7 @@ This is a somewhat complex process, but the simplified overview is this:
 * Those "building blocks" are checked against the component list of our application, and when a match is found, a React component is returned, along with the data that Sitecore sent along with the component that it needs to render properly.
 * If a match is not found, a "placeholder component" is rendered instead. Within the React app, this is exactly what it sounds like: a big, ugly "placeholder" to remind you that this component has not yet been created for the app:
 
-Oops! 🙀 we dont have Global Alerts yet!\
-
+Oops! 🙀 we dont have Global Alerts yet!\\
 
 Let's dive in and get a little more insight.
 
@@ -34,17 +33,13 @@ Next >
 
 Intro | Technical Overview | Practical Overview | Typescript | Sitecore | Definition of Done | Analytics
 
-
-
-
-
 <details>
 
 <summary>Readme</summary>
 
 :leftwards\_arrow\_with\_hook:[ Basics](intro.md)
 
-## Component Creation
+### Component Creation
 
 [Intro](intro.md)
 
