@@ -39,7 +39,7 @@ Intro | Technical Overview | Practical Overview | Typescript | Sitecore | Defini
 
 :leftwards\_arrow\_with\_hook:[ Basics](intro.md)
 
-#### Component Creation
+**Component Creation**
 
 [Intro](intro.md)
 
@@ -49,7 +49,7 @@ Intro | Technical Overview | Practical Overview | Typescript | Sitecore | Defini
 
 [Typescript](../typescript.md)
 
-[Sitecore](sitecore.md)
+[Sitecore](../../website/creating-components/sitecore/)
 
 [Definition of Done](definitionofdone.md)
 
