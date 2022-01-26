@@ -1,8 +1,14 @@
 # 🌎 Navigation
 
+{% embed url="https://bitbucketp.duke-energy.com/projects/DEUX/repos/dxt-jss-public-playground/browse" %}
+
 _<mark style="color:red;">**DXT-JSS-Public Developer Documentation**</mark>_
 
+
+
 _<mark style="color:red;">****</mark>_
+
+{% embed url="https://dukeenergy.sharepoint.com/sites/portal_home" %}
 
 Project Setup
 
