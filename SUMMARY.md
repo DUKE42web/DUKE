@@ -1,6 +1,7 @@
 # Table of contents
 
 * [👋 Welcome!](README.md)
+  * [Downloads](readme/downloads.md)
 
 ## The Company
 
@@ -10,15 +11,15 @@
 ## ⁉ Questions
 
 * [Personal Questions](questions/page-1.md)
-* [Project Questions](questions/page-2.md)
+* [Project Questions](page-2.md)
 
 ## Website
 
 * [🌎 Navigation](website/navigation.md)
 * [⚒ Creating Components](Website/creating-components/README.md)
   * [Intro](Website/creating-components/intro.md)
-  * [🧑💻 TechnicalOverview](website/creating-components/technicaloverview/README.md)
-    * [👨🔬 PracticalOverview](website/creating-components/technicaloverview/practicaloverview.md)
+  * [🧑💻 TechnicalOverview](Website/creating-components/technicaloverview.md)
+    * [👨🔬 PracticalOverview](Website/creating-components/practicaloverview.md)
   * [🔎 Analytics](Website/creating-components/analytics.md)
   * [🎛 Sitecore](website/creating-components/sitecore/README.md)
     * [📓 Sitecore-Docs](website/creating-components/sitecore/sitecore-docs.md)
@@ -52,7 +53,7 @@
 
 ## General Info
 
-* [📚 General Info](general-info/general-info/README.md)
+* [📚 General Info](general-info/general-info.md)
   * [Links](general-info/general-info/links.md)
 * [Argv](general-info/argv.md)
 * [Optional Chaning](general-info/optional-chaning.md)
