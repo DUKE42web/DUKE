@@ -10,33 +10,30 @@
 ## ⁉ Questions
 
 * [Personal Questions](questions/page-1.md)
-
-***
-
-* [Project Questions](page-2.md)
+* [Project Questions](questions/page-2.md)
 
 ## Website
 
 * [🌎 Navigation](website/navigation.md)
-* [Creating Components](Website/creating-components/README.md)
+* [⚒ Creating Components](Website/creating-components/README.md)
   * [Intro](Website/creating-components/intro.md)
-  * [TechnicalOverview](Website/creating-components/technicaloverview.md)
-  * [Analytics](Website/creating-components/analytics.md)
-  * [PracticalOverview](Website/creating-components/practicaloverview.md)
-  * [Sitecore](website/creating-components/sitecore/README.md)
-    * [Sitecore-Docs](website/creating-components/sitecore/sitecore-docs.md)
-  * [DefinitionOfDone](Website/creating-components/definitionofdone.md)
+  * [🧑💻 TechnicalOverview](website/creating-components/technicaloverview/README.md)
+    * [👨🔬 PracticalOverview](website/creating-components/technicaloverview/practicaloverview.md)
+  * [🔎 Analytics](Website/creating-components/analytics.md)
+  * [🎛 Sitecore](website/creating-components/sitecore/README.md)
+    * [📓 Sitecore-Docs](website/creating-components/sitecore/sitecore-docs.md)
+  * [☑ DefinitionOfDone](Website/creating-components/definitionofdone.md)
 * [⚙ SETUP](website/setup.md)
-* [Forms](Website/forms.md)
-* [React](Website/react.md)
-* [Storybook](website/storybook/README.md)
-  * [Official Tutorial](website/storybook/official-tutorial/README.md)
+* [📋 Forms](Website/forms.md)
+* [⚛ React](Website/react.md)
+* [📖 Storybook](website/storybook/README.md)
+  * [📔 Official Tutorial](website/storybook/official-tutorial/README.md)
     * [Component Driven Design](website/storybook/official-tutorial/component-driven-design.md)
-* [Code Splitting](Website/code-splitting.md)
+* [🗒 Code Splitting](Website/code-splitting.md)
 * [SvgLoader](Website/svgloader.md)
-* [Tailwind CSS](Website/tailwind-css.md)
-* [Typescript](Website/typescript.md)
-* [Unit Tests](Website/unit-tests.md)
+* [🌬 Tailwind CSS](Website/tailwind-css.md)
+* [⌨ Typescript](Website/typescript.md)
+* [🧪 Unit Tests](Website/unit-tests.md)
 
 ## Personal Assignments
 
@@ -55,7 +52,8 @@
 
 ## General Info
 
-* [📚 General Info](general-info/general-info.md)
+* [📚 General Info](general-info/general-info/README.md)
+  * [Links](general-info/general-info/links.md)
 * [Argv](general-info/argv.md)
-* [Optional Chaning](general-info/optional-chaning/README.md)
+* [Optional Chaning](general-info/optional-chaning.md)
   * [Links](general-info/optional-chaning/links.md)

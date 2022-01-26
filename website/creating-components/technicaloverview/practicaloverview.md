@@ -1,4 +1,4 @@
-# PracticalOverview
+# 👨🔬 PracticalOverview
 
 ## Component Creation - Practical Overview
 
@@ -14,7 +14,7 @@ Table of Contents:
 
 ***
 
-If you'd prefer to get right to the point and skip the overview, [there's a handy checklist here](broken-reference). Otherwise, read on for an in-depth explanation of how one could approach a workflow via Storybook.
+If you'd prefer to get right to the point and skip the overview, [there's a handy checklist here](../../../Website/creating-components/broken-reference/). Otherwise, read on for an in-depth explanation of how one could approach a workflow via Storybook.
 
 ## Workflow - A Practical Overview
 
@@ -98,6 +98,6 @@ The following section summarizes things into a concise checklist.
 * [ ] Submit a PR.
 * [ ] Stretch. It's not part of the component, it's just good for your body.
 
-< Previous       Next >
+< Previous Next >
 
 Intro | Technical Overview | Practical Overview | Typescript | Sitecore | Definition of Done | Analytics

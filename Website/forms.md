@@ -1,4 +1,4 @@
-# Forms
+# 📋 Forms
 
 Dynamically generating forms with React and Sitecore JSS
 
@@ -301,8 +301,7 @@ Dynamically generating forms with React and Sitecore JSS
     };
     ```
 
-\
-
+\\
 
 ### Side note: Important info
 

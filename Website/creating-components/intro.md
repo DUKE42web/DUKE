@@ -54,9 +54,9 @@ Next >
 
 [Intro](intro.md)
 
-[Practical Overview](practicaloverview.md)
+[Practical Overview](../../website/creating-components/technicaloverview/practicaloverview.md)
 
-[Technical Overview](technicaloverview.md)
+[Technical Overview](../../website/creating-components/technicaloverview/)
 
 [Typescript](../typescript.md)
 

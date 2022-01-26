@@ -1,4 +1,4 @@
-# Sitecore
+# 🎛 Sitecore
 
 ## Component Creation - Sitecore
 

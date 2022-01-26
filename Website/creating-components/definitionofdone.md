@@ -1,4 +1,4 @@
-# DefinitionOfDone
+# ☑ DefinitionOfDone
 
 ## Component Creation - Definition of Done
 
@@ -37,6 +37,6 @@ In summary, your component should do the following...
 
 If you have met all of these requirements, then you, intrepid developer, have a component worthy of submission to PR!
 
-< Previous       Next >
+< Previous Next >
 
 Intro | Technical Overview | Practical Overview | Typescript | Sitecore | Definition of Done | Analytics

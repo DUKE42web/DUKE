@@ -1,4 +1,4 @@
-# Code Splitting
+# 🗒 Code Splitting
 
 Rather than all code living in a single file, we can split the code up into different files and only load the code that we need for a given page. Here is how we can accomplish this in our project using [loadable-components](https://loadable-components.com/docs/server-side-rendering/).
 
@@ -209,7 +209,7 @@ html = assertReplace(
 
 Add LoadablePlugin. Then add HtmlWebpackPlugin and alter the webpack config to opt-out of the default CRA behavior that injects compiled chunks into the index.html template. We will control this ourselves manually.
 
-```js
+```javascript
 const LoadablePlugin = require('@loadable/webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -247,7 +247,7 @@ After all chunks are ready we can hydrate / render the App.
 
 > Loadable components loads all your scripts asynchronously to ensure optimal performances. All scripts are loaded in parallel, so you have to wait for them to be ready using loadableReady.
 
-```js
+```javascript
 import { loadableReady } from '@loadable/component';
 
 ...

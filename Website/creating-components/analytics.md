@@ -1,4 +1,4 @@
-# Analytics
+# 🔎 Analytics
 
 ## Analytics
 
@@ -25,7 +25,6 @@ const { compositionFunction, component } = Composition(NavCard)(({ fields, param
     },
     []
   );
-
 ```
 
 Then import the `track` object from `src/lib/Analytics` into your component, and grab the `analytics` data from the composition props. After that, simply attach a handler to the correct component node, to call the `track.component` method and send the data to analytics:
