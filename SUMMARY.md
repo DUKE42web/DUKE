@@ -1,10 +1,11 @@
 # Table of contents
 
-* [Welcome!](README.md)
+* [👋 Welcome!](README.md)
 
 ## The Company
 
-* [Meet the Team!](the-company/meet-the-team.md)
+* [🏨 Meet the Team!](the-company/meet-the-team/README.md)
+  * [New Hire Setup](the-company/meet-the-team/new-hire-setup.md)
 
 ## ⁉ Questions
 
@@ -25,6 +26,7 @@
     * [Sitecore-Docs](website/creating-components/sitecore/sitecore-docs.md)
   * [TechnicalOverview](Website/creating-components/technicaloverview.md)
   * [DefinitionOfDone](Website/creating-components/definitionofdone.md)
+* [⚙ SETUP](website/setup.md)
 * [Code Splitting](Website/code-splitting.md)
 * [Forms](Website/forms.md)
 * [React](Website/react.md)

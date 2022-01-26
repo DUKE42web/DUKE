@@ -5,7 +5,7 @@ coverY: 0
 description: DXT
 ---
 
-# Meet the Team!
+# 🏨 Meet the Team!
 
 ## DXT (Web and customer facing tools)&#x20;
 
