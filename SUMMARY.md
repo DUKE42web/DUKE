@@ -20,11 +20,11 @@
 * [🌎 Navigation](website/navigation.md)
 * [Creating Components](Website/creating-components/README.md)
   * [Intro](Website/creating-components/intro.md)
+  * [TechnicalOverview](Website/creating-components/technicaloverview.md)
   * [Analytics](Website/creating-components/analytics.md)
   * [PracticalOverview](Website/creating-components/practicaloverview.md)
   * [Sitecore](website/creating-components/sitecore/README.md)
     * [Sitecore-Docs](website/creating-components/sitecore/sitecore-docs.md)
-  * [TechnicalOverview](Website/creating-components/technicaloverview.md)
   * [DefinitionOfDone](Website/creating-components/definitionofdone.md)
 * [⚙ SETUP](website/setup.md)
 * [Code Splitting](Website/code-splitting.md)
@@ -53,3 +53,5 @@
 ## General Info
 
 * [📚 General Info](general-info/general-info.md)
+* [Argv](general-info/argv.md)
+* [Optional Chaning](general-info/optional-chaning.md)

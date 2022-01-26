@@ -6,6 +6,19 @@
 
 Each component should have its own folder nested inside the `/components` folder. The name of this folder should match the name of the component itself. Inside this folder you should have the following files:
 
+
+
+1. data.js
+2. index.ts
+3. stories.js
+4. styles.ts(x) (optional)
+5. test.tsx
+6.  types.ts
+
+
+
+
+
 * data.js
   * contains a copy of the JSS `fields` object for this component. This will get imported in unit tests and Storybook stories. If the component doesn't get called from Sitecore and doesn't have JSS fields, then this file isn't needed.
 * index.tsx
@@ -20,13 +33,11 @@ Each component should have its own folder nested inside the `/components` folder
   * Typescript types and interfaces the component
 
 \
-\
-
+\\
 
 ***
 
-\
-
+\\
 
 ### Composition File
 
@@ -83,13 +94,11 @@ An important thing to note and best practice is to use optional chaining when re
 [MDN - Optional Chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional\_chaining)
 
 \
-\
-
+\\
 
 ***
 
-\
-
+\\
 
 ### Function Components
 
@@ -209,13 +218,11 @@ export default ParentComponent;
 ```
 
 \
-\
-
+\\
 
 ***
 
-\
-
+\\
 
 ### Spread and Destructure
 
@@ -255,13 +262,11 @@ const QuickLinks = ({ items }: { items: Array<ComponentTypes> }) => (
 If you're not transforming the props names from the parent to the child, then you can omit setting them directly on the child and instead just spread them in with the `{...rest}` property.
 
 \
-\
-
+\\
 
 ***
 
-\
-
+\\
 
 ### Small, Focused and DRY
 
