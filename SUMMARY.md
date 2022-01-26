@@ -1,10 +1,10 @@
 # Table of contents
 
-* [👋 Welcome!](README.md)
+* [Welcome!](README.md)
 
 ## The Company
 
-* [🏨 Meet the Team!](the-company/meet-the-team.md)
+* [Meet the Team!](the-company/meet-the-team.md)
 
 ## ⁉ Questions
 
