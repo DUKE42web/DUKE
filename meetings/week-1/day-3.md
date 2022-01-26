@@ -33,3 +33,9 @@ How do we translate meta data in the cms?
 {% hint style="info" %}
 The translations aren't picking up any words to translate. I guess it's because we're using the text portion of the link field. Is there any way to get it to see that?
 {% endhint %}
+
+\[10:14 AM] Holly, Joshua Randel
+
+there are CTA's across the site that would also need that text to be picked up and translated
+
+\
