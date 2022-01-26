@@ -32,7 +32,15 @@
 * [Typescript](Website/typescript.md)
 * [Unit Tests](Website/unit-tests.md)
 
-***
+## Personal Assignments
 
-* [Import](import/README.md)
-  * [Setup](import/setup.md)
+* [Testing Assignment](personal-assignments/testing-assignment.md)
+
+## Meetings
+
+* [Week1](meetings/week1.md)
+* [Week 2](meetings/week-2.md)
+* [Week 3](meetings/week-3.md)
+* [Week 4](meetings/week-4.md)
+* [Week 5](meetings/week-5.md)
+* [Week 6](meetings/week-6.md)
