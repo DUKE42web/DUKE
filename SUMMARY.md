@@ -6,13 +6,13 @@
 
 * [Meet the Team!](the-company/meet-the-team.md)
 
-## The Formal Stuff
+## ⁉ Questions
 
-* [Page 1](the-formal-stuff/page-1.md)
+* [Personal Questions](questions/page-1.md)
 
 ***
 
-* [Page 2](page-2.md)
+* [Project Questions](page-2.md)
 
 ## Website
 
