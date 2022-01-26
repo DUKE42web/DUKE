@@ -30,3 +30,6 @@ Do we have a script for automatically approving translations ... to move the sta
 How do we translate meta data in the cms?
 {% endhint %}
 
+{% hint style="info" %}
+The translations aren't picking up any words to translate. I guess it's because we're using the text portion of the link field. Is there any way to get it to see that?
+{% endhint %}
