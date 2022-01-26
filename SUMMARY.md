@@ -1,10 +1,10 @@
 # Table of contents
 
-* [Welcome!](README.md)
+* [👋 Welcome!](README.md)
 
 ## The Company
 
-* [Meet the Team!](the-company/meet-the-team.md)
+* [🏨 Meet the Team!](the-company/meet-the-team.md)
 
 ## ⁉ Questions
 
@@ -16,6 +16,7 @@
 
 ## Website
 
+* [🌎 Navigation](website/navigation.md)
 * [Creating Components](Website/creating-components/README.md)
   * [Intro](Website/creating-components/intro.md)
   * [Analytics](Website/creating-components/analytics.md)
@@ -46,3 +47,7 @@
 * [Week 4](meetings/week-4.md)
 * [Week 5](meetings/week-5.md)
 * [Week 6](meetings/week-6.md)
+
+## General Info
+
+* [📚 General Info](general-info/general-info.md)
