@@ -1,6 +1,13 @@
+---
+cover: ../../.gitbook/assets/Screen Shot 2022-01-27 at 4.18.39 PM.png
+coverY: 0
+---
+
 # ⌨ Typescript
 
 
+
+{% embed url="https://www.typescriptlang.org/docs" %}
 
 
 
