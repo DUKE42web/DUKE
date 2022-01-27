@@ -15,7 +15,7 @@
 
 ## Website
 
-* [⚒ Creating Components](Website/creating-components/README.md)
+* [⚒ CREATING COMPONENTS](Website/creating-components/README.md)
   * [Intro](Website/creating-components/intro.md)
   * [🧑💻 TechnicalOverview](Website/creating-components/technicaloverview.md)
     * [👨🔬 PracticalOverview](Website/creating-components/practicaloverview.md)
@@ -32,7 +32,7 @@
   * [📔 Official Tutorial](website/storybook/official-tutorial/README.md)
     * [Component Driven Design](website/storybook/official-tutorial/component-driven-design.md)
 * [🗒 Code Splitting](Website/code-splitting.md)
-* [SvgLoader](Website/svgloader.md)
+* [🖼 SvgLoader](Website/svgloader.md)
 * [🌬 Tailwind CSS](Website/tailwind-css.md)
 * [⌨ Typescript](Website/typescript.md)
 * [🧪 Unit Tests](Website/unit-tests.md)
