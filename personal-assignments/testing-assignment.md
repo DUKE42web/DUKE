@@ -1,11 +1,4 @@
 # 🕐 Testing Assignment
-
-
-
-
-
-
-
 * be properly formatted, following the ESLint, Prettier, and Typescript rules included with our project
 * have the files necessary to run your component
 * match the appearance of the Abstract file from the Design team
@@ -14,8 +7,6 @@
 * include unit tests
 
 ![](<../.gitbook/assets/Screen Shot 2022-01-27 at 3.23.20 AM (1).png>)
-
-
 
 ![](<../.gitbook/assets/Screen Shot 2022-01-27 at 12.59.02 AM.png>)
 

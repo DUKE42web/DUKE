@@ -14,7 +14,7 @@ This means exporting the components in your `index.tsx` and importing them into 
 
 ## Creating the Unit Tests
 
-First begin by creating a .`/test.tsx` file next to your `index.tsx` file. This file will hold your unit tests.
+First begin by creating a . `/test.tsx` file next to your `index.tsx` file. This file will hold your unit tests.
 
 A basic outline of that file would be:
 
@@ -42,10 +42,10 @@ It is ideal to use your component-specific data from your `./data.js` file to po
 
 Deciding what to write tests for can be a challenge, some things to test include:
 
-- Edge Cases
-- Bad Input/Good Input
-- Logic Branches - Is there a positive and negative path? Perhaps things are hidden or shown.
-- Individual Methods - Especially when they contain specific logic
+* Edge Cases
+* Bad Input/Good Input
+* Logic Branches - Is there a positive and negative path? Perhaps things are hidden or shown.
+* Individual Methods - Especially when they contain specific logic
 
 Practical examples: If your function takes numbers, what happens if you pass it strings? Do both the positive and negative path tests of your function produce the correct output? What happens if you pass in zero, negative numbers, undefined, or null?
 
@@ -252,11 +252,11 @@ You will want to import and use the same types used in your component to create 
 
 ## Resources
 
-- [React Testing](https://reactjs.org/docs/testing.html)
-- [React Testing Recipes](https://reactjs.org/docs/testing-recipes.html)
-- [Jest Testing Framework](https://jestjs.io/)
-- [Jest Mocks](https://jestjs.io/docs/en/jest-object#mock-modules)
-- [Jest Testing React](https://jestjs.io/docs/en/tutorial-react)
-- [Enzyme](https://enzymejs.github.io/enzyme/)
+* [React Testing](https://reactjs.org/docs/testing.html)
+* [React Testing Recipes](https://reactjs.org/docs/testing-recipes.html)
+* [Jest Testing Framework](https://jestjs.io/)
+* [Jest Mocks](https://jestjs.io/docs/en/jest-object#mock-modules)
+* [Jest Testing React](https://jestjs.io/docs/en/tutorial-react)
+* [Enzyme](https://enzymejs.github.io/enzyme/)
 
 [React](./React.md) | [Typescript](./Typescript.md) | [Tailwind](./Tailwind.md) | [Forms](./Forms.md) | [Unit Tests](./UnitTests.md)

@@ -16,7 +16,7 @@ npm install @loadable/server && npm install --save-dev @loadable/babel-plugin @l
 
 **Guide**
 
-**1. Install `@loadable/babel-plugin`**
+**1. Install `@loadable/babel-plugin` **
 
 **.babelrc**
 
@@ -24,7 +24,7 @@ npm install @loadable/server && npm install --save-dev @loadable/babel-plugin @l
 {  "plugins": ["@loadable/babel-plugin"]}
 ```
 
-**2. Install `@loadable/webpack-plugin`**
+**2. Install `@loadable/webpack-plugin` **
 
 **webpack.config.js**
 
@@ -40,7 +40,7 @@ import { ChunkExtractor } from '@loadable/server'// This is the stats file gener
 
 **4. Add `loadableReady` client-side**
 
-Loadable components loads all your scripts asynchronously to ensure optimal performances. All scripts are loaded in parallel, so you have to wait for them to be ready using `loadableReady`.
+Loadable components loads all your scripts asynchronously to ensure optimal performances. All scripts are loaded in parallel, so you have to wait for them to be ready using `loadableReady` .
 
 ```
 import { loadableReady } from '@loadable/component'loadableReady(() => {  const root = document.getElementById('main')  hydrate(<App />, root)})
@@ -62,7 +62,7 @@ The `collectChunks` method wraps your element in a provider. Optionally you can 
 import { renderToString } from 'react-dom/server'import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server'const statsFile = path.resolve('../dist/loadable-stats.json')const extractor = new ChunkExtractor({ statsFile })const html = renderToString(  <ChunkExtractorManager extractor={extractor}>    <YourApp />  </ChunkExtractorManager>,)const scriptTags = extractor.getScriptTags() // or extractor.getScriptElements();
 ```
 
-The `extractor.getScriptTags()` returns a string of multiple `<script>` tags marked as "async". You have to wait for them to be ready using `loadableReady`.
+The `extractor.getScriptTags()` returns a string of multiple `<script>` tags marked as "async". You have to wait for them to be ready using `loadableReady` .
 
 Alternatively the `ChunkExtractor` also has a `getScriptElements()` method that returns an array of React elements.
 
@@ -78,17 +78,17 @@ Streaming rendering is not compatible with prefetch `<link>` tags.
 
 **Prefetching**
 
-[Webpack prefetching](https://webpack.js.org/guides/code-splitting/#prefetching-preloading-modules) is supported out of the box by Loadable. [`<link rel="preload">` and `<link rel="prefetch">`](https://css-tricks.com/prefetching-preloading-prebrowsing/) can be added directly server-side to improve performances.
+[Webpack prefetching](https://webpack.js.org/guides/code-splitting/#prefetching-preloading-modules) is supported out of the box by Loadable. [ `<link rel="preload">` and `<link rel="prefetch">` ](https://css-tricks.com/prefetching-preloading-prebrowsing/) can be added directly server-side to improve performances.
 
 ```
 import path from 'path'import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server'const statsFile = path.resolve('../dist/loadable-stats.json')const extractor = new ChunkExtractor({ statsFile })const jsx = extractor.collectChunks(<YourApp />)const html = renderToString(jsx)const linkTags = extractor.getLinkTags() // or chunkExtractor.getLinkElements();const html = `<html>  <head>${linkTags}</head>  <body>    <div id="root">${html}</div>  </body></html>`
 ```
 
-It only works with `renderToString` API. Since `<link>` must be added in the `<head>`, you can't do it using `renderToNodeStream`.
+It only works with `renderToString` API. Since `<link>` must be added in the `<head>` , you can't do it using `renderToNodeStream` .
 
 **CSS**
 
-Extracted CSS using plugins like ["mini-css-extract-plugin"](https://github.com/webpack-contrib/mini-css-extract-plugin) are automatically collected, you can get them using `getStyleTags` or `getStyleElements`.
+Extracted CSS using plugins like ["mini-css-extract-plugin"](https://github.com/webpack-contrib/mini-css-extract-plugin) are automatically collected, you can get them using `getStyleTags` or `getStyleElements` .
 
 ```
 import { renderToString } from 'react-dom/server'import { ChunkExtractor } from '@loadable/server'const statsFile = path.resolve('../dist/loadable-stats.json')const extractor = new ChunkExtractor({ statsFile })const html = renderToString(extractor.collectChunks(<YourApp />))const styleTags = extractor.getStyleTags() // or extractor.getStyleElements();
@@ -96,7 +96,7 @@ import { renderToString } from 'react-dom/server'import { ChunkExtractor } from 
 
 **Disable SSR on a specific loadable**
 
-Disable SSR on a specific loadable component with `ssr: false`:
+Disable SSR on a specific loadable component with `ssr: false` :
 
 ```
 import loadable from '@loadable/component'// This dynamic import will not be processed server-sideconst Other = loadable(() => import('./Other'), { ssr: false })
@@ -110,9 +110,9 @@ To override `stats.publicPath` at runtime, pass in a custom `publicPath` to the 
 import { ChunkExtractor } from '@loadable/server'const statsFile = path.resolve('../dist/loadable-stats.json')const extractor = new ChunkExtractor({  statsFile,  publicPath: 'https://cdn.example.org/v1.1.0/',})
 ```
 
-**`ChunkExtractor` entrypoints**
+** `ChunkExtractor` entrypoints**
 
-When running your build, notice `@loadable/webpack-plugin` generates a file called `loadable-stats.json`, which contains information about all your entries and chuncks from webpack.
+When running your build, notice `@loadable/webpack-plugin` generates a file called `loadable-stats.json` , which contains information about all your entries and chuncks from webpack.
 
 Once that's in place, `ChunkExtractor` will be responsible of finding your entries into this file.
 
@@ -126,7 +126,7 @@ module.exports = {  entry: './src/index.js',  // ...}
 
 [Checkout webpack's entry naming configuration](https://webpack.js.org/configuration/entry-context/#naming).
 
-`ChunkExtractor` will try to find your `main.js`, and will look into `loadable-stats.json` to confirm it's there.
+`ChunkExtractor` will try to find your `main.js` , and will look into `loadable-stats.json` to confirm it's there.
 
 If for instance, your wish is to get a different named entry, you will need to pass an `entrypoints` option.
 
@@ -136,7 +136,7 @@ const extractor = new ChunkExtractor({  statsFile,  entrypoints: ['client'], // 
 
 **Using your own stats file**
 
-By default, the webpack plugin adds an asset to the webpack build called `loadable-stats.json`. This contains the result of running webpack's [`stats.toJson()`](https://webpack.js.org/api/node/#statstojsonoptions) with the following options:
+By default, the webpack plugin adds an asset to the webpack build called `loadable-stats.json` . This contains the result of running webpack's [ `stats.toJson()` ](https://webpack.js.org/api/node/#statstojsonoptions) with the following options:
 
 ```
 {  hash: true,  publicPath: true,  assets: true,  chunks: false,  modules: false,  source: false,  errorDetails: false,  timings: false,}
@@ -162,7 +162,9 @@ const LoadablePlugin = require('@loadable/webpack-plugin');
 
 ...
 
-plugins: [new LoadablePlugin({ filename: 'loadable-stats-server.json' })],
+plugins: [new LoadablePlugin({
+    filename: 'loadable-stats-server.json'
+})],
 ```
 
 ### server/server.js
@@ -170,33 +172,41 @@ plugins: [new LoadablePlugin({ filename: 'loadable-stats-server.json' })],
 Use ChunkExtractor to get all the chunks, then put the script tags in the body and the link / style tags in the document head.
 
 ```js
-import { ChunkExtractor } from '@loadable/server';
+import {
+    ChunkExtractor
+} from '@loadable/server';
 
 ...
 
 const extractor = new ChunkExtractor({
-  statsFile: './loadable-stats.json',
+    statsFile: './loadable-stats.json',
 });
 
-const jsx = extractor.collectChunks(<AppRoot path={path} Router={StaticRouter} />);
+const jsx = extractor.collectChunks( < AppRoot path = {
+            path
+        }
+        Router = {
+            StaticRouter
+        }
+        />);
 
-...
+        ...
 
-const renderedAppHtml = ReactDOMServer.renderToString(jsx);
+        const renderedAppHtml = ReactDOMServer.renderToString(jsx);
 
-...
+        ...
 
-html = assertReplace(
-  html,
-  '<div id="root"></div>',
-  `<div id="root">${renderedAppHtml}</div>${extractor.getScriptTags()}`
-);
+        html = assertReplace(
+            html,
+            '<div id="root"></div>',
+            `<div id="root">${renderedAppHtml}</div>${extractor.getScriptTags()}`
+        );
 
-html = assertReplace(
-  html,
-  '<head>',
-  `<head>${helmet.title.toString()}${helmet.meta.toString()}${helmet.link.toString()}${extractor.getLinkTags()}${extractor.getStyleTags()}`
-);
+        html = assertReplace(
+            html,
+            '<head>',
+            `<head>${helmet.title.toString()}${helmet.meta.toString()}${helmet.link.toString()}${extractor.getLinkTags()}${extractor.getStyleTags()}`
+        );
 ```
 
 ***
@@ -207,35 +217,37 @@ html = assertReplace(
 
 Add LoadablePlugin. Then add HtmlWebpackPlugin and alter the webpack config to opt-out of the default CRA behavior that injects compiled chunks into the index.html template. We will control this ourselves manually.
 
-```javascript
+```js
 const LoadablePlugin = require('@loadable/webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 ...
 
 webpack: {
-  mode: 'development',
-  configure: (webpackConfig, { env }) => {
-    // Prevent webpack from injecting script tags into index.html template because
-    // we add the tags via the `@loadable` library for code-splitting. If we didn't
-    // do this the same tags will be added twice.
-    if (env !== 'development') {
-      const htmlWebpackPluginInstance = webpackConfig.plugins.find(
-        webpackPlugin => webpackPlugin instanceof HtmlWebpackPlugin
-      );
-      if (htmlWebpackPluginInstance) {
-        htmlWebpackPluginInstance.options.inject = false;
-      }
-    }
+    mode: 'development',
+    configure: (webpackConfig, {
+        env
+    }) => {
+        // Prevent webpack from injecting script tags into index.html template because
+        // we add the tags via the `@loadable` library for code-splitting. If we didn't
+        // do this the same tags will be added twice.
+        if (env !== 'development') {
+            const htmlWebpackPluginInstance = webpackConfig.plugins.find(
+                webpackPlugin => webpackPlugin instanceof HtmlWebpackPlugin
+            );
+            if (htmlWebpackPluginInstance) {
+                htmlWebpackPluginInstance.options.inject = false;
+            }
+        }
 
-    Object.assign(webpackConfig.output, {
-      filename: '[name].js',
-      chunkFilename: 'static/js/[name].js',
-    });
+        Object.assign(webpackConfig.output, {
+            filename: '[name].js',
+            chunkFilename: 'static/js/[name].js',
+        });
 
-    return webpackConfig;
-  },
-  plugins: [new LoadablePlugin()],
+        return webpackConfig;
+    },
+    plugins: [new LoadablePlugin()],
 },
 ```
 
@@ -245,15 +257,23 @@ After all chunks are ready we can hydrate / render the App.
 
 > Loadable components loads all your scripts asynchronously to ensure optimal performances. All scripts are loaded in parallel, so you have to wait for them to be ready using loadableReady.
 
-```javascript
-import { loadableReady } from '@loadable/component';
+```js
+import {
+    loadableReady
+} from '@loadable/component';
 
 ...
 
 loadableReady(() => {
-  // HTML element to place the app into
-  const rootElement = document.getElementById('root');
+            // HTML element to place the app into
+            const rootElement = document.getElementById('root');
 
-  renderFunction(<AppRoot path={window.location.pathname} Router={BrowserRouter} />, rootElement);
-});
+            renderFunction( < AppRoot path = {
+                    window.location.pathname
+                }
+                Router = {
+                    BrowserRouter
+                }
+                />, rootElement);
+            });
 ```

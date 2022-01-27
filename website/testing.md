@@ -69,7 +69,7 @@ const generateText = (name, age) => {
 }
 ```
 
-Then our test will fail. Because this function would return `'29 (29 years old)'` instead of `'Max (29 years old)'`.
+Then our test will fail. Because this function would return `'29 (29 years old)'` instead of `'Max (29 years old)'` .
 
 I'll come back to where the `test` and `expect` functions are coming from!
 
@@ -179,7 +179,7 @@ You can install Jest into your project (assuming you're using [npm](https://npmj
 npm install --save-dev jest
 ```
 
-You also need to be able to define your `expect`ations and check them. Assertion libraries like [Chai](https://www.chaijs.com) help you with that.
+You also need to be able to define your `expect` ations and check them. Assertion libraries like [Chai](https://www.chaijs.com) help you with that.
 
 But here, we also can use Jest! And that's the cool thing about it. Besides being powerful and all that, it's also not just a test runner but test runner + assertion library combined. Another reason for its popularity.
 
@@ -217,7 +217,7 @@ Here, we first of all import the functions we want to test. Jest supports these 
 
 Thereafter, a test is defined via the `test` function.
 
-As you can see, two arguments are passed to `test`. A description of the test which will show up in the test summary once you execute your tests. And an anonymous function that contains your test logic.
+As you can see, two arguments are passed to `test` . A description of the test which will show up in the test summary once you execute your tests. And an anonymous function that contains your test logic.
 
 Inside the test logic/ code, you find the `expect` function.
 
@@ -274,9 +274,9 @@ test('should create an element with text and correct class', async () => {
 }, 10000)
 ```
 
-We launch a browser (that can be controlled via the test) with `puppeteer.launch`. This browser object can then be used to create new pages (`newPage()`), navigate to different URLs (`goto()`) and interact with the page (e.g. `click()`).
+We launch a browser (that can be controlled via the test) with `puppeteer.launch` . This browser object can then be used to create new pages ( `newPage()` ), navigate to different URLs ( `goto()` ) and interact with the page (e.g. `click()` ).
 
-Since all that code interacts with a real browser, we can then also use some built-in methods (e.g. `$eval`) to evaluate DOM elements. In the example, we extract the `textContent` of a created element. At the end, `expect` is used again to check whether the created element has a valid text or not.
+Since all that code interacts with a real browser, we can then also use some built-in methods (e.g. `$eval` ) to evaluate DOM elements. In the example, we extract the `textContent` of a created element. At the end, `expect` is used again to check whether the created element has a valid text or not.
 
 Now that you know what testing is about, how it works, which tools you need and how to write tests, it's time to dive in deeper.
 
@@ -286,4 +286,4 @@ The [official docs](https://jestjs.io/docs/en/getting-started) and future conten
 
 </details>
 
-![](https://res.cloudinary.com/academind-gmbh/image/upload/f\_auto,q\_auto:eco/dpr\_2.0,w\_400,c\_limit,g\_center/v1/academind.com/content/tutorials/javascript-testing-introduction/javascript-different-kinds-of-tests)
+![](https://res.cloudinary.com/academind-gmbh/image/upload/f\_auto, q\_auto:eco/dpr\_2.0, w\_400, c\_limit, g\_center/v1/academind.com/content/tutorials/javascript-testing-introduction/javascript-different-kinds-of-tests)

@@ -8,9 +8,9 @@
 
 ### React Testing Library
 
-[`React Testing Library`](https://github.com/testing-library/react-testing-library) builds on top of `DOM Testing Library` by adding APIs for working with React components.
+[ `React Testing Library` ](https://github.com/testing-library/react-testing-library) builds on top of `DOM Testing Library` by adding APIs for working with React components.
 
-Projects created with [`Create React App`](https://create-react-app.dev) have out of the box support for **React Testing Library**. If that is not the case, you can add it via `npm` like so:
+Projects created with [ `Create React App` ](https://create-react-app.dev) have out of the box support for **React Testing Library**. If that is not the case, you can add it via `npm` like so:
 
 ```
 npm install --save-dev @testing-library/react
@@ -26,7 +26,7 @@ You want to write maintainable tests for your React components. As a part of thi
 
 #### This solution[​](https://testing-library.com/docs/react-testing-library/intro/#this-solution) <a href="#this-solution" id="this-solution"></a>
 
-The `React Testing Library` is a very light-weight solution for testing React components. It provides light utility functions on top of `react-dom` and `react-dom/test-utils`, in a way that encourages better testing practices. Its primary guiding principle is:
+The `React Testing Library` is a very light-weight solution for testing React components. It provides light utility functions on top of `react-dom` and `react-dom/test-utils` , in a way that encourages better testing practices. Its primary guiding principle is:
 
 [The more your tests resemble the way your software is used, the more confidence they can give you.](https://testing-library.com/docs/guiding-principles)
 
@@ -41,7 +41,7 @@ This library is a replacement for [Enzyme](http://airbnb.io/enzyme/). While you 
 1. A test runner or framework
 2. Specific to a testing framework (though we recommend Jest as our preference, the library works with any framework. See [Using Without Jest](https://testing-library.com/docs/react-testing-library/setup#using-without-jest))
 
-NOTE: This library is built on top of [`DOM Testing Library`](https://testing-library.com/docs/dom-testing-library/intro) which is where most of the logic behind the queries is.
+NOTE: This library is built on top of [ `DOM Testing Library` ](https://testing-library.com/docs/dom-testing-library/intro) which is where most of the logic behind the queries is.
 
 \\
 
@@ -61,7 +61,7 @@ This means exporting the components in your `index.tsx` and importing them into 
 
 ## Creating the Unit Tests
 
-First begin by creating a .`/test.tsx` file next to your `index.tsx` file. This file will hold your unit tests.
+First begin by creating a . `/test.tsx` file next to your `index.tsx` file. This file will hold your unit tests.
 
 A basic outline of that file would be:
 

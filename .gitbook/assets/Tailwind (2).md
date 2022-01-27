@@ -32,7 +32,7 @@ example:
 <div className="js-form text-blue-dark..." />
 ```
 
-Often, the amount of classes you need to style a complex element can be rather long. In this case, it is suggested that you group your classes conceptually. Since Tailwind is a mobile-first framework, it makes sense to start with "base" styles that will be present across all sizes of the component, immediately followed by the responsive counterparts, in ascending order (`md`, `lg`, `xl`, etc).
+Often, the amount of classes you need to style a complex element can be rather long. In this case, it is suggested that you group your classes conceptually. Since Tailwind is a mobile-first framework, it makes sense to start with "base" styles that will be present across all sizes of the component, immediately followed by the responsive counterparts, in ascending order ( `md` , `lg` , `xl` , etc).
 
 Of the base styles, start with sizing (height, width, padding, margin) and other fiddly rules so that they are easily accessible to you and anyone who may need to maintain your code in the future. Utility classes that represent rules that are easily identifiable at a glance, such as text color or background color, should come secondary.
 
@@ -54,12 +54,12 @@ That may seem a lot to unpack, so let's examine that for a second. Note that the
 
 ## Resources
 
-- [Styled Components](https://styled-components.com/) - documentation in case you need to step outside the Tailwind garden
-- [Tailwind Requests](https://confluence.duke-energy.com/display/DEPW/Tailwind+requests) - add to the Tailwind/Electron wishlist!
-- [Electron Docs](https://electron.duke-energy.com/foundation/utilities/utility-first)
-- [Tailwind VSCode Intellisense Plugin](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-- [Nerdcave CheatSheet](https://nerdcave.com/tailwind-cheat-sheet) - some random guy made a really handy cheatsheet for Tailwind CSS. Obviously, our rules won't be on it, but it's a nice quick reference for a lot of the classes.
-- [Tailwind CSS Docs](https://tailwindcss.com/docs) - their official docs are better than most
-- [Configuring Variants](https://v1.tailwindcss.com/docs/configuring-variants) - case in point
+* [Styled Components](https://styled-components.com/) - documentation in case you need to step outside the Tailwind garden
+* [Tailwind Requests](https://confluence.duke-energy.com/display/DEPW/Tailwind+requests) - add to the Tailwind/Electron wishlist!
+* [Electron Docs](https://electron.duke-energy.com/foundation/utilities/utility-first)
+* [Tailwind VSCode Intellisense Plugin](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+* [Nerdcave CheatSheet](https://nerdcave.com/tailwind-cheat-sheet) - some random guy made a really handy cheatsheet for Tailwind CSS. Obviously, our rules won't be on it, but it's a nice quick reference for a lot of the classes.
+* [Tailwind CSS Docs](https://tailwindcss.com/docs) - their official docs are better than most
+* [Configuring Variants](https://v1.tailwindcss.com/docs/configuring-variants) - case in point
 
 [React](./React.md) | [Typescript](./Typescript.md) | [Tailwind](./Tailwind.md) | [Forms](./Forms.md) | [Unit Tests](./UnitTests.md)

@@ -4,17 +4,13 @@
 
 <summary>Creating Components</summary>
 
-
-
 </details>
 
 {% embed url="https://bitbucketp.duke-energy.com/projects/DEUX/repos/dxt-jss-public-playground/browse" %}
 
-_<mark style="color:red;">**DXT-JSS-Public Developer Documentation**</mark>_
+_<mark style="color:red; ">**DXT-JSS-Public Developer Documentation**</mark>_
 
-
-
-_<mark style="color:red;">****</mark>_
+_<mark style="color:red; ">****</mark>_
 
 {% embed url="https://dukeenergy.sharepoint.com/sites/portal_home" %}
 
@@ -23,8 +19,6 @@ Project Setup
 {% content-ref url="setup.md" %}
 [setup.md](setup.md)
 {% endcontent-ref %}
-
-
 
 ### Website
 
@@ -109,12 +103,6 @@ Website/creating-components/analytics.md" %}
 {% content-ref url="Website/unit-tests.md" %}
 [unit-tests.md](Website/unit-tests.md)
 {% endcontent-ref %}
-
-
-
-
-
-
 
 ## Basics
 

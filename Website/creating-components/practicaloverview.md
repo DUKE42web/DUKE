@@ -57,11 +57,13 @@ After that, **you can work in Storybook by importing your component's compositio
 
 An example of that might look something like this:
 
-```javascript
+```js
 // story.js
 import React from 'react';
 import MyComponent from './index';
-import { MyComponent as MyComponentComposition } from '../../lib/composition';
+import {
+    MyComponent as MyComponentComposition
+} from '../../lib/composition';
 import Data from './data';
 
 /**
@@ -71,14 +73,17 @@ import Data from './data';
  */
 const props = MyComponentComposition(Data);
 
-const Template = args => <MyComponent {...args} />;
+const Template = args => < MyComponent {
+    ...args
+}
+/>;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  /* here you can spread those props into your Storybook file, making data
-   * available to your component as it would be on the actual live page.
-   */
-  ...props,
+    /* here you can spread those props into your Storybook file, making data
+     * available to your component as it would be on the actual live page.
+     */
+    ...props,
 };
 ```
 

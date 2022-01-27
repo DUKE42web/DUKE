@@ -28,15 +28,15 @@
 
 [DXT Ninja Turtles - Duke Energy JIRA](https://jiraprod.duke-energy.com/projects/DNT?selectedItem=com.arijea.plugins.easy-agile-user-story-maps\&rapidView=5168)
 
-[Access required](https://dukeenergy.sharepoint.com/sites/O365-AgileDuke/\_layouts/15/AccessDenied.aspx?Source=https%3a%2f%2fdukeenergy.sharepoint.com%2fsites%2fO365-AgileDuke%2fSitePages%2fJIRA.aspx\&correlation=40401aa0-f082-1000-6673-01c7c2da9ad7\&Type=item\&name=ac57e397-1967-4521-a9db-d16ed32707c5\&listItemId=4)
+[Access required](https://dukeenergy.sharepoint.com/sites/O365-AgileDuke/\_layouts/15/AccessDenied.aspx? Source=https%3a%2f%2fdukeenergy.sharepoint.com%2fsites%2fO365-AgileDuke%2fSitePages%2fJIRA.aspx\&correlation=40401aa0-f082-1000-6673-01c7c2da9ad7\&Type=item\&name=ac57e397-1967-4521-a9db-d16ed32707c5\&listItemId=4)
 
 [CI-CD Engineering Self Service](https://cicdengineering-selfservice.apps-corp-ent1-dcpprd.duke-energy.com/login)
 
 [Mail - Guner, Bryan - Outlook](https://outlook.office.com/mail/deeplink?AttachmentId=AAMkADA4ZjI5NGZkLTQzMzEtNDQwNi1iZDJkLTg3MzgxYzExNTgzNgBGAAAAAACWTeuhkN7tQ5l3pRc4Y61FBwAQr3kybx9sTKz3NLnNvanPAAAAAAEMAAANAF6xFQZoR4pJU2jKPBLEAAABz%2FarAAABEgAQAJOX9S9MgfhJoaLBeTO0g3Q%3D\&ItemId=AAMkADA4ZjI5NGZkLTQzMzEtNDQwNi1iZDJkLTg3MzgxYzExNTgzNgBGAAAAAACWTeuhkN7tQ5l3pRc4Y61FBwAQr3kybx9sTKz3NLnNvanPAAAAAAEMAAANAF6xFQZoR4pJU2jKPBLEAAABz%2FarAAA%3D\&AttachmentName=HowtoDocuments.zip)
 
-[New Hire Setup.docx](https://dukeenergy.sharepoint.com/:w:/r/sites/O365-MACUserSupport/\_layouts/15/Doc.aspx?sourcedoc=%7BFC983426-6BDC-437D-B498-124A2244ED2D%7D\&file=New%20Hire%20Setup.docx\&action=default\&mobileredirect=true\&DefaultItemOpen=1\&ct=1643121396781\&wdOrigin=OFFICECOM-WEB.MAIN.OTHER\&cid=fe2e769c-50fd-45ed-bf91-b30570ba98f3)
+[New Hire Setup.docx](https://dukeenergy.sharepoint.com/:w:/r/sites/O365-MACUserSupport/\_layouts/15/Doc.aspx?sourcedoc=%7BFC983426-6BDC-437D-B498-124A2244ED2D%7D\&file=New%20Hire%20Setup.docx\&action=default\&mobileredirect=true\&DefaultItemOpen=1\&ct=1643121396781\&wdOrigin=OFFICECOM-WEB. MAIN. OTHER\&cid=fe2e769c-50fd-45ed-bf91-b30570ba98f3)
 
-[Mac Enrollment.docx](https://dukeenergy.sharepoint.com/:w:/r/sites/O365-MACUserSupport/\_layouts/15/Doc.aspx?sourcedoc=%7B5081ED1D-2A14-45CC-88E0-22BD4C2F55A1%7D\&file=Mac%20Enrollment.docx\&action=default\&mobileredirect=true\&DefaultItemOpen=1\&ct=1643121378497\&wdOrigin=OFFICECOM-WEB.MAIN.OTHER\&cid=90394e61-ab5d-4414-944e-91f11ea4a4d7)
+[Mac Enrollment.docx](https://dukeenergy.sharepoint.com/:w:/r/sites/O365-MACUserSupport/\_layouts/15/Doc.aspx?sourcedoc=%7B5081ED1D-2A14-45CC-88E0-22BD4C2F55A1%7D\&file=Mac%20Enrollment.docx\&action=default\&mobileredirect=true\&DefaultItemOpen=1\&ct=1643121378497\&wdOrigin=OFFICECOM-WEB. MAIN. OTHER\&cid=90394e61-ab5d-4414-944e-91f11ea4a4d7)
 
 [Device Registration](https://jamfpro.duke-energy.com/DeviceRegistration.html?Upn=bryan.guner@duke-energy.com\&UserId=07f93a93-4edd-45c2-817e-b3c14d770992)
 

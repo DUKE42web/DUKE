@@ -13,6 +13,7 @@ This section outlines getting the application (for the JSS public site) setup fo
       1. In your terminal (command line), run `git clone https://bitbucketp.duke-energy.com/scm/dukcom/dxt-jss-public.git`
 2. Install dependencies
    1. Use node -v `14.17.4`
+
    2. Set npm registry to Nexus (prod)\*
       1. run `npm config set registry https://nexus.duke-energy.com/repository/duke-cne-npm/` on the command line
    3. Run `npm install` on the command line
@@ -20,7 +21,9 @@ This section outlines getting the application (for the JSS public site) setup fo
    1. Add `scjssconfig.json` file (or rename scjssconfig-sample.json → scjssconfig.json)
       1. Add:
 
-````json
+`
+
+```json
          {
            "sitecore": {
              "instancePath": "",
@@ -36,11 +39,17 @@ This section outlines getting the application (for the JSS public site) setup fo
    1. Add:
 
       
-````
+
+`
+
+```
 
 ````
+
   HTTPS=true
-  ```
+  
+
+```
 
   This will allow you to use `https://` for development so that jurisdiction cookies will work properly.
 ````

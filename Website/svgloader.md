@@ -51,7 +51,7 @@ After that we will use React's lazy import to be able to import with a dynamic n
 const SvgComponent = React.lazy(() => import(`src/components/Svgs/${name}`));
 ```
 
-In order to use this lazy loaded component we need to wrap it in a `<Suspense>`. This wrapper serves as something to render while its loading the component. This also gives us the built-in benefit as to no longer needing a mock for this component in all of our tests as the fallback will be a blank svg with the props passed in.
+In order to use this lazy loaded component we need to wrap it in a `<Suspense>` . This wrapper serves as something to render while its loading the component. This also gives us the built-in benefit as to no longer needing a mock for this component in all of our tests as the fallback will be a blank svg with the props passed in.
 
 ```typescript
 <Suspense fallback={<svg {...props}></svg>}>
@@ -59,7 +59,7 @@ In order to use this lazy loaded component we need to wrap it in a `<Suspense>`.
 </Suspense>
 ```
 
-So while its loading the actual svg, this placeholder svg will be displayed that has all of the properties such as width, height, color, etc... The only real difference is that the `<SvgComponent>` gets one extra prop. The is a dataSet prop called `testid` with the value `svg`. This makes it easier to search for in the tests
+So while its loading the actual svg, this placeholder svg will be displayed that has all of the properties such as width, height, color, etc... The only real difference is that the `<SvgComponent>` gets one extra prop. The is a dataSet prop called `testid` with the value `svg` . This makes it easier to search for in the tests
 
 ## Testing
 
@@ -89,4 +89,4 @@ How this works is that we first render the component, then we wait for the `data
 
 ## Adding A New Svg
 
-To add a new svg all you need to do is to add the svg to the `src/assets/svgs` folder. Make sure that the fill inside the svg is set to `currentColor` so we will be able to change the color of the svg once we start using it. Next you'll want to run the following command in your terminal: `npm run start:svgs`. This will start the automatic conversion from the raw svg to the svg component and it will then be ready for use by `<SvgLoader />`
+To add a new svg all you need to do is to add the svg to the `src/assets/svgs` folder. Make sure that the fill inside the svg is set to `currentColor` so we will be able to change the color of the svg once we start using it. Next you'll want to run the following command in your terminal: `npm run start:svgs` . This will start the automatic conversion from the raw svg to the svg component and it will then be ready for use by `<SvgLoader />`

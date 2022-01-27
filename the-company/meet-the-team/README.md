@@ -7,16 +7,17 @@ description: DXT
 
 # 🏨 Meet the Team!
 
-## DXT (Web and customer facing tools)&#x20;
+## DXT (Web and customer facing tools)&#x20; 
 
 * Mobil app...
-* Customer connect (add self service features and consolidate different&#x20;
+* Customer connect (add self service features and consolidate different&#x20; 
 
-### &#x20;Teams
+### &#x20; Teams
 
 *   Your teams
+    
 
-    ```
+```
     O365-MAC User Support
 
     -   General
@@ -25,7 +26,6 @@ description: DXT
 
         -   Important Announcements
 
-
     O365-Ninja Turtles
 
     -   General
@@ -33,8 +33,6 @@ description: DXT
         -   REACT
 
         -   2 hidden channels
-
-
 
     O365-DXT Team
 

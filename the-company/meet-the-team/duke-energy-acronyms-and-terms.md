@@ -18,7 +18,7 @@ _**8.                BBP – Budget Billing Plan; MW only; same as Carolinas EPP
 
 _**9.                BizTalk – Comparable to Mitem; used for meter reads and start service in MW**_
 
-_<mark style="background-color:orange;">**10.               BP – Business Partner in ISU, equivalent to a customer. An “individual” BP is a person, an “org” BP a business/organizational customer.**</mark>_
+_<mark style="background-color:orange; ">**10.               BP – Business Partner in ISU, equivalent to a customer. An "individual" BP is a person, an "org" BP a business/organizational customer.**</mark>_
 
 _**11.               BPSS – Business Production Support**_
 
@@ -42,7 +42,7 @@ _**20.               CCPC – Customer Contact Preference Center**_
 
 _**21.               CDP – Common Digital Platform**_
 
-_**22.               CDS – Customer Decision System (“next best offer”)**_
+_**22.               CDS – Customer Decision System ("next best offer")**_
 
 _**23.               CFL – Compact Fluorescent Light**_
 
@@ -104,7 +104,7 @@ _**51.               EBD – Ebill Direct; not to be confused with Email Bill De
 
 _**52.               ED – Energy Delivery**_
 
-_**53.               EE Store –Energy Efficiency online store. One of Duke Energy’s non-regulated lines of business.**_
+_**53.               EE Store –Energy Efficiency online store. One of Duke Energy's non-regulated lines of business.**_
 
 _**54.               ECS – New Smart Grid billing system**_
 
@@ -118,7 +118,7 @@ _**58.               ETL – Extract, Transfer and Load – extracts updated dat
 
 _**59.               ETR/ETOR – Estimated Time of Resolution**_
 
-_**60.               FTEU – “Free To End User" text messaging. A specialized system developed by the U.S. cellular carriers that allows businesses to send a text message to a consumer without the consumer receiving a charge for the message.**_
+_**60.               FTEU – "Free To End User" text messaging. A specialized system developed by the U. S. cellular carriers that allows businesses to send a text message to a consumer without the consumer receiving a charge for the message.**_
 
 _**61.               GTM – Google Tag Manager**_
 
@@ -136,9 +136,9 @@ _**67.               IS-U/ISU- Industry Standard – Utilities. The new billing 
 
 _**68.               IVR – Interactive Voice Response**_
 
-_**69.               KRIN (CMS) – Credit inquiry in CMS; only screen where you can see the customer’s SSN if needed for testing.**_
+_**69.               KRIN (CMS) – Credit inquiry in CMS; only screen where you can see the customer's SSN if needed for testing.**_
 
-_**70.               Kubra – Duke’s billing system (Kubra is the vendor)**_
+_**70.               Kubra – Duke's billing system (Kubra is the vendor)**_
 
 _**71.               Kubra Token – A 172 character string used to authenticate Duke Energy customers with Kubra for the purpose of paying bills.**_
 
@@ -194,7 +194,7 @@ _**96.               Plumtree – Developer of consumer and corporate portal pla
 
 _**97.               PPL – paperless billing**_
 
-_**98.               Profile- A web users online “identity” based on unique email address. Not to be confused with an ACCOUNT.**_
+_**98.               Profile- A web users online "identity" based on unique email address. Not to be confused with an ACCOUNT.**_
 
 _**99.               PSI – Project Success International**_
 
@@ -206,7 +206,7 @@ _**102.             RBP – Related Business Partner. See also BP.**_
 
 _**103.             Reddot – CMS for myduke.com (deprecated)**_
 
-_**104.             RPA – Robotic Process Automation; aka “The Robots”**_
+_**104.             RPA – Robotic Process Automation; aka "The Robots"**_
 
 _**105.             SAAP – Special Assistance Agency Portal**_
 
@@ -242,7 +242,7 @@ _**120.             SSO – Single Sign On**_
 
 _**121.             ST – South Tryon, specifically the former Wachovia Building located at 400 South Tryon**_
 
-_**122.             Superpop – a single “super” screen pop that provides info and amounts quoted to customer in IVR**_
+_**122.             Superpop – a single "super" screen pop that provides info and amounts quoted to customer in IVR**_
 
 _**123.             TCA – trouble call analysis**_
 
@@ -270,6 +270,6 @@ _**134.             WRT – Work Request Tool**_
 
 _**135.             XDS – Active directory for all Duke User IDs and Email addresses**_
 
-_<mark style="background-color:orange;">**136.             Youtility – Duke public website**</mark>_
+_<mark style="background-color:orange; ">**136.             Youtility – Duke public website**</mark>_
 
-&#x20;_****_&#x20;
+&#x20; _****_&#x20; 

@@ -32,7 +32,7 @@ example:
 <div className="js-form text-blue-dark..." />
 ```
 
-Often, the amount of classes you need to style a complex element can be rather long. In this case, it is suggested that you group your classes conceptually. Since Tailwind is a mobile-first framework, it makes sense to start with "base" styles that will be present across all sizes of the component, immediately followed by the responsive counterparts, in ascending order (`md`, `lg`, `xl`, etc).
+Often, the amount of classes you need to style a complex element can be rather long. In this case, it is suggested that you group your classes conceptually. Since Tailwind is a mobile-first framework, it makes sense to start with "base" styles that will be present across all sizes of the component, immediately followed by the responsive counterparts, in ascending order ( `md` , `lg` , `xl` , etc).
 
 Of the base styles, start with sizing (height, width, padding, margin) and other fiddly rules so that they are easily accessible to you and anyone who may need to maintain your code in the future. Utility classes that represent rules that are easily identifiable at a glance, such as text color or background color, should come secondary.
 

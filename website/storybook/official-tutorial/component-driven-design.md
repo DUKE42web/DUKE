@@ -10,7 +10,7 @@
 
 [![Component Driven](https://www.componentdriven.org/logo-componentdriven.svg)](https://www.componentdriven.org)
 
-The development and design practice of building user interfaces with modular components. UIs are built from the “bottom up” starting with basic components then progressively combined to assemble screens.
+The development and design practice of building user interfaces with modular components. UIs are built from the "bottom up" starting with basic components then progressively combined to assemble screens.
 
 ### Why components?
 
@@ -75,7 +75,7 @@ Docs site
 ### Benefits
 
 * **Quality:** Verify that UIs work in different scenarios by building components in isolation and defining their relevant states.
-* **Durability:** Pinpoint bugs down to the detail by testing at the component level. It’s less work and more precise than testing screens.
+* **Durability:** Pinpoint bugs down to the detail by testing at the component level. It's less work and more precise than testing screens.
 * **Speed:** Assemble UIs faster by reusing existing components from a component library or design system.
 * **Efficiency:** Parallelize development and design by decomposing UI into discrete components then sharing the load between different team members.
 
@@ -96,7 +96,7 @@ Docs site
 
 [Component Driven Development](https://blog.hichroma.com/component-driven-development-ce1109d56c8e)
 
-A development methodology that anchors the build process around components. It is a process that builds UIs from the “bottom up” by starting at the level of components and ending at the level of pages or screens.
+A development methodology that anchors the build process around components. It is a process that builds UIs from the "bottom up" by starting at the level of components and ending at the level of pages or screens.
 
 [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
 
