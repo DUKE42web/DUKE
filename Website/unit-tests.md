@@ -6,7 +6,7 @@
 
 <summary>React Testing Library</summary>
 
-## React Testing Library
+### React Testing Library
 
 [`React Testing Library`](https://github.com/testing-library/react-testing-library) builds on top of `DOM Testing Library` by adding APIs for working with React components.
 
@@ -20,11 +20,11 @@ Copy
 
 * [React Testing Library on GitHub](https://github.com/testing-library/react-testing-library)
 
-### The problem[​](https://testing-library.com/docs/react-testing-library/intro/#the-problem) <a href="#the-problem" id="the-problem"></a>
+#### The problem[​](https://testing-library.com/docs/react-testing-library/intro/#the-problem) <a href="#the-problem" id="the-problem"></a>
 
 You want to write maintainable tests for your React components. As a part of this goal, you want your tests to avoid including implementation details of your components and rather focus on making your tests give you the confidence for which they are intended. As part of this, you want your testbase to be maintainable in the long run so refactors of your components (changes to implementation but not functionality) don't break your tests and slow you and your team down.
 
-### This solution[​](https://testing-library.com/docs/react-testing-library/intro/#this-solution) <a href="#this-solution" id="this-solution"></a>
+#### This solution[​](https://testing-library.com/docs/react-testing-library/intro/#this-solution) <a href="#this-solution" id="this-solution"></a>
 
 The `React Testing Library` is a very light-weight solution for testing React components. It provides light utility functions on top of `react-dom` and `react-dom/test-utils`, in a way that encourages better testing practices. Its primary guiding principle is:
 
@@ -43,14 +43,9 @@ This library is a replacement for [Enzyme](http://airbnb.io/enzyme/). While you 
 
 NOTE: This library is built on top of [`DOM Testing Library`](https://testing-library.com/docs/dom-testing-library/intro) which is where most of the logic behind the queries is.
 
-\
-
+\\
 
 </details>
-
-
-
-
 
 Creating Unit Tests for the DXT Application
 
