@@ -121,8 +121,8 @@ Website/creating-components/analytics.md" %}
 
 ### Personal Assignments
 
-{% content-ref url="personal-assignments/testing-assignment.md" %}
-[testing-assignment.md](personal-assignments/testing-assignment.md)
+{% content-ref url="personal-assignments/testing-assignment/" %}
+[testing-assignment](personal-assignments/testing-assignment/)
 {% endcontent-ref %}
 
 ### Meetings

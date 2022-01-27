@@ -9,31 +9,31 @@
 
 ## ⁉ Questions
 
-* [Project Questions](page-2.md)
+* [❓ Project Questions](page-2.md)
 * [❓ Personal Questions](questions/page-1.md)
 
 ## Website
 
+* [🌎 Navigation](website/navigation.md)
 * [⚒ CREATING COMPONENTS](Website/creating-components/README.md)
-  * [Intro](Website/creating-components/intro.md)
+  * [ℹ Intro](Website/creating-components/intro.md)
   * [🧑💻 TechnicalOverview](Website/creating-components/technicaloverview.md)
     * [👨🔬 👨🔬 👨🔬 👨🔬 PracticalOverview](Website/creating-components/practicaloverview.md)
-  * [Analytics](Website/creating-components/analytics.md)
-  * [Sitecore](website/creating-components/sitecore/README.md)
+  * [📈 Analytics](Website/creating-components/analytics.md)
+  * [📰 Sitecore](website/creating-components/sitecore/README.md)
     * [Sitecore-Docs](website/creating-components/sitecore/sitecore-docs.md)
-  * [DefinitionOfDone](Website/creating-components/definitionofdone.md)
-* [🌎 Navigation](website/navigation.md)
+  * [✅ DefinitionOfDone](Website/creating-components/definitionofdone.md)
 * [⚙ SETUP](website/setup.md)
-* [Testing](website/testing.md)
-* [Forms](Website/forms.md)
+* [🧪 Testing](website/testing.md)
+* [ℹ Forms](Website/forms.md)
 * [React](Website/react.md)
 * [📖 Storybook](website/storybook/README.md)
   * [📔 Official Tutorial](website/storybook/official-tutorial/README.md)
     * [Component Driven Design](website/storybook/official-tutorial/component-driven-design.md)
 * [🗒 Code Splitting](Website/code-splitting.md)
 * [SvgLoader](Website/svgloader.md)
-* [Tailwind CSS](Website/tailwind-css.md)
-* [Typescript](Website/typescript.md)
+* [🌬 Tailwind CSS](Website/tailwind-css.md)
+* [⌨ Typescript](Website/typescript.md)
 * [💯 Unit Tests](Website/unit-tests.md)
 
 ## ⁉ Questions
@@ -42,18 +42,19 @@
 
 ## Personal Assignments
 
-* [🕐 Testing Assignment](personal-assignments/testing-assignment.md)
+* [🕐 Testing Assignment](personal-assignments/testing-assignment/README.md)
+  * [Files For News Banner Component](personal-assignments/testing-assignment/files-for-news-banner-component.md)
 
 ## Meetings
 
-* [Week 1](meetings/week-1/README.md)
+* [🗓 Week 1](meetings/week-1/README.md)
   * [Day 2](meetings/week-1/day-2.md)
   * [Day 3](meetings/week-1/day-3.md)
-* [Week 2](meetings/week-2.md)
-* [Week 3](meetings/week-3.md)
-* [Week 4](meetings/week-4.md)
-* [Week 5](meetings/week-5.md)
-* [Week 6](meetings/week-6.md)
+* [🗓 Week 2](meetings/week-2.md)
+* [🗓 Week 3](meetings/week-3.md)
+* [🗓 Week 4](meetings/week-4.md)
+* [🗓 Week 5](meetings/week-5.md)
+* [🗓 Week 6](meetings/week-6.md)
 
 ## General Info
 
