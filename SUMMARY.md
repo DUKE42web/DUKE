@@ -7,6 +7,7 @@
 * [🏨 Meet the Team!](the-company/meet-the-team/README.md)
   * [Portal Site Managers](the-company/meet-the-team/portal-site-managers.md)
   * [New Hire Setup](the-company/meet-the-team/new-hire-setup.md)
+  * [Duke Energy Acronyms and Terms](the-company/meet-the-team/duke-energy-acronyms-and-terms.md)
 
 ## ⁉ Questions
 
@@ -36,10 +37,6 @@
 * [🌬 Tailwind CSS](Website/tailwind-css.md)
 * [⌨ Typescript](Website/typescript.md)
 * [💯 Unit Tests](Website/unit-tests.md)
-
-## ⁉ Questions
-
-* [Page 1](questions-1/page-1.md)
 
 ## Personal Assignments
 
