@@ -21,8 +21,8 @@ coverY: 222.9864253393665
 [meet-the-team](the-company/meet-the-team/)
 {% endcontent-ref %}
 
-{% content-ref url="the-company/meet-the-team/new-hire-setup.md" %}
-[new-hire-setup.md](the-company/meet-the-team/new-hire-setup.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 ### ⁉ Questions
