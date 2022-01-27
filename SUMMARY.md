@@ -2,6 +2,10 @@
 
 * [🗺 Site Navigation](README.md)
 
+## 📚 Resources
+
+* [Youtube & Videos:](resources/youtube-and-videos.md)
+
 ## The Company
 
 * [🏨 Meet the Team!](the-company/meet-the-team/README.md)
