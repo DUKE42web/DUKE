@@ -6,15 +6,15 @@ Rather than all code living in a single file, we can split the code up into diff
 
 <summary>Loadable Components</summary>
 
-#### Server Side Rendering <a href="#server-side-rendering" id="server-side-rendering"></a>
+### Server Side Rendering <a href="#server-side-rendering" id="server-side-rendering"></a>
 
-**Install**
+#### Install <a href="#install" id="install"></a>
 
 ```
 npm install @loadable/server && npm install --save-dev @loadable/babel-plugin @loadable/webpack-plugin# or using yarnyarn add @loadable/server && yarn add --dev @loadable/babel-plugin @loadable/webpack-plugin
 ```
 
-**Guide**
+#### Guide <a href="#guide" id="guide"></a>
 
 **1. Install `@loadable/babel-plugin`**
 
@@ -48,7 +48,7 @@ import { loadableReady } from '@loadable/component'loadableReady(() => {  const 
 
 **🚀** [**Checkout the complete example in this repository**](https://github.com/gregberge/loadable-components/tree/master/examples/server-side-rendering)
 
-**Collecting chunks**
+#### Collecting chunks <a href="#collecting-chunks" id="collecting-chunks"></a>
 
 The basic API goes as follows:
 
@@ -66,7 +66,7 @@ The `extractor.getScriptTags()` returns a string of multiple `<script>` tags mar
 
 Alternatively the `ChunkExtractor` also has a `getScriptElements()` method that returns an array of React elements.
 
-**Streaming rendering**
+#### Streaming rendering <a href="#streaming-rendering" id="streaming-rendering"></a>
 
 Loadable is compatible with streaming rendering, if you use it you have to include script when the stream is complete.
 
@@ -76,7 +76,7 @@ import { renderToNodeStream } from 'react-dom/server'import { ChunkExtractor } f
 
 Streaming rendering is not compatible with prefetch `<link>` tags.
 
-**Prefetching**
+#### Prefetching <a href="#prefetching" id="prefetching"></a>
 
 [Webpack prefetching](https://webpack.js.org/guides/code-splitting/#prefetching-preloading-modules) is supported out of the box by Loadable. [`<link rel="preload">` and `<link rel="prefetch">`](https://css-tricks.com/prefetching-preloading-prebrowsing/) can be added directly server-side to improve performances.
 
@@ -86,7 +86,7 @@ import path from 'path'import { ChunkExtractor, ChunkExtractorManager } from '@l
 
 It only works with `renderToString` API. Since `<link>` must be added in the `<head>`, you can't do it using `renderToNodeStream`.
 
-**CSS**
+#### CSS <a href="#css" id="css"></a>
 
 Extracted CSS using plugins like ["mini-css-extract-plugin"](https://github.com/webpack-contrib/mini-css-extract-plugin) are automatically collected, you can get them using `getStyleTags` or `getStyleElements`.
 
@@ -94,7 +94,7 @@ Extracted CSS using plugins like ["mini-css-extract-plugin"](https://github.com/
 import { renderToString } from 'react-dom/server'import { ChunkExtractor } from '@loadable/server'const statsFile = path.resolve('../dist/loadable-stats.json')const extractor = new ChunkExtractor({ statsFile })const html = renderToString(extractor.collectChunks(<YourApp />))const styleTags = extractor.getStyleTags() // or extractor.getStyleElements();
 ```
 
-**Disable SSR on a specific loadable**
+#### Disable SSR on a specific loadable <a href="#disable-ssr-on-a-specific-loadable" id="disable-ssr-on-a-specific-loadable"></a>
 
 Disable SSR on a specific loadable component with `ssr: false`:
 
@@ -102,7 +102,7 @@ Disable SSR on a specific loadable component with `ssr: false`:
 import loadable from '@loadable/component'// This dynamic import will not be processed server-sideconst Other = loadable(() => import('./Other'), { ssr: false })
 ```
 
-**Override `stats.publicPath` at runtime**
+#### Override `stats.publicPath` at runtime <a href="#override-statspublicpath-at-runtime" id="override-statspublicpath-at-runtime"></a>
 
 To override `stats.publicPath` at runtime, pass in a custom `publicPath` to the `ChunkExtractor` constructor:
 
@@ -110,7 +110,7 @@ To override `stats.publicPath` at runtime, pass in a custom `publicPath` to the 
 import { ChunkExtractor } from '@loadable/server'const statsFile = path.resolve('../dist/loadable-stats.json')const extractor = new ChunkExtractor({  statsFile,  publicPath: 'https://cdn.example.org/v1.1.0/',})
 ```
 
-**`ChunkExtractor` entrypoints**
+#### `ChunkExtractor` entrypoints <a href="#chunkextractor-entrypoints" id="chunkextractor-entrypoints"></a>
 
 When running your build, notice `@loadable/webpack-plugin` generates a file called `loadable-stats.json`, which contains information about all your entries and chuncks from webpack.
 
@@ -134,7 +134,7 @@ If for instance, your wish is to get a different named entry, you will need to p
 const extractor = new ChunkExtractor({  statsFile,  entrypoints: ['client'], // array of webpack entries (default: ['main'])})
 ```
 
-**Using your own stats file**
+#### Using your own stats file <a href="#using-your-own-stats-file" id="using-your-own-stats-file"></a>
 
 By default, the webpack plugin adds an asset to the webpack build called `loadable-stats.json`. This contains the result of running webpack's [`stats.toJson()`](https://webpack.js.org/api/node/#statstojsonoptions) with the following options:
 

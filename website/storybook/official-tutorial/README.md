@@ -2,7 +2,7 @@
 
 ## Storybook for React tutorial | Storybook Tutorials
 
-> **Excerpt**
+> #### Excerpt
 >
 > Set up Storybook in your development environment
 

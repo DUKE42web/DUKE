@@ -2,7 +2,7 @@
 
 ## Component Driven User Interfaces
 
-> **Excerpt**
+> #### Excerpt
 >
 > How modularity is transforming design and frontend development
 

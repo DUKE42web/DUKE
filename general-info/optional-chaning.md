@@ -2,7 +2,7 @@
 
 ## JavaScript Optional Chaining Operator (?.)
 
-> **Excerpt**
+> #### Excerpt
 >
 > In this tutorial, you'll learn about the optional chaining operator (?.) that simplifies the way to access values through connected objects
 

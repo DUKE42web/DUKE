@@ -2,7 +2,11 @@
 description: In Jest
 ---
 
-# 🧪 Testing
+# Testing
+
+
+
+
 
 {% embed url="https://www.youtube.com/watch?v=r9HdJ8P6GQI" %}
 '[https://www.youtube.com/watch?v=r9HdJ8P6GQI](https://www.youtube.com/watch?v=r9HdJ8P6GQI)'
@@ -287,3 +291,4 @@ The [official docs](https://jestjs.io/docs/en/getting-started) and future conten
 </details>
 
 ![](https://res.cloudinary.com/academind-gmbh/image/upload/f\_auto,q\_auto:eco/dpr\_2.0,w\_400,c\_limit,g\_center/v1/academind.com/content/tutorials/javascript-testing-introduction/javascript-different-kinds-of-tests)
+
