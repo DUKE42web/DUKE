@@ -1,4 +1,4 @@
-# Unit Tests
+# 🧪 Unit Tests
 
 ## Creating Unit Tests for the DXT Application
 

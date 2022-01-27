@@ -1,8 +1,8 @@
 # Table of contents
 
-* [Nav](README.md)
-* [👋 Welcome!](<README (1).md>)
+* [👋 Welcome!](README.md)
   * [Downloads](readme/downloads.md)
+* [Nav](nav.md)
 
 ## The Company
 
