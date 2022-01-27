@@ -1,4 +1,4 @@
-# ⚛ React
+# React
 
 ## React
 
@@ -6,18 +6,12 @@
 
 Each component should have its own folder nested inside the `/components` folder. The name of this folder should match the name of the component itself. Inside this folder you should have the following files:
 
-
-
 1. data.js
 2. index.ts
 3. stories.js
 4. styles.ts(x) (optional)
 5. test.tsx
-6.  types.ts
-
-
-
-
+6. types.ts
 
 * data.js
   * contains a copy of the JSS `fields` object for this component. This will get imported in unit tests and Storybook stories. If the component doesn't get called from Sitecore and doesn't have JSS fields, then this file isn't needed.

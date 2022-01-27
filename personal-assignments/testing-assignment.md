@@ -2,11 +2,9 @@
 
 {% embed url="https://jestjs.io/docs/getting-started" %}
 
-
-
 ## Getting Started · Jest
 
-> ### Excerpt
+> #### Excerpt
 >
 > Install Jest using yarn:
 

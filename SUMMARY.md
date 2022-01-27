@@ -1,6 +1,7 @@
 # Table of contents
 
-* [👋 Welcome!](README.md)
+* [Nav](README.md)
+* [👋 Welcome!](<README (1).md>)
   * [Downloads](readme/downloads.md)
 
 ## The Company
@@ -18,24 +19,24 @@
 * [⚒ CREATING COMPONENTS](Website/creating-components/README.md)
   * [Intro](Website/creating-components/intro.md)
   * [🧑💻 TechnicalOverview](Website/creating-components/technicaloverview.md)
-    * [👨🔬 PracticalOverview](Website/creating-components/practicaloverview.md)
-  * [🔎 Analytics](Website/creating-components/analytics.md)
-  * [🎛 Sitecore](website/creating-components/sitecore/README.md)
-    * [📓 Sitecore-Docs](website/creating-components/sitecore/sitecore-docs.md)
-  * [☑ DefinitionOfDone](Website/creating-components/definitionofdone.md)
+    * [👨🔬 👨🔬 PracticalOverview](Website/creating-components/practicaloverview.md)
+  * [Analytics](Website/creating-components/analytics.md)
+  * [Sitecore](website/creating-components/sitecore/README.md)
+    * [Sitecore-Docs](website/creating-components/sitecore/sitecore-docs.md)
+  * [DefinitionOfDone](Website/creating-components/definitionofdone.md)
 * [🌎 Navigation](website/navigation.md)
 * [⚙ SETUP](website/setup.md)
 * [Testing](website/testing.md)
-* [📋 Forms](Website/forms.md)
-* [⚛ React](Website/react.md)
+* [Forms](Website/forms.md)
+* [React](Website/react.md)
 * [📖 Storybook](website/storybook/README.md)
   * [📔 Official Tutorial](website/storybook/official-tutorial/README.md)
     * [Component Driven Design](website/storybook/official-tutorial/component-driven-design.md)
 * [🗒 Code Splitting](Website/code-splitting.md)
-* [🖼 SvgLoader](Website/svgloader.md)
-* [🌬 Tailwind CSS](Website/tailwind-css.md)
-* [⌨ Typescript](Website/typescript.md)
-* [🧪 Unit Tests](Website/unit-tests.md)
+* [SvgLoader](Website/svgloader.md)
+* [Tailwind CSS](Website/tailwind-css.md)
+* [Typescript](Website/typescript.md)
+* [Unit Tests](Website/unit-tests.md)
 
 ## Personal Assignments
 
