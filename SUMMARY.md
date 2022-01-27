@@ -61,7 +61,7 @@
 ## General Info
 
 * [📚 General Info](general-info/general-info.md)
-* [Links](general-info/links.md)
+* [Links](general-info/general-info/links.md)
 * [Argv](general-info/argv.md)
 * [Optional Chaning](general-info/optional-chaning.md)
   * [Links](general-info/optional-chaning/links.md)

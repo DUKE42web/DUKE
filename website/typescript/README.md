@@ -1,6 +1,14 @@
 # ⌨ Typescript
 
-## `Global types`
+
+
+
+
+
+
+
+
+## <mark style="color:red;background-color:purple;">`Global types`</mark>
 
 In typescript global types can be declared in a `.d.ts` file and used anywhere without explicitly importing them. Our project's `.d.ts` file is named `project.d.ts` .
 
