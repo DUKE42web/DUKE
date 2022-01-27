@@ -15,7 +15,6 @@
 
 ## Website
 
-* [🌎 Navigation](website/navigation.md)
 * [⚒ Creating Components](Website/creating-components/README.md)
   * [Intro](Website/creating-components/intro.md)
   * [🧑💻 TechnicalOverview](Website/creating-components/technicaloverview.md)
@@ -24,7 +23,9 @@
   * [🎛 Sitecore](website/creating-components/sitecore/README.md)
     * [📓 Sitecore-Docs](website/creating-components/sitecore/sitecore-docs.md)
   * [☑ DefinitionOfDone](Website/creating-components/definitionofdone.md)
+* [🌎 Navigation](website/navigation.md)
 * [⚙ SETUP](website/setup.md)
+* [Testing](website/testing.md)
 * [📋 Forms](Website/forms.md)
 * [⚛ React](Website/react.md)
 * [📖 Storybook](website/storybook/README.md)
