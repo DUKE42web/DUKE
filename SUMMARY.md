@@ -5,6 +5,7 @@
 ## The Company
 
 * [🏨 Meet the Team!](the-company/meet-the-team/README.md)
+  * [Downloads](the-company/meet-the-team/downloads.md)
   * [Portal Site Managers](the-company/meet-the-team/portal-site-managers.md)
   * [New Hire Setup](the-company/meet-the-team/new-hire-setup.md)
   * [Duke Energy Acronyms and Terms](the-company/meet-the-team/duke-energy-acronyms-and-terms.md)
