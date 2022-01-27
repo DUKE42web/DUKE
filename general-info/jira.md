@@ -1,6 +1,81 @@
-# Searching JIRA
+# JIRA
 
+<details>
 
+<summary>Configuring A Project</summary>
+
+## Configuring a project
+
+**In this section**
+
+* [Creating a board](https://confluence.atlassian.com/jirasoftwareserver085/creating-a-board-981156209.html)
+* [Configuring a board](https://confluence.atlassian.com/jirasoftwareserver085/configuring-a-board-981156247.html)
+* [Workflows](https://confluence.atlassian.com/jirasoftwareserver085/workflows-981156771.html)
+
+**Related content**
+
+* [Setting up your workspace](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Setting+up+your+workspace)
+* [Permissions overview](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Permissions+overview)
+* [Creating a board](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Creating+a+board)
+* [Leading an agile project](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Leading+an+agile+project)
+* [What is a board?](https://confluence.atlassian.com/pages/viewpage.action?pageId=981156224)
+* [Plan for the team](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Plan+for+the+team)
+* [Building a backlog](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Building+a+backlog)
+* [Working with issues](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Working+with+issues)
+* [Working in an agile project](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Working+in+an+agile+project)
+* [Doing more with your agile projects](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Doing+more+with+your+agile+projects)
+
+**Still need help?**
+
+The Atlassian Community is here for you.
+
+[Ask the community](https://community.atlassian.com/t5/custom/page/page-id/create-post-step-1?add-tags=Jira+Software)
+
+Your issue tracker should be the hub of your development project. When properly configured, Jira Software helps your team members prioritize and organize work better, so they can spend more time developing great software instead of wrangling issues.
+
+A project is simply a collection of issues (stories, bugs, tasks, etc). You would typically use a project to represent the development work for a product, project, or service in Jira Software.
+
+_**Scrum or Kanban?** Scrum has an iteration-based approach, which is generally a good fit for teams developing products, particularly if your team is releasing new versions on a regular schedule. Kanban is better suited for a continuous flow of work (e.g. service-oriented teams), where its constraint-based approach helps prevent your team from being overloaded._
+
+### Before you begin <a href="#configuringaproject-beforeyoubegin" id="configuringaproject-beforeyoubegin"></a>
+
+Ideally, you should be a **Jira administrator** (i.e. someone with the 'Jira Administrators' global permission), if you want to set up a new project in Jira Software. Many of the tasks involved can only be performed by a JIRA administrator, such as creating a project, modifying a workflow, etc. For more information, see [Permissions overview](https://confluence.atlassian.com/jirasoftwareserver085/permissions-overview-981157144.html).
+
+### Overview <a href="#configuringaproject-overview" id="configuringaproject-overview"></a>
+
+The topics in this section cover the activities that you will need to do when configuring a project:
+
+#### Create a project <a href="#configuringaproject-createaproject" id="configuringaproject-createaproject"></a>
+
+Your first task is to create a Software project ![](https://confluence.atlassian.com/jirasoftwareserver085/files/981156207/981156208/1/1575972651600/jira-softwareproject-icon.png) and configure it according to the needs and requirements of your development team. You need to be a Jira administrator to create a project, but you can configure most project details (e.g. name, avatar, etc) if you are a project administrator.
+
+Learn more: [Defining a project](https://confluence.atlassian.com/adminjiraserver/defining-a-project-938847066.html) (Jira Admin documentation)
+
+#### Configure the board for your project <a href="#configuringaproject-configuretheboardforyourproject" id="configuringaproject-configuretheboardforyourproject"></a>
+
+A board is the central tool for working with issues in a Scrum or Kanban development project. A Scrum or Kanban board will be created when you create a Scrum or Kanban development project respectively. You can add more boards (of either type) to the project, if you like.
+
+Learn more: [Configuring a board](https://confluence.atlassian.com/jirasoftwareserver085/configuring-a-board-981156247.html)
+
+#### Configure project permissions <a href="#configuringaproject-configureprojectpermissions" id="configuringaproject-configureprojectpermissions"></a>
+
+You can control access to your project by configuring a permission scheme. A permission scheme maps users, user groups, roles, etc to the project functions (e.g. Assign issues). Your new project will be pre-configured with the default permission scheme.
+
+Learn more: [Managing project role memberships](https://confluence.atlassian.com/jirasoftwareserver085/managing-project-role-memberships-981157129.html)
+
+#### Tweak issue types, workflow, screens, and fields  <a href="#configuringaproject-tweakissuetypes-workflow-screens-andfields" id="configuringaproject-tweakissuetypes-workflow-screens-andfields"></a>
+
+Your project is pre-configured with issue types, a workflow, screens, and fields. You can change these to suit any development process. For example, you may want to create a 'Design' issue type or add a 'QA review' step to your workflow.
+
+Learn more: [Defining issue type field values](https://confluence.atlassian.com/adminjiraserver/defining-issue-type-field-values-938847087.html), [Workflows](https://confluence.atlassian.com/jirasoftwareserver085/workflows-981156771.html), [Defining a screen](https://confluence.atlassian.com/adminjiraserver/defining-a-screen-938847288.html), [JIRA custom fields](https://confluence.atlassian.com/adminjiraserver/adding-a-custom-field-938847222.html) (Jira Admin documentation)
+
+#### Create components <a href="#configuringaproject-createcomponents" id="configuringaproject-createcomponents"></a>
+
+Components can be used to group issues in a project. However, in an agile project, you should consider using epics to group issues (stories) instead, as there are more features that support working with epics, like the epic column on boards, reports, etc.
+
+Learn more: [Managing components](https://confluence.atlassian.com/adminjiraserver/managing-components-938847187.html)
+
+</details>
 
 <details>
 
@@ -220,3 +295,4 @@ Read the following related topics:
 * [Working with search results](https://confluence.atlassian.com/jirasoftwareserver085/working-with-search-results-981156915.html)—find out how to use the issue navigator, export your search results, bulk modify issues, and share your search results.
 
 </details>
+
