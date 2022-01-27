@@ -1,8 +1,23 @@
 # 🕐 Testing Assignment
 
-![](<../../.gitbook/assets/Screen Shot 2022-01-27 at 3.23.20 AM (1).png>)
 
-![](<../../.gitbook/assets/Screen Shot 2022-01-27 at 12.59.02 AM.png>)
+
+
+
+
+
+* be properly formatted, following the ESLint, Prettier, and Typescript rules included with our project
+* have the files necessary to run your component
+* match the appearance of the Abstract file from the Design team
+* address any provided Acceptance Criteria
+* meet WCAG2.1 accessibility requirements
+* include unit tests
+
+![](<../.gitbook/assets/Screen Shot 2022-01-27 at 3.23.20 AM (1).png>)
+
+
+
+![](<../.gitbook/assets/Screen Shot 2022-01-27 at 12.59.02 AM.png>)
 
 {% embed url="https://share.goabstract.com/2b800eac-7c18-47bb-ba7c-16266b03146c?collectionLayerId=26c85763-39d5-411c-991b-ed946c19bf50&mode=design&sha=latest" %}
 Abstract Sketch

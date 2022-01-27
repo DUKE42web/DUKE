@@ -42,7 +42,7 @@
 
 ## Personal Assignments
 
-* [🕐 Testing Assignment](personal-assignments/testing-assignment/README.md)
+* [🕐 Testing Assignment](personal-assignments/testing-assignment.md)
   * [Files For News Banner Component](personal-assignments/testing-assignment/files-for-news-banner-component.md)
 
 ## Meetings
