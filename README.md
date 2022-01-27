@@ -1,9 +1,16 @@
 ---
 cover: .gitbook/assets/duke.jpeg
 coverY: 222.9864253393665
+description: Navigate my docs
 ---
 
 # 🗺 Site Navigation
+
+
+
+{% embed url="https://duke-2.gitbook.io/duke" %}
+_<mark style="color:red;background-color:green;">**Self Link**</mark>_
+{% endembed %}
 
 ## Table of contents
 
@@ -67,8 +74,8 @@ Website/creating-components/analytics.md" %}
 [definitionofdone.md](Website/creating-components/definitionofdone.md)
 {% endcontent-ref %}
 
-{% content-ref url="website/navigation.md" %}
-[navigation.md](website/navigation.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="website/setup.md" %}

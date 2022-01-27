@@ -16,7 +16,6 @@
 
 ## Website
 
-* [🌎 Navigation](website/navigation.md)
 * [⚒ CREATING COMPONENTS](Website/creating-components/README.md)
   * [ℹ Intro](Website/creating-components/intro.md)
   * [🧑💻 TechnicalOverview](Website/creating-components/technicaloverview.md)
@@ -62,7 +61,8 @@
 ## General Info
 
 * [📚 General Info](general-info/general-info.md)
-* [Links](general-info/general-info/links.md)
+* [LINKS](general-info/general-info/links.md)
+* [Curry VS Functional Composition](general-info/curry-vs-functional-composition.md)
 * [Argv](general-info/argv.md)
 * [Optional Chaning](general-info/optional-chaning.md)
   * [Links](general-info/optional-chaning/links.md)
