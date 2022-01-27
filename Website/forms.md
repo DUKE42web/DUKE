@@ -1,4 +1,4 @@
-# 📋 Forms
+# ℹ Forms
 
 Dynamically generating forms with React and Sitecore JSS
 

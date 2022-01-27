@@ -1,4 +1,4 @@
-# 🎛 Sitecore
+# Sitecore
 
 ## Component Creation - Sitecore
 
@@ -16,9 +16,7 @@ Table of Contents:
 
 <summary>Checklist For Creating Component Corresponding To Sitecore.</summary>
 
-
-
-### Checklist
+**Checklist**
 
 * [ ] Ensure your component exists within Sitecore. If not, create it.
 * [ ] Create a folder in the `/components` directory and within it, an <mark style="color:blue;">`index.ts`</mark> file for your React component.

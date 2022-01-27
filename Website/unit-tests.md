@@ -1,6 +1,58 @@
-# 🧪 Unit Tests
+# 💯 Unit Tests
 
-## Creating Unit Tests for the DXT Application
+##
+
+<details>
+
+<summary>React Testing Library</summary>
+
+## React Testing Library
+
+[`React Testing Library`](https://github.com/testing-library/react-testing-library) builds on top of `DOM Testing Library` by adding APIs for working with React components.
+
+Projects created with [`Create React App`](https://create-react-app.dev) have out of the box support for **React Testing Library**. If that is not the case, you can add it via `npm` like so:
+
+```
+npm install --save-dev @testing-library/react
+```
+
+Copy
+
+* [React Testing Library on GitHub](https://github.com/testing-library/react-testing-library)
+
+### The problem[​](https://testing-library.com/docs/react-testing-library/intro/#the-problem) <a href="#the-problem" id="the-problem"></a>
+
+You want to write maintainable tests for your React components. As a part of this goal, you want your tests to avoid including implementation details of your components and rather focus on making your tests give you the confidence for which they are intended. As part of this, you want your testbase to be maintainable in the long run so refactors of your components (changes to implementation but not functionality) don't break your tests and slow you and your team down.
+
+### This solution[​](https://testing-library.com/docs/react-testing-library/intro/#this-solution) <a href="#this-solution" id="this-solution"></a>
+
+The `React Testing Library` is a very light-weight solution for testing React components. It provides light utility functions on top of `react-dom` and `react-dom/test-utils`, in a way that encourages better testing practices. Its primary guiding principle is:
+
+[The more your tests resemble the way your software is used, the more confidence they can give you.](https://testing-library.com/docs/guiding-principles)
+
+So rather than dealing with instances of rendered React components, your tests will work with actual DOM nodes. The utilities this library provides facilitate querying the DOM in the same way the user would. Finding form elements by their label text (just like a user would), finding links and buttons from their text (like a user would). It also exposes a recommended way to find elements by a `data-testid` as an "escape hatch" for elements where the text content and label do not make sense or is not practical.
+
+This library encourages your applications to be more accessible and allows you to get your tests closer to using your components the way a user will, which allows your tests to give you more confidence that your application will work when a real user uses it.
+
+This library is a replacement for [Enzyme](http://airbnb.io/enzyme/). While you _can_ follow these guidelines using Enzyme itself, enforcing this is harder because of all the extra utilities that Enzyme provides (utilities which facilitate testing implementation details). Read more about this in [the FAQ](https://testing-library.com/docs/react-testing-library/faq).
+
+**What this library is not**:
+
+1. A test runner or framework
+2. Specific to a testing framework (though we recommend Jest as our preference, the library works with any framework. See [Using Without Jest](https://testing-library.com/docs/react-testing-library/setup#using-without-jest))
+
+NOTE: This library is built on top of [`DOM Testing Library`](https://testing-library.com/docs/dom-testing-library/intro) which is where most of the logic behind the queries is.
+
+\
+
+
+</details>
+
+
+
+
+
+Creating Unit Tests for the DXT Application
 
 Our unit testing utilizes the [Jest Testing Framework](https://jestjs.io) and [Enzyme](https://enzymejs.github.io/enzyme/).
 
