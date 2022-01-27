@@ -14,7 +14,7 @@
 
 [Abstract](https://app.abstract.com/invitations/9aff976aec513bdec25aa75b0f843c07b5f3e7e01caab0efa8591fe89d82bcac/confirmation)
 
-[Typescript - DUKE](../../Website/typescript.md)
+[Typescript - DUKE](../../website/typescript/)
 
 [teams - Google Search](https://www.google.com/search?q=teams\&rlz=1C5CHFA\_enUS990US990\&oq=teams\&aqs=chrome..69i57j0i271l3j69i60l3j69i65.1471j0j7\&sourceid=chrome\&ie=UTF-8)
 

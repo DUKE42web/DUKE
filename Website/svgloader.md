@@ -1,4 +1,4 @@
-# SvgLoader
+# 🖼 SvgLoader
 
 ## Overview
 

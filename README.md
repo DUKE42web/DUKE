@@ -11,8 +11,8 @@ coverY: 0
 [.](./)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="broken-reference/" %}
+[broken-reference](broken-reference/)
 {% endcontent-ref %}
 
 ### The Company
@@ -111,8 +111,8 @@ Website/creating-components/analytics.md" %}
 [tailwind-css.md](Website/tailwind-css.md)
 {% endcontent-ref %}
 
-{% content-ref url="Website/typescript.md" %}
-[typescript.md](Website/typescript.md)
+{% content-ref url="website/typescript/" %}
+[typescript](website/typescript/)
 {% endcontent-ref %}
 
 {% content-ref url="Website/unit-tests.md" %}

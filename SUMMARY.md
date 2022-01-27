@@ -33,9 +33,10 @@
   * [📔 Official Tutorial](website/storybook/official-tutorial/README.md)
     * [Component Driven Design](website/storybook/official-tutorial/component-driven-design.md)
 * [🗒 Code Splitting](Website/code-splitting.md)
-* [SvgLoader](Website/svgloader.md)
+* [🖼 SvgLoader](Website/svgloader.md)
 * [🌬 Tailwind CSS](Website/tailwind-css.md)
-* [⌨ Typescript](Website/typescript.md)
+* [⌨ Typescript](website/typescript/README.md)
+  * [Enums](website/typescript/enums.md)
 * [💯 Unit Tests](Website/unit-tests.md)
 
 ## Personal Assignments
