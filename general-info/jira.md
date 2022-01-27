@@ -4,7 +4,7 @@
 
 <summary>Configuring A Project</summary>
 
-## Configuring a project
+### Configuring a project
 
 **In this section**
 
@@ -37,39 +37,39 @@ A project is simply a collection of issues (stories, bugs, tasks, etc). You woul
 
 _**Scrum or Kanban?** Scrum has an iteration-based approach, which is generally a good fit for teams developing products, particularly if your team is releasing new versions on a regular schedule. Kanban is better suited for a continuous flow of work (e.g. service-oriented teams), where its constraint-based approach helps prevent your team from being overloaded._
 
-### Before you begin <a href="#configuringaproject-beforeyoubegin" id="configuringaproject-beforeyoubegin"></a>
+#### Before you begin <a href="#configuringaproject-beforeyoubegin" id="configuringaproject-beforeyoubegin"></a>
 
 Ideally, you should be a **Jira administrator** (i.e. someone with the 'Jira Administrators' global permission), if you want to set up a new project in Jira Software. Many of the tasks involved can only be performed by a JIRA administrator, such as creating a project, modifying a workflow, etc. For more information, see [Permissions overview](https://confluence.atlassian.com/jirasoftwareserver085/permissions-overview-981157144.html).
 
-### Overview <a href="#configuringaproject-overview" id="configuringaproject-overview"></a>
+#### Overview <a href="#configuringaproject-overview" id="configuringaproject-overview"></a>
 
 The topics in this section cover the activities that you will need to do when configuring a project:
 
-#### Create a project <a href="#configuringaproject-createaproject" id="configuringaproject-createaproject"></a>
+**Create a project**
 
 Your first task is to create a Software project ![](https://confluence.atlassian.com/jirasoftwareserver085/files/981156207/981156208/1/1575972651600/jira-softwareproject-icon.png) and configure it according to the needs and requirements of your development team. You need to be a Jira administrator to create a project, but you can configure most project details (e.g. name, avatar, etc) if you are a project administrator.
 
 Learn more: [Defining a project](https://confluence.atlassian.com/adminjiraserver/defining-a-project-938847066.html) (Jira Admin documentation)
 
-#### Configure the board for your project <a href="#configuringaproject-configuretheboardforyourproject" id="configuringaproject-configuretheboardforyourproject"></a>
+**Configure the board for your project**
 
 A board is the central tool for working with issues in a Scrum or Kanban development project. A Scrum or Kanban board will be created when you create a Scrum or Kanban development project respectively. You can add more boards (of either type) to the project, if you like.
 
 Learn more: [Configuring a board](https://confluence.atlassian.com/jirasoftwareserver085/configuring-a-board-981156247.html)
 
-#### Configure project permissions <a href="#configuringaproject-configureprojectpermissions" id="configuringaproject-configureprojectpermissions"></a>
+**Configure project permissions**
 
 You can control access to your project by configuring a permission scheme. A permission scheme maps users, user groups, roles, etc to the project functions (e.g. Assign issues). Your new project will be pre-configured with the default permission scheme.
 
 Learn more: [Managing project role memberships](https://confluence.atlassian.com/jirasoftwareserver085/managing-project-role-memberships-981157129.html)
 
-#### Tweak issue types, workflow, screens, and fields  <a href="#configuringaproject-tweakissuetypes-workflow-screens-andfields" id="configuringaproject-tweakissuetypes-workflow-screens-andfields"></a>
+**Tweak issue types, workflow, screens, and fields**
 
 Your project is pre-configured with issue types, a workflow, screens, and fields. You can change these to suit any development process. For example, you may want to create a 'Design' issue type or add a 'QA review' step to your workflow.
 
 Learn more: [Defining issue type field values](https://confluence.atlassian.com/adminjiraserver/defining-issue-type-field-values-938847087.html), [Workflows](https://confluence.atlassian.com/jirasoftwareserver085/workflows-981156771.html), [Defining a screen](https://confluence.atlassian.com/adminjiraserver/defining-a-screen-938847288.html), [JIRA custom fields](https://confluence.atlassian.com/adminjiraserver/adding-a-custom-field-938847222.html) (Jira Admin documentation)
 
-#### Create components <a href="#configuringaproject-createcomponents" id="configuringaproject-createcomponents"></a>
+**Create components**
 
 Components can be used to group issues in a project. However, in an agile project, you should consider using epics to group issues (stories) instead, as there are more features that support working with epics, like the epic column on boards, reports, etc.
 
@@ -81,7 +81,7 @@ Learn more: [Managing components](https://confluence.atlassian.com/adminjiraserv
 
 <summary>Jira Advanced Search</summary>
 
-## Advanced searching
+### Advanced searching
 
 **On this page**
 
@@ -122,21 +122,20 @@ The Atlassian Community is here for you.
 
 [Ask the community](https://community.atlassian.com/t5/custom/page/page-id/create-post-step-1?add-tags=Jira+Software)
 
-The advanced search allows you to build structured queries using the Jira Query Language (JQL) to search for issues. You can specify criteria that cannot be defined in the quick or basic searches (e.g. `ORDER BY` clause).&#x20; 
+The advanced search allows you to build structured queries using the Jira Query Language (JQL) to search for issues. You can specify criteria that cannot be defined in the quick or basic searches (e.g. `ORDER BY` clause).
 
 * If you don't have complex search criteria, you may want to use [quick search](https://confluence.atlassian.com/jirasoftwareserver085/quick-searching-981156830.html) instead.
 * If you are not comfortable with the Jira Query Language (JQL), you may want to use [basic search](https://confluence.atlassian.com/jirasoftwareserver085/basic-searching-981156808.html) instead.
 
-Note, JQL is not a database query language, even though it uses SQL-like syntax.&#x20; 
+Note, JQL is not a database query language, even though it uses SQL-like syntax.
 
 _Screenshot: Advanced search_
 
 ![](https://confluence.atlassian.com/jirasoftwareserver085/files/981156836/981156837/1/1575972955279/advanced\_search2.png)
 
-### Advanced searching <a href="#advancedsearching-queryadvancedsearching" id="advancedsearching-queryadvancedsearching"></a>
+#### Advanced searching <a href="#advancedsearching-queryadvancedsearching" id="advancedsearching-queryadvancedsearching"></a>
 
-1. Navigate to **Issues** (in header) > **Search for issues**.\
-
+1. Navigate to **Issues** (in header) > **Search for issues**.\\
    * If there are existing search criteria, click the **New filter** button to reset the search criteria.
    *   If the basic search is shown instead of the advanced search, click **Advanced** (next to the **Search** button).
 
@@ -148,23 +147,19 @@ _Screenshot: Advanced search_
        *
        *
        *
-
-2.  Enter your JQL query. As you type, Jira will offer a list of "auto-complete" suggestions based on the context of your query. Note, auto-complete suggestions only include the first 15 matches, displayed alphabetically, so you may need to enter more text if you can't find a match.
-    [Why aren't the auto-complete suggestions being shown?](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#)
-
-    *
-    *
-    *
-
+2. Enter your JQL query. As you type, Jira will offer a list of "auto-complete" suggestions based on the context of your query. Note, auto-complete suggestions only include the first 15 matches, displayed alphabetically, so you may need to enter more text if you can't find a match. [Why aren't the auto-complete suggestions being shown?](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#)
+   *
+   *
+   *
 3. Press Enter or click **Search** to run your query. Your search results will display in the issue navigator.
 
-### Understanding advanced searching <a href="#advancedsearching-understandingadvancedsearching" id="advancedsearching-understandingadvancedsearching"></a>
+#### Understanding advanced searching <a href="#advancedsearching-understandingadvancedsearching" id="advancedsearching-understandingadvancedsearching"></a>
 
 Read the following topics to learn how to get the most out of advanced searching:
 
 [Constructing JQL queries](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-ConstructingJQLqueries) | [Precedence in JQL queries](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-parenthesesPrecedenceinJQLqueries) | [Restricted words and characters](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-restrictionsRestrictedwordsandcharacters) | [Performing text searches](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-textPerformingtextsearches)
 
-#### Constructing JQL queries <a href="#advancedsearching-constructingjqlqueries" id="advancedsearching-constructingjqlqueries"></a>
+**Constructing JQL queries**
 
 A simple query in JQL (also known as a 'clause') consists of a _field_, followed by an _operator_, followed by one or more _values_ or _functions_. For example:
 
@@ -184,7 +179,7 @@ This query will find all issues in the "TEST" project where the assignee is the 
 
 For more information on fields, operators, keywords and functions, see the [Reference section](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-reference) below.
 
-#### Precedence in JQL queries <a href="#advancedsearching-parenthesesprecedenceinjqlqueries" id="advancedsearching-parenthesesprecedenceinjqlqueries"></a>
+**Precedence in JQL queries**
 
 Precedence in JQL queries depends on keywords that you use to connect your clauses (a clause being e.g. `project = "Teams in Space"` ). The easiest way to look at this is to treat the _AND_ keyword as the one grouping clauses, and _OR_ as the one separating them. The _AND_ keyword takes precedence over other keywords, because it groups clauses together, essentially turning them into one combined clause.
 
@@ -232,7 +227,7 @@ If you used parentheses like in the following example, they wouldn't have any ef
 (status=resolved AND project="Teams in Space") OR assignee=captainjoe
 ```
 
-#### Restricted words and characters <a href="#advancedsearching-restrictionsrestrictedwordsandcharacters" id="advancedsearching-restrictionsrestrictedwordsandcharacters"></a>
+**Restricted words and characters**
 
 **Reserved characters**
 
@@ -240,25 +235,25 @@ JQL has a list of reserved characters:
 
 If you wish to use these characters in queries, you need to:
 
-* surround them with quote-marks (you can use either single quote-marks (`'`) or double quote-marks (`"`)); \
-  **and, **
+* surround them with quote-marks (you can use either single quote-marks (`'`) or double quote-marks (`"`));\
+  \*\*and, \*\*
 * if you are searching a **text field** and the character is on the list of [special characters in text searches](https://confluence.atlassian.com/jirasoftwareserver085/search-syntax-for-text-fields-981156853.html), precede them with two backslashes. This will let you run the query that contains a reserved character, but the character itself will be ignored in your query. For more info, see _Special characters_ in [Search syntax for text fields](https://confluence.atlassian.com/jirasoftwareserver085/search-syntax-for-text-fields-981156853.html).
 
-\
+\\
 
 For example:
 
-* 
+*
 
 ```
   version = "[example]"
-  ```
+```
 
-* 
+*
 
 ```
   summary ~ "\\[example\\]"
-  ```
+```
 
 **Reserved words**
 
@@ -268,7 +263,7 @@ JQL also has a list of reserved words. These words need to be surrounded by quot
 
 _Note for Jira administrators: this list is hard coded in the `JqlStringSupportImpl.java` file._
 
-#### Performing text searches <a href="#advancedsearching-textperformingtextsearches" id="advancedsearching-textperformingtextsearches"></a>
+**Performing text searches**
 
 You can use Lucene's text-searching features when performing searches on the following fields, using the CONTAINS operator:
 
@@ -276,9 +271,9 @@ Summary, Description, Environment, Comments, custom fields that use the "Free Te
 
 For more information, see [Search syntax for text fields](https://confluence.atlassian.com/jirasoftwareserver085/search-syntax-for-text-fields-981156853.html).
 
-### Reference <a href="#advancedsearching-referencereference" id="advancedsearching-referencereference"></a>
+#### Reference <a href="#advancedsearching-referencereference" id="advancedsearching-referencereference"></a>
 
-### Running a saved search <a href="#advancedsearching-runningasavedsearch" id="advancedsearching-runningasavedsearch"></a>
+#### Running a saved search <a href="#advancedsearching-runningasavedsearch" id="advancedsearching-runningasavedsearch"></a>
 
 Saved searches (also known as [Saving your search as a filter](https://confluence.atlassian.com/jirasoftwareserver085/saving-your-search-as-a-filter-981156854.html)) are shown in the left panel, when using advanced search. If the left panel is not showing, hover your mouse over the left side of the screen to display it.
 
@@ -286,7 +281,7 @@ To run a filter, e.g. **My Open Issues**, simply click it. The JQL for the advan
 
 ![](https://confluence.atlassian.com/jirasoftwareserver085/files/981156836/981156846/1/1575972956125/saved\_search.png)
 
-### Next steps <a href="#advancedsearching-nextsteps" id="advancedsearching-nextsteps"></a>
+#### Next steps <a href="#advancedsearching-nextsteps" id="advancedsearching-nextsteps"></a>
 
 Read the following related topics:
 

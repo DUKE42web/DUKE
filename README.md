@@ -165,8 +165,8 @@ Website/creating-components/analytics.md" %}
 [general-info.md](general-info/general-info.md)
 {% endcontent-ref %}
 
-{% content-ref url="general-info/general-info/links.md" %}
-[links.md](general-info/general-info/links.md)
+{% content-ref url="general-info/links.md" %}
+[links.md](general-info/links.md)
 {% endcontent-ref %}
 
 {% content-ref url="general-info/argv.md" %}
