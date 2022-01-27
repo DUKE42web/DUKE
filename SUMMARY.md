@@ -4,6 +4,7 @@
 
 ## 📚 Resources
 
+* [🕸 LINKS](resources/links.md)
 * [Youtube & Videos:](resources/youtube-and-videos.md)
 
 ## The Company
@@ -65,7 +66,6 @@
 ## General Info
 
 * [📚 General Info](general-info/general-info.md)
-* [LINKS](general-info/general-info/links.md)
 * [Curry VS Functional Composition](general-info/curry-vs-functional-composition.md)
 * [Argv](general-info/argv.md)
 * [Optional Chaning](general-info/optional-chaning.md)
