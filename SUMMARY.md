@@ -51,6 +51,7 @@
 * [🗓 Week 1](meetings/week-1/README.md)
   * [Day 2](meetings/week-1/day-2.md)
   * [Day 3](meetings/week-1/day-3.md)
+* [📅 Day 4](meetings/day-4.md)
 * [🗓 Week 2](meetings/week-2.md)
 * [🗓 Week 3](meetings/week-3.md)
 * [🗓 Week 4](meetings/week-4.md)
