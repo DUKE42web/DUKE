@@ -12,9 +12,9 @@ Add LoadablePlugin.
 
 ```js
 const LoadablePlugin = require('@loadable/webpack-plugin');
-
+```
 ...
-
+```js
 plugins: [new LoadablePlugin({
     filename: 'loadable-stats-server.json'
 })],
