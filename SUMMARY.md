@@ -44,8 +44,9 @@
 * [💯 Unit Tests](Website/unit-tests.md)
 * [⌨ Typescript](website/typescript/README.md)
   * [Typescript Types](website/typescript/typescript-types.md)
-  * [Enums](website/typescript/enums.md)
   * [Types VS Interfaces](website/typescript/types-vs-interfaces.md)
+  * [Enums](website/typescript/enums.md)
+  * [Types VS Interfaces](website/typescript/types-vs-interfaces-1.md)
   * [Tutorial](website/typescript/tutorial.md)
 
 ## Personal Assignments
