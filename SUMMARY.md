@@ -22,7 +22,7 @@
 
 ## Website
 
-* [Overview](website/overview.md)
+* [😀 Overview](website/overview.md)
 * [Live Deploy](website/live-deploy.md)
 * [⚒ CREATING COMPONENTS](Website/creating-components/README.md)
   * [ℹ Intro](Website/creating-components/intro.md)
