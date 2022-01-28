@@ -1,12 +1,12 @@
-# Component Driven Design
+# 🧱 Component Driven Design
 
 ## Component Driven User Interfaces
 
-> #### Excerpt
+> **Excerpt**
 >
 > How modularity is transforming design and frontend development
 
----
+***
 
 [![Component Driven](https://www.componentdriven.org/logo-componentdriven.svg)](https://www.componentdriven.org)
 
@@ -74,15 +74,15 @@ Docs site
 
 ### Benefits
 
-- **Quality:** Verify that UIs work in different scenarios by building components in isolation and defining their relevant states.
-- **Durability:** Pinpoint bugs down to the detail by testing at the component level. It's less work and more precise than testing screens.
-- **Speed:** Assemble UIs faster by reusing existing components from a component library or design system.
-- **Efficiency:** Parallelize development and design by decomposing UI into discrete components then sharing the load between different team members.
+* **Quality:** Verify that UIs work in different scenarios by building components in isolation and defining their relevant states.
+* **Durability:** Pinpoint bugs down to the detail by testing at the component level. It's less work and more precise than testing screens.
+* **Speed:** Assemble UIs faster by reusing existing components from a component library or design system.
+* **Efficiency:** Parallelize development and design by decomposing UI into discrete components then sharing the load between different team members.
 
 #### What UIs are not Component Driven?
 
-- **Page-based:** Development and design processes that treats a website as a collection of pages. Not much effort is made to reuse common elements across pages.
-- **Tools designed for pages:** Tools that focus on displaying documents like Wordpress and Drupal. Backend frameworks such as Rails, Django and PHP that treat UI reuse as an afterthought and discourage widespread component reuse.
+* **Page-based:** Development and design processes that treats a website as a collection of pages. Not much effort is made to reuse common elements across pages.
+* **Tools designed for pages:** Tools that focus on displaying documents like Wordpress and Drupal. Backend frameworks such as Rails, Django and PHP that treat UI reuse as an afterthought and discourage widespread component reuse.
 
 #### Complementary trends
 
@@ -106,4 +106,4 @@ Atomic Design is atoms, molecules, organisms, templates, and pages concurrently 
 
 This book guides readers through best practices around planning, designing, building, and implementing a design system, with insights and first-hand experiences from experts who have gone through the journey.
 
----
+***

@@ -25,7 +25,7 @@ So here's how the initial default PushDownPanel might look:
 ```js
 export const NoIcons = Template.bind();
 NoIcons.args = {
-  items: itemsOptions["3"],
+    items: itemsOptions['3'],
 };
 ```
 
@@ -34,7 +34,7 @@ And then we can add variations based on different states, for example a version 
 ```js
 export const Icons = Template.bind({});
 Icons.args = {
-  items: itemsOptions["5"],
+    items: itemsOptions['5'],
 };
 ```
 
@@ -52,24 +52,27 @@ Most of the time the type of arg will be [inferred automatically](https://storyb
 
 ```js
 export default {
-  title: "Components/Accordion",
-  component: AccordionComponent,
-  argTypes: {
-    theme: {
-      name: "Theme",
+    title: 'Components/Accordion',
+    component: AccordionComponent,
+    argTypes: {
+        theme: {
+            name: 'Theme',
+        },
+        closeOthers: {
+            name: 'One Panel Open At A Time',
+        },
     },
-    closeOthers: {
-      name: "One Panel Open At A Time",
-    },
-  },
 };
 
-const Template = (args) => <AccordionComponent {...args} />;
+const Template = args => < AccordionComponent {
+    ...args
+}
+/>;
 
 export const Primary = Template.bind({});
 
 Primary.args = {
-  ...props,
+    ...props,
 };
 ```
 
@@ -156,34 +159,41 @@ Stories exist alongside the other component files as `stories.js` .
 Here's an example of how a typical story might take shape:
 
 ```js
-import React from "react";
-import MyComponent from "./index";
-import { Data } from "./data";
-import { MyComponent as MyComponentComposition } from "../../lib/composition";
+import React from 'react';
+import MyComponent from './index';
+import {
+    Data
+} from './data';
+import {
+    MyComponent as MyComponentComposition
+} from '../../lib/composition';
 
 const props = MyComponentComposition({
-  fields: Data,
+    fields: Data
 });
 
 export default {
-  title: "Components/MyComponent",
-  component: MyComponent,
-  argTypes: {
-    backgroundColor: {
-      control: {
-        type: "radio",
-        options: ["white", "gray"],
-      },
-      defaultValue: "white",
+    title: 'Components/MyComponent',
+    component: MyComponent,
+    argTypes: {
+        backgroundColor: {
+            control: {
+                type: 'radio',
+                options: ['white', 'gray'],
+            },
+            defaultValue: 'white',
+        },
     },
-  },
 };
 
-const Template = (args) => <MyComponent {...args} />;
+const Template = args => < MyComponent {
+    ...args
+}
+/>;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  ...props,
+    ...props,
 };
 ```
 
@@ -314,7 +324,7 @@ export default {
 
 ## Resources
 
-- [Learn Storybook](https://www.learnstorybook.com/) - a guided tutorial through building a simple application with Storybook
-- [Component Driven User Interfaces](https://www.componentdriven.org/) - learn more about the component-driven approach that Storybook enables
-- [Storybook Addons](https://storybook.js.org/addons) - supercharge Storybook with advanced features and new workflows
-- [Component Story Format](https://storybook.js.org/blog/component-story-format/) - read more about the Component Story Format (CSF), a new way to author stories based on ES6 modules
+* [Learn Storybook](https://www.learnstorybook.com/) - a guided tutorial through building a simple application with Storybook
+* [Component Driven User Interfaces](https://www.componentdriven.org/) - learn more about the component-driven approach that Storybook enables
+* [Storybook Addons](https://storybook.js.org/addons) - supercharge Storybook with advanced features and new workflows
+* [Component Story Format](https://storybook.js.org/blog/component-story-format/) - read more about the Component Story Format (CSF), a new way to author stories based on ES6 modules

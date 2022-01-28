@@ -60,7 +60,7 @@ Unless you're really trying to take advantage of JavaScript's runtime behavior i
 
 Each enum member has a value associated with it which can be either _constant_ or _computed_. An enum member is considered constant if:
 
-- It is the first member in the enum and it has no initializer, in which case it's assigned the value `0`:
+* It is the first member in the enum and it has no initializer, in which case it's assigned the value `0`:
 
 ````
     // E.X is constant:enum E {  X,}Try
@@ -68,20 +68,19 @@ Each enum member has a value associated with it which can be either _constant_ o
 
 *   It does not have an initializer and the preceding enum member was a _numeric_ constant. In this case the value of the current enum member will be the value of the preceding enum member plus one.
 
-
 ````
 
-    // All enum members in 'E1' and 'E2' are constant. enum E1 {  X,  Y,  Z,} enum E2 {  A = 1,  B,  C,}Try
-    ```
+````
+// All enum members in 'E1' and 'E2' are constant. enum E1 {  X,  Y,  Z,} enum E2 {  A = 1,  B,  C,}Try
+```
+````
 
-- The enum member is initialized with a constant enum expression. A constant enum expression is a subset of TypeScript expressions that can be fully evaluated at compile time. An expression is a constant enum expression if it is:
-
+* The enum member is initialized with a constant enum expression. A constant enum expression is a subset of TypeScript expressions that can be fully evaluated at compile time. An expression is a constant enum expression if it is:
   1. a literal enum expression (basically a string literal or a numeric literal)
   2. a reference to previously defined constant enum member (which can originate from a different enum)
   3. a parenthesized constant enum expression
   4. one of the `+`, `-`, `~` unary operators applied to constant enum expression
-  5. `+`, `-`, `*`, `/`, `%`, `<<`, `>>`, `>>>`, `&`, `|`, `^` binary operators with constant enum expressions as operands
-     It is a compile time error for constant enum expressions to be evaluated to `NaN` or `Infinity` .
+  5. `+`, `-`, `*`, `/`, `%`, `<<`, `>>`, `>>>`, `&`, `|`, `^` binary operators with constant enum expressions as operands It is a compile time error for constant enum expressions to be evaluated to `NaN` or `Infinity` .
 
 In all other cases enum member is considered computed.
 
@@ -93,9 +92,9 @@ enum FileAccess {  // constant members  None,  Read = 1 << 1,  Write = 1 << 2,  
 
 There is a special subset of constant enum members that aren't calculated: literal enum members. A literal enum member is a constant enum member with no initialized value, or with values that are initialized to
 
-- any string literal (e.g. `"foo"`, `"bar`, `"baz"`)
-- any numeric literal (e.g. `1`, `100`)
-- a unary minus applied to any numeric literal (e.g. `-1`, `-100`)
+* any string literal (e.g. `"foo"`, `"bar`, `"baz"`)
+* any numeric literal (e.g. `1`, `100`)
+* a unary minus applied to any numeric literal (e.g. `-1`, `-100`)
 
 When all members in an enum have literal enum values, some special semantics come into play.
 
@@ -183,7 +182,7 @@ Inlining enum values is straightforward at first, but comes with subtle implicat
 
 Here are two approaches to avoiding these pitfalls:
 
-A. Do not use const enums at all. You can easily [ban const enums](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/FAQ.md#how-can-i-ban-specific-language-feature) with the help of a linter. Obviously this avoids any issues with const enums, but prevents your project from inlining its own enums. Unlike inlining enums from other projects, inlining a project's own enums is not problematic and has performance implications. B. Do not publish ambient const enums, by deconstifying them with the help of [ `preserveConstEnums` ](https://www.typescriptlang.org/tsconfig#preserveConstEnums). This is the approach taken internally by the [TypeScript project itself](https://github.com/microsoft/TypeScript/pull/5422). [ `preserveConstEnums` ](https://www.typescriptlang.org/tsconfig#preserveConstEnums) emits the same JavaScript for const enums as plain enums. You can then safely strip the `const` modifier from `.d.ts` files [in a build step](https://github.com/microsoft/TypeScript/blob/1a981d1df1810c868a66b3828497f049a944951c/Gulpfile.js#L144).
+A. Do not use const enums at all. You can easily [ban const enums](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/FAQ.md#how-can-i-ban-specific-language-feature) with the help of a linter. Obviously this avoids any issues with const enums, but prevents your project from inlining its own enums. Unlike inlining enums from other projects, inlining a project's own enums is not problematic and has performance implications. B. Do not publish ambient const enums, by deconstifying them with the help of [`preserveConstEnums` ](https://www.typescriptlang.org/tsconfig#preserveConstEnums). This is the approach taken internally by the [TypeScript project itself](https://github.com/microsoft/TypeScript/pull/5422). [`preserveConstEnums` ](https://www.typescriptlang.org/tsconfig#preserveConstEnums)emits the same JavaScript for const enums as plain enums. You can then safely strip the `const` modifier from `.d.ts` files [in a build step](https://github.com/microsoft/TypeScript/blob/1a981d1df1810c868a66b3828497f049a944951c/Gulpfile.js#L144).
 
 This way downstream consumers will not inline enums from your project, avoiding the pitfalls above, but a project can still inline its own enums, unlike banning const enums entirely.
 
@@ -205,4 +204,4 @@ In modern TypeScript, you may not need an enum when an object with `as const` co
 const enum EDirection {  Up,  Down,  Left,  Right,} const ODirection = {  Up: 0,  Down: 1,  Left: 2,  Right: 3,} as const; EDirection.Up;           (enum member) EDirection.Up = 0 ODirection.Up;           (property) Up: 0 // Using the enum as a parameterfunction walk(dir: EDirection) {} // It requires an extra line to pull out the valuestype Direction = typeof ODirection[keyof typeof ODirection];function run(dir: Direction) {} walk(EDirection.Left);run(ODirection.Right);Try
 ```
 
-\
+\\

@@ -26,8 +26,8 @@ _<mark style="color:red;background-color:green;">**Self Link**</mark>_
 [meet-the-team](the-company/meet-the-team/)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="broken-reference/" %}
+[broken-reference](broken-reference/)
 {% endcontent-ref %}
 
 ### ⁉ Questions
@@ -72,8 +72,8 @@ Website/creating-components/analytics.md" %}
 [definitionofdone.md](Website/creating-components/definitionofdone.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="broken-reference/" %}
+[broken-reference](broken-reference/)
 {% endcontent-ref %}
 
 {% content-ref url="website/setup.md" %}
@@ -166,8 +166,8 @@ Website/creating-components/analytics.md" %}
 
 ### General Info
 
-{% content-ref url="general-info/general-info.md" %}
-[general-info.md](general-info/general-info.md)
+{% content-ref url="general-info/general-info/" %}
+[general-info](general-info/general-info/)
 {% endcontent-ref %}
 
 {% content-ref url="resources/links/" %}

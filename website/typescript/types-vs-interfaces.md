@@ -2,11 +2,11 @@
 
 ## Types vs. interfaces in TypeScript - LogRocket Blog
 
-> ### Excerpt
+> #### Excerpt
 >
 > It is very simple to get started with TypeScript, but sometimes we need to think more about the best use case for us. In this case, types or interfaces?
 
----
+***
 
 The idea of having static type-checking in JavaScript is really fantastic and the adoption of TypeScript is growing more every day.
 

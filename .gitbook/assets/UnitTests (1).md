@@ -19,13 +19,13 @@ First begin by creating a . `/test.tsx` file next to your `index.tsx` file. This
 A basic outline of that file would be:
 
 ```tsx
-import React from "react";
-import { mount } from "enzyme";
-import { Data } from "./data";
-import ComponentName, { ComponentParts } from "./index";
+import React from 'react';
+import { mount } from 'enzyme';
+import { Data } from './data';
+import ComponentName, { ComponentParts } from './index';
 
-describe("ComponentName Tests", () => {
-  it("Verify ComponentName will render", () => {
+describe('ComponentName Tests', () => {
+  it('Verify ComponentName will render', () => {
     const wrapper = mount(<ComponentName data={Data} />);
     expect(wrapper.exists()).toBeTruthy();
   });
@@ -42,10 +42,10 @@ It is ideal to use your component-specific data from your `./data.js` file to po
 
 Deciding what to write tests for can be a challenge, some things to test include:
 
-- Edge Cases
-- Bad Input/Good Input
-- Logic Branches - Is there a positive and negative path? Perhaps things are hidden or shown.
-- Individual Methods - Especially when they contain specific logic
+* Edge Cases
+* Bad Input/Good Input
+* Logic Branches - Is there a positive and negative path? Perhaps things are hidden or shown.
+* Individual Methods - Especially when they contain specific logic
 
 Practical examples: If your function takes numbers, what happens if you pass it strings? Do both the positive and negative path tests of your function produce the correct output? What happens if you pass in zero, negative numbers, undefined, or null?
 
@@ -141,8 +141,8 @@ There are also some existing mocks that enable us to test components that would 
 if useMediaQuery or useIntersection are used in your component, you will need to mock them in you tests using the following:
 
 ```tsx
-jest.mock("@/lib/useIntersection");
-jest.mock("@/lib/useMediaQuery");
+jest.mock('@/lib/useIntersection');
+jest.mock('@/lib/useMediaQuery');
 ```
 
 ### Router
@@ -150,8 +150,8 @@ jest.mock("@/lib/useMediaQuery");
 The router can be mocked as follows:
 
 ```tsx
-jest.mock("react-router-dom", () => ({
-  useRouter: jest.fn(() => ({ asPath: "/home" })),
+jest.mock('react-router-dom', () => ({
+  useRouter: jest.fn(() => ({ asPath: '/home' })),
   useRouter: jest.fn(() => ({ query: { tab: mockTabQuery } })),
 }));
 ```
@@ -175,7 +175,7 @@ export default ComponentName;
 Then simply import the mock into your `test.tsx` like so:
 
 ```jsx
-jest.mock("@/components/ComponentName");
+jest.mock('@/components/ComponentName');
 ```
 
 ## Tips and Tricks
@@ -252,11 +252,11 @@ You will want to import and use the same types used in your component to create 
 
 ## Resources
 
-- [React Testing](https://reactjs.org/docs/testing.html)
-- [React Testing Recipes](https://reactjs.org/docs/testing-recipes.html)
-- [Jest Testing Framework](https://jestjs.io/)
-- [Jest Mocks](https://jestjs.io/docs/en/jest-object#mock-modules)
-- [Jest Testing React](https://jestjs.io/docs/en/tutorial-react)
-- [Enzyme](https://enzymejs.github.io/enzyme/)
+* [React Testing](https://reactjs.org/docs/testing.html)
+* [React Testing Recipes](https://reactjs.org/docs/testing-recipes.html)
+* [Jest Testing Framework](https://jestjs.io/)
+* [Jest Mocks](https://jestjs.io/docs/en/jest-object#mock-modules)
+* [Jest Testing React](https://jestjs.io/docs/en/tutorial-react)
+* [Enzyme](https://enzymejs.github.io/enzyme/)
 
 [React](./React.md) | [Typescript](./Typescript.md) | [Tailwind](./Tailwind.md) | [Forms](./Forms.md) | [Unit Tests](./UnitTests.md)

@@ -60,8 +60,7 @@ _Although ComponentTypes is a :white_check_mark: Good starting place, some compo
       <a href={ `#${item}` }>{item.split('-').join(' ')}</a>
     </li>
 
-))}
-
+  ))}
 </ul>
 
 ---
@@ -201,15 +200,15 @@ type ImageProps = { src: string; alt: string };
 :no_entry_sign: Bad
 
 ```ts
-const FooBar = "baz";
-const FooBar = () => "baz";
+const FooBar = 'baz';
+const FooBar = () => 'baz';
 ```
 
 :white_check_mark: Good
 
 ```ts
-const fooBar = "baz";
-const fooBar = () => "baz";
+const fooBar = 'baz';
+const fooBar = () => 'baz';
 ```
 
 ---

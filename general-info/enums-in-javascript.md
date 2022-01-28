@@ -2,11 +2,11 @@
 
 ## Using Enums (Enumerations) In Javascript
 
-> ### Excerpt
+> #### Excerpt
 >
 > How to implement and use enumerations (or enum types) in Javascript
 
----
+***
 
 Updated on November 26, 2021
 
@@ -58,7 +58,7 @@ console.log(Summer === Apples);
 
 ### Enums with Symbols
 
-[Symbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) let us define values that are guaranteed not to collide with one another.
+[Symbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Symbol) let us define values that are guaranteed not to collide with one another.
 
 For example:
 
@@ -145,7 +145,6 @@ If we used the class-based approach above, we can loop through the keys of the `
 
 ```
 Object.keys(Season).forEach(season => console.log("season:", season))
-
 
 ```
 

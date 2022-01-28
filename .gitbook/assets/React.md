@@ -5,21 +5,20 @@
 Each component should have its own folder nested inside the `/components` folder. The name of this folder should match the name of the component itself.
 Inside this folder you should have the following files:
 
-- data.js
-
-  - contains a copy of the JSS `fields` object for this component. This will get imported in unit tests and Storybook stories. If the component doesn't get called from
+* data.js
+  + contains a copy of the JSS `fields` object for this component. This will get imported in unit tests and Storybook stories. If the component doesn't get called from
     Sitecore and doesn't have JSS fields, then this file isn't needed.
 
-- index.tsx
-  - main React component
-- stories.js
-  - Storybook stories
-- styles.ts(x) (optional)
-  - if you use Styled Components for the component, they will live here
-- test.tsx
-  - Jest unit tests
-- types.ts
-  - Typescript types and interfaces the component
+* index.tsx
+  + main React component
+* stories.js
+  + Storybook stories
+* styles.ts(x) (optional)
+  + if you use Styled Components for the component, they will live here
+* test.tsx
+  + Jest unit tests
+* types.ts
+  + Typescript types and interfaces the component
 
 <br />
 <br />
@@ -96,7 +95,7 @@ We should always use function components with hooks over class components. Funct
 and render methods like class components do. If you need to track state in your component, import the `useState` hook.
 
 ```tsx
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Button = () => {
   const [count, setCount] = useState(0);
