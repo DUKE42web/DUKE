@@ -12,7 +12,7 @@ Updated on November 26, 2021
 
 This post will explain how to implement and use **enumerations** (or enum types) in Javascript.
 
-[![banner image](https://www.sohamkamani.com/static/fa26842619224d64f417312ef931f764/5a190/banner.drawio.png)](https://www.sohamkamani.com/static/fa26842619224d64f417312ef931f764/6acbf/banner.drawio.png)
+![](https://www.sohamkamani.com/static/fa26842619224d64f417312ef931f764/5a190/banner.drawio.png)
 
 Enums are types that contain only a limited number of fixed values, as opposed to types like `Number` or `String` which can have a wide range of values.
 
@@ -42,19 +42,22 @@ While this would work for small codebases, we will face a few immediate issues:
 1. It’s easy to make mistakes in your code. A developer can make the mistake of using integers outside the range of the ones defined.
 2.  Definitions from unrelated enums can overlap and cause conflicts:
 
-    ```
-    const Summer = 0
-    const Autumn = 1
-    const Winter = 2
-    const Spring = 3
-
-    const Apples = 0
-    const Oranges = 1
 
 
-    console.log(Summer === Apples)
-    ```
-3. This is semantically incorrect - Seasons are not _really_ integers or strings, they’re seasons!
+```javascript
+const Summer = 0
+const Autumn = 1
+const Winter = 2
+const Spring = 3
+
+const Apples = 0
+const Oranges = 1
+
+
+console.log(Summer === Apples)
+```
+
+1. This is semantically incorrect - Seasons are not _really_ integers or strings, they’re seasons!
 
 ### Enums with Symbols
 
