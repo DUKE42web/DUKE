@@ -8,18 +8,18 @@ Common testing patterns for React components.
 
 On this page, we will primarily use function components. However, these testing strategies don't depend on implementation details, and work just as well for class components too.
 
-* [Setup/Teardown](https://reactjs.org/docs/testing-recipes.html#setup--teardown)
-* [`act()`](https://reactjs.org/docs/testing-recipes.html#act)
-* [Rendering](https://reactjs.org/docs/testing-recipes.html#rendering)
-* [Data Fetching](https://reactjs.org/docs/testing-recipes.html#data-fetching)
-* [Mocking Modules](https://reactjs.org/docs/testing-recipes.html#mocking-modules)
-* [Events](https://reactjs.org/docs/testing-recipes.html#events)
-* [Timers](https://reactjs.org/docs/testing-recipes.html#timers)
-* [Snapshot Testing](https://reactjs.org/docs/testing-recipes.html#snapshot-testing)
-* [Multiple Renderers](https://reactjs.org/docs/testing-recipes.html#multiple-renderers)
-* [Something Missing?](https://reactjs.org/docs/testing-recipes.html#something-missing)
+- [Setup/Teardown](https://reactjs.org/docs/testing-recipes.html#setup--teardown)
+- [`act()`](https://reactjs.org/docs/testing-recipes.html#act)
+- [Rendering](https://reactjs.org/docs/testing-recipes.html#rendering)
+- [Data Fetching](https://reactjs.org/docs/testing-recipes.html#data-fetching)
+- [Mocking Modules](https://reactjs.org/docs/testing-recipes.html#mocking-modules)
+- [Events](https://reactjs.org/docs/testing-recipes.html#events)
+- [Timers](https://reactjs.org/docs/testing-recipes.html#timers)
+- [Snapshot Testing](https://reactjs.org/docs/testing-recipes.html#snapshot-testing)
+- [Multiple Renderers](https://reactjs.org/docs/testing-recipes.html#multiple-renderers)
+- [Something Missing?](https://reactjs.org/docs/testing-recipes.html#something-missing)
 
-***
+---
 
 #### Setup/Teardown
 
@@ -32,13 +32,13 @@ import { unmountComponentAtNode } from "react-dom";
 
 let container = null;
 beforeEach(() => {
-  
+
   container = document.createElement("div");
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-  
+
   unmountComponentAtNode(container);
   container.remove();
   container = null;
@@ -47,7 +47,7 @@ afterEach(() => {
 
 You may use a different pattern, but keep in mind that we want to execute the cleanup _even if a test fails_. Otherwise, tests can become "leaky", and one test can change the behavior of another test. That makes them difficult to debug.
 
-***
+---
 
 #### `act()`
 
@@ -61,7 +61,7 @@ You might find using `act()` directly a bit too verbose. To avoid some of the bo
 >
 > The name `act` comes from the [Arrange-Act-Assert](http://wiki.c2.com/?ArrangeActAssert) pattern.
 
-***
+---
 
 #### Rendering
 
@@ -92,13 +92,13 @@ import Hello from "./hello";
 
 let container = null;
 beforeEach(() => {
-  
+
   container = document.createElement("div");
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-  
+
   unmountComponentAtNode(container);
   container.remove();
   container = null;
@@ -118,14 +118,13 @@ it("renders with or without a name", () => {
 });
 ```
 
-***
+---
 
 #### Data Fetching
 
 Instead of calling real APIs in all your tests, you can mock requests with dummy data. Mocking data fetching with "fake" data prevents flaky tests due to an unavailable backend, and makes them run faster. Note: you may still want to run a subset of tests using an ["end-to-end"](https://reactjs.org/docs/testing-environments.html#end-to-end-tests-aka-e2e-tests) framework that tells whether the whole app is working together.
 
 ```js
-
 import React, { useState, useEffect } from "react";
 
 export default function User(props) {
@@ -166,13 +165,13 @@ import User from "./user";
 
 let container = null;
 beforeEach(() => {
-  
+
   container = document.createElement("div");
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-  
+
   unmountComponentAtNode(container);
   container.remove();
   container = null;
@@ -180,7 +179,7 @@ afterEach(() => {
 
 it("renders user data", async () => {
   const fakeUser = {    name: "Joni Baez",    age: "32",    address: "123, Charming Avenue"  };  jest.spyOn(global, "fetch").mockImplementation(() =>    Promise.resolve({      json: () => Promise.resolve(fakeUser)    })  );
-  
+
   await act(async () => {
     render(<User id="123" />, container);
   });
@@ -192,7 +191,7 @@ it("renders user data", async () => {
     global.fetch.mockRestore();});
 ```
 
-***
+---
 
 #### Mocking Modules
 
@@ -248,13 +247,13 @@ import MockedMap from "./map";
 jest.mock("./map", () => {  return function DummyMap(props) {    return (      <div data-testid="map">        {props.center.lat}:{props.center.long}      </div>    );  };});
 let container = null;
 beforeEach(() => {
-  
+
   container = document.createElement("div");
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-  
+
   unmountComponentAtNode(container);
   container.remove();
   container = null;
@@ -288,7 +287,7 @@ it("should render contact information", () => {
 });
 ```
 
-***
+---
 
 #### Events
 
@@ -326,11 +325,11 @@ import Toggle from "./toggle";
 
 let container = null;
 beforeEach(() => {
-  
+
   container = document.createElement("div");
   document.body.appendChild(container);});
 afterEach(() => {
-  
+
   unmountComponentAtNode(container);
   container.remove();
   container = null;
@@ -342,7 +341,7 @@ it("changes value when clicked", () => {
     render(<Toggle onChange={onChange} />, container);
   });
 
-  
+
   const button = document.querySelector("[data-testid=toggle]");
   expect(button.innerHTML).toBe("Turn on");
 
@@ -368,7 +367,7 @@ Different DOM events and their properties are described in [MDN](https://develop
 >
 > React Testing Library offers a [more concise helper](https://testing-library.com/docs/dom-testing-library/api-events) for firing events.
 
-***
+---
 
 #### Timers
 
@@ -403,7 +402,6 @@ export default function Card(props) {
 We can write tests for this component by leveraging [Jest's timer mocks](https://jestjs.io/docs/en/timer-mocks), and testing the different states it can be in.
 
 ```js
-
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
@@ -411,14 +409,12 @@ import { act } from "react-dom/test-utils";
 import Card from "./card";
 let container = null;
 beforeEach(() => {
-  
   container = document.createElement("div");
   document.body.appendChild(container);
   jest.useFakeTimers();
 });
 
 afterEach(() => {
-  
   unmountComponentAtNode(container);
   container.remove();
   container = null;
@@ -431,12 +427,12 @@ it("should select null after timing out", () => {
     render(<Card onSelect={onSelect} />, container);
   });
 
-    act(() => {
+  act(() => {
     jest.advanceTimersByTime(100);
   });
   expect(onSelect).not.toHaveBeenCalled();
 
-    act(() => {
+  act(() => {
     jest.advanceTimersByTime(5000);
   });
   expect(onSelect).toHaveBeenCalledWith(null);
@@ -452,7 +448,6 @@ it("should cleanup on being removed", () => {
   });
   expect(onSelect).not.toHaveBeenCalled();
 
-  
   act(() => {
     render(null, container);
   });
@@ -480,7 +475,7 @@ it("should accept selections", () => {
 
 You can use fake timers only in some tests. Above, we enabled them by calling `jest.useFakeTimers()` . The main advantage they provide is that your test doesn't actually have to wait five seconds to execute, and you also didn't need to make the component code more convoluted just for testing.
 
-***
+---
 
 #### Snapshot Testing
 
@@ -499,13 +494,13 @@ import Hello from "./hello";
 
 let container = null;
 beforeEach(() => {
-  
+
   container = document.createElement("div");
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-  
+
   unmountComponentAtNode(container);
   container.remove();
   container = null;
@@ -516,14 +511,14 @@ it("should render a greeting", () => {
     render(<Hello />, container);
   });
 
-  expect(    pretty(container.innerHTML)  ).toMatchInlineSnapshot(); 
+  expect(    pretty(container.innerHTML)  ).toMatchInlineSnapshot();
   act(() => {
     render(<Hello name="Jenny" />, container);
   });
 
   expect(
     pretty(container.innerHTML)
-  ).toMatchInlineSnapshot(); 
+  ).toMatchInlineSnapshot();
 
   act(() => {
     render(<Hello name="Margaret" />, container);
@@ -531,13 +526,13 @@ it("should render a greeting", () => {
 
   expect(
     pretty(container.innerHTML)
-  ).toMatchInlineSnapshot(); 
+  ).toMatchInlineSnapshot();
 });
 ```
 
 It's typically better to make more specific assertions than to use snapshots. These kinds of tests include implementation details so they break easily, and teams can get desensitized to snapshot breakages. Selectively [mocking some child components](https://reactjs.org/docs/testing-recipes.html#mocking-modules) can help reduce the size of snapshots and keep them readable for the code review.
 
-***
+---
 
 #### Multiple Renderers
 
@@ -556,6 +551,6 @@ domAct(() => {
 expect(root).toMatchSnapshot();
 ```
 
-***
+---
 
 ####

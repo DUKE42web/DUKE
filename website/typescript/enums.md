@@ -60,28 +60,28 @@ Unless you're really trying to take advantage of JavaScript's runtime behavior i
 
 Each enum member has a value associated with it which can be either _constant_ or _computed_. An enum member is considered constant if:
 
-*   It is the first member in the enum and it has no initializer, in which case it's assigned the value `0`:
-    
+- It is the first member in the enum and it has no initializer, in which case it's assigned the value `0`:
 
-```
+````
     // E.X is constant:enum E {  X,}Try
     ```
 
 *   It does not have an initializer and the preceding enum member was a _numeric_ constant. In this case the value of the current enum member will be the value of the preceding enum member plus one.
-    
 
-```
+
+````
+
     // All enum members in 'E1' and 'E2' are constant. enum E1 {  X,  Y,  Z,} enum E2 {  A = 1,  B,  C,}Try
     ```
 
-*   The enum member is initialized with a constant enum expression. A constant enum expression is a subset of TypeScript expressions that can be fully evaluated at compile time. An expression is a constant enum expression if it is:
+- The enum member is initialized with a constant enum expression. A constant enum expression is a subset of TypeScript expressions that can be fully evaluated at compile time. An expression is a constant enum expression if it is:
 
-    1. a literal enum expression (basically a string literal or a numeric literal)
-    2. a reference to previously defined constant enum member (which can originate from a different enum)
-    3. a parenthesized constant enum expression
-    4. one of the `+`, `-`, `~` unary operators applied to constant enum expression
-    5. `+`, `-`, `*`, `/`, `%`, `<<`, `>>`, `>>>`, `&`, `|`, `^` binary operators with constant enum expressions as operands
-    It is a compile time error for constant enum expressions to be evaluated to `NaN` or `Infinity` .
+  1. a literal enum expression (basically a string literal or a numeric literal)
+  2. a reference to previously defined constant enum member (which can originate from a different enum)
+  3. a parenthesized constant enum expression
+  4. one of the `+`, `-`, `~` unary operators applied to constant enum expression
+  5. `+`, `-`, `*`, `/`, `%`, `<<`, `>>`, `>>>`, `&`, `|`, `^` binary operators with constant enum expressions as operands
+     It is a compile time error for constant enum expressions to be evaluated to `NaN` or `Infinity` .
 
 In all other cases enum member is considered computed.
 
@@ -93,9 +93,9 @@ enum FileAccess {  // constant members  None,  Read = 1 << 1,  Write = 1 << 2,  
 
 There is a special subset of constant enum members that aren't calculated: literal enum members. A literal enum member is a constant enum member with no initialized value, or with values that are initialized to
 
-* any string literal (e.g. `"foo"`,  `"bar`,  `"baz"`)
-* any numeric literal (e.g. `1`,  `100`)
-* a unary minus applied to any numeric literal (e.g. `-1`,  `-100`)
+- any string literal (e.g. `"foo"`, `"bar`, `"baz"`)
+- any numeric literal (e.g. `1`, `100`)
+- a unary minus applied to any numeric literal (e.g. `-1`, `-100`)
 
 When all members in an enum have literal enum values, some special semantics come into play.
 

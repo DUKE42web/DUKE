@@ -6,7 +6,7 @@
 >
 > In this tutorial, you'll learn about the optional chaining operator (?.) that simplifies the way to access values through connected objects
 
-***
+---
 
 **Summary**: in this tutorial, you'll learn about the optional chaining operator ( `?.` ) that simplifies the way to access values through connected objects.
 
@@ -41,7 +41,7 @@ Code language: JavaScript (javascript)
 
 The following uses the `getUser()` function to access the user profile:
 
- `let user = getUser(1); let profile = user.profile;`
+`let user = getUser(1); let profile = user.profile;`
 
 Code language: JavaScript (javascript)
 
@@ -49,7 +49,7 @@ However, if you pass the `id` that is less than or equal to zero or the `id` doe
 
 Therefore, before accessing the `avatar` property, you need to check if the `user` is not `null` using the [logical operator](https://www.javascripttutorial.net/javascript-logical-operators/) AND:
 
- `let user = getUser(2); let profile = user && user.profile;`
+`let user = getUser(2); let profile = user && user.profile;`
 
 Code language: JavaScript (javascript)
 
@@ -57,19 +57,19 @@ In this example, we confirm that the `user` is not `null` or `undefined` before 
 
 ES2020 introduced the optional chaining operator denoted by the question mark followed by a dot:
 
- `?.`
+`?.`
 
 Code language: JavaScript (javascript)
 
 To access a property of an object using the optional chaining operator, you use one of the following:
 
- `objectName ?. propertyName objectName ?. [expression]`
+`objectName ?. propertyName objectName ?. [expression]`
 
 Code language: JavaScript (javascript)
 
 The optional chaining operator implicitly checks if the `user` is not `null` or `undefined` before attempting to access the `user.profile` :
 
- `let user = getUser(2); let profile = user ?. profile;`
+`let user = getUser(2); let profile = user ?. profile;`
 
 Code language: JavaScript (javascript)
 
@@ -77,7 +77,7 @@ In this example, if the `user` is `null` or `undefined` , the optional chaining 
 
 Technically, it is equivalent to the following:
 
- `let user = getUser(2); let profile = (user !== null || user !== undefined) ? user.profile : undefined;`
+`let user = getUser(2); let profile = (user !== null || user !== undefined) ? user.profile : undefined;`
 
 Code language: JavaScript (javascript)
 
@@ -87,7 +87,7 @@ In case the `user` object returned by the `getUser()` does not have the `profile
 
 To avoid the error, you can use the optional chaining operator multiple times like this:
 
- `let user = getUser(-1); let avatar = user ?. profile ?. avatar;`
+`let user = getUser(-1); let avatar = user ?. profile ?. avatar;`
 
 Code language: JavaScript (javascript)
 
@@ -97,7 +97,7 @@ In this case, the `avatar` is `undefined` .
 
 If you want to assign a default profile to the `user` , you can combine the optional chaining operator ( `?.` ) with the nullish coalescing operator ( `??` ) as follows:
 
-\`let defaultProfile = { default: '/default.png', language: 'English'}; 
+\`let defaultProfile = { default: '/default.png', language: 'English'};
 
 let user = getUser(2); let profile = user ?. profile ?? defaultProfile; \`
 
@@ -109,31 +109,31 @@ In this example, if the `user.profile` is `null` or `undefined` , the profile wi
 
 Suppose that you have a file API as follows:
 
-` `let file = { read() { return 'file content'; }, write(content) { console.log(` Writing ${content} to file... `); return true; } };` `
+` `let file = { read() { return 'file content'; }, write(content) { console.log(`Writing ${content} to file...`); return true; } };` `
 
 Code language: JavaScript (javascript)
 
 This example calls the `read()` method of the `file` object:
 
- `let data = file.read(); console.log(data);`
+`let data = file.read(); console.log(data);`
 
 Code language: JavaScript (javascript)
 
 If you call a method that doesn't exist in the `file` object, you'll get a `TypeError` :
 
- `let compressedData = file.compress();`
+`let compressedData = file.compress();`
 
 Code language: JavaScript (javascript)
 
 Error:
 
- `Uncaught TypeError: file.compress is not a function`
+`Uncaught TypeError: file.compress is not a function`
 
 Code language: JavaScript (javascript)
 
 However, if you use the optional chaining operator with the method call, the expression will return `undefined` instead of throwing an error:
 
- `let compressedData = file.compress?.();`
+`let compressedData = file.compress?.();`
 
 Code language: JavaScript (javascript)
 
@@ -143,7 +143,7 @@ This is useful when you use an API in which a method might be not available for 
 
 The following illustrates the syntax for using the optional chaining operator with a function or method call:
 
- `functionName ?. (args)`
+`functionName ?. (args)`
 
 Code language: JavaScript (javascript)
 
@@ -189,6 +189,6 @@ Code language: JavaScript (javascript)
 
 ### Summary
 
-* The optional chaining operator (`?.`) returns `undefined` instead of throwing an error if you attempt to access a property of an `null` or `undefined` object: `obj ?. property`.
-* Combine the optional chaining operator (`?.`) with the nullish coalescing operator (`??`) to assign a default value.
-* Use `functionName ?. (args)` to avoid explicitly checking if the `functionName` is not `undefined` or `null` before invoking it.
+- The optional chaining operator (`?.`) returns `undefined` instead of throwing an error if you attempt to access a property of an `null` or `undefined` object: `obj ?. property`.
+- Combine the optional chaining operator (`?.`) with the nullish coalescing operator (`??`) to assign a default value.
+- Use `functionName ?. (args)` to avoid explicitly checking if the `functionName` is not `undefined` or `null` before invoking it.

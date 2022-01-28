@@ -6,8 +6,6 @@ description: Navigate my docs
 
 # 🗺 Site Navigation
 
-
-
 {% embed url="https://duke-2.gitbook.io/duke" %}
 _<mark style="color:red;background-color:green;">**Self Link**</mark>_
 {% endembed %}

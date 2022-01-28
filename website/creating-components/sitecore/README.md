@@ -2,7 +2,7 @@
 
 ## Component Creation - Sitecore
 
-***
+---
 
 Table of Contents:
 
@@ -18,15 +18,15 @@ Table of Contents:
 
 **Checklist**
 
-* [ ] Ensure your component exists within Sitecore. If not, create it.
-* [ ] Create a folder in the `/components` directory and within it, an <mark style="color:blue; ">`index.ts`</mark> file for your React component.
-* [ ] Add a composition function to the index file of the `/composition` directory.
-* [ ] Create a `test.ts` file and add some unit test assertions to it.
-* [ ] Add a `data.js` file populated with dummy data (if necessary).
-* [ ] Develop your component with the data from the composition file.
-* [ ] Finish your unit tests.
-* [ ] Submit a PR.
-* [ ] Stretch. It's not part of the component, it's just good for your body.
+- [ ] Ensure your component exists within Sitecore. If not, create it.
+- [ ] Create a folder in the `/components` directory and within it, an <mark style="color:blue; ">`index.ts`</mark> file for your React component.
+- [ ] Add a composition function to the index file of the `/composition` directory.
+- [ ] Create a `test.ts` file and add some unit test assertions to it.
+- [ ] Add a `data.js` file populated with dummy data (if necessary).
+- [ ] Develop your component with the data from the composition file.
+- [ ] Finish your unit tests.
+- [ ] Submit a PR.
+- [ ] Stretch. It's not part of the component, it's just good for your body.
 
 </details>
 
