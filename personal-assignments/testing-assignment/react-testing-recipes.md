@@ -124,7 +124,7 @@ it("renders with or without a name", () => {
 
 Instead of calling real APIs in all your tests, you can mock requests with dummy data. Mocking data fetching with "fake" data prevents flaky tests due to an unavailable backend, and makes them run faster. Note: you may still want to run a subset of tests using an ["end-to-end"](https://reactjs.org/docs/testing-environments.html#end-to-end-tests-aka-e2e-tests) framework that tells whether the whole app is working together.
 
-```
+```js
 
 import React, { useState, useEffect } from "react";
 
@@ -402,7 +402,7 @@ export default function Card(props) {
 
 We can write tests for this component by leveraging [Jest's timer mocks](https://jestjs.io/docs/en/timer-mocks), and testing the different states it can be in.
 
-```
+```js
 
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
