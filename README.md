@@ -172,8 +172,8 @@ Website/creating-components/analytics.md" %}
 [general-info.md](general-info/general-info.md)
 {% endcontent-ref %}
 
-{% content-ref url="resources/links.md" %}
-[links.md](resources/links.md)
+{% content-ref url="resources/links/" %}
+[links](resources/links/)
 {% endcontent-ref %}
 
 {% content-ref url="general-info/argv.md" %}
@@ -184,8 +184,8 @@ Website/creating-components/analytics.md" %}
 [optional-chaning.md](general-info/optional-chaning.md)
 {% endcontent-ref %}
 
-{% content-ref url="general-info/optional-chaning/links.md" %}
-[links.md](general-info/optional-chaning/links.md)
+{% content-ref url="resources/links/links.md" %}
+[links.md](resources/links/links.md)
 {% endcontent-ref %}
 
 ## Nav

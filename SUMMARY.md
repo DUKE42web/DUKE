@@ -4,7 +4,8 @@
 
 ## 📚 Resources
 
-* [🕸 LINKS](resources/links.md)
+* [🕸 LINKS](resources/links/README.md)
+  * [🔖 Bookmarks](resources/links/links.md)
 * [Youtube & Videos:](resources/youtube-and-videos.md)
 
 ## The Company
@@ -21,6 +22,7 @@
 
 ## Website
 
+* [Live Deploy](website/live-deploy.md)
 * [⚒ CREATING COMPONENTS](Website/creating-components/README.md)
   * [ℹ Intro](Website/creating-components/intro.md)
   * [🧑💻 TechnicalOverview](Website/creating-components/technicaloverview.md)
@@ -44,6 +46,7 @@
   * [Typescript Types](website/typescript/typescript-types.md)
   * [Enums](website/typescript/enums.md)
   * [Types VS Interfaces](website/typescript/types-vs-interfaces.md)
+  * [Tutorial](website/typescript/tutorial.md)
 
 ## Personal Assignments
 
@@ -68,6 +71,6 @@
 * [📚 General Info](general-info/general-info.md)
 * [Curry VS Functional Composition](general-info/curry-vs-functional-composition.md)
 * [Argv](general-info/argv.md)
+* [Enums In Javascript](general-info/enums-in-javascript.md)
 * [Optional Chaning](general-info/optional-chaning.md)
-  * [Links](general-info/optional-chaning/links.md)
 * [JIRA](general-info/jira.md)
