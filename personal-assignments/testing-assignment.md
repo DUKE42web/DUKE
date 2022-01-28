@@ -40,6 +40,12 @@
     * The content area should be centered horizontally when when the CTA is not displayed.
     * There are predefined background options.
 
+![](<../.gitbook/assets/Screen Shot 2022-01-28 at 12.18.23 PM.png>)
+
+
+
+![](../.gitbook/assets/assignment.png)
+
 ![](<../.gitbook/assets/Screen Shot 2022-01-27 at 3.23.20 AM (1).png>)
 
 ![](<../.gitbook/assets/Screen Shot 2022-01-27 at 12.59.02 AM.png>)
