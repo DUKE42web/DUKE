@@ -72,6 +72,7 @@
 * [📚 General Info](general-info/general-info.md)
 * [Curry VS Functional Composition](general-info/curry-vs-functional-composition.md)
 * [Argv](general-info/argv.md)
+* [Modules](general-info/modules.md)
 * [Enums In Javascript](general-info/enums-in-javascript.md)
 * [Optional Chaning](general-info/optional-chaning.md)
 * [JIRA](general-info/jira.md)
