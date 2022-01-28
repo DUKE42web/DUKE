@@ -54,12 +54,12 @@ That may seem a lot to unpack, so let's examine that for a second. Note that the
 
 ## Resources
 
-* [Styled Components](https://styled-components.com/) - documentation in case you need to step outside the Tailwind garden
-* [Tailwind Requests](https://confluence.duke-energy.com/display/DEPW/Tailwind+requests) - add to the Tailwind/Electron wishlist!
-* [Electron Docs](https://electron.duke-energy.com/foundation/utilities/utility-first)
-* [Tailwind VSCode Intellisense Plugin](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-* [Nerdcave CheatSheet](https://nerdcave.com/tailwind-cheat-sheet) - some random guy made a really handy cheatsheet for Tailwind CSS. Obviously, our rules won't be on it, but it's a nice quick reference for a lot of the classes.
-* [Tailwind CSS Docs](https://tailwindcss.com/docs) - their official docs are better than most
-* [Configuring Variants](https://v1.tailwindcss.com/docs/configuring-variants) - case in point
+- [Styled Components](https://styled-components.com/) - documentation in case you need to step outside the Tailwind garden
+- [Tailwind Requests](https://confluence.duke-energy.com/display/DEPW/Tailwind+requests) - add to the Tailwind/Electron wishlist!
+- [Electron Docs](https://electron.duke-energy.com/foundation/utilities/utility-first)
+- [Tailwind VSCode Intellisense Plugin](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [Nerdcave CheatSheet](https://nerdcave.com/tailwind-cheat-sheet) - some random guy made a really handy cheatsheet for Tailwind CSS. Obviously, our rules won't be on it, but it's a nice quick reference for a lot of the classes.
+- [Tailwind CSS Docs](https://tailwindcss.com/docs) - their official docs are better than most
+- [Configuring Variants](https://v1.tailwindcss.com/docs/configuring-variants) - case in point
 
 [React](./React.md) | [Typescript](./Typescript.md) | [Tailwind](./Tailwind.md) | [Forms](./Forms.md) | [Unit Tests](./UnitTests.md)

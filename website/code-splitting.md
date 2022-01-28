@@ -144,12 +144,12 @@ By default, the webpack plugin adds an asset to the webpack build called `loadab
 
 `stats.toJson()` is an expensive operation, and it can significantly slow down webpack watching recompiles. If you already have a webpack stats file in your build that includes the necessary options, you may choose to use your existing stats object instead of creating a new one. You can do this as follows:
 
-* pass your existing stats object into [`ChunkExtractor`](https://loadable-components.com/docs/api-loadable-server/#chunkextractor) via the `stats` option
-* disable both the `outputAsset` and `writeToDisk` options in the [webpack plugin](https://loadable-components.com/docs/api-loadable-webpack-plugin/#loadableplugin) to prevent it from calling `stats.toJson()`
+- pass your existing stats object into [`ChunkExtractor`](https://loadable-components.com/docs/api-loadable-server/#chunkextractor) via the `stats` option
+- disable both the `outputAsset` and `writeToDisk` options in the [webpack plugin](https://loadable-components.com/docs/api-loadable-webpack-plugin/#loadableplugin) to prevent it from calling `stats.toJson()`
 
 </details>
 
-***
+---
 
 ## Server
 
@@ -209,7 +209,7 @@ const jsx = extractor.collectChunks( < AppRoot path = {
         );
 ```
 
-***
+---
 
 ## Client
 

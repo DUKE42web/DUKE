@@ -6,7 +6,7 @@
 >
 > How to implement and use enumerations (or enum types) in Javascript
 
-***
+---
 
 Updated on November 26, 2021
 
@@ -40,28 +40,25 @@ const Spring = "spring"
 While this would work for small codebases, we will face a few immediate issues:
 
 1. It’s easy to make mistakes in your code. A developer can make the mistake of using integers outside the range of the ones defined.
-2.  Definitions from unrelated enums can overlap and cause conflicts:
-
-
+2. Definitions from unrelated enums can overlap and cause conflicts:
 
 ```javascript
-const Summer = 0
-const Autumn = 1
-const Winter = 2
-const Spring = 3
+const Summer = 0;
+const Autumn = 1;
+const Winter = 2;
+const Spring = 3;
 
-const Apples = 0
-const Oranges = 1
+const Apples = 0;
+const Oranges = 1;
 
-
-console.log(Summer === Apples)
+console.log(Summer === Apples);
 ```
 
 1. This is semantically incorrect - Seasons are not _really_ integers or strings, they’re seasons!
 
 ### Enums with Symbols
 
-[Symbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Symbol) let us define values that are guaranteed not to collide with one another.
+[Symbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) let us define values that are guaranteed not to collide with one another.
 
 For example:
 
@@ -117,7 +114,7 @@ Let’s see how we can use classes and objects to create distinct enum groups:
 
 ```
 class Season {
-  
+
   static Summer = new Season("summer")
   static Autumn = new Season("autumn")
   static Winter = new Season("winter")

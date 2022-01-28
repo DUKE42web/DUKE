@@ -2,7 +2,7 @@
 
 ## Analytics
 
-Adding analytics to a component is pretty straightforward, 
+Adding analytics to a component is pretty straightforward,
 
 First set up your analytics object in your `composition` method:
 

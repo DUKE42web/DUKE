@@ -11,9 +11,11 @@ Rather than all code living in a single file, we can split the code up into diff
 Add LoadablePlugin.
 
 ```js
-const LoadablePlugin = require('@loadable/webpack-plugin');
+const LoadablePlugin = require("@loadable/webpack-plugin");
 ```
+
 ...
+
 ```js
 plugins: [new LoadablePlugin({
     filename: 'loadable-stats-server.json'

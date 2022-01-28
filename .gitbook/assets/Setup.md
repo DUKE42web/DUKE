@@ -5,17 +5,18 @@ This section outlines getting the application (for the JSS public site) setup fo
    2. clone the project from https://bitbucketp.duke-energy.com/projects/DUKCOM/repos/dxt-jss-public/browse
       1. In your terminal (command line), run `git clone https://bitbucketp.duke-energy.com/scm/dukcom/dxt-jss-public.git`
 2. Install dependencies
+
    1. Use node -v `14.17.4`
 
    2. Set npm registry to Nexus (prod)\*
       1. run `npm config set registry https://nexus.duke-energy.com/repository/duke-cne-npm/` on the command line
    3. Run `npm install` on the command line
+
 3. Setup .jssconfig and .env
    1. Add `scjssconfig.json` file (or rename scjssconfig-sample.json → scjssconfig.json)
       1. Add:
-         
 
-```
+````
          {
            "sitecore": {
              "instancePath": "",
@@ -30,21 +31,24 @@ This section outlines getting the application (for the JSS public site) setup fo
 4. Add `.env` file (or rename `.env-sample` → .env)
    1. Add:
 
-      
 
-```
+
+````
+
       HTTPS=true
       ```
 
       This will allow you to use `https://` for development so that jurisdiction cookies will work properly.
 
 5. Setup your `.hosts` file
+
    1. We need to set the local IP to `local.duke-energy.com` so we can use cookies set by the `.duke-energy.com` domain.
    2. On the command line, run  `sudo vim /etc/hosts`
 
    3. Add a new line and enter `127.0.0.1 local.duke-energy.com`
 
    4. Press `Esc` key and then `:x` to save and exit
+
 6. Start the project for development.
    1. Inside the project, run `npm run start:connected` on the command line.
    2. After the app successfully starts up, change the URL to `https://local.duke-energy.com:3000/home` .

@@ -7,17 +7,16 @@ description: DXT
 
 # 🏨 Meet the Team!
 
-## DXT (Web and customer facing tools)&#x20; 
+## DXT (Web and customer facing tools)&#x20;
 
-* Mobil app...
-* Customer connect (add self service features and consolidate different&#x20; 
+- Mobil app...
+- Customer connect (add self service features and consolidate different&#x20;
 
 ### &#x20; Teams
 
-*   Your teams
-    
+- Your teams
 
-```
+````
     O365-MAC User Support
 
     -   General
@@ -154,3 +153,4 @@ Sr IT Applications Analyst
 {% hint style="info" %}
 
 {% endhint %}
+````

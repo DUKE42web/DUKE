@@ -2,7 +2,7 @@
 
 ## Component Creation - Intro
 
-***
+---
 
 Table of Contents:
 
@@ -12,7 +12,7 @@ Table of Contents:
 4. Definition of Done
 5. Sitecore
 
-***
+---
 
 ## Introduction
 
@@ -20,10 +20,10 @@ To understand how a component is displayed within our application, it helps to u
 
 This is a somewhat complex process, but the simplified overview is this:
 
-* When a user navigates to a route, the React app receives a big bundle of data from Sitecore, including a list of components, and the relevant data for those components.
-* That list represents the building blocks of the page that the user has navigated to.
-* <mark style="background-color:purple; ">Those "building blocks" are checked against the component list of our application, and when a match is found, a React component is returned, along with the data that Sitecore sent along with the component that it needs to render properly.</mark>
-* If a match is not found, a "placeholder component" is rendered instead. Within the React app, this is exactly what it sounds like: a big, ugly "placeholder" to remind you that this component has not yet been created for the app:
+- When a user navigates to a route, the React app receives a big bundle of data from Sitecore, including a list of components, and the relevant data for those components.
+- That list represents the building blocks of the page that the user has navigated to.
+- <mark style="background-color:purple; ">Those "building blocks" are checked against the component list of our application, and when a match is found, a React component is returned, along with the data that Sitecore sent along with the component that it needs to render properly.</mark>
+- If a match is not found, a "placeholder component" is rendered instead. Within the React app, this is exactly what it sounds like: a big, ugly "placeholder" to remind you that this component has not yet been created for the app:
 
 Oops! 🙀 we dont have Global Alerts yet!\\
 
@@ -35,7 +35,7 @@ Next >
 
 <summary>Readme</summary>
 
-:leftwards\_arrow\_with\_hook:[ Basics](intro.md)
+:leftwards_arrow_with_hook:[ Basics](intro.md)
 
 **Component Creation**
 
