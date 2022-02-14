@@ -4,6 +4,7 @@
 
 ## 📚 Resources
 
+* [Site Audit](resources/site-audit.md)
 * [🕸 LINKS](resources/links/README.md)
   * [🔖 Bookmarks](resources/links/links.md)
 * [Youtube & Videos:](resources/youtube-and-videos.md)
@@ -80,3 +81,7 @@
 * [JIRA](general-info/jira.md)
 * [🕸 Webpack](general-info/webpack.md)
 * [Promises](general-info/promises.md)
+
+***
+
+* [Duke Energy Manual Audit\_Report](duke-energy-manual-audit\_report.md)
