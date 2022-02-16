@@ -1,8 +1,8 @@
 # 🕐 Testing Assignment
 
-*   ###
+*   ####
 
-    #### Onboarding project
+    **Onboarding project**
 
     You will work through building a component using React, TypeScript and Tailwind, working with mock data from Sitecore, writing tests, and setting up your component in Storybook.
 

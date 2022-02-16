@@ -4,7 +4,7 @@
 
 <summary>Configuring A Project</summary>
 
-#### Configuring a project
+**Configuring a project**
 
 **In this section**
 
@@ -81,7 +81,7 @@ Learn more: [Managing components](https://confluence.atlassian.com/adminjiraserv
 
 <summary>Jira Advanced Search</summary>
 
-#### Advanced searching
+**Advanced searching**
 
 **On this page**
 
@@ -147,7 +147,7 @@ _Screenshot: Advanced search_
        *
        *
        *
-2. ### Enter your JQL query. As you type, Jira will offer a list of "auto-complete" suggestions based on the context of your query. Note, auto-complete suggestions only include the first 15 matches, displayed alphabetically, so you may need to enter more text if you can't find a match. [Why aren't the auto-complete suggestions being shown?](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#)
+2. #### Enter your JQL query. As you type, Jira will offer a list of "auto-complete" suggestions based on the context of your query. Note, auto-complete suggestions only include the first 15 matches, displayed alphabetically, so you may need to enter more text if you can't find a match. [Why aren't the auto-complete suggestions being shown?](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#)
    *
    *
 3. Press Enter or click **Search** to run your query. Your search results will display in the issue navigator.

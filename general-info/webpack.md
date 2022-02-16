@@ -1,12 +1,10 @@
 # 🕸 Webpack
 
-
-
 ## Concepts | webpack
 
-> ### Excerpt
+> #### Excerpt
 >
-> #### webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
+> **webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.**
 
 ***
 
@@ -512,7 +510,6 @@ module.exports = {
 #### Defaults: Example 1
 
 ```
-
 import('./a'); 
 ```
 
@@ -534,7 +531,6 @@ What's the reasoning behind this? `react` probably won't change as often as your
 #### Defaults: Example 2
 
 ```
-
 
 import('./a');
 import('./b');

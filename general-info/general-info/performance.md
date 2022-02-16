@@ -4,9 +4,9 @@
 
 <summary>Code Splitting</summary>
 
-## Reduce JavaScript payloads with code splitting
+### Reduce JavaScript payloads with code splitting
 
-### Excerpt
+#### Excerpt
 
 Sending large JavaScript payloads impacts the speed of your site significantly. Instead of shipping all the JavaScript to your user as soon as the first page of your application is loaded, split your bundle into multiple pieces and only send what's necessary at the very beginning.
 
@@ -18,7 +18,7 @@ Nobody likes waiting. [**Over 50% of users abandon a website if it takes longer 
 
 Sending large JavaScript payloads impacts the speed of your site significantly. Instead of shipping all the JavaScript to your user as soon as the first page of your application is loaded, split your bundle into multiple pieces and only send what's necessary at the very beginning.
 
-### Measure [#](https://web.dev/reduce-javascript-payloads-with-code-splitting/#measure)
+#### Measure [#](https://web.dev/reduce-javascript-payloads-with-code-splitting/#measure)
 
 Lighthouse displays a failed audit when a significant amount of time is taken to execute all the JavaScript on a page.
 
@@ -50,7 +50,7 @@ Last updated: Nov 5, 2018 — [Improve article](https://github.com/GoogleChrome/
 
 ## Time to Interactive (TTI)
 
-> ### Excerpt
+> #### Excerpt
 >
 > This post introduces the Time to Interactive (TTI) metric and explains how to measure it
 

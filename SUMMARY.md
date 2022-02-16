@@ -1,10 +1,11 @@
 # Table of contents
 
 * [🗺 Site Navigation](README.md)
+* [🔬 Testing](testing.md)
 
 ## 📚 Resources
 
-* [Site Audit](resources/site-audit.md)
+* [🧐 Site Audit](resources/site-audit.md)
 * [🕸 LINKS](resources/links/README.md)
   * [🔖 Bookmarks](resources/links/links.md)
 * [Youtube & Videos:](resources/youtube-and-videos.md)
@@ -28,7 +29,7 @@
 * [⚒ CREATING COMPONENTS](Website/creating-components/README.md)
   * [ℹ Intro](Website/creating-components/intro.md)
   * [🧑💻 TechnicalOverview](Website/creating-components/technicaloverview.md)
-    * [👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 PracticalOverview](Website/creating-components/practicaloverview.md)
+    * [👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 PracticalOverview](Website/creating-components/practicaloverview.md)
   * [📈 Analytics](Website/creating-components/analytics.md)
   * [📰 Sitecore](website/creating-components/sitecore/README.md)
     * [Sitecore-Docs](website/creating-components/sitecore/sitecore-docs.md)
