@@ -1,7 +1,8 @@
 # Table of contents
 
 * [🗺 Site Navigation](README.md)
-* [🔬 Testing](testing.md)
+* [🔬 Testing](testing/README.md)
+  * [Testing Input](testing/testing-input.md)
 
 ## 📚 Resources
 

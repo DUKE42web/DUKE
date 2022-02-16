@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/react-testing.png
+cover: ../.gitbook/assets/react-testing.png
 coverY: 0
 ---
 
