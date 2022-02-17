@@ -58,7 +58,7 @@ _<mark style="color:red;background-color:green;">**Self Link**</mark>_
 [practicaloverview.md](Website/creating-components/practicaloverview.md)
 {% endcontent-ref %}
 
-Website/creating-components/analytics.md" %}
+Website/creating-components/analytics.md" %\}
 
 {% content-ref url="website/creating-components/sitecore/" %}
 [sitecore](website/creating-components/sitecore/)
@@ -166,8 +166,8 @@ Website/creating-components/analytics.md" %}
 
 ### General Info
 
-{% content-ref url="general-info/general-info/" %}
-[general-info](general-info/general-info/)
+{% content-ref url="general-info/general-info.md" %}
+[general-info.md](general-info/general-info.md)
 {% endcontent-ref %}
 
 {% content-ref url="resources/links/" %}

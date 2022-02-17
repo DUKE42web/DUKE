@@ -73,10 +73,11 @@
 
 ## General Info
 
-* [⚛ REACT NOTES](general-info/react-notes.md)
-* [📚 General Info](general-info/general-info/README.md)
-  * [Performance](general-info/general-info/performance.md)
+* [⚛ REACT NOTES](general-info/react-notes/README.md)
+  * [Page 1](general-info/react-notes/page-1.md)
+* [📚 General Info](general-info/general-info.md)
 * [Curry VS Functional Composition](general-info/curry-vs-functional-composition.md)
+* [Performance](general-info/performance.md)
 * [Argv](general-info/argv.md)
 * [Modules](general-info/modules.md)
 * [Enums In Javascript](general-info/enums-in-javascript.md)
