@@ -73,6 +73,7 @@
 
 ## General Info
 
+* [⚛ REACT NOTES](general-info/react-notes.md)
 * [📚 General Info](general-info/general-info/README.md)
   * [Performance](general-info/general-info/performance.md)
 * [Curry VS Functional Composition](general-info/curry-vs-functional-composition.md)
