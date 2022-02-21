@@ -2,7 +2,7 @@
 
 ## Component Creation - Technical Overview
 
-***
+---
 
 Table of Contents:
 
@@ -12,11 +12,11 @@ Table of Contents:
 4. Definition of Done
 5. Sitecore
 
-***
+---
 
 ## A Technical Overview
 
-***
+---
 
 ### Generate Component Factory
 
@@ -27,9 +27,9 @@ Table of Contents:
 ```js
 /* eslint-disable */
 
-const fs = require('fs');
-const path = require('path');
-const chokidar = require('chokidar');
+const fs = require("fs");
+const path = require("path");
+const chokidar = require("chokidar");
 
 /*
   COMPONENT FACTORY GENERATION
@@ -51,191 +51,206 @@ const chokidar = require('chokidar');
 
 /* eslint-disable no-console */
 
-const componentFactoryPath = path.resolve('src/temp/componentFactory.js');
-const componentRootPath = 'src/components';
+const componentFactoryPath = path.resolve("src/temp/componentFactory.js");
+const componentRootPath = "src/components";
 
-const isWatch = process.argv.some(arg => arg === '--watch');
+const isWatch = process.argv.some((arg) => arg === "--watch");
 
 if (isWatch) {
-    watchComponentFactory();
+  watchComponentFactory();
 } else {
-    writeComponentFactory();
+  writeComponentFactory();
 }
 
 function watchComponentFactory() {
-    console.log(`Watching for changes to component factory sources in ${componentRootPath}...`);
+  console.log(
+    `Watching for changes to component factory sources in ${componentRootPath}...`
+  );
 
-    chokidar
-        .watch(componentRootPath, {
-            ignoreInitial: true,
-            awaitWriteFinish: true
-        })
-        .on('add', writeComponentFactory)
-        .on('unlink', writeComponentFactory);
+  chokidar
+    .watch(componentRootPath, {
+      ignoreInitial: true,
+      awaitWriteFinish: true,
+    })
+    .on("add", writeComponentFactory)
+    .on("unlink", writeComponentFactory);
 }
 
 function writeComponentFactory() {
-    const componentFactory = generateComponentFactory();
+  const componentFactory = generateComponentFactory();
 
-    console.log(`Writing component factory to ${componentFactoryPath}`);
+  console.log(`Writing component factory to ${componentFactoryPath}`);
 
-    fs.writeFileSync(componentFactoryPath, componentFactory, {
-        encoding: 'utf8'
-    });
+  fs.writeFileSync(componentFactoryPath, componentFactory, {
+    encoding: "utf8",
+  });
 }
 
 function generateComponentFactory() {
-    // by convention, we expect to find React components
-    // * under /src/components/ComponentName
-    // * with an index.js under the folder to define the component
-    // If you'd like to use your own convention, encode it below.
-    // NOTE: generating the component factory is also totally optional,
-    // and it can be maintained manually if preferred.
+  // by convention, we expect to find React components
+  // * under /src/components/ComponentName
+  // * with an index.js under the folder to define the component
+  // If you'd like to use your own convention, encode it below.
+  // NOTE: generating the component factory is also totally optional,
+  // and it can be maintained manually if preferred.
 
-    const imports = [];
-    const registrations = [];
+  const imports = [];
+  const registrations = [];
 
-    // a mapping of components that we want to reference in a different
-    // name other than what sitecore calls it
-    // [key: string]: Array<string>
-    // ex: OurComponentName: ['SitecoreNaming', 'AnotherPossibleSitecoreName', etc..]
-    const componentAlias = {
-        Accordion: ['JSS Accordion'],
-        AdditionalResources: ['Additional Resources'],
-        ApplicationComponent: ['Application Component'],
-        BulletedOverview: ['Bulleted Overview'],
-        CallToAction: ['Call To Action'],
-        EmailSignup: ['Email Sign Up'],
-        GlobalAlerts: ['Global Alerts'],
-        LatestNews: ['Latest News'],
-        LightAuth: ['Light Authentication'],
-        ModalSessionExpiration: ['Session Expiration Modal'],
-        ModalSlideshow: ['Modal Slideshow'],
-        ModalVideo: ['Modal Video'],
-        MoreInfoWidget: ['More Info Widget'],
-        MultiColumn: ['Multi Column'],
-        MultiStepForm: ['Multi Step Form'],
-        NewsAndResources: ['News and Resources', 'News And Resources'],
-        NewsBanner: ['News Banner'],
-        PageLoad: ['Jss Page Load'],
-        ProductCards: ['Product Cards'],
-        PushDownPanel: ['Push Down Panel'],
-        PushDownPanelItem: ['Push Down Panel Item'],
-        QuickLinks: ['Quick Links'],
-        RelatedLinks: ['Related Links'],
-        RichText: ['Rich Text'],
-        Search: ['Search Results'],
-        SecondaryNav: ['NavItems'],
-        SingleStepForm: ['Single Step Form'],
-        SiteSettings: ['Site Settings'],
-        SkipRenderingComponent: [
-            'Dessa',
-            'Hero Stock Ticker',
-            'Progressive Disclosure Form',
-            'Sign In',
-            'Page Access',
-        ],
-        TopTasks: ['Top Tasks'],
-    };
+  // a mapping of components that we want to reference in a different
+  // name other than what sitecore calls it
+  // [key: string]: Array<string>
+  // ex: OurComponentName: ['SitecoreNaming', 'AnotherPossibleSitecoreName', etc..]
+  const componentAlias = {
+    Accordion: ["JSS Accordion"],
+    AdditionalResources: ["Additional Resources"],
+    ApplicationComponent: ["Application Component"],
+    BulletedOverview: ["Bulleted Overview"],
+    CallToAction: ["Call To Action"],
+    EmailSignup: ["Email Sign Up"],
+    GlobalAlerts: ["Global Alerts"],
+    LatestNews: ["Latest News"],
+    LightAuth: ["Light Authentication"],
+    ModalSessionExpiration: ["Session Expiration Modal"],
+    ModalSlideshow: ["Modal Slideshow"],
+    ModalVideo: ["Modal Video"],
+    MoreInfoWidget: ["More Info Widget"],
+    MultiColumn: ["Multi Column"],
+    MultiStepForm: ["Multi Step Form"],
+    NewsAndResources: ["News and Resources", "News And Resources"],
+    NewsBanner: ["News Banner"],
+    PageLoad: ["Jss Page Load"],
+    ProductCards: ["Product Cards"],
+    PushDownPanel: ["Push Down Panel"],
+    PushDownPanelItem: ["Push Down Panel Item"],
+    QuickLinks: ["Quick Links"],
+    RelatedLinks: ["Related Links"],
+    RichText: ["Rich Text"],
+    Search: ["Search Results"],
+    SecondaryNav: ["NavItems"],
+    SingleStepForm: ["Single Step Form"],
+    SiteSettings: ["Site Settings"],
+    SkipRenderingComponent: [
+      "Dessa",
+      "Hero Stock Ticker",
+      "Progressive Disclosure Form",
+      "Sign In",
+      "Page Access",
+    ],
+    TopTasks: ["Top Tasks"],
+  };
 
-    // Do not map these components
-    const componentToIgnore = [
-        'Button',
-        'Carousel',
-        'LazyImage',
-        'Link',
-        'LoadingOverlay',
-        'PageHeading',
-        'SidePanel',
-        'StockTicker',
-        'Svgs',
-        'SvgLoader',
-    ];
+  // Do not map these components
+  const componentToIgnore = [
+    "Button",
+    "Carousel",
+    "LazyImage",
+    "Link",
+    "LoadingOverlay",
+    "PageHeading",
+    "SidePanel",
+    "StockTicker",
+    "Svgs",
+    "SvgLoader",
+  ];
 
-    // If we need to load a JSS component from somewhere like src/components/SomeComponent/NestedComponent
-    const nestedComponents = {
-        // [What the root folder is]: ['Aliased name', 'Sitecore name']
-        PushDownPanel: ['PushDownPanelItem', 'Push Down Panel Item'],
-        Tab: ['TabItem', 'Tab Item'],
-    };
+  // If we need to load a JSS component from somewhere like src/components/SomeComponent/NestedComponent
+  const nestedComponents = {
+    // [What the root folder is]: ['Aliased name', 'Sitecore name']
+    PushDownPanel: ["PushDownPanelItem", "Push Down Panel Item"],
+    Tab: ["TabItem", "Tab Item"],
+  };
 
-    // If composition exists, import component from there to transform the props (see lib/Composition).
-    const addComponentImports = (importedComponent, componentName, hasComposition = false) => {
-        imports.push(
-            `import ${importedComponent} from '../components/${componentName}${
-        hasComposition ? '/composition' : ''
+  // If composition exists, import component from there to transform the props (see lib/Composition).
+  const addComponentImports = (
+    importedComponent,
+    componentName,
+    hasComposition = false
+  ) => {
+    imports.push(
+      `import ${importedComponent} from '../components/${componentName}${
+        hasComposition ? "/composition" : ""
       }';`
-        );
-    };
+    );
+  };
 
-    // Sets both the aliased name and the sitecore name to the same imported component
-    const addComponentRegistrations = (componentName, importedComponent) => {
-        registrations.push(`components.set('${componentName}', ${importedComponent});`);
-    };
+  // Sets both the aliased name and the sitecore name to the same imported component
+  const addComponentRegistrations = (componentName, importedComponent) => {
+    registrations.push(
+      `components.set('${componentName}', ${importedComponent});`
+    );
+  };
 
-    const registerAliases = (arr, importVarName) => {
-        arr.forEach(name => {
-            addComponentRegistrations(name, importVarName);
-        });
-    };
-
-    // boolean check if a composition file exists in that path location
-    const checkComposition = componentPath => {
-        return fs.existsSync(path.join(componentPath, 'composition.tsx'));
-    };
-
-    fs.readdirSync(componentRootPath).forEach(componentFolder => {
-        const componentFolderFullPath = path.join(componentRootPath, componentFolder);
-
-        // early return if componentFolder is a componentToIgnore
-        if (componentToIgnore.some(elm => elm === componentFolder)) {
-            return null;
-        }
-
-        if (
-            fs.existsSync(path.join(componentFolderFullPath, 'index.js')) ||
-            fs.existsSync(path.join(componentFolderFullPath, 'index.jsx')) ||
-            fs.existsSync(path.join(componentFolderFullPath, 'index.tsx'))
-        ) {
-            const importVarName = componentFolder.replace(/[^\w]+/g, '');
-            const aliasNames = componentAlias[componentFolder];
-            const hasComposition = checkComposition(componentFolderFullPath);
-            const nestedComponent = nestedComponents[componentFolder];
-
-            console.debug(`Registering JSS component ${componentFolder}`);
-
-            addComponentImports(importVarName, componentFolder, hasComposition);
-            addComponentRegistrations(componentFolder, importVarName);
-
-            // push alias variants (if any) to the map
-            if (aliasNames) {
-                registerAliases(aliasNames, importVarName);
-            }
-
-            if (nestedComponent) {
-                const nestedFolder = `${componentFolder}/${nestedComponent[0]}`;
-                const nestedFolderFullPath = path.join(componentRootPath, nestedFolder);
-                const hasNestedComposition = checkComposition(nestedFolderFullPath);
-
-                console.debug(`Registering JSS component ${nestedComponent[0]}`);
-
-                addComponentImports(nestedComponent[0], nestedFolder, hasNestedComposition);
-
-                // register the pascal case and alias names
-                nestedComponent.forEach(name => {
-                    addComponentRegistrations(name, nestedComponent[0]);
-                });
-            }
-        }
+  const registerAliases = (arr, importVarName) => {
+    arr.forEach((name) => {
+      addComponentRegistrations(name, importVarName);
     });
+  };
 
-    return `/* eslint-disable */
+  // boolean check if a composition file exists in that path location
+  const checkComposition = (componentPath) => {
+    return fs.existsSync(path.join(componentPath, "composition.tsx"));
+  };
+
+  fs.readdirSync(componentRootPath).forEach((componentFolder) => {
+    const componentFolderFullPath = path.join(
+      componentRootPath,
+      componentFolder
+    );
+
+    // early return if componentFolder is a componentToIgnore
+    if (componentToIgnore.some((elm) => elm === componentFolder)) {
+      return null;
+    }
+
+    if (
+      fs.existsSync(path.join(componentFolderFullPath, "index.js")) ||
+      fs.existsSync(path.join(componentFolderFullPath, "index.jsx")) ||
+      fs.existsSync(path.join(componentFolderFullPath, "index.tsx"))
+    ) {
+      const importVarName = componentFolder.replace(/[^\w]+/g, "");
+      const aliasNames = componentAlias[componentFolder];
+      const hasComposition = checkComposition(componentFolderFullPath);
+      const nestedComponent = nestedComponents[componentFolder];
+
+      console.debug(`Registering JSS component ${componentFolder}`);
+
+      addComponentImports(importVarName, componentFolder, hasComposition);
+      addComponentRegistrations(componentFolder, importVarName);
+
+      // push alias variants (if any) to the map
+      if (aliasNames) {
+        registerAliases(aliasNames, importVarName);
+      }
+
+      if (nestedComponent) {
+        const nestedFolder = `${componentFolder}/${nestedComponent[0]}`;
+        const nestedFolderFullPath = path.join(componentRootPath, nestedFolder);
+        const hasNestedComposition = checkComposition(nestedFolderFullPath);
+
+        console.debug(`Registering JSS component ${nestedComponent[0]}`);
+
+        addComponentImports(
+          nestedComponent[0],
+          nestedFolder,
+          hasNestedComposition
+        );
+
+        // register the pascal case and alias names
+        nestedComponent.forEach((name) => {
+          addComponentRegistrations(name, nestedComponent[0]);
+        });
+      }
+    }
+  });
+
+  return `/* eslint-disable */
 // Do not edit this file, it is auto-generated at build time!
 // See scripts/generate-component-factory.js to modify the generation of this file.
-${imports.join('\n')}
+${imports.join("\n")}
 
 const components = new Map();
-${registrations.join('\n')}
+${registrations.join("\n")}
 
 export default function componentFactory(componentName) {
   return components.get(componentName);
@@ -258,9 +273,9 @@ Sometimes Sitecore references a component in a way that is different from what w
 
 ```ts
 const componentAlias = {
-  HeroCarousel: 'Hero',
-  HeroCarouselNocache: 'Hero',
-  JssAccordion: 'Accordion',
+  HeroCarousel: "Hero",
+  HeroCarouselNocache: "Hero",
+  JssAccordion: "Accordion",
   // ...
 };
 ```
@@ -291,26 +306,24 @@ To illustrate this, in the following example, the QuickLinks component will get 
 
 ```js
 // composition/index.js
-const QuickLinks = ({
-    fields
-}) => {
-    const items = fields?.QuickLinkItems?.reduce(
-        (acc, curr) => [
-            ...acc,
-            {
-                image: {
-                    ...curr.Icon?.value
-                },
-                link: curr.Link?.value?.href,
-                title: curr.Title?.value,
-                id: curr.Id,
-            },
-        ],
-        []
-    );
-    return {
-        items
-    };
+const QuickLinks = ({ fields }) => {
+  const items = fields?.QuickLinkItems?.reduce(
+    (acc, curr) => [
+      ...acc,
+      {
+        image: {
+          ...curr.Icon?.value,
+        },
+        link: curr.Link?.value?.href,
+        title: curr.Title?.value,
+        id: curr.Id,
+      },
+    ],
+    []
+  );
+  return {
+    items,
+  };
 };
 ```
 
@@ -333,13 +346,13 @@ Now that you know how components are implemented within our app, how is a compon
 
 Generally, each component you create will consist of at least one of the following items:
 
-* an [`index.tsx` file](broken-reference/) - your React file.
-* a [`composition.tsx`](broken-reference/) file for transforming incoming data into more concise props
-* a [`test.tsx` file](broken-reference/) - a file for your unit tests.
-* a [`types.ts` file](broken-reference/) - for Typescript definitions and interfaces
-* a [`stories.js` file](broken-reference/) - for Storybook..
-* a [`data.js` file](broken-reference/) - for mock Sitecore data.
-* a [📁 containing each of these files](broken-reference/) - It's a folder.
+- an [`index.tsx` file](broken-reference/) - your React file.
+- a [`composition.tsx`](broken-reference/) file for transforming incoming data into more concise props
+- a [`test.tsx` file](broken-reference/) - a file for your unit tests.
+- a [`types.ts` file](broken-reference/) - for Typescript definitions and interfaces
+- a [`stories.js` file](broken-reference/) - for Storybook..
+- a [`data.js` file](broken-reference/) - for mock Sitecore data.
+- a [📁 containing each of these files](broken-reference/) - It's a folder.
 
 Read on for more detail.
 

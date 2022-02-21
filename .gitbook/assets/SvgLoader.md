@@ -14,12 +14,12 @@ To use the SvgLoader you would simply use it like this:
 
 It requires only one prop, name. This is a string that represents the svg component. The other props are:
 
-* animate: this will add a transform timing and easing to the style
-* className: class that you would like to inject
-* color: the tailwind color that you would like the svg to be
-* rotate: a number that will rotate the svg in degrees
-* size: the width and height
-* style: css style object of any other properties you wish to pass in
+- animate: this will add a transform timing and easing to the style
+- className: class that you would like to inject
+- color: the tailwind color that you would like the svg to be
+- rotate: a number that will rotate the svg in degrees
+- size: the width and height
+- style: css style object of any other properties you wish to pass in
 
 ```typescript
 <SvgLoader
@@ -29,7 +29,7 @@ It requires only one prop, name. This is a string that represents the svg compon
   name="Arrow"
   rotate={90}
   size={32}
-  style={{ margin: 'auto' }}
+  style={{ margin: "auto" }}
 />
 ```
 
@@ -55,7 +55,7 @@ In order to use this lazy loaded component we need to wrap it in a `<Suspense>` 
 
 ```typescript
 <Suspense fallback={<svg {...props}></svg>}>
-  <SvgComponent {...{ 'data-testid': 'svg', ...props }} />
+  <SvgComponent {...{ "data-testid": "svg", ...props }} />
 </Suspense>
 ```
 
@@ -70,18 +70,19 @@ For the tests on the SvgLoader we need to account for the React lazy loading and
 First we do the imports:
 
 ```typescript
-import { render, waitFor, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import SvgLoader from './index';
+import { render, waitFor, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import SvgLoader from "./index";
 ```
 
 and then the test..
 
 ```typescript
-it('should change the text color class if given a color prop', async () => {
+it("should change the text color class if given a color prop", async () => {
   render(<SvgLoader color="gray" name="Arrow" />);
-  const mounted = await waitFor(() => expect(screen.getByTestId('svg')));
-  mounted && expect(screen.getByTestId('svg')).toHaveAttribute('class', 'text-gray');
+  const mounted = await waitFor(() => expect(screen.getByTestId("svg")));
+  mounted &&
+    expect(screen.getByTestId("svg")).toHaveAttribute("class", "text-gray");
 });
 ```
 

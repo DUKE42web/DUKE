@@ -13,33 +13,34 @@ Let’s look at a first example, to give you a taste of what working with promis
 With Node.js-style callbacks, reading a file asynchronously looks like this:
 
 ```js
-fs.readFile('config.json',
-    function (error, text) {
-        if (error) {
-            console.error('Error while reading config file');
-        } else {
-            try {
-                var obj = JSON.parse(text);
-                console.log(JSON.stringify(obj, null, 4));
-            } catch (e) {
-                console.error('Invalid JSON in file');
-            }
-        }
-    });
+fs.readFile("config.json", function (error, text) {
+  if (error) {
+    console.error("Error while reading config file");
+  } else {
+    try {
+      var obj = JSON.parse(text);
+      console.log(JSON.stringify(obj, null, 4));
+    } catch (e) {
+      console.error("Invalid JSON in file");
+    }
+  }
+});
 ```
 
 With promises, the same functionality is implemented like this:
 
 ```js
-readFilePromisified('config.json')
-.then(function (text) { // (A)
+readFilePromisified("config.json")
+  .then(function (text) {
+    // (A)
     var obj = JSON.parse(text);
     console.log(JSON.stringify(obj, null, 4));
-})
-.catch(function (reason) { // (B)
+  })
+  .catch(function (reason) {
+    // (B)
     // File read error or JSON SyntaxError
-    console.error('An error occurred', reason);
-});
+    console.error("An error occurred", reason);
+  });
 ```
 
 There are still callbacks, but they are provided via methods that are invoked on the result (`then()` and `catch()`). The error callback in line (B) is convenient in two ways: First, it’s a single style of handling errors. Second, you can handle the errors of both `readFilePromisified()` and the callback from line (A).
@@ -66,18 +67,18 @@ var promise = new Promise(
 
 A promise is always in either one of three (mutually exclusive) states:
 
-* Pending: the result hasn’t been computed, yet
-* Fulfilled: the result was computed successfully
-* Rejected: a failure occurred during computation
+- Pending: the result hasn’t been computed, yet
+- Fulfilled: the result was computed successfully
+- Rejected: a failure occurred during computation
 
 A promise is _settled_ (the computation it represents has finished) if it is either fulfilled or rejected. A promise can only be settled once and then stays settled. Subsequent attempts to settle it have no effect.
 
-![](https://2ality.com/2014/10/es6-promises-api/promise\_states\_simple.jpg)
+![](https://2ality.com/2014/10/es6-promises-api/promise_states_simple.jpg)
 
 The parameter of `new Promise()` (starting in line (A)) is called an _executor_:
 
-* If the computation went well, the executor sends the result via `resolve()`. That usually fulfills the promise (it may not, if you resolve with a promise, as explained later).
-* If an error happened, the executor notifies the promise consumer via `reject()`. That always rejects the promise.
+- If the computation went well, the executor sends the result via `resolve()`. That usually fulfills the promise (it may not, if you resolve with a promise, as explained later).
+- If an error happened, the executor notifies the promise consumer via `reject()`. That always rejects the promise.
 
 #### Consuming a promise
 
@@ -85,38 +86,41 @@ As a consumer of `promise`, you are notified of a fulfillment or a rejection via
 
 ```js
 promise.then(
-    function (value) { /* fulfillment */ },
-    function (reason) { /* rejection */ }
+  function (value) {
+    /* fulfillment */
+  },
+  function (reason) {
+    /* rejection */
+  }
 );
 ```
 
 What makes promises so useful for asynchronous functions (with one-off results) is that once a promise is settled, it doesn’t change anymore. Furthermore, there are never any race conditions, because it doesn’t matter whether you invoke `then()` before or after a promise is settled:
 
-* In the former case, the appropriate reaction is called as soon as the promise is settled.
-* In the latter case, the promise result (fulfillment value or rejection value) is cached and handed to the appropriate reaction “immediately” (queued as a task).
+- In the former case, the appropriate reaction is called as soon as the promise is settled.
+- In the latter case, the promise result (fulfillment value or rejection value) is cached and handed to the appropriate reaction “immediately” (queued as a task).
 
 #### Only handling fulfillments or rejections
 
 If you are only interested in fulfillments, you can omit the second parameter of `then()`:
 
 ```js
-promise.then(
-    function (value) { /* fulfillment */ }
-);
+promise.then(function (value) {
+  /* fulfillment */
+});
 ```
 
 If you are only interested in rejections, you can omit the first parameter. The method `catch()` is a more compact way of doing the same thing.
 
 ```js
-promise.then(
-    null,
-    function (reason) { /* rejection */ }
-);
+promise.then(null, function (reason) {
+  /* rejection */
+});
 
 // Equivalent:
-promise.catch(
-    function (reason) { /* rejection */ }
-);
+promise.catch(function (reason) {
+  /* rejection */
+});
 ```
 
 It is recommended to use `then()` exclusively for fulfillments and `catch()` for errors, because it nicely labels callbacks and because you can handle the rejections of multiple promises at the same time (how is explained later).
@@ -131,39 +135,37 @@ The following is a promise-based function that performs an HTTP GET via the even
 
 ```js
 function httpGet(url) {
-    return new Promise(
-        function (resolve, reject) {
-            var request = new XMLHttpRequest();
-            request.onreadystatechange = function () {
-                if (this.status === 200) {
-                    // Success
-                    resolve(this.response);
-                } else {
-                    // Something went wrong (404 etc.)
-                    reject(new Error(this.statusText));
-                }
-            }
-            request.onerror = function () {
-                reject(new Error(
-                    'XMLHttpRequest Error: '+this.statusText));
-            };
-            request.open('GET', url);
-            request.send();    
-        });
+  return new Promise(function (resolve, reject) {
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+      if (this.status === 200) {
+        // Success
+        resolve(this.response);
+      } else {
+        // Something went wrong (404 etc.)
+        reject(new Error(this.statusText));
+      }
+    };
+    request.onerror = function () {
+      reject(new Error("XMLHttpRequest Error: " + this.statusText));
+    };
+    request.open("GET", url);
+    request.send();
+  });
 }
 ```
 
 This is how you use `httpGet()`:
 
 ```js
-httpGet('http://example.com/file.txt')
-.then(
-    function (value) {
-        console.log('Contents: ' + value);
-    },
-    function (reason) {
-        console.error('Something went wrong', reason);
-    });
+httpGet("http://example.com/file.txt").then(
+  function (value) {
+    console.log("Contents: " + value);
+  },
+  function (reason) {
+    console.error("Something went wrong", reason);
+  }
+);
 ```
 
 #### Example: delaying an activity
@@ -172,14 +174,15 @@ Let’s implement `setTimeout()` as the promise-based function `delay()` (simila
 
 ```js
 function delay(ms) {
-    return new Promise(function (resolve, reject) {
-        setTimeout(resolve, ms); // (A)
-    });
+  return new Promise(function (resolve, reject) {
+    setTimeout(resolve, ms); // (A)
+  });
 }
 
 // Using delay():
-delay(5000).then(function () { // (B)
-    console.log('5 seconds have passed!')
+delay(5000).then(function () {
+  // (B)
+  console.log("5 seconds have passed!");
 });
 ```
 
@@ -189,12 +192,12 @@ Note that in line (A), we are calling `resolve` with zero parameters, which is t
 
 ```js
 function timeout(ms, promise) {
-    return new Promise(function (resolve, reject) {
-        promise.then(resolve);
-        setTimeout(function () {
-            reject(new Error('Timeout after '+ms+' ms')); // (A)
-        }, ms);
-    });
+  return new Promise(function (resolve, reject) {
+    promise.then(resolve);
+    setTimeout(function () {
+      reject(new Error("Timeout after " + ms + " ms")); // (A)
+    }, ms);
+  });
 }
 ```
 
@@ -203,13 +206,13 @@ Note that the rejection after the timeout (in line (A)) does not cancel the requ
 Using `timeout()` looks like this:
 
 ```js
-timeout(5000, httpGet('http://example.com/file.txt'))
-.then(function (value) {
-    console.log('Contents: ' + value);
-})
-.catch(function (reason) {
-    console.error('Error or timeout', reason);
-});
+timeout(5000, httpGet("http://example.com/file.txt"))
+  .then(function (value) {
+    console.log("Contents: " + value);
+  })
+  .catch(function (reason) {
+    console.error("Error or timeout", reason);
+  });
 ```
 
 ### Chaining `then()`
@@ -217,13 +220,13 @@ timeout(5000, httpGet('http://example.com/file.txt'))
 The result of a method call
 
 ```js
-P.then(onFulfilled, onRejected)
+P.then(onFulfilled, onRejected);
 ```
 
 is a new promise Q. That means that you can keep the promised-based control flow going by invoking `then()` on Q:
 
-* Q is resolved with what is returned by either `onFulfilled` or `onRejected`.
-* Q is rejected if either `onFulfilled` or `onRejected` throw an exception.
+- Q is resolved with what is returned by either `onFulfilled` or `onRejected`.
+- Q is rejected if either `onFulfilled` or `onRejected` throw an exception.
 
 #### Resolving with normal values
 
@@ -231,19 +234,19 @@ If you resolve the promise Q returned by `then()` with a normal value, you can p
 
 ```js
 asyncFunc()
-.then(function (value1) {
+  .then(function (value1) {
     return 123;
-})
-.then(function (value2) {
+  })
+  .then(function (value2) {
     console.log(value2); // 123
-});
+  });
 ```
 
 #### Resolving with thenables
 
 You can also resolve the promise Q returned by `then()` with a _thenable_ R. A thenable is any object that has a promise-style method `then()`. Thus, promises are thenable. Resolving with R (e.g. by returning it from `onFulfilled`) means that it is inserted “after” Q: R’s settlement is forwarded to Q’s `onFulfilled` and `onRejected` callbacks. In a way, Q becomes R.
 
-![](https://2ality.com/2014/10/es6-promises-api/resolve\_with\_thenable.jpg)
+![](https://2ality.com/2014/10/es6-promises-api/resolve_with_thenable.jpg)
 
 The main use for this mechanism is to flatten nested `then()` calls, like in the following example:
 
@@ -290,10 +293,9 @@ Exceptions in the executor are passed on to the next error handler.
 
 ```js
 new Promise(function (resolve, reject) {
-    throw new Error();
-})
-.catch(function (err) {
-    // Handle error here
+  throw new Error();
+}).catch(function (err) {
+  // Handle error here
 });
 ```
 
@@ -301,12 +303,12 @@ As are exceptions that are thrown in either one of `then`’s parameters:
 
 ```js
 asyncFunc()
-.then(function (value) {
+  .then(function (value) {
     throw new Error();
-})
-.catch(function (reason) {
+  })
+  .catch(function (reason) {
     // Handle error here
-});
+  });
 ```
 
 #### Chaining errors
@@ -315,11 +317,11 @@ There can be one or more `then()` method calls that don’t provide an error han
 
 ```js
 asyncFunc1()
-.then(asyncFunc2)
-.then(asyncFunc3)
-.catch(function (reason) {
+  .then(asyncFunc2)
+  .then(asyncFunc3)
+  .catch(function (reason) {
     // Something went wrong above
-});
+  });
 ```
 
 ### Composition
@@ -331,10 +333,7 @@ This section describes how you can compose existing promises to create new ones.
 One nice thing about promises is that many synchronous tools still work, because promise-based functions return results. For example, you can use the array method `map()`:
 
 ```js
-var fileUrls = [
-    'http://example.com/file1.txt',
-    'http://example.com/file2.txt'
-];
+var fileUrls = ["http://example.com/file1.txt", "http://example.com/file2.txt"];
 var promisedTexts = fileUrls.map(httpGet);
 ```
 
@@ -342,14 +341,14 @@ var promisedTexts = fileUrls.map(httpGet);
 
 ```js
 Promise.all(promisedTexts)
-.then(function (texts) {
+  .then(function (texts) {
     texts.forEach(function (text) {
-        console.log(text);
+      console.log(text);
     });
-})
-.catch(function (reason) {
+  })
+  .catch(function (reason) {
     // Receives first rejection among the promises
-});
+  });
 ```
 
 #### Timing out via `Promise.race()`
@@ -379,7 +378,7 @@ That means that you code can rely on run-to-completion semantics (as explained i
 
 ### Cheat sheet: the ECMAScript 6 promise API
 
-This section gives an overview of the ECMAScript 6 promise API, as described in the [specification](https://people.mozilla.org/\~jorendorff/es6-draft.html#sec-promise-objects).
+This section gives an overview of the ECMAScript 6 promise API, as described in the [specification](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects).
 
 #### Glossary
 
@@ -387,39 +386,39 @@ The promise API is about delivering results asynchronously. A _promise object_ (
 
 States:
 
-* A promise is always in either one of three mutually exclusive states:
-  * Before the result is ready, the promise is _pending_.
-  * If a result is available, the promise is _fulfilled_.
-  * If an error happened, the promise is _rejected_.
-* A promise is _settled_ if “things are done” (if it is either fulfilled or rejected).
-* A promise is settled exactly once and then remains unchanged.
+- A promise is always in either one of three mutually exclusive states:
+  - Before the result is ready, the promise is _pending_.
+  - If a result is available, the promise is _fulfilled_.
+  - If an error happened, the promise is _rejected_.
+- A promise is _settled_ if “things are done” (if it is either fulfilled or rejected).
+- A promise is settled exactly once and then remains unchanged.
 
 Reacting to state changes:
 
-* _Promise reactions_ are callbacks that you register with the promise method `then()`, to be notified of a fulfillment or a rejection.
-* A _thenable_ is an object that has a promise-style `then()` method. Whenever the API is only interested in being notified of settlements, it only demands thenables.
+- _Promise reactions_ are callbacks that you register with the promise method `then()`, to be notified of a fulfillment or a rejection.
+- A _thenable_ is an object that has a promise-style `then()` method. Whenever the API is only interested in being notified of settlements, it only demands thenables.
 
 Changing states: There are two operations for changing the state of a promise. After you have invoked either one of them once, further invocations have no effect.
 
-* _Rejecting_ a promise means that the promise becomes rejected.
-* _Resolving_ a promise has different effects, depending on what value you are resolving with:
-  * Resolving with a normal (non-thenable) value fulfills the promise.
-  * Resolving a promise P with a thenable T means that P can’t be resolved anymore and will now follow T’s state, including its fulfillment or rejection value. The appropriate P reactions will get called once T settles (or are called if T is already settled).
+- _Rejecting_ a promise means that the promise becomes rejected.
+- _Resolving_ a promise has different effects, depending on what value you are resolving with:
+  - Resolving with a normal (non-thenable) value fulfills the promise.
+  - Resolving a promise P with a thenable T means that P can’t be resolved anymore and will now follow T’s state, including its fulfillment or rejection value. The appropriate P reactions will get called once T settles (or are called if T is already settled).
 
 #### Constructor
 
 The constructor for promises has the following signature:
 
 ```js
-var p = new Promise(executor(resolve, reject))
+var p = new Promise(executor(resolve, reject));
 ```
 
 It creates a promise whose behavior is determined by the callback `executor`. It can use its parameters to resolve or reject `p`:
 
-* `resolve(x)` resolves `p` with `x`:
-  * If `x` is thenable, its settlement is forwarded to `p` (which includes triggering reactions registered via `then()`).
-  * Otherwise, `p` is fulfilled with `x`.
-* `reject(e)` rejects `p` with the value `e` (often an instance of [`Error`](http://speakingjs.com/es5/ch14.html#error\_constructors)).
+- `resolve(x)` resolves `p` with `x`:
+  - If `x` is thenable, its settlement is forwarded to `p` (which includes triggering reactions registered via `then()`).
+  - Otherwise, `p` is fulfilled with `x`.
+- `reject(e)` rejects `p` with the value `e` (often an instance of [`Error`](http://speakingjs.com/es5/ch14.html#error_constructors)).
 
 #### Static methods
 
@@ -429,55 +428,55 @@ All static methods of `Promise` support subclassing: they create new instances v
 
 The following two methods create new instances of their receiver (their `this`).
 
-* `Promise.resolve(x)`:
-  * If `x` is thenable, it is converted to a promise (an instance of the receiver).
-  * If `x` is a promise, it is returned unchanged.
-  * Otherwise, return a new instance of the receiver that is fulfilled with `x`.
-* `Promise.reject(reason)`: creates a new promise that is rejected with the value `reason`.
+- `Promise.resolve(x)`:
+  - If `x` is thenable, it is converted to a promise (an instance of the receiver).
+  - If `x` is a promise, it is returned unchanged.
+  - Otherwise, return a new instance of the receiver that is fulfilled with `x`.
+- `Promise.reject(reason)`: creates a new promise that is rejected with the value `reason`.
 
 **Composing promises**
 
 Intuitively, the static methods `Promise.all()` and `Promise.race()` compose iterables of promises to a single promise. That is:
 
-* They take an iterable. The elements of the iterable are converted to promises via `this.resolve()`.
-* They return a new promise. That promise is a fresh instance of the receiver.
+- They take an iterable. The elements of the iterable are converted to promises via `this.resolve()`.
+- They return a new promise. That promise is a fresh instance of the receiver.
 
 The methods are:
 
-* `Promise.all(iterable)`: returns a promise that…
-  * is fulfilled if all elements in `iterable` are fulfilled.\
+- `Promise.all(iterable)`: returns a promise that…
+  - is fulfilled if all elements in `iterable` are fulfilled.\
     Fulfillment value: array with fulfillment values.
-  * is rejected if any of the elements are rejected.\
+  - is rejected if any of the elements are rejected.\
     Rejection value: first rejection value.
-* `Promise.race(iterable)`: the first element of `iterable` that is settled is used to settle the returned promise.
+- `Promise.race(iterable)`: the first element of `iterable` that is settled is used to settle the returned promise.
 
 #### Instance prototype methods
 
 `Promise.prototype.then(onFulfilled, onRejected)`:
 
-* The callbacks `onFulfilled` and `onRejected` are called _reactions_.
-* `onFulfilled` is called immediately if the promise is already fulfilled or as soon as it becomes fulfilled. Similarly, `onRejected` is informed of rejections.
-* `then()` returns a new promise Q (created via the constructor of the receiver):
-  * If either of the reactions returns a value, Q is resolved with it.
-  * If either of the reactions throws an exception, Q is rejected with it.
-* Omitted reactions:
-  * If `onFulfilled` has been omitted, a fulfillment of the receiver is forwarded to the result of `then()`.
-  * If `onRejected` has been omitted, a rejection of the receiver is forwarded to the result of `then()`.
+- The callbacks `onFulfilled` and `onRejected` are called _reactions_.
+- `onFulfilled` is called immediately if the promise is already fulfilled or as soon as it becomes fulfilled. Similarly, `onRejected` is informed of rejections.
+- `then()` returns a new promise Q (created via the constructor of the receiver):
+  - If either of the reactions returns a value, Q is resolved with it.
+  - If either of the reactions throws an exception, Q is rejected with it.
+- Omitted reactions:
+  - If `onFulfilled` has been omitted, a fulfillment of the receiver is forwarded to the result of `then()`.
+  - If `onRejected` has been omitted, a rejection of the receiver is forwarded to the result of `then()`.
 
 Default values for omitted reactions could be implemented like this:
 
 ```js
 function defaultOnFulfilled(x) {
-    return x;
+  return x;
 }
 function defaultOnRejected(e) {
-    throw e;
+  throw e;
 }
 ```
 
 `Promise.prototype.catch(onRejected)`:
 
-* Same as `then(null, onRejected)`.
+- Same as `then(null, onRejected)`.
 
 ### Pros and cons of promises
 
@@ -497,7 +496,7 @@ fetch(url)
 
 `fetch()` returns a promise for the actual request, `text()` returns a promise for the content as a string.
 
-The [ECMAScript 6 API](https://2ality.com/2014/09/es6-modules-final.html#the\_ecmascript\_6\_module\_loader\_api) for programmatically importing modules is based on promises, too:
+The [ECMAScript 6 API](https://2ality.com/2014/09/es6-modules-final.html#the_ecmascript_6_module_loader_api) for programmatically importing modules is based on promises, too:
 
 ```js
  System.import('some_module.js')
@@ -531,13 +530,13 @@ Additional promise advantages include better error handling (which integrates ex
 
 Promises work well for for single asynchronous results. They are not suited for:
 
-* Recurring events: If you are interested in those, take a look at [reactive programming](http://reactive-extensions.github.io/RxJS/), which add a clever way of chaining to normal event handling.
-* Streams of data: A [standard](https://streams.spec.whatwg.org) for supporting those is currently in development.
+- Recurring events: If you are interested in those, take a look at [reactive programming](http://reactive-extensions.github.io/RxJS/), which add a clever way of chaining to normal event handling.
+- Streams of data: A [standard](https://streams.spec.whatwg.org) for supporting those is currently in development.
 
 ECMAScript 6 promises lack two features that are sometimes useful:
 
-* You can’t cancel them.
-* You can’t query them for how far along they are (e.g. to display a progress bar in a client-side user interface).
+- You can’t cancel them.
+- You can’t query them for how far along they are (e.g. to display a progress bar in a client-side user interface).
 
 The Q promise library has [support](https://github.com/kriskowal/q#progress-notification) for the latter and there are [plans](https://github.com/promises-aplus) to add both capabilities to Promises/A+.
 
@@ -547,16 +546,17 @@ With the help of a utility function such as `Q.spawn()`, you can use promise-bas
 
 ```js
 Q.spawn(function* () {
-    try {
-        let [foo, bar] = yield Promise.all([ // (A)
-            httpGet('foo.json'),
-            httpGet('bar.json')
-        ]);
-        render(foo);
-        render(bar);
-    } catch (e) {
-        console.log('Read failed: ' + e);
-    }
+  try {
+    let [foo, bar] = yield Promise.all([
+      // (A)
+      httpGet("foo.json"),
+      httpGet("bar.json"),
+    ]);
+    render(foo);
+    render(bar);
+  } catch (e) {
+    console.log("Read failed: " + e);
+  }
 });
 ```
 
@@ -593,32 +593,36 @@ Google Chrome recently got the ability to debug asynchronous code [\[3\]](https:
 
 ```js
 function first() {
-    setTimeout(function () { second('a') }, 0); // (A)
+  setTimeout(function () {
+    second("a");
+  }, 0); // (A)
 }
 function second(x) {
-    setTimeout(function () { third('b') }, 0); // (B)
+  setTimeout(function () {
+    third("b");
+  }, 0); // (B)
 }
 function third(x) {
-    debugger;
+  debugger;
 }
 first();
 ```
 
 As you can see in the screen shot, the debugger shows a stack trace that contains all three functions. It even includes the anonymous functions in line (A) and (B).
 
-![](https://2ality.com/2014/10/es6-promises-api/debugging\_callbacks.png)
+![](https://2ality.com/2014/10/es6-promises-api/debugging_callbacks.png)
 
 ### The internals of promises
 
 In this section, we will approach promises from a different angle: Instead of learning how to use the API, we will look at a simple implementation of it. This different angle helped me greatly with making sense of promises.
 
-The promise implementation is called DemoPromise and available [on GitHub](https://github.com/rauschma/demo\_promise). In order to be easier to understand, it doesn’t completely match the API. But it is close enough to still give you much insight into the challenges that actual implementations are facing.
+The promise implementation is called DemoPromise and available [on GitHub](https://github.com/rauschma/demo_promise). In order to be easier to understand, it doesn’t completely match the API. But it is close enough to still give you much insight into the challenges that actual implementations are facing.
 
 `DemoPromise` is a constructor with three instance prototype methods:
 
-* `DemoPromise.prototype.resolve(value)`
-* `DemoPromise.prototype.reject(reason)`
-* `DemoPromise.prototype.then(onFulfilled, onRejected)`
+- `DemoPromise.prototype.resolve(value)`
+- `DemoPromise.prototype.reject(reason)`
+- `DemoPromise.prototype.then(onFulfilled, onRejected)`
 
 That is, `resolve` and `reject` are methods (versus functions handed to a callback parameter of the constructor).
 
@@ -626,53 +630,53 @@ That is, `resolve` and `reject` are methods (versus functions handed to a callba
 
 Our first implementation is a stand-alone promise with minimal functionality:
 
-* You can create a promise.
-* You can resolve or reject a promise and you can only do it once.
-* You can register _reactions_ (callbacks) via `then()`. The method does not support chaining, yet – it does not return anything. It must work independently of whether the promise has already been settled or not.
+- You can create a promise.
+- You can resolve or reject a promise and you can only do it once.
+- You can register _reactions_ (callbacks) via `then()`. The method does not support chaining, yet – it does not return anything. It must work independently of whether the promise has already been settled or not.
 
 This is how this first implementation is used:
 
 ```js
 var dp = new DemoPromise();
-dp.resolve('abc');
+dp.resolve("abc");
 dp.then(function (value) {
-    console.log(value); // abc
+  console.log(value); // abc
 });
 ```
 
 The following diagram illustrates how our first `DemoPromise` works:
 
-![](https://2ality.com/2014/10/es6-promises-api/promise1\_simple.jpg)
+![](https://2ality.com/2014/10/es6-promises-api/promise1_simple.jpg)
 
 Let’s examine `then()` first. It has to handle two cases:
 
-* If the promise is still pending, it queues invocations of `onFulfilled` and `onRejected`, to be used when the promise is settled.
-* If the promise is already fulfilled or rejected, `onFulfilled` or `onRejected` can be invoked right away.
+- If the promise is still pending, it queues invocations of `onFulfilled` and `onRejected`, to be used when the promise is settled.
+- If the promise is already fulfilled or rejected, `onFulfilled` or `onRejected` can be invoked right away.
 
 ```js
 DemoPromise.prototype.then = function (onFulfilled, onRejected) {
-    var self = this;
-    var fulfilledTask = function () {
-        onFulfilled(self.promiseResult);
-    };
-    var rejectedTask = function () {
-        onRejected(self.promiseResult);
-    };
-    switch (this.promiseState) {
-        case 'pending':
-            this.fulfillReactions.push(fulfilledTask);
-            this.rejectReactions.push(rejectedTask);
-            break;
-        case 'fulfilled':
-            addToTaskQueue(fulfilledTask);
-            break;
-        case 'rejected':
-            addToTaskQueue(rejectedTask);
-            break;
-    }
+  var self = this;
+  var fulfilledTask = function () {
+    onFulfilled(self.promiseResult);
+  };
+  var rejectedTask = function () {
+    onRejected(self.promiseResult);
+  };
+  switch (this.promiseState) {
+    case "pending":
+      this.fulfillReactions.push(fulfilledTask);
+      this.rejectReactions.push(rejectedTask);
+      break;
+    case "fulfilled":
+      addToTaskQueue(fulfilledTask);
+      break;
+    case "rejected":
+      addToTaskQueue(rejectedTask);
+      break;
+  }
 };
 function addToTaskQueue(task) {
-    setTimeout(task, 0);
+  setTimeout(task, 0);
 }
 ```
 
@@ -680,16 +684,16 @@ function addToTaskQueue(task) {
 
 ```js
 Promise.prototype.resolve = function (value) {
-    if (this.promiseState !== 'pending') return;
-    this.promiseState = 'fulfilled';
-    this.promiseResult = value;
-    this._clearAndEnqueueReactions(this.fulfillReactions);
-    return this; // enable chaining
+  if (this.promiseState !== "pending") return;
+  this.promiseState = "fulfilled";
+  this.promiseResult = value;
+  this._clearAndEnqueueReactions(this.fulfillReactions);
+  return this; // enable chaining
 };
 Promise.prototype._clearAndEnqueueReactions = function (reactions) {
-    this.fulfillReactions = undefined;
-    this.rejectReactions = undefined;
-    reactions.map(addToTaskQueue);
+  this.fulfillReactions = undefined;
+  this.rejectReactions = undefined;
+  reactions.map(addToTaskQueue);
 };
 ```
 
@@ -699,10 +703,10 @@ Promise.prototype._clearAndEnqueueReactions = function (reactions) {
 
 The next feature we implement is chaining:
 
-* `then()` returns a promise that is resolved with what either `onFulfilled` or `onRejected` return.
-* If `onFulfilled` or `onRejected` are missing, whatever they would have received is passed on to the promise returned by `then()`.
+- `then()` returns a promise that is resolved with what either `onFulfilled` or `onRejected` return.
+- If `onFulfilled` or `onRejected` are missing, whatever they would have received is passed on to the promise returned by `then()`.
 
-![](https://2ality.com/2014/10/es6-promises-api/promise2\_chaining.jpg)
+![](https://2ality.com/2014/10/es6-promises-api/promise2_chaining.jpg)
 
 Obviously, only `then()` changes:
 
@@ -743,10 +747,10 @@ DemoPromise.prototype.then = function (onFulfilled, onRejected) {
 
 `then()` creates and returns a new promise (lines (A) and (F)). Additionally, `fulfilledTask` and `rejectedTask` are set up differently: After a settlement...
 
-* The result of `onFulfilled` is used to resolve `returnValue` (line (B).
-  * If `onFulfilled` is missing, we use the fulfillment value to resolve `returnValue` (line (C)).
-* The result of `onRejected` is used to resolve (not reject!) `returnValue` (line (D)).
-  * If `onRejected` is missing, we use the rejection value to reject `returnValue` (line (E)).
+- The result of `onFulfilled` is used to resolve `returnValue` (line (B).
+  - If `onFulfilled` is missing, we use the fulfillment value to resolve `returnValue` (line (C)).
+- The result of `onRejected` is used to resolve (not reject!) `returnValue` (line (D)).
+  - If `onRejected` is missing, we use the rejection value to reject `returnValue` (line (E)).
 
 #### Flattening
 
@@ -754,34 +758,34 @@ Flattening is mostly about making chaining more convenient: Normally, returning 
 
 ```js
 asyncFunc1()
-.then(function (value1) {
+  .then(function (value1) {
     return asyncFunc2(); // (A)
-})
-.then(function (value2) {
+  })
+  .then(function (value2) {
     // value2 is fulfillment value of asyncFunc2() promise
     console.log(value2);
-});
+  });
 ```
 
 We returned a promise in line (A) and didn’t have to nest a call to `then()` inside the current method, we could invoke `then()` on the method’s result. Thus: no nested `then()`, everything remains flat.
 
 We implement this by letting the `resolve()` method do the flattening:
 
-* Resolving a promise P with a promise Q means that Q’s settlement is forwarded to P’s reactions.
-* P becomes “locked in” on Q: it can’t be resolved (incl. rejected), anymore. And its state and result are always the same as Q’s.
+- Resolving a promise P with a promise Q means that Q’s settlement is forwarded to P’s reactions.
+- P becomes “locked in” on Q: it can’t be resolved (incl. rejected), anymore. And its state and result are always the same as Q’s.
 
 We can make flattening more generic if we allow Q to be a thenable (instead of only a promise).
 
-![](https://2ality.com/2014/10/es6-promises-api/promise3\_flattening.jpg)
+![](https://2ality.com/2014/10/es6-promises-api/promise3_flattening.jpg)
 
 To implement locking-in, we introduce a new boolean flag `this.alreadyResolved`. Once it is true, `this` is locked and can’t be resolved anymore. Note that `this` may still be pending, because its state is now the same as the promise it is locked in on.
 
 ```js
 DemoPromise.prototype.resolve = function (value) {
-    if (this.alreadyResolved) return;
-    this.alreadyResolved = true;
-    this._doResolve(value);
-    return this; // enable chaining
+  if (this.alreadyResolved) return;
+  this.alreadyResolved = true;
+  this._doResolve(value);
+  return this; // enable chaining
 };
 ```
 
@@ -789,24 +793,25 @@ The actual resolution now happens in the private method `_doResolve()`:
 
 ```js
 DemoPromise.prototype._doResolve = function (value) {
-    var self = this;
-    // Is `value` a thenable?
-    if (value !== null && typeof value === 'object'
-        && 'then' in value) {
-        addToTaskQueue(function () { // (A)
-            value.then(
-                function onFulfilled(value) {
-                    self._doResolve(value);
-                },
-                function onRejected(reason) {
-                    self._doReject(reason);
-                });
-        });
-    } else {
-        this.promiseState = 'fulfilled';
-        this.promiseResult = value;
-        this._clearAndEnqueueReactions(this.fulfillReactions);
-    }
+  var self = this;
+  // Is `value` a thenable?
+  if (value !== null && typeof value === "object" && "then" in value) {
+    addToTaskQueue(function () {
+      // (A)
+      value.then(
+        function onFulfilled(value) {
+          self._doResolve(value);
+        },
+        function onRejected(reason) {
+          self._doReject(reason);
+        }
+      );
+    });
+  } else {
+    this.promiseState = "fulfilled";
+    this.promiseResult = value;
+    this._clearAndEnqueueReactions(this.fulfillReactions);
+  }
 };
 ```
 
@@ -814,41 +819,41 @@ The flattening is performed in line (A): If `value` is fulfilled, we want `self`
 
 #### Promise states in more detail
 
-With chaining, the states of promises become more complex (as covered by [Sect. 25.4](https://people.mozilla.org/\~jorendorff/es6-draft.html#sec-promise-objects) of the ECMAScript 6 specification):
+With chaining, the states of promises become more complex (as covered by [Sect. 25.4](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects) of the ECMAScript 6 specification):
 
-![](https://2ality.com/2014/10/es6-promises-api/promise\_states\_all.jpg)
+![](https://2ality.com/2014/10/es6-promises-api/promise_states_all.jpg)
 
 If you are only _using_ promises, you can normally adopt a simplified worldview and ignore locking-in. The most important state-related concept remains “settledness”: a promise is settled if it is either fulfilled or rejected. After a promise is settled, it doesn’t change, anymore (state and fulfillment or rejection value).
 
 If you want to _implement_ promises then “resolving” matters, too and is now harder to understand:
 
-* Intuitively, “resolved” means “can’t be (directly) resolved anymore”. A promise is resolved if it is either settled or locked in. Quoting the spec: “An unresolved promise is always in the pending state. A resolved promise may be pending, fulfilled or rejected.”
-* Resolving does not necessarily lead to settling: you can resolve a promise with another one that is always pending.
-* Resolving now includes rejecting (i.e., it is more general): you can reject a promise by resolving it with a rejected promise.
+- Intuitively, “resolved” means “can’t be (directly) resolved anymore”. A promise is resolved if it is either settled or locked in. Quoting the spec: “An unresolved promise is always in the pending state. A resolved promise may be pending, fulfilled or rejected.”
+- Resolving does not necessarily lead to settling: you can resolve a promise with another one that is always pending.
+- Resolving now includes rejecting (i.e., it is more general): you can reject a promise by resolving it with a rejected promise.
 
 #### Exceptions
 
 As our final feature, we’d like our promises to handle exceptions in user code as rejections. For now, “user code” means the two callback parameters of `then()`.
 
-![](https://2ality.com/2014/10/es6-promises-api/promise4\_exceptions.jpg)
+![](https://2ality.com/2014/10/es6-promises-api/promise4_exceptions.jpg)
 
 The following excerpt shows how we turn exceptions inside `onFulfilled` into rejections – by wrapping a `try-catch` around its invocation in line (A).
 
 ```js
 var fulfilledTask;
-if (typeof onFulfilled === 'function') {
-    fulfilledTask = function () {
-        try {
-            var r = onFulfilled(self.promiseResult); // (A)
-            returnValue.resolve(r);
-        } catch (e) {
-            returnValue.reject(e);
-        }
-    };
+if (typeof onFulfilled === "function") {
+  fulfilledTask = function () {
+    try {
+      var r = onFulfilled(self.promiseResult); // (A)
+      returnValue.resolve(r);
+    } catch (e) {
+      returnValue.reject(e);
+    }
+  };
 } else {
-    fulfilledTask = function () {
-        returnValue.resolve(self.promiseResult);
-    };
+  fulfilledTask = function () {
+    returnValue.resolve(self.promiseResult);
+  };
 }
 ```
 
@@ -856,7 +861,7 @@ if (typeof onFulfilled === 'function') {
 
 If we wanted to turn `DemoPromise` into an actual promise implementation, we’d still need to implement the revealing constructor pattern [\[4\]](https://2ality.com/2014/10/es6-promises-api.html#fn4): ES6 promises are not resolved and rejected via methods, but via functions that are handed to the _executor_, the callback parameter of the constructor.
 
-![](https://2ality.com/2014/10/es6-promises-api/promise5\_everything.jpg)
+![](https://2ality.com/2014/10/es6-promises-api/promise5_everything.jpg)
 
 If the executor throws an exception then “its” promise must be rejected.
 
@@ -870,10 +875,7 @@ When you chain several promise method calls, you risk silently discarding errors
 
 ```js
 function doSomething() {
-    asyncFunc()
-    .then(f1)
-    .catch(r1)
-    .then(f2); // (A)
+  asyncFunc().then(f1).catch(r1).then(f2); // (A)
 }
 ```
 
@@ -881,10 +883,7 @@ If `then()` in line (A) produces a rejection, it will never be handled anywhere.
 
 ```js
 function doSomething() {
-    asyncFunc()
-    .then(f1)
-    .catch(r1)
-    .done(f2);
+  asyncFunc().then(f1).catch(r1).done(f2);
 }
 ```
 
@@ -892,11 +891,7 @@ Or it is inserted after the last `then()` (and has zero arguments):
 
 ```js
 function doSomething() {
-    asyncFunc()
-    .then(f1)
-    .catch(r1)
-    .then(f2)
-    .done();
+  asyncFunc().then(f1).catch(r1).then(f2).done();
 }
 ```
 
@@ -908,10 +903,11 @@ This is how you would implement `done()` in ECMAScript 6:
 
 ```js
 Promise.prototype.done = function (onFulfilled, onRejected) {
-    this.then(onFulfilled, onRejected)
-    .catch(function (reason) {
-        setTimeout(() => { throw reason }, 0);
-    });
+  this.then(onFulfilled, onRejected).catch(function (reason) {
+    setTimeout(() => {
+      throw reason;
+    }, 0);
+  });
 };
 ```
 
@@ -938,31 +934,34 @@ This is how `Domenic Denicola` [proposes](https://github.com/domenic/promises-un
 
 ```js
 Promise.prototype.finally = function (callback) {
-    let p = this.constructor;
-    // We don’t invoke the callback in here,
-    // because we want then() to handle its exceptions
-    return this.then(
-        // Callback fulfills: pass on predecessor settlement
-        // Callback rejects: pass on rejection (=omit 2nd arg.)
-        value  => p.resolve(callback()).then(() => value),
-        reason => p.resolve(callback()).then(() => { throw reason })
-    );
+  let p = this.constructor;
+  // We don’t invoke the callback in here,
+  // because we want then() to handle its exceptions
+  return this.then(
+    // Callback fulfills: pass on predecessor settlement
+    // Callback rejects: pass on rejection (=omit 2nd arg.)
+    (value) => p.resolve(callback()).then(() => value),
+    (reason) =>
+      p.resolve(callback()).then(() => {
+        throw reason;
+      })
+  );
 };
 ```
 
 The callback determines how the settlement of the receiver (`this`) is handled:
 
-* If the callback throws an exception or returns a rejected promise then that becomes/contributes the rejection value.
-* Otherwise, the settlement of the receiver becomes the settlement of the promise returned by `finally()`. In a way, we take `finally()` out of the chain of methods.
+- If the callback throws an exception or returns a rejected promise then that becomes/contributes the rejection value.
+- Otherwise, the settlement of the receiver becomes the settlement of the promise returned by `finally()`. In a way, we take `finally()` out of the chain of methods.
 
 **Example 1** (by [Jake Archibald](https://gist.github.com/jakearchibald/785f79b0dea5bfe0c448)): using `finally()` to hide a spinner. Simplified version:
 
 ```js
 showSpinner();
 fetchGalleryData()
-.then(data => updateGallery(data))
-.catch(showNoDataError)
-.finally(hideSpinner);
+  .then((data) => updateGallery(data))
+  .catch(showNoDataError)
+  .finally(hideSpinner);
 ```
 
 **Example 2** (by [Kris Kowal](https://github.com/domenic/promises-unwrapping/issues/18#issuecomment-27707922)): using `finally()` to tear down a test.
@@ -970,23 +969,24 @@ fetchGalleryData()
 ```js
 var HTTP = require("q-io/http");
 var server = HTTP.Server(app);
-return server.listen(0)
-.then(function () {
+return server
+  .listen(0)
+  .then(function () {
     // run test
-})
-.finally(server.stop);
+  })
+  .finally(server.stop);
 ```
 
 ### ES6-compatible promise libraries
 
 There are many promise libraries out there. The following ones conform to the ECMAScript 6 API, which means that you can use them now and easily migrate to native ES6 later.
 
-* “[RSVP.js](https://github.com/tildeio/rsvp.js/)” by Stefan Penner is a superset of the ES6 promise API .
-  * “[ES6-Promises](https://github.com/jakearchibald/es6-promise)” by Jake Archibald extracts just the ES6 API out of RSVP.js.
-* “[Native Promise Only (NPO)](https://github.com/getify/native-promise-only)” by Kyle Simpson is “a polyfill for native ES6 promises, as close as possible (no extensions) to the strict spec definitions”.
-* “[Lie](https://github.com/calvinmetcalf/lie)” by Calvin Metcalf is “a small, performant, promise library implementing the Promises/A+ spec”.
-* [`Q.Promise`](https://github.com/kriskowal/q#using-qpromise) by Kris Kowal implements the ES6 API.
-* Lastly, the “[ES6 Shim](https://github.com/paulmillr/es6-shim)” by Paul Millr includes `Promise`.
+- “[RSVP.js](https://github.com/tildeio/rsvp.js/)” by Stefan Penner is a superset of the ES6 promise API .
+  - “[ES6-Promises](https://github.com/jakearchibald/es6-promise)” by Jake Archibald extracts just the ES6 API out of RSVP.js.
+- “[Native Promise Only (NPO)](https://github.com/getify/native-promise-only)” by Kyle Simpson is “a polyfill for native ES6 promises, as close as possible (no extensions) to the strict spec definitions”.
+- “[Lie](https://github.com/calvinmetcalf/lie)” by Calvin Metcalf is “a small, performant, promise library implementing the Promises/A+ spec”.
+- [`Q.Promise`](https://github.com/kriskowal/q#using-qpromise) by Kris Kowal implements the ES6 API.
+- Lastly, the “[ES6 Shim](https://github.com/paulmillr/es6-shim)” by Paul Millr includes `Promise`.
 
 ### Interfacing with legacy asynchronous code
 
@@ -1013,16 +1013,17 @@ jQuery has [deferreds](http://api.jquery.com/category/deferred-object/) which ar
 
 ```js
 Promise.resolve(
-    jQuery.ajax({
-        url: 'somefile.html',
-        type: 'GET'
-    }))
-.then(function (data) {
+  jQuery.ajax({
+    url: "somefile.html",
+    type: "GET",
+  })
+)
+  .then(function (data) {
     console.log(data);
-})
-.catch(function (reason) {
+  })
+  .catch(function (reason) {
     console.error(reason);
-});
+  });
 ```
 
 \

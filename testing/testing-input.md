@@ -1,7 +1,5 @@
 # Testing Input
 
-
-
 ## Input Event
 
 > Note

@@ -52,7 +52,7 @@ Required<Pick<ComponentTypes, 'text'>>
 
 Using the stategies above you can select types from the global source and compose them to create a representation of the props in a specific component. While the global types live in `project.d.ts` , component level types should generally be placed in a `types.ts` file within the component directory and imported for use.
 
-_Although ComponentTypes is a_ :white_check_mark: _Good starting place, some components may require a type that is more specific and not usefully included in the global declaration._
+_Although ComponentTypes is a_ :white*check_mark: \_Good starting place, some components may require a type that is more specific and not usefully included in the global declaration.*
 
 ---
 

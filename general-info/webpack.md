@@ -6,7 +6,7 @@
 >
 > **webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.**
 
-***
+---
 
 Originally, chunks (and modules imported inside them) were connected by a parent-child relationship in the internal webpack graph. The `CommonsChunkPlugin` was used to avoid duplicated dependencies across them, but further optimizations were not possible.
 
@@ -20,10 +20,10 @@ By default it only affects on-demand chunks, because changing initial chunks wou
 
 Webpack will automatically split chunks based on these conditions:
 
-* New chunk can be shared OR modules are from the `node_modules` folder
-* New chunk would be bigger than 20kb (before min+gz)
-* Maximum number of parallel requests when loading chunks on demand would be lower or equal to 30
-* Maximum number of parallel requests at initial page load would be lower or equal to 30
+- New chunk can be shared OR modules are from the `node_modules` folder
+- New chunk would be bigger than 20kb (before min+gz)
+- Maximum number of parallel requests when loading chunks on demand would be lower or equal to 30
+- Maximum number of parallel requests at initial page load would be lower or equal to 30
 
 When trying to fulfill the last two conditions, bigger chunks are preferred.
 
@@ -39,7 +39,7 @@ This configuration object represents the default behavior of the `SplitChunksPlu
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       chunks: 'async',
@@ -84,10 +84,10 @@ Note that it is applied to the fallback cache group as well (`splitChunks.fallba
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
-      
+
       chunks: 'all',
     },
   },
@@ -98,11 +98,11 @@ Alternatively, you may provide a function for more control. The return value wil
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       chunks(chunk) {
-        
+
         return chunk.name !== 'my-excluded-chunk';
       },
     },
@@ -228,13 +228,13 @@ console.log(_.join(['Hello', 'webpack'], ' '));
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       cacheGroups: {
         commons: {
           test: /[\\/]node_modules[\\/]/,
-          
+
           name(module, chunks, cacheGroupKey) {
             const moduleFileName = module
               .identifier()
@@ -269,7 +269,7 @@ Cache groups can inherit and/or override any options from `splitChunks.*`; but `
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -296,7 +296,7 @@ If the current chunk contains modules already split out from the main bundle, it
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -319,7 +319,7 @@ Allows to assign modules to a cache group by module type.
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -346,14 +346,14 @@ Providing a function to`{cacheGroup}.test`:
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       cacheGroups: {
         svgGroup: {
           test(module) {
-            
-            
+
+
             const path = require('path');
             return (
               module.resource &&
@@ -381,12 +381,12 @@ Providing a `RegExp` to `{cacheGroup}.test`:
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       cacheGroups: {
         defaultVendors: {
-          
+
           test: /[\\/]node_modules[\\/]|vendor[\\/]analytics_provider|vendor[\\/]other_lib/,
         },
       },
@@ -405,7 +405,7 @@ Allows to override the filename when and only when it's an initial chunk. All pl
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -424,13 +424,13 @@ And as a function:
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       cacheGroups: {
         defaultVendors: {
           filename: (pathData) => {
-            
+
             return `${pathData.chunk.name}-bundle.js`;
           },
         },
@@ -446,7 +446,7 @@ It is possible to create a folder structure by providing path prefixing the file
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -469,7 +469,7 @@ Tells webpack to ignore [`splitChunks.minSize`](https://webpack.js.org/concepts/
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -492,7 +492,7 @@ Sets the hint for chunk id. It will be added to chunk's filename.
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -510,7 +510,7 @@ module.exports = {
 #### Defaults: Example 1
 
 ```
-import('./a'); 
+import('./a');
 ```
 
 ```
@@ -521,10 +521,10 @@ import 'react';
 
 Why:
 
-* Condition 1: The chunk contains modules from `node_modules`
-* Condition 2: `react` is bigger than 30kb
-* Condition 3: Number of parallel requests at the import call is 2
-* Condition 4: Doesn't affect request at initial page load
+- Condition 1: The chunk contains modules from `node_modules`
+- Condition 2: `react` is bigger than 30kb
+- Condition 3: Number of parallel requests at the import call is 2
+- Condition 4: Doesn't affect request at initial page load
 
 What's the reasoning behind this? `react` probably won't change as often as your application code. By moving it into a separate chunk this chunk can be cached separately from your app code (assuming you are using chunkhash, records, Cache-Control or other long term cache approach).
 
@@ -537,22 +537,22 @@ import('./b');
 ```
 
 ```
-import './helpers'; 
+import './helpers';
 ```
 
 ```
 import './helpers';
-import './more-helpers'; 
+import './more-helpers';
 ```
 
 **Result:** A separate chunk would be created containing `./helpers` and all dependencies of it. At the import calls this chunk is loaded in parallel to the original chunks.
 
 Why:
 
-* Condition 1: The chunk is shared between both import calls
-* Condition 2: `helpers` is bigger than 30kb
-* Condition 3: Number of parallel requests at the import calls is 2
-* Condition 4: Doesn't affect request at initial page load
+- Condition 1: The chunk is shared between both import calls
+- Condition 2: `helpers` is bigger than 30kb
+- Condition 3: Number of parallel requests at the import calls is 2
+- Condition 4: Doesn't affect request at initial page load
 
 Putting the content of `helpers` into each chunk will result into its code being downloaded twice. By using a separate chunk this will only happen once. We pay the cost of an additional request, which could be considered a tradeoff. That's why there is a minimum size of 30kb.
 
@@ -564,7 +564,7 @@ Create a `commons` chunk, which includes all code shared between entry points.
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -587,7 +587,7 @@ Create a `vendors` chunk, which includes all code from `node_modules` in the who
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -610,7 +610,7 @@ Create a `custom vendor` chunk, which contains certain `node_modules` packages m
 
 ```
 module.exports = {
-  
+
   optimization: {
     splitChunks: {
       cacheGroups: {

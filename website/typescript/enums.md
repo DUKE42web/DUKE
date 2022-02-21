@@ -26,7 +26,7 @@ Here, `Up` would have the value `0` , `Down` would have `1` , etc. This auto-inc
 
 Using an enum is simple: just access any member as a property off of the enum itself, and declare types using the name of the enum:
 
-```
+```ts
 enum UserResponse {  No = 0,  Yes = 1,} function respond(recipient: string, message: UserResponse): void {  // ...} respond("Princess Caroline", UserResponse.Yes);Try
 ```
 
@@ -60,7 +60,7 @@ Unless you're really trying to take advantage of JavaScript's runtime behavior i
 
 Each enum member has a value associated with it which can be either _constant_ or _computed_. An enum member is considered constant if:
 
-* It is the first member in the enum and it has no initializer, in which case it's assigned the value `0`:
+- It is the first member in the enum and it has no initializer, in which case it's assigned the value `0`:
 
 ````
     // E.X is constant:enum E {  X,}Try
@@ -75,7 +75,7 @@ Each enum member has a value associated with it which can be either _constant_ o
 ```
 ````
 
-* The enum member is initialized with a constant enum expression. A constant enum expression is a subset of TypeScript expressions that can be fully evaluated at compile time. An expression is a constant enum expression if it is:
+- The enum member is initialized with a constant enum expression. A constant enum expression is a subset of TypeScript expressions that can be fully evaluated at compile time. An expression is a constant enum expression if it is:
   1. a literal enum expression (basically a string literal or a numeric literal)
   2. a reference to previously defined constant enum member (which can originate from a different enum)
   3. a parenthesized constant enum expression
@@ -92,9 +92,9 @@ enum FileAccess {  // constant members  None,  Read = 1 << 1,  Write = 1 << 2,  
 
 There is a special subset of constant enum members that aren't calculated: literal enum members. A literal enum member is a constant enum member with no initialized value, or with values that are initialized to
 
-* any string literal (e.g. `"foo"`, `"bar`, `"baz"`)
-* any numeric literal (e.g. `1`, `100`)
-* a unary minus applied to any numeric literal (e.g. `-1`, `-100`)
+- any string literal (e.g. `"foo"`, `"bar`, `"baz"`)
+- any numeric literal (e.g. `1`, `100`)
+- a unary minus applied to any numeric literal (e.g. `-1`, `-100`)
 
 When all members in an enum have literal enum values, some special semantics come into play.
 
@@ -106,7 +106,7 @@ enum ShapeKind {  Circle,  Square,} interface Circle {  kind: ShapeKind.Circle; 
 
 The other change is that enum types themselves effectively become a _union_ of each enum member. With union enums, the type system is able to leverage the fact that it knows the exact set of values that exist in the enum itself. Because of that, TypeScript can catch bugs where we might be comparing values incorrectly. For example:
 
-```
+```ts
 enum E {  Foo,  Bar,} function f(x: E) {  if (x !== E.Foo || x !== E.Bar) {This condition will always return 'true' since the types 'E.Foo' and 'E.Bar' have no overlap.This condition will always return 'true' since the types 'E.Foo' and 'E.Bar' have no overlap.    //  }}Try
 ```
 
@@ -116,14 +116,26 @@ In that example, we first checked whether `x` was _not_ `E.Foo` . If that check 
 
 Enums are real objects that exist at runtime. For example, the following enum
 
-```
-enum E {  X,  Y,  Z,}Try
+```ts
+enum E {
+  X,
+  Y,
+  Z,
+}
+Try;
 ```
 
 can actually be passed around to functions
 
-```
-enum E {  X,  Y,  Z,} function f(obj: { X: number }) {  return obj.X;} // Works, since 'E' has a property named 'X' which is a number.f(E);Try
+```ts
+enum E {
+  X,
+  Y,
+  Z,
+}
+function f(obj: { X: number }) {
+  return obj.X;
+} // Works, since 'E' has a property named 'X' which is a number.f(E);Try
 ```
 
 ### Enums at compile time <a href="#enums-at-compile-time" id="enums-at-compile-time"></a>
@@ -138,14 +150,24 @@ enum LogLevel {  ERROR,  WARN,  INFO,  DEBUG,} /** * This is equivalent to: * ty
 
 In addition to creating an object with property names for members, numeric enums members also get a _reverse mapping_ from enum values to enum names. For example, in this example:
 
-```
-enum Enum {  A,} let a = Enum.A;let nameOfA = Enum[a]; // "A"Try
+```ts
+enum Enum {
+  A,
+}
+let a = Enum.A;
+let nameOfA = Enum[a]; // "A"Try
 ```
 
 TypeScript compiles this down to the following JavaScript:
 
-```
-"use strict";var Enum;(function (Enum) {    Enum[Enum["A"] = 0] = "A";})(Enum || (Enum = {}));let a = Enum.A;let nameOfA = Enum[a]; // "A" Try
+```ts
+"use strict";
+var Enum;
+(function (Enum) {
+  Enum[(Enum["A"] = 0)] = "A";
+})(Enum || (Enum = {}));
+let a = Enum.A;
+let nameOfA = Enum[a]; // "A" Try
 ```
 
 In this generated code, an enum is compiled into an object that stores both forward ( `name` -> `value` ) and reverse ( `value` -> `name` ) mappings. References to other enum members are always emitted as property accesses and never inlined.
@@ -156,20 +178,38 @@ Keep in mind that string enum members _do not_ get a reverse mapping generated a
 
 In most cases, enums are a perfectly valid solution. However sometimes requirements are tighter. To avoid paying the cost of extra generated code and additional indirection when accessing enum values, it's possible to use `const` enums. Const enums are defined using the `const` modifier on our enums:
 
-```
-const enum Enum {  A = 1,  B = A * 2,}Try
+```ts
+const enum Enum {
+  A = 1,
+  B = A * 2,
+}
+Try;
 ```
 
 Const enums can only use constant enum expressions and unlike regular enums they are completely removed during compilation. Const enum members are inlined at use sites. This is possible since const enums cannot have computed members.
 
-```
-const enum Direction {  Up,  Down,  Left,  Right,} let directions = [  Direction.Up,  Direction.Down,  Direction.Left,  Direction.Right,];Try
+```ts
+const enum Direction {
+  Up,
+  Down,
+  Left,
+  Right,
+}
+let directions = [
+  Direction.Up,
+  Direction.Down,
+  Direction.Left,
+  Direction.Right,
+];
+Try;
 ```
 
 in generated code will become
 
-```
-"use strict";let directions = [    0 /* Up */,    1 /* Down */,    2 /* Left */,    3 /* Right */,]; Try
+```ts
+"use strict";
+let directions = [0 /* Up */, 1 /* Down */, 2 /* Left */, 3 /* Right */];
+Try;
 ```
 
 **Const enum pitfalls**

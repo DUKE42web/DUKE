@@ -6,7 +6,7 @@
 >
 > How to implement and use enumerations (or enum types) in Javascript
 
-***
+---
 
 
 
@@ -58,7 +58,7 @@ console.log(Summer === Apples);
 
 ### Enums with Symbols
 
-[Symbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Symbol) let us define values that are guaranteed not to collide with one another.
+[Symbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) let us define values that are guaranteed not to collide with one another.
 
 For example:
 
