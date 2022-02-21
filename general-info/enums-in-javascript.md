@@ -2,15 +2,15 @@
 
 ## Using Enums (Enumerations) In Javascript
 
-> #### Excerpt
+> **Excerpt**
 >
 > How to implement and use enumerations (or enum types) in Javascript
 
 ***
 
-Updated on November 26, 2021
 
-This post will explain how to implement and use **enumerations** (or enum types) in Javascript.
+
+#### This post will explain how to implement and use <mark style="background-color:blue;">**enumerations**</mark> <mark style="background-color:blue;"></mark><mark style="background-color:blue;"></mark> (or enum types) in Javascript.
 
 ![](https://www.sohamkamani.com/static/fa26842619224d64f417312ef931f764/5a190/banner.drawio.png)
 
@@ -145,7 +145,6 @@ If we used the class-based approach above, we can loop through the keys of the `
 
 ```
 Object.keys(Season).forEach(season => console.log("season:", season))
-
 ```
 
 ### When to Use Enums in Javascript?
