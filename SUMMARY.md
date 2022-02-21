@@ -6,6 +6,7 @@
 
 ## 📚 Resources
 
+* [How To](resources/how-to.md)
 * [🧐 Site Audit](resources/site-audit.md)
 * [🕸 LINKS](resources/links/README.md)
   * [🔖 Bookmarks](resources/links/links.md)
@@ -75,6 +76,7 @@
 
 * [⚛ REACT NOTES](general-info/react-notes/README.md)
   * [Page 1](general-info/react-notes/page-1.md)
+  * [Create React App](general-info/react-notes/create-react-app.md)
 * [📚 General Info](general-info/general-info.md)
 * [Curry VS Functional Composition](general-info/curry-vs-functional-composition.md)
 * [Performance](general-info/performance.md)
@@ -92,4 +94,5 @@
 
 ## 👨💻 Code
 
+* [🌬 Tailwind Classes](code/tailwind-classes.md)
 * [Index.tsx](code/index.tsx.md)
