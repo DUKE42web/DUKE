@@ -3,6 +3,7 @@
 * [🗺 Site Navigation](README.md)
 * [🔬 Testing](testing/README.md)
   * [Testing Input](testing/testing-input.md)
+* [After Onboarding Task](after-onboarding-task.md)
 
 ## 📚 Resources
 
