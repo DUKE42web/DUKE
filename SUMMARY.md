@@ -7,7 +7,6 @@
 ## 📚 Resources
 
 * [How To](resources/how-to.md)
-* [🧐 Site Audit](resources/site-audit.md)
 * [🕸 LINKS](resources/links/README.md)
   * [🔖 Bookmarks](resources/links/links.md)
 * [Youtube & Videos:](resources/youtube-and-videos.md)

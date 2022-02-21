@@ -1,6 +1,128 @@
 # 💯 Unit Tests
 
-##
+<details>
+
+<summary>React Testing Library Cheat Sheet</summary>
+
+
+
+
+
+### Queries[​](https://testing-library.com/docs/dom-testing-library/cheatsheet#queries) <a href="#queries" id="queries"></a>
+
+See [Which query should I use?](https://testing-library.com/docs/queries/about#priority)
+
+* **ByLabelText** find by label or aria-label text content
+  * getByLabelText
+  * queryByLabelText
+  * getAllByLabelText
+  * queryAllByLabelText
+  * findByLabelText
+  * findAllByLabelText
+* **ByPlaceholderText** find by input placeholder value
+  * getByPlaceholderText
+  * queryByPlaceholderText
+  * getAllByPlaceholderText
+  * queryAllByPlaceholderText
+  * findByPlaceholderText
+  * findAllByPlaceholderText
+* **ByText** find by element text content
+  * getByText
+  * queryByText
+  * getAllByText
+  * queryAllByText
+  * findByText
+  * findAllByText
+* **ByDisplayValue** find by form element current value
+  * getByDisplayValue
+  * queryByDisplayValue
+  * getAllByDisplayValue
+  * queryAllByDisplayValue
+  * findByDisplayValue
+  * findAllByDisplayValue
+* **ByAltText** find by img alt attribute
+  * getByAltText
+  * queryByAltText
+  * getAllByAltText
+  * queryAllByAltText
+  * findByAltText
+  * findAllByAltText
+* **ByTitle** find by title attribute or svg title tag
+  * getByTitle
+  * queryByTitle
+  * getAllByTitle
+  * queryAllByTitle
+  * findByTitle
+  * findAllByTitle
+* **ByRole** find by aria role
+  * getByRole
+  * queryByRole
+  * getAllByRole
+  * queryAllByRole
+  * findByRole
+  * findAllByRole
+* **ByTestId** find by data-testid attribute
+  * getByTestId
+  * queryByTestId
+  * getAllByTestId
+  * queryAllByTestId
+  * findByTestId
+  * findAllByTestId
+
+### Async[​](https://testing-library.com/docs/dom-testing-library/cheatsheet#async) <a href="#async" id="async"></a>
+
+See [Async API](https://testing-library.com/docs/dom-testing-library/api-async). Remember to `await` or `.then()` the result of async functions in your tests!
+
+* **waitFor** (Promise) retry the function within until it stops throwing or times out
+* **waitForElementToBeRemoved** (Promise) retry the function until it no longer returns a DOM node
+
+**Deprecated since v7.0.0:**
+
+* **wait** (Promise) retry the function within until it stops throwing or times
+* **waitForElement** (Promise) retry the function until it returns an element or an array of elements. The `findBy` and `findAllBy` queries are async and retry until the query returns successfully, or when the query times out; they wrap `waitForElement`
+* **waitForDomChange** (Promise) retry the function each time the DOM is changed
+
+### Events[​](https://testing-library.com/docs/dom-testing-library/cheatsheet#events) <a href="#events" id="events"></a>
+
+See [Considerations for fireEvent](https://testing-library.com/docs/guide-events), [Events API](https://testing-library.com/docs/dom-testing-library/api-events)
+
+* **fireEvent** trigger DOM event: `fireEvent(node, event)`
+* **fireEvent.\*** helpers for default event types
+  * **click** `fireEvent.click(node)`
+  * [See all supported events](https://github.com/testing-library/dom-testing-library/blob/master/src/event-map.js)
+
+### Other[​](https://testing-library.com/docs/dom-testing-library/cheatsheet#other) <a href="#other" id="other"></a>
+
+See [Querying Within Elements](https://testing-library.com/docs/dom-testing-library/api-within), [Config API](https://testing-library.com/docs/dom-testing-library/api-configuration)
+
+* **within** take a node and return an object with all the queries bound to the node (used to return the queries from `React Testing Library`'s render method): `within(node).getByText("hello")`
+* **configure** change global options: `configure({testIdAttribute: 'my-data-test-id'})`
+
+### Text Match Options[​](https://testing-library.com/docs/dom-testing-library/cheatsheet#text-match-options) <a href="#text-match-options" id="text-match-options"></a>
+
+Given the following HTML:
+
+```
+<div>Hello World</div>
+```
+
+Copy
+
+_**Will**_** find the div:**
+
+```
+// Matching a string:getByText(container, 'Hello World') // full string matchgetByText(container, 'llo Worl', {exact: false}) // substring matchgetByText(container, 'hello world', {exact: false}) // ignore case// Matching a regex:getByText(container, /World/) // substring matchgetByText(container, /world/i) // substring match, ignore casegetByText(container, /^hello world$/i) // full string match, ignore casegetByText(container, /Hello W?oRlD/i) // advanced regex// Matching with a custom function:getByText(container, (content, element) => content.startsWith('Hello'))
+```
+
+Copy
+
+Given a button that updates the page after some time:
+
+```
+test('loads items eventually', async () => {  // Click button  fireEvent.click(getByText(node, 'Load'))  // Wait for page to update with query text  const items = await findByText(node, /Item #[0-9]: /)  expect(items).toHaveLength(10)})
+```
+
+</details>
 
 <details>
 
