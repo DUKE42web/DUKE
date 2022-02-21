@@ -1,92 +1,67 @@
 # 🖼 SvgLoader
 
-## Overview
+## Tailwind CSS
 
-SvgLoader is a component that will render an inlined svg element. By using an inlined svg you are able to change the color, size and other properties easily. By comparison, importing the svg directly and using it within an image would lose this ability.
+Tailwind CSS is a utility-based styling library. In order to streamline and standardize things like colors and spacing within our application, an Electron theme has been created to extend Tailwind's functionality, thus making it easy for us to access some standard Duke colors, fonts, etc. As a result, you will get most of the magic of Tailwind, but with most of the colors, text, and sizing options overwritten to reflect Duke's design system.
 
-## Usage
+We won't talk too much about the decisions behind why we are using this implementation here, but Chris Greufe has already done an incredible job documenting the ins-and-outs of it [here](https://electron.duke-energy.com/foundation/utilities/utility-first). If you want to know more of the granular aspects and philosophy to our approach, you are encouraged to give it a read.
 
-To use the SvgLoader you would simply use it like this:
+Instead, this doc will mostly focus on how the dev team actually uses this implementation and a bit about our approach, as well as a proposed style guide.
 
-```typescript
-<SvgLoader name="Arrow" />
+### Philosophy and Approach
+
+Tailwind CSS is our primary way of styling within the DXT-JSS-Public React App. A lot of effort and resources have been put into making Tailwind and Electron do as much of the heavy lifting for us as possible, so for maintainability's sake, every effort should be made to find a solution to style your work with Tailwind. If you're hitting a wall trying to figure out an approach that works within Tailwind, don't hesitate to reach out to a teammate. If you find yourself in the rare situation where you encounter something that simply cannot be resolved using Tailwind, we use [Styled Components](https://styled-components.com) as our fallback. If you find that you are creating a styled component often to deal with an edge case, it's probably worth documenting [here](https://confluence.duke-energy.com/display/DEPW/Tailwind+requests).
+
+### Tooling
+
+There's not a lot of tooling required for Tailwind but [the Tailwind CSS Intellisense VSCode plugin](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) can be pretty helpful. Once installed, it gives suggestions for Tailwind classes as well as Electron-specific ones. It also shows a preview of the CSS rules that the utility class utilizes.
+
+### Enabling Tailwind Properties
+
+Although Tailwind provides the flexibility to apply a wide range of modifiers (called `variants` in Tailwind) to a variety of CSS rules, you may occasionally find that a Tailwind class is not behaving the way you expect in a responsive context, or upon hover. This may mean that you will need to edit the Tailwind config. [You can find more info about that here.](https://tailwindcss.com/docs/configuring-variants) Please be careful to [extend the values](https://v1.tailwindcss.com/docs/configuring-variants), rather than simply adding them to the variant object, which will overwrite all the defaults.
+
+### Key Differences
+
+The main difference you'll find between Tailwind's approach and Electron's is that Duke doesn't need an extensive color library. As a result, you'll find that something like text-blue-800 or bg-yellow-200 does not behave as you'd expect. Most likely you will be looking for something like text-blue-dark or bg-yellow. So the color palette will be limited, and rather than a number to modify the color, there will either be no modifier, or a modifier of -light, -lighter, -dark, or -darker.
+
+### Style Guide
+
+Because almost all of our styles exist within utility classes, there is often no need for traditional CSS classes to style a block. It's fairly unusual to need to add a class like wrapper or large BEM classes. Occasionally, you may need to add a class to make it easier for unit tests to search for a selector. In such a case, we suggest that you use a js- prefix, and that you place it at the beginning of your utility classes.
+
+example:
+
+```jsx
+<div className="js-form text-blue-dark..." />
 ```
 
-It requires only one prop, name. This is a string that represents the svg component. The other props are:
+Often, the amount of classes you need to style a complex element can be rather long. In this case, it is suggested that you group your classes conceptually. Since Tailwind is a mobile-first framework, it makes sense to start with "base" styles that will be present across all sizes of the component, immediately followed by the responsive counterparts, in ascending order (`md`, `lg`, `xl`, etc).
 
-* animate: this will add a transform timing and easing to the style
-* className: class that you would like to inject
-* color: the tailwind color that you would like the svg to be
-* rotate: a number that will rotate the svg in degrees
-* size: the width and height
-* style: css style object of any other properties you wish to pass in
+Of the base styles, start with sizing (height, width, padding, margin) and other fiddly rules so that they are easily accessible to you and anyone who may need to maintain your code in the future. Utility classes that represent rules that are easily identifiable at a glance, such as text color or background color, should come secondary.
 
-```typescript
-<SvgLoader
-  animate={true}
-  className="some class"
-  color="white"
-  name="Arrow"
-  rotate={90}
-  size={32}
-  style={{ margin: 'auto' }}
-/>
+That was a lot of words, so let's look at an example.
+
+:no\_entry\_sign: Bad
+
+```jsx
+<div className="text-blue transition-all md:px-32 mt-12 flex bg-black w-20 duration-500 md:block px-24 lg:w-16 lg:px-48" />
 ```
 
-## How It Works
+:white\_check\_mark: Good
 
-All of our svgs reside in the `src/assets/svgs` folder. In order to easily import them and use them as React components we first need to convert them from raw svgs into components. This process will (thankfully) happen automatically before the bootstrap script runs. So all we need to worry about is placing any new svgs into the `src/assets/svgs` folder.
-
-The `@svgr/cli` runner will look into the svgs folder and convert all of them to React components and save them to the `src/components/Svgs` folder. Doing it this way eliminates the nightmare of webpack, configs and wrangling all of that mess.
-
-The first thing the component will look for is if the name prop is falsy. If it is, SvgLoader will just return null
-
-```typescript
-if (!name) return null;
+```jsx
+<div className="w-20 lg:w-16 mt-12 px-24 md:px-32 lg:px-48 flex md:block text-blue bg-black transition-all duration-500 />
 ```
 
-After that we will use React's lazy import to be able to import with a dynamic name like this:
+That may seem a lot to unpack, so let's examine that for a second. Note that the classes start with the width property and then are immediately followed by the responsive variant. This pattern follows as we move through the margin and into the padding, which is then followed by the display types, and onto more obvious styles like font and background colors, which don't require a check of the code in order to verify the values. Finally, the rules end with the transition and duration properties, which are often "set and forget" rules.
 
-```typescript
-const SvgComponent = React.lazy(() => import(`src/components/Svgs/${name}`));
-```
+### Resources
 
-In order to use this lazy loaded component we need to wrap it in a `<Suspense>` . This wrapper serves as something to render while its loading the component. This also gives us the built-in benefit as to no longer needing a mock for this component in all of our tests as the fallback will be a blank svg with the props passed in.
+* [Styled Components](https://styled-components.com) - documentation in case you need to step outside the Tailwind garden
+* [Tailwind Requests](https://confluence.duke-energy.com/display/DEPW/Tailwind+requests) - add to the Tailwind/Electron wishlist!
+* [Electron Docs](https://electron.duke-energy.com/foundation/utilities/utility-first)
+* [Tailwind VSCode Intellisense Plugin](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+* [Nerdcave CheatSheet](https://nerdcave.com/tailwind-cheat-sheet) - some random guy made a really handy cheatsheet for Tailwind CSS. Obviously, our rules won't be on it, but it's a nice quick reference for a lot of the classes.
+* [Tailwind CSS Docs](https://tailwindcss.com/docs) - their official docs are better than most
+* [Configuring Variants](https://v1.tailwindcss.com/docs/configuring-variants) - case in point
 
-```typescript
-<Suspense fallback={<svg {...props}></svg>}>
-  <SvgComponent {...{ 'data-testid': 'svg', ...props }} />
-</Suspense>
-```
-
-So while its loading the actual svg, this placeholder svg will be displayed that has all of the properties such as width, height, color, etc... The only real difference is that the `<SvgComponent>` gets one extra prop. The is a dataSet prop called `testid` with the value `svg` . This makes it easier to search for in the tests
-
-## Testing
-
-If your component uses the SvgLoader then you are good to go. You no longer need a mock as the `<Suspense>` will return a svg with the same properties that you are expecting.
-
-For the tests on the SvgLoader we need to account for the React lazy loading and `@testing-library/react` makes this pretty simple.
-
-First we do the imports:
-
-```typescript
-import { render, waitFor, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import SvgLoader from './index';
-```
-
-and then the test..
-
-```typescript
-it('should change the text color class if given a color prop', async () => {
-  render(<SvgLoader color="gray" name="Arrow" />);
-  const mounted = await waitFor(() => expect(screen.getByTestId('svg')));
-  mounted && expect(screen.getByTestId('svg')).toHaveAttribute('class', 'text-gray');
-});
-```
-
-How this works is that we first render the component, then we wait for the `data-testid` with the value `svg` to be in the DOM, then once that mounts we can do the assertions as to what the results are. This is why it was key to pass that `data-testid` prop to the imported svg and not the `<Suspense>` fallback svg. This way the test will ignore the fallback until the real svg has mounted.
-
-## Adding A New Svg
-
-To add a new svg all you need to do is to add the svg to the `src/assets/svgs` folder. Make sure that the fill inside the svg is set to `currentColor` so we will be able to change the color of the svg once we start using it. Next you'll want to run the following command in your terminal: `npm run start:svgs` . This will start the automatic conversion from the raw svg to the svg component and it will then be ready for use by `<SvgLoader />`
+React | Typescript | Tailwind | Forms | Unit Tests
