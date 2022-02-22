@@ -59,6 +59,7 @@
 * [🕐 Testing Assignment](personal-assignments/testing-assignment.md)
   * [Files For News Banner Component](personal-assignments/testing-assignment/files-for-news-banner-component.md)
   * [React Testing Recipes:](personal-assignments/testing-assignment/react-testing-recipes.md)
+* [😁 DXT-Solution](personal-assignments/dxt-solution.md)
 
 ## Meetings
 
