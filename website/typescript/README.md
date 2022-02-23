@@ -52,29 +52,29 @@ Required<Pick<ComponentTypes, 'text'>>
 
 Using the stategies above you can select types from the global source and compose them to create a representation of the props in a specific component. While the global types live in `project.d.ts` , component level types should generally be placed in a `types.ts` file within the component directory and imported for use.
 
-_Although ComponentTypes is a_ :white*check_mark: \_Good starting place, some components may require a type that is more specific and not usefully included in the global declaration.*
+_Although ComponentTypes is a_ :white_check\_mark: \_Good starting place, some components may require a type that is more specific and not usefully included in the global declaration._
 
----
+***
 
 ## `Naming`
 
-- {\['class', 'enum', 'interface', 'namespace', 'type', 'variable-and-function'].map(item => (
-- {item.split('-').join(' ')}
-- ))}
+* {\['class', 'enum', 'interface', 'namespace', 'type', 'variable-and-function'].map(item => (
+* {item.split('-').join(' ')}
+* ))}
 
----
+***
 
 ### `class`
 
 **🧑‍🔬 PascalCase**
 
-:no_entry_sign: Bad
+:no\_entry\_sign: Bad
 
 ```ts
 class foo {}
 ```
 
-:white_check_mark: Good
+:white\_check\_mark: Good
 
 ```ts
 class Foo {}
@@ -82,7 +82,7 @@ class Foo {}
 
 For memebers/methods use **🐪 camelCase**
 
-:no_entry_sign: Bad
+:no\_entry\_sign: Bad
 
 ```ts
 class Foo {
@@ -91,7 +91,7 @@ class Foo {
 }
 ```
 
-:white_check_mark: Good
+:white\_check\_mark: Good
 
 ```ts
 class Foo {
@@ -100,37 +100,37 @@ class Foo {
 }
 ```
 
----
+***
 
 ### `enum`
 
 **🧑‍🔬 PascalCase**
 
-:no_entry_sign: Bad
+:no\_entry\_sign: Bad
 
 ```ts
 enum backgroundColor {}
 ```
 
-:white_check_mark: Good
+:white\_check\_mark: Good
 
 ```ts
 enum BackgroundColor {}
 ```
 
----
+***
 
 ### `interface`
 
 **🧑‍🔬 PascalCase**
 
-:no_entry_sign: Bad
+:no\_entry\_sign: Bad
 
 ```ts
 interface checkboxProps {}
 ```
 
-:white_check_mark: Good
+:white\_check\_mark: Good
 
 ```ts
 interface CheckboxProps {}
@@ -138,7 +138,7 @@ interface CheckboxProps {}
 
 For memebers use **🐪 camelCase**
 
-:no_entry_sign: Bad
+:no\_entry\_sign: Bad
 
 ```ts
 interface CheckboxProps {
@@ -146,7 +146,7 @@ interface CheckboxProps {
 }
 ```
 
-:white_check_mark: Good
+:white\_check\_mark: Good
 
 ```ts
 interface CheckboxProps = {
@@ -154,62 +154,62 @@ interface CheckboxProps = {
 }
 ```
 
----
+***
 
 ### `namespace`
 
 **🧑‍🔬 PascalCase**
 
-:no_entry_sign: Bad
+:no\_entry\_sign: Bad
 
 ```ts
 namespace foo {}
 ```
 
-:white_check_mark: Good
+:white\_check\_mark: Good
 
 ```ts
 namespace Foo {}
 ```
 
----
+***
 
 ### `type`
 
 **🧑‍🔬 PascalCase**
 
-:no_entry_sign: Bad
+:no\_entry\_sign: Bad
 
 ```ts
 type imageProps = { src: string; alt: string };
 ```
 
-✅ :white_check_mark: Good
+✅ :white\_check\_mark: Good
 
 ```ts
 type ImageProps = { src: string; alt: string };
 ```
 
----
+***
 
 ### `variable and function`
 
 **🐪 camelCase**
 
-:no_entry_sign: Bad
+:no\_entry\_sign: Bad
 
 ```ts
 const FooBar = "baz";
 const FooBar = () => "baz";
 ```
 
-:white_check_mark: Good
+:white\_check\_mark: Good
 
 ```ts
 const fooBar = "baz";
 const fooBar = () => "baz";
 ```
 
----
+***
 
 React | Typescript | Tailwind | Forms | Unit Tests

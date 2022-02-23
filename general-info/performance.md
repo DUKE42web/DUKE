@@ -4,13 +4,13 @@
 
 <summary>Code Splitting</summary>
 
-### Reduce JavaScript payloads with code splitting
+#### Reduce JavaScript payloads with code splitting
 
-#### Excerpt
+**Excerpt**
 
 Sending large JavaScript payloads impacts the speed of your site significantly. Instead of shipping all the JavaScript to your user as soon as the first page of your application is loaded, split your bundle into multiple pieces and only send what's necessary at the very beginning.
 
----
+***
 
 Nov 5, 2018
 
@@ -18,7 +18,7 @@ Nobody likes waiting. [**Over 50% of users abandon a website if it takes longer 
 
 Sending large JavaScript payloads impacts the speed of your site significantly. Instead of shipping all the JavaScript to your user as soon as the first page of your application is loaded, split your bundle into multiple pieces and only send what's necessary at the very beginning.
 
-#### Measure [#](https://web.dev/reduce-javascript-payloads-with-code-splitting/#measure)
+**Measure** [**#**](https://web.dev/reduce-javascript-payloads-with-code-splitting/#measure)
 
 Lighthouse displays a failed audit when a significant amount of time is taken to execute all the JavaScript on a page.
 
@@ -26,7 +26,7 @@ Lighthouse displays a failed audit when a significant amount of time is taken to
 
 Split the JavaScript bundle to only send the code needed for the initial route when the user loads an application. This minimizes the amount of script that needs to be parsed and compiled, which results in faster page load times.
 
-Popular module bundlers like [webpack](https://webpack.js.org/guides/code-splitting/), [Parcel](https://parceljs.org/code_splitting.html), and [Rollup](https://rollupjs.org/guide/en#dynamic-import) allow you to split your bundles using [dynamic imports](https://developers.google.com/web/updates/2017/11/dynamic-import). For example, consider the following code snippet that shows an example of a `someFunction` method that gets fired when a form is submitted.
+Popular module bundlers like [webpack](https://webpack.js.org/guides/code-splitting/), [Parcel](https://parceljs.org/code\_splitting.html), and [Rollup](https://rollupjs.org/guide/en#dynamic-import) allow you to split your bundles using [dynamic imports](https://developers.google.com/web/updates/2017/11/dynamic-import). For example, consider the following code snippet that shows an example of a `someFunction` method that gets fired when a form is submitted.
 
 ```
 import moduleA from "library";form.addEventListener("submit", e => {  e.preventDefault();  someFunction();});const someFunction = () => {  // uses moduleA}
@@ -50,11 +50,11 @@ Last updated: Nov 5, 2018 — [Improve article](https://github.com/GoogleChrome/
 
 ## Time to Interactive (TTI)
 
-> #### Excerpt
+> **Excerpt**
 >
 > This post introduces the Time to Interactive (TTI) metric and explains how to measure it
 
----
+***
 
 Nov 7, 2019 — Updated Jun 15, 2020
 
@@ -79,8 +79,8 @@ Techniques like server-side rendering (SSR) can lead to scenarios where a page _
 
 When users try to interact with a page that looks interactive but actually isn't, they'll likely respond in one of two ways:
 
-- In the best-case scenario, they'll be annoyed that the page is slow to respond.
-- In the worst-case scenario, they'll assume the page is broken and likely leave. They may even lose confidence or trust in the value of your brand.
+* In the best-case scenario, they'll be annoyed that the page is slow to respond.
+* In the worst-case scenario, they'll assume the page is broken and likely leave. They may even lose confidence or trust in the value of your brand.
 
 To avoid this problem, make every effort to minimize the difference between FCP and TTI. And in cases were a noticeable difference does exist, make it clear through visual indicators that the components on your page are not yet interactive.
 
@@ -90,8 +90,8 @@ TTI is a metric that's best measured [in the lab](https://web.dev/user-centric-p
 
 #### Lab tools [#](https://web.dev/tti/#lab-tools)
 
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
-- [WebPageTest](https://www.webpagetest.org)
+* [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+* [WebPageTest](https://www.webpagetest.org)
 
 ### What is a good TTI score? [#](https://web.dev/tti/#what-is-a-good-tti-score)
 
@@ -105,11 +105,11 @@ To learn how to improve TTI for a specific site, you can run a Lighthouse perfor
 
 To learn how to improve TTI in general (for any site), refer to the following performance guides:
 
-- [Minify JavaScript](https://web.dev/unminified-javascript/)
-- [Preconnect to required origins](https://web.dev/uses-rel-preconnect/)
-- [Preload key requests](https://web.dev/uses-rel-preload/)
-- [Reduce the impact of third-party code](https://web.dev/third-party-summary/)
-- [Minimize critical request depth](https://web.dev/critical-request-chains/)
-- [Reduce JavaScript execution time](https://web.dev/bootup-time/)
-- [Minimize main thread work](https://web.dev/mainthread-work-breakdown/)
-- [Keep request counts low and transfer sizes small](https://web.dev/resource-summary/)
+* [Minify JavaScript](https://web.dev/unminified-javascript/)
+* [Preconnect to required origins](https://web.dev/uses-rel-preconnect/)
+* [Preload key requests](https://web.dev/uses-rel-preload/)
+* [Reduce the impact of third-party code](https://web.dev/third-party-summary/)
+* [Minimize critical request depth](https://web.dev/critical-request-chains/)
+* [Reduce JavaScript execution time](https://web.dev/bootup-time/)
+* [Minimize main thread work](https://web.dev/mainthread-work-breakdown/)
+* [Keep request counts low and transfer sizes small](https://web.dev/resource-summary/)

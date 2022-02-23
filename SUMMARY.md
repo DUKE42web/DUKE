@@ -1,6 +1,7 @@
 # Table of contents
 
 * [🗺 Site Navigation](README.md)
+* [Project Scrum / Sprints:](project-scrum-sprints.md)
 * [🔬 Testing](testing/README.md)
   * [Testing Input](testing/testing-input.md)
 * [After Onboarding Task](after-onboarding-task.md)
