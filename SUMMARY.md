@@ -78,16 +78,16 @@
     * [Create React App](general-info/general-info/react-notes/create-react-app.md)
   * [🕸 Webpack](general-info/general-info/webpack.md)
   * [Curry VS Functional Composition](general-info/general-info/curry-vs-functional-composition.md)
-  * [🥑 Airbnb JavaScript Style Guide](general-info/general-info/airbnb-javascript-style-guide.md)
-  * [🤸♂ 🤸♂ Performance](general-info/general-info/performance.md)
   * [Argv](general-info/general-info/argv.md)
   * [Modules](general-info/general-info/modules.md)
   * [Optional Chaning](general-info/general-info/optional-chaning.md)
   * [💍 Promises](general-info/general-info/promises.md)
   * [Enums In Javascript](general-info/general-info/enums-in-javascript.md)
   * [🗣 JIRA](general-info/general-info/jira.md)
+  * [🥑 Airbnb JavaScript Style Guide](general-info/general-info/airbnb-javascript-style-guide.md)
+  * [🤸♂ 🤸♂ Performance](general-info/general-info/performance.md)
 
-## 👨💻 👨💻 👨💻 Code
+## 👨💻 💻 Code
 
 * [Code](code/code/README.md)
   * [Index.tsx](code/code/index.tsx.md)
