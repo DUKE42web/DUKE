@@ -25,7 +25,7 @@ So here's how the initial default PushDownPanel might look:
 ```js
 export const NoIcons = Template.bind();
 NoIcons.args = {
-  items: itemsOptions["3"],
+  items: itemsOptions['3'],
 };
 ```
 
@@ -34,7 +34,7 @@ And then we can add variations based on different states, for example a version 
 ```js
 export const Icons = Template.bind({});
 Icons.args = {
-  items: itemsOptions["5"],
+  items: itemsOptions['5'],
 };
 ```
 
@@ -52,19 +52,19 @@ Most of the time the type of arg will be [inferred automatically](https://storyb
 
 ```js
 export default {
-  title: "Components/Accordion",
+  title: 'Components/Accordion',
   component: AccordionComponent,
   argTypes: {
     theme: {
-      name: "Theme",
+      name: 'Theme',
     },
     closeOthers: {
-      name: "One Panel Open At A Time",
+      name: 'One Panel Open At A Time',
     },
   },
 };
 
-const Template = (args) => <AccordionComponent {...args} />;
+const Template = args => <AccordionComponent {...args} />;
 
 export const Primary = Template.bind({});
 
@@ -77,7 +77,7 @@ Primary.args = {
 
 Controls allow designers and developers to explore component behavior by mucking about with its arguments.
 
-Storybook feeds the given args property into the story during render. Each of the args from the story function will now be live editable using Storybook's Controls panel, so we can dynamically change components in Storybook to see how they look with different settings and data:
+Storybook feeds the given args property into the story during render. Each of the args from the story function will now be live editable using Storybook’s Controls panel, so we can dynamically change components in Storybook to see how they look with different settings and data:
 
 ![Storybook Controls panel](./storybook-args.png)
 
@@ -87,13 +87,13 @@ Controls can be configured to use UI elements that we deem most appropriate acco
 
 ```js
 argTypes: {
-    backgroundColor: {
-        control: {
-            type: 'radio',
-            options: ['white', 'gray'],
-        },
-        defaultValue: 'white',
+  backgroundColor: {
+    control: {
+      type: 'radio',
+      options: ['white', 'gray'],
     },
+    defaultValue: 'white',
+  },
 },
 ```
 
@@ -101,15 +101,15 @@ A select menu to control the number of items that render:
 
 ```js
 argTypes: {
-    items: {
-        name: 'How many items?',
-        control: {
-            type: 'select',
-            options: {
-                ...itemsPrimary,
-            },
-        },
+  items: {
+    name: 'How many items?',
+    control: {
+      type: 'select',
+      options: {
+        ...itemsPrimary,
+      },
     },
+  },
 },
 ```
 
@@ -117,25 +117,25 @@ And for our Hero component, a mixture of text inputs, boolean switch and radio g
 
 ```js
 argTypes: {
-    title: {
-        control: {
-            type: 'text',
-        },
+  title: {
+    control: {
+      type: 'text',
     },
-    subtitle: {
-        control: {
-            type: 'text',
-        },
+  },
+  subtitle: {
+    control: {
+      type: 'text',
     },
-    link: {
-        control: 'boolean',
+  },
+  link: {
+    control: 'boolean',
+  },
+  ctaType: {
+    control: {
+      type: 'inline-radio',
+      options: ['ImageSlide', 'VideoSlide'],
     },
-    ctaType: {
-        control: {
-            type: 'inline-radio',
-            options: ['ImageSlide', 'VideoSlide'],
-        },
-    },
+  },
 },
 ```
 
@@ -151,35 +151,33 @@ We also use the Viewport [toolbar](https://storybook.js.org/docs/react/get-start
 
 ## Anatomy of a Story
 
-Stories exist alongside the other component files as `stories.js` .
+Stories exist alongside the other component files as `stories.js`.
 
 Here's an example of how a typical story might take shape:
 
 ```js
-import React from "react";
-import MyComponent from "./index";
-import { Data } from "./data";
-import { MyComponent as MyComponentComposition } from "../../lib/composition";
+import React from 'react';
+import MyComponent from './index';
+import { Data } from './data';
+import { MyComponent as MyComponentComposition } from '../../lib/composition';
 
-const props = MyComponentComposition({
-  fields: Data,
-});
+const props = MyComponentComposition({ fields: Data });
 
 export default {
-  title: "Components/MyComponent",
+  title: 'Components/MyComponent',
   component: MyComponent,
   argTypes: {
     backgroundColor: {
       control: {
-        type: "radio",
-        options: ["white", "gray"],
+        type: 'radio',
+        options: ['white', 'gray'],
       },
-      defaultValue: "white",
+      defaultValue: 'white',
     },
   },
 };
 
-const Template = (args) => <MyComponent {...args} />;
+const Template = args => <MyComponent {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -192,9 +190,7 @@ Let's break this down line by line:
 ```js
 import React from 'react';
 import MyComponent from './index';
-import {
-    Data
-} from './data';
+import { Data } from './data';
 
 ...
 ```
@@ -204,13 +200,9 @@ import {
 ```js
 ...
 
-import {
-    MyComponent as MyComponentComposition
-} from '../../lib/composition';
+import { MyComponent as MyComponentComposition } from '../../lib/composition';
 
-const props = MyComponentComposition({
-    fields: Data
-});
+const props = MyComponentComposition({ fields: Data });
 
 ...
 ```
@@ -221,17 +213,17 @@ const props = MyComponentComposition({
 ...
 
 export default {
-    title: 'Components/MyComponent',
-    component: MyComponent,
-    argTypes: {
-        backgroundColor: {
-            control: {
-                type: 'radio',
-                options: ['white', 'gray'],
-            },
-            defaultValue: 'white',
-        },
+  title: 'Components/MyComponent',
+  component: MyComponent,
+  argTypes: {
+    backgroundColor: {
+      control: {
+        type: 'radio',
+        options: ['white', 'gray'],
+      },
+      defaultValue: 'white',
     },
+  },
 };
 
 ...
@@ -250,22 +242,19 @@ In the example above, we're setting `backgroundColor` as a radio button so the u
 ```js
 ...
 
-const Template = args => < MyComponent {
-    ...args
-}
-/>;
+const Template = args => <MyComponent {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-    ...props,
+  ...props,
 };
 ```
 
-**Template Definition:** Now that our stories are exported, we move on to defining a master template ( `Template` ) for our component's stories, and passing in our args.
+**Template Definition:** Now that our stories are exported, we move on to defining a master template (`Template`) for our component's stories, and passing in our args.
 
 We can then reuse this template across stories. `Template.bind({})` makes a copy of the function, reducing code duplication. This is a [standard JavaScript technique](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) for making a copy of a function, and allows each exported story to set its own properties.
 
-And finally we spread in our component's props ( `...props` ), making data available to our component as it would be in the regular app.
+And finally we spread in our component's props (`...props`), making data available to our component as it would be in the regular app.
 
 ## storybookCustomArgs
 
@@ -284,29 +273,26 @@ Again we have a nifty function for that! Here's an example of both `storybookCus
 ```js
 ...
 
-import {
-    storybookCustomArgs,
-    createStoryOptions
-} from 'src/lib/helpers';
+import { storybookCustomArgs, createStoryOptions } from 'src/lib/helpers';
 
 const props = BulletedOverviewComposition(Data);
 const itemsToShow = createStoryOptions(props.items);
 
 export default {
-    title: 'Components/Bulleted Overview',
-    component: BulletedOverview,
-    argTypes: {
-        ...storybookCustomArgs(props, BulletedOverview, [], false),
-        items: {
-            name: 'How many items?',
-            control: {
-                type: 'select',
-                options: {
-                    ...itemsToShow,
-                },
-            },
+  title: 'Components/Bulleted Overview',
+  component: BulletedOverview,
+  argTypes: {
+    ...storybookCustomArgs(props, BulletedOverview, [], false),
+    items: {
+      name: 'How many items?',
+      control: {
+        type: 'select',
+        options: {
+          ...itemsToShow,
         },
+      },
     },
+  },
 };
 
 ...

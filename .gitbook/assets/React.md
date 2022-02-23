@@ -6,10 +6,8 @@ Each component should have its own folder nested inside the `/components` folder
 Inside this folder you should have the following files:
 
 - data.js
-
   - contains a copy of the JSS `fields` object for this component. This will get imported in unit tests and Storybook stories. If the component doesn't get called from
     Sitecore and doesn't have JSS fields, then this file isn't needed.
-
 - index.tsx
   - main React component
 - stories.js
@@ -96,7 +94,7 @@ We should always use function components with hooks over class components. Funct
 and render methods like class components do. If you need to track state in your component, import the `useState` hook.
 
 ```tsx
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Button = () => {
   const [count, setCount] = useState(0);
@@ -106,9 +104,8 @@ const Button = () => {
 
 ### Use Short Syntax Over React Fragments
 
-If your return content doesn't have a wrapping div you will need to create a fragment by using a short syntax element `<>` rather than a React `<Fragment>` .
-The only exception is if you need to use a `key` when using a `map` . In these instances you will need to use a `<Fragment>`
-
+If your return content doesn't have a wrapping div you will need to create a fragment by using a short syntax element `<>` rather than a React `<Fragment>`.
+The only exception is if you need to use a `key` when using a `map`. In these instances you will need to use a `<Fragment>`
 [React Short Syntax](https://reactjs.org/docs/fragments.html#short-syntax)
 
 :no_entry_sign: Bad

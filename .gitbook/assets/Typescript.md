@@ -2,7 +2,7 @@
 
 ## `Global types`
 
-In typescript global types can be declared in a `.d.ts` file and used anywhere without explicitly importing them. Our project's `.d.ts` file is named `project.d.ts` .
+In typescript global types can be declared in a `.d.ts` file and used anywhere without explicitly importing them. Our project's `.d.ts` file is named `project.d.ts`.
 
 It contains:
 
@@ -45,7 +45,7 @@ Required<Pick<ComponentTypes, 'text'>>
 // the text type is required
 ```
 
-Using the stategies above you can select types from the global source and compose them to create a representation of the props in a specific component. While the global types live in `project.d.ts` , component level types should generally be placed in a `types.ts` file within the component directory and imported for use.
+Using the stategies above you can select types from the global source and compose them to create a representation of the props in a specific component. While the global types live in `project.d.ts`, component level types should generally be placed in a `types.ts` file within the component directory and imported for use.
 
 _Although ComponentTypes is a :white_check_mark: Good starting place, some components may require a type that is more specific and not usefully included in the global declaration._
 
@@ -55,13 +55,10 @@ _Although ComponentTypes is a :white_check_mark: Good starting place, some compo
 
 <ul>
   {['class', 'enum', 'interface', 'namespace', 'type', 'variable-and-function'].map(item => (
-
     <li>
-      <a href={ `#${item}` }>{item.split('-').join(' ')}</a>
+      <a href={`#${item}`}>{item.split('-').join(' ')}</a>
     </li>
-
-))}
-
+  ))}
 </ul>
 
 ---
@@ -201,15 +198,15 @@ type ImageProps = { src: string; alt: string };
 :no_entry_sign: Bad
 
 ```ts
-const FooBar = "baz";
-const FooBar = () => "baz";
+const FooBar = 'baz';
+const FooBar = () => 'baz';
 ```
 
 :white_check_mark: Good
 
 ```ts
-const fooBar = "baz";
-const fooBar = () => "baz";
+const fooBar = 'baz';
+const fooBar = () => 'baz';
 ```
 
 ---
