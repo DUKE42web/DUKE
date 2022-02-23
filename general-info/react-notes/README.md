@@ -97,7 +97,13 @@ return (
 
 You can respond to events by declaring event handler functions inside your components:
 
-```
+
+
+
+
+```js
+
+
 function MyButton() {
   function handleClick() {
     alert('You clicked me!');
@@ -109,7 +115,11 @@ function MyButton() {
     </button>
   );
 }
+
+
 ```
+
+
 
 Notice how `onClick={handleClick}` has no parentheses at the end! Do not _call_ the event handler function: you only need to _pass it down_. React will call your event handler when the user clicks the button.
 
@@ -119,22 +129,55 @@ Often, you’ll want your component to “remember” some information and displ
 
 First, import [`useState`](https://beta.reactjs.org/apis/usestate) from React:
 
-```
+
+
+
+
+```js
+
+
+
+
+
+
+```js
+
+
 import { useState } from 'react';
+
+
 ```
+
+
 
 Now you can declare a _state variable_ inside your component:
 
-```
+
+
+
+
+```js
+
+
 function MyButton() {
   const [count, setCount] = useState(0);
+
+
 ```
+
+
 
 You will get two things from `useState`: the current state (`count`), and the function that lets you update it (`setCount`). You can give them any names, but the convention is to call them like `[something, setSomething]`.
 
 The first time the button is displayed, `count` will be `0` because you passed `0` to `useState()`. When you want to change state, call `setCount()` and pass the new value to it. Clicking this button will increment the counter:
 
-```
+
+
+
+
+```js
+
+
 function MyButton() {
   const [count, setCount] = useState(0);
 
@@ -148,11 +191,22 @@ function MyButton() {
     </button>
   );
 }
+
+
 ```
+
+
 
 React will call your component function again. This time, `count` will be `1`. Then it will be `2`. And so on.
 
 If you render the same component multiple times, each will get its own state. Try clicking each button separately:
+
+
+
+
+
+```js
+
 
 import { useState } from 'react';
 
@@ -180,29 +234,55 @@ Hooks are more restrictive than regular functions. You can only call Hooks _at t
 
 In the previous example, each button had its own independent counter:
 
-```
+
+
+
+
+```js
+
+
 - MyApp
   - MyButton (count: 3)
   - MyButton (count: 1)
   - MyButton (count: 2)
+
+
 ```
+
+
 
 However, you’ll often need components to _share data and always update together_.
 
 To make all buttons display the same `count` and update together, you need to move the state from the individual buttons “upwards” to the closest component containing all of them. In this example, it is `MyApp`:
 
-```
+
+
+
+
+```js
+
+
 - MyApp (count: 3)
   - MyButton
   - MyButton
   - MyButton
+
+
 ```
+
+
 
 Here’s how you can express this in code.
 
 First, _move the state up_ from `MyButton` into `MyApp`:
 
-```
+
+
+
+
+```js
+
+
 function MyButton() {
   // ... we're moving code from here ...
 }
@@ -223,11 +303,21 @@ export default function MyApp() {
     </div>
   );
 }
+
+
 ```
+
+
 
 Then, _pass the state down_ from `MyApp` to each `MyButton`, together with the shared click handler. You can pass information to `MyButton` using the JSX curly braces, just like you previously did with built-in tags like `<img>`:
 
-```
+
+
+
+
+```js
+
+
 export default function MyApp() {
   const [count, setCount] = useState(0);
 
@@ -244,13 +334,23 @@ export default function MyApp() {
     </div>
   );
 }
+
+
 ```
+
+
 
 The information you pass down like this is called _props_. Now the `MyApp` component contains the `count` state and the `handleClick` event handler, and _passes both of them down as props_ to each of the buttons.
 
 Finally, change `MyButton` to _read_ the props you have passed from its parent component:
 
-```
+
+
+
+
+```js
+
+
 function MyButton({ count, onClick }) {
   return (
     <button onClick={onClick}>
@@ -258,11 +358,22 @@ function MyButton({ count, onClick }) {
     </button>
   );
 }
+
+
 ```
+
+
 
 When you click the button, the `onClick` handler fires. Each button’s `onClick` prop was set to the `handleClick` function inside `MyApp`, so the code inside of it runs. That code calls `setCount(count + 1)`, incrementing the `count` state variable. The new `count` value is passed as a prop to each button, so they all show the new value.
 
 This is called “lifting state up”. By moving state up, we’ve shared it between components.
+
+
+
+
+
+```js
+
 
 import { useState } from 'react';
 
@@ -277,6 +388,10 @@ return (
 #### Counters that update together
 
 ); }
+
+
+```
+
 
 **Next Steps**
 
@@ -441,15 +556,31 @@ So the state values will live in `FilterableProductTable`.
 
 Add state to the component with the [`useState()` Hook](https://beta.reactjs.org/apis/usestate). Hooks let you “hook into” a component’s [render cycle](https://beta.reactjs.org/learn/render-and-commit). Add two state variables at the top of `FilterableProductTable` and specify the initial state of your application:
 
-```
+
+
+
+
+```js
+
+
 function FilterableProductTable({ products }) {
   const [filterText, setFilterText] = useState('');
   const [inStockOnly, setInStockOnly] = useState(false);
+
+
 ```
+
+
 
 Then, pass `filterText` and `inStockOnly` to `ProductTable` and `SearchBar` as props:
 
-```
+
+
+
+
+```js
+
+
 <div>
   <SearchBar
     filterText={filterText}
@@ -459,9 +590,20 @@ Then, pass `filterText` and `inStockOnly` to `ProductTable` and `SearchBar` as p
     filterText={filterText}
     inStockOnly={inStockOnly} />
 </div>
+
+
 ```
 
+
+
 You can start seeing how your application will behave. Edit the `filterText` initial value from `useState('')` to `useState('fruit')` in the sandbox code below. You’ll see both the search input text and the table update:
+
+
+
+
+
+```js
+
 
 import { useState } from 'react';
 
@@ -495,9 +637,19 @@ const PRODUCTS = \[ {category: "Fruits", price: "$1", stocked: true, name: "Appl
 
 export default function App() { return ; }
 
-In the sandbox above, `ProductTable` and `SearchBar` read the `filterText` and `inStockOnly` props to render the table, the input, and the checkbox. For example, here is how `SearchBar` populates the input value:
 
 ```
+
+
+In the sandbox above, `ProductTable` and `SearchBar` read the `filterText` and `inStockOnly` props to render the table, the input, and the checkbox. For example, here is how `SearchBar` populates the input value:
+
+
+
+
+
+```js
+
+
 function SearchBar({ filterText, inStockOnly }) {
   return (
     <form>
@@ -505,7 +657,11 @@ function SearchBar({ filterText, inStockOnly }) {
         type="text"
         value={filterText}
         placeholder="Search..."/>
+
+
 ```
+
+
 
 Refer to the [Managing State](https://beta.reactjs.org/learn/managing-state) to dive deeper into how React uses state and how you can organize your app with it.
 
@@ -517,7 +673,13 @@ React makes this data flow explicit, but it requires a little more typing than t
 
 You want to make it so whenever the user changes the form inputs, the state updates to reflect those changes. The state is owned by `FilterableProductTable`, so only it can call `setFilterText` and `setInStockOnly`. To let `SearchBar` update the `FilterableProductTable`’s state, you need to pass these functions down to `SearchBar`:
 
-```
+
+
+
+
+```js
+
+
 function FilterableProductTable({ products }) {
   const [filterText, setFilterText] = useState('');
   const [inStockOnly, setInStockOnly] = useState(false);
@@ -529,19 +691,40 @@ function FilterableProductTable({ products }) {
         inStockOnly={inStockOnly}
         onFilterTextChange={setFilterText}
         onInStockOnlyChange={setInStockOnly} />
+
+
 ```
+
+
 
 Inside the `SearchBar`, you will add the `onChange` event handlers and set the parent state from them:
 
-```
+
+
+
+
+```js
+
+
 <input
   type="text"
   value={filterText}
   placeholder="Search..."
   onChange={(e) => onFilterTextChange(e.target.value)} />
+
+
 ```
 
+
+
 Now the application fully works!
+
+
+
+
+
+```js
+
 
 import { useState } from 'react';
 
