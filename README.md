@@ -22,8 +22,8 @@ _<mark style="color:red;background-color:green;">**Self Link**</mark>_
 
 ### The Company
 
-{% content-ref url="the-company/meet-the-team/" %}
-[meet-the-team](the-company/meet-the-team/)
+{% content-ref url="resources/meet-the-company/meet-the-team/" %}
+[meet-the-team](resources/meet-the-company/meet-the-team/)
 {% endcontent-ref %}
 
 {% content-ref url="broken-reference/" %}

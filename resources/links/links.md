@@ -52,7 +52,7 @@
 
 [Citrix Receiver | Third Party Notices](https://www2.myapps-duke-energy.com/Citrix/Duke-Energy-MFAWeb/ReceiverThirdPartyNotices.htm)
 
-[Meet the Team! - DUKE](../../the-company/meet-the-team/)
+[Meet the Team! - DUKE](../meet-the-company/meet-the-team/)
 
 [DUKE/Website/creating-components at master - bgoonz/DUKE](https://github.com/bgoonz/DUKE/tree/master/Website/creating-components)
 
