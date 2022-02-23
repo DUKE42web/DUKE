@@ -8,91 +8,91 @@
 
 See [Which query should I use?](https://testing-library.com/docs/queries/about#priority)
 
-* **ByLabelText** find by label or aria-label text content
-  * getByLabelText
-  * queryByLabelText
-  * getAllByLabelText
-  * queryAllByLabelText
-  * findByLabelText
-  * findAllByLabelText
-* **ByPlaceholderText** find by input placeholder value
-  * getByPlaceholderText
-  * queryByPlaceholderText
-  * getAllByPlaceholderText
-  * queryAllByPlaceholderText
-  * findByPlaceholderText
-  * findAllByPlaceholderText
-* **ByText** find by element text content
-  * getByText
-  * queryByText
-  * getAllByText
-  * queryAllByText
-  * findByText
-  * findAllByText
-* **ByDisplayValue** find by form element current value
-  * getByDisplayValue
-  * queryByDisplayValue
-  * getAllByDisplayValue
-  * queryAllByDisplayValue
-  * findByDisplayValue
-  * findAllByDisplayValue
-* **ByAltText** find by img alt attribute
-  * getByAltText
-  * queryByAltText
-  * getAllByAltText
-  * queryAllByAltText
-  * findByAltText
-  * findAllByAltText
-* **ByTitle** find by title attribute or svg title tag
-  * getByTitle
-  * queryByTitle
-  * getAllByTitle
-  * queryAllByTitle
-  * findByTitle
-  * findAllByTitle
-* **ByRole** find by aria role
-  * getByRole
-  * queryByRole
-  * getAllByRole
-  * queryAllByRole
-  * findByRole
-  * findAllByRole
-* **ByTestId** find by data-testid attribute
-  * getByTestId
-  * queryByTestId
-  * getAllByTestId
-  * queryAllByTestId
-  * findByTestId
-  * findAllByTestId
+- **ByLabelText** find by label or aria-label text content
+  - getByLabelText
+  - queryByLabelText
+  - getAllByLabelText
+  - queryAllByLabelText
+  - findByLabelText
+  - findAllByLabelText
+- **ByPlaceholderText** find by input placeholder value
+  - getByPlaceholderText
+  - queryByPlaceholderText
+  - getAllByPlaceholderText
+  - queryAllByPlaceholderText
+  - findByPlaceholderText
+  - findAllByPlaceholderText
+- **ByText** find by element text content
+  - getByText
+  - queryByText
+  - getAllByText
+  - queryAllByText
+  - findByText
+  - findAllByText
+- **ByDisplayValue** find by form element current value
+  - getByDisplayValue
+  - queryByDisplayValue
+  - getAllByDisplayValue
+  - queryAllByDisplayValue
+  - findByDisplayValue
+  - findAllByDisplayValue
+- **ByAltText** find by img alt attribute
+  - getByAltText
+  - queryByAltText
+  - getAllByAltText
+  - queryAllByAltText
+  - findByAltText
+  - findAllByAltText
+- **ByTitle** find by title attribute or svg title tag
+  - getByTitle
+  - queryByTitle
+  - getAllByTitle
+  - queryAllByTitle
+  - findByTitle
+  - findAllByTitle
+- **ByRole** find by aria role
+  - getByRole
+  - queryByRole
+  - getAllByRole
+  - queryAllByRole
+  - findByRole
+  - findAllByRole
+- **ByTestId** find by data-testid attribute
+  - getByTestId
+  - queryByTestId
+  - getAllByTestId
+  - queryAllByTestId
+  - findByTestId
+  - findAllByTestId
 
 **Async**[**​**](https://testing-library.com/docs/dom-testing-library/cheatsheet#async)
 
 See [Async API](https://testing-library.com/docs/dom-testing-library/api-async). Remember to `await` or `.then()` the result of async functions in your tests!
 
-* **waitFor** (Promise) retry the function within until it stops throwing or times out
-* **waitForElementToBeRemoved** (Promise) retry the function until it no longer returns a DOM node
+- **waitFor** (Promise) retry the function within until it stops throwing or times out
+- **waitForElementToBeRemoved** (Promise) retry the function until it no longer returns a DOM node
 
 **Deprecated since v7.0.0:**
 
-* **wait** (Promise) retry the function within until it stops throwing or times
-* **waitForElement** (Promise) retry the function until it returns an element or an array of elements. The `findBy` and `findAllBy` queries are async and retry until the query returns successfully, or when the query times out; they wrap `waitForElement`
-* **waitForDomChange** (Promise) retry the function each time the DOM is changed
+- **wait** (Promise) retry the function within until it stops throwing or times
+- **waitForElement** (Promise) retry the function until it returns an element or an array of elements. The `findBy` and `findAllBy` queries are async and retry until the query returns successfully, or when the query times out; they wrap `waitForElement`
+- **waitForDomChange** (Promise) retry the function each time the DOM is changed
 
 **Events**[**​**](https://testing-library.com/docs/dom-testing-library/cheatsheet#events)
 
 See [Considerations for fireEvent](https://testing-library.com/docs/guide-events), [Events API](https://testing-library.com/docs/dom-testing-library/api-events)
 
-* **fireEvent** trigger DOM event: `fireEvent(node, event)`
-* **fireEvent.\*** helpers for default event types
-  * **click** `fireEvent.click(node)`
-  * [See all supported events](https://github.com/testing-library/dom-testing-library/blob/master/src/event-map.js)
+- **fireEvent** trigger DOM event: `fireEvent(node, event)`
+- **fireEvent.\*** helpers for default event types
+  - **click** `fireEvent.click(node)`
+  - [See all supported events](https://github.com/testing-library/dom-testing-library/blob/master/src/event-map.js)
 
 **Other**[**​**](https://testing-library.com/docs/dom-testing-library/cheatsheet#other)
 
 See [Querying Within Elements](https://testing-library.com/docs/dom-testing-library/api-within), [Config API](https://testing-library.com/docs/dom-testing-library/api-configuration)
 
-* **within** take a node and return an object with all the queries bound to the node (used to return the queries from `React Testing Library`'s render method): `within(node).getByText("hello")`
-* **configure** change global options: `configure({testIdAttribute: 'my-data-test-id'})`
+- **within** take a node and return an object with all the queries bound to the node (used to return the queries from `React Testing Library`'s render method): `within(node).getByText("hello")`
+- **configure** change global options: `configure({testIdAttribute: 'my-data-test-id'})`
 
 **Text Match Options**[**​**](https://testing-library.com/docs/dom-testing-library/cheatsheet#text-match-options)
 
@@ -136,7 +136,7 @@ npm install --save-dev @testing-library/react
 
 Copy
 
-* [React Testing Library on GitHub](https://github.com/testing-library/react-testing-library)
+- [React Testing Library on GitHub](https://github.com/testing-library/react-testing-library)
 
 **The problem**[**​**](https://testing-library.com/docs/react-testing-library/intro/#the-problem)
 
@@ -207,10 +207,10 @@ It is ideal to use your component-specific data from your `./data.js` file to po
 
 Deciding what to write tests for can be a challenge, some things to test include:
 
-* Edge Cases
-* Bad Input/Good Input
-* Logic Branches - Is there a positive and negative path? Perhaps things are hidden or shown.
-* Individual Methods - Especially when they contain specific logic
+- Edge Cases
+- Bad Input/Good Input
+- Logic Branches - Is there a positive and negative path? Perhaps things are hidden or shown.
+- Individual Methods - Especially when they contain specific logic
 
 Practical examples: If your function takes numbers, what happens if you pass it strings? Do both the positive and negative path tests of your function produce the correct output? What happens if you pass in zero, negative numbers, undefined, or null?
 
@@ -237,7 +237,7 @@ it('Test div Exists', () => {
 
 Where as this would be a good test, as you are testing the logic in the isVisible, and not the React framework:
 
-:white\_check\_mark: Good
+:white_check_mark: Good
 
 ```tsx
 const isVisible(someData: MyType) {
@@ -412,11 +412,11 @@ You will want to import and use the same types used in your component to create 
 
 ## Resources
 
-* [React Testing](https://reactjs.org/docs/testing.html)
-* [React Testing Recipes](https://reactjs.org/docs/testing-recipes.html)
-* [Jest Testing Framework](https://jestjs.io)
-* [Jest Mocks](https://jestjs.io/docs/en/jest-object#mock-modules)
-* [Jest Testing React](https://jestjs.io/docs/en/tutorial-react)
-* [Enzyme](https://enzymejs.github.io/enzyme/)
+- [React Testing](https://reactjs.org/docs/testing.html)
+- [React Testing Recipes](https://reactjs.org/docs/testing-recipes.html)
+- [Jest Testing Framework](https://jestjs.io)
+- [Jest Mocks](https://jestjs.io/docs/en/jest-object#mock-modules)
+- [Jest Testing React](https://jestjs.io/docs/en/tutorial-react)
+- [Enzyme](https://enzymejs.github.io/enzyme/)
 
 React | Typescript | Tailwind | Forms | Unit Tests

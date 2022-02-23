@@ -4,7 +4,7 @@
 
 Rather than all code living in a single file, we can split the code up into different files and only load the code that we need for a given page. Here is how we can accomplish this in our project using [loadable-components](https://loadable-components.com/docs/server-side-rendering/).
 
-***
+---
 
 ### Server
 
@@ -54,7 +54,7 @@ html = assertReplace(
 );
 ```
 
-***
+---
 
 ### Client
 

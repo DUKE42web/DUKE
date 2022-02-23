@@ -56,7 +56,7 @@ Note that this pattern of setting defaults for unspecified values is so common t
 function paintShape({ shape, xPos = 0, yPos = 0 }: PaintOptions) {  console.log("x coordinate at", xPos);                                  (parameter) xPos: number  console.log("y coordinate at", yPos);                                  (parameter) yPos: number  // ...}Try
 ```
 
-Here we used [a destructuring pattern](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring\_assignment) for `paintShape`’s parameter, and provided [default values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring\_assignment#Default\_values) for `xPos` and `yPos`. Now `xPos` and `yPos` are both definitely present within the body of `paintShape`, but optional for any callers to `paintShape`.
+Here we used [a destructuring pattern](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) for `paintShape`’s parameter, and provided [default values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Default_values) for `xPos` and `yPos`. Now `xPos` and `yPos` are both definitely present within the body of `paintShape`, but optional for any callers to `paintShape`.
 
 > Note that there is currently no way to place type annotations within destructuring patterns. This is because the following syntax already means something different in JavaScript.
 
@@ -109,6 +109,7 @@ An index signature property type must be either ‘string’ or ‘number’.
 <summary>It is possible to support both types of indexers...</summary>
 
 ```
+
 ```
 
 </details>
@@ -335,7 +336,7 @@ If we try to index past the number of elements, we’ll get an error.
 function doSomething(pair: [string, number]) {  // ...   const c = pair[2];Tuple type '[string, number]' of length '2' has no element at index '2'.Tuple type '[string, number]' of length '2' has no element at index '2'.}Try
 ```
 
-We can also [destructure tuples](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring\_assignment#Array\_destructuring) using JavaScript’s array destructuring.
+We can also [destructure tuples](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring) using JavaScript’s array destructuring.
 
 ```
 function doSomething(stringHash: [string, number]) {  const [inputString, hash] = stringHash;   console.log(inputString);                  const inputString: string   console.log(hash);               const hash: number}Try
@@ -363,9 +364,9 @@ Tuples can also have rest elements, which have to be an array/tuple type.
 type StringNumberBooleans = [string, number, ...boolean[]];type StringBooleansNumber = [string, ...boolean[], number];type BooleansStringNumber = [...boolean[], string, number];Try
 ```
 
-* `StringNumberBooleans` describes a tuple whose first two elements are `string` and `number` respectively, but which may have any number of `boolean`s following.
-* `StringBooleansNumber` describes a tuple whose first element is `string` and then any number of `boolean`s and ending with a `number`.
-* `BooleansStringNumber` describes a tuple whose starting elements any number of `boolean`s and ending with a `string` then a `number`.
+- `StringNumberBooleans` describes a tuple whose first two elements are `string` and `number` respectively, but which may have any number of `boolean`s following.
+- `StringBooleansNumber` describes a tuple whose first element is `string` and then any number of `boolean`s and ending with a `number`.
+- `BooleansStringNumber` describes a tuple whose starting elements any number of `boolean`s and ending with a `string` then a `number`.
 
 A tuple with a rest element has no set “length” - it only has a set of well-known elements in different positions.
 

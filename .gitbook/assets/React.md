@@ -94,7 +94,7 @@ We should always use function components with hooks over class components. Funct
 and render methods like class components do. If you need to track state in your component, import the `useState` hook.
 
 ```tsx
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Button = () => {
   const [count, setCount] = useState(0);

@@ -14,28 +14,36 @@
 - The content area should be centered horizontally when when the CTA is not displayed.
 - There are predefined background options.
 */
-import { Text } from '@sitecore-jss/sitecore-jss-react';
-import React from 'react';
-import LazyImage from 'src/components/LazyImage';
-import { NewsBannerProps } from './types';
-import RichText from 'src/components/RichText';
-import Button from 'src/components/Button';
-const NewsBanner = ({ icon, rounded, title, body,  bgColorClass, cta }: NewsBannerProps) => {
+import { Text } from "@sitecore-jss/sitecore-jss-react";
+import React from "react";
+import LazyImage from "src/components/LazyImage";
+import { NewsBannerProps } from "./types";
+import RichText from "src/components/RichText";
+import Button from "src/components/Button";
+const NewsBanner = ({
+  icon,
+  rounded,
+  title,
+  body,
+  bgColorClass,
+  cta,
+}: NewsBannerProps) => {
   const ctaExists = cta?.href && cta?.text;
-  const iconRounded = rounded ? 'rounded-full' : '';
-  const iconSize = icon?.value?.src?.includes('.svg')
-    ? 'icon-48 sm:icon-76'
-    : 'icon-76 sm:icon-122';
+  const iconRounded = rounded ? "rounded-full" : "";
+  const iconSize = icon?.value?.src?.includes(".svg")
+    ? "icon-48 sm:icon-76"
+    : "icon-76 sm:icon-122";
 
   return (
     <section className={`px-16 md:px-24 py-24 md:py-32  ${bgColorClass}`}>
       <div
         className={`lg:flex-row container-3xl lg:space-x-32 flex flex-col items-center lg:justify-center text-center lg:text-left`}
       >
-        <div
-          className={` py-24 lg:px-24  flex-shrink-0 }`}
-        >
-          <LazyImage {...icon} className={`mx-auto lg:mx-0 w-full ${iconSize} ${iconRounded}`} />
+        <div className={` py-24 lg:px-24  flex-shrink-0 }`}>
+          <LazyImage
+            {...icon}
+            className={`mx-auto lg:mx-0 w-full ${iconSize} ${iconRounded}`}
+          />
         </div>
         <div>
           <Text className="text-xl" field={title} tag="h3" />
@@ -58,5 +66,4 @@ const NewsBanner = ({ icon, rounded, title, body,  bgColorClass, cta }: NewsBann
   );
 };
 export default NewsBanner;
-
 ```

@@ -28,9 +28,9 @@ Sometimes Sitecore references a component in a way that is different from what w
 
 ```ts
 const componentAlias = {
-  HeroCarousel: 'Hero',
-  HeroCarouselNocache: 'Hero',
-  JssAccordion: 'Accordion',
+  HeroCarousel: "Hero",
+  HeroCarouselNocache: "Hero",
+  JssAccordion: "Accordion",
   // ...
 };
 ```

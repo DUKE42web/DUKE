@@ -1,13 +1,8 @@
 # Types.ts
 
-
-
 #### Code:
 
-
-
 ```typescript
-
 interface ctaTypes {
   //https://stackoverflow.com/questions/67494696/typescript-require-at-least-one-property
   target?: string;
@@ -25,8 +20,6 @@ interface NewsBannerProps {
   color?: string;
 }
 export type { NewsBannerProps };
-
-
 ```
 
 > end of code

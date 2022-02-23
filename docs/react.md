@@ -4,27 +4,25 @@
 
 Each component should have its own folder nested inside the `/components` folder. The name of this folder should match the name of the component itself. Inside this folder you should have the following files:
 
-* data.js
-  * contains a copy of the JSS `fields` object for this component. This will get imported in unit tests and Storybook stories. If the component doesn't get called from Sitecore and doesn't have JSS fields, then this file isn't needed.
-* index.tsx
-  * main React component
-* stories.js
-  * Storybook stories
-* styles.ts(x) (optional)
-  * if you use Styled Components for the component, they will live here
-* test.tsx
-  * Jest unit tests
-* types.ts
-  * Typescript types and interfaces the component
+- data.js
+  - contains a copy of the JSS `fields` object for this component. This will get imported in unit tests and Storybook stories. If the component doesn't get called from Sitecore and doesn't have JSS fields, then this file isn't needed.
+- index.tsx
+  - main React component
+- stories.js
+  - Storybook stories
+- styles.ts(x) (optional)
+  - if you use Styled Components for the component, they will live here
+- test.tsx
+  - Jest unit tests
+- types.ts
+  - Typescript types and interfaces the component
 
 \
 \
 
-
-***
+---
 
 \
-
 
 ## Composition File
 
@@ -78,23 +76,21 @@ const QuickLinks = ({ items }: { items: Array<ComponentTypes> }) => (
 
 An important thing to note and best practice is to use optional chaining when reaching into an object. The `(?.)` operator allows you to reach as far down into a nested object without first having to validate that the previous step in the chain is valid and exists first.
 
-[MDN - Optional Chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional\_chaining)
+[MDN - Optional Chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 
 \
 \
 
-
-***
+---
 
 \
-
 
 ## Function Components
 
 We should always use function components with hooks over class components. Function components are 'stateless' and simple as they don't track state or have lifecycle and render methods like class components do. If you need to track state in your component, import the `useState` hook.
 
 ```tsx
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Button = () => {
   const [count, setCount] = useState(0);
@@ -106,7 +102,7 @@ const Button = () => {
 
 If your return content doesn't have a wrapping div you will need to create a fragment by using a short syntax element `<>` rather than a React `<Fragment>`. The only exception is if you need to use a `key` when using a `map`. In these instances you will need to use a `<Fragment>` [React Short Syntax](https://reactjs.org/docs/fragments.html#short-syntax)
 
-:no\_entry\_sign: Bad
+:no_entry_sign: Bad
 
 ```tsx
 const ChildComponent = () => {
@@ -119,7 +115,7 @@ const ChildComponent = () => {
 };
 ```
 
-:white\_check\_mark: Good
+:white_check_mark: Good
 
 ```tsx
 const ChildComponent = () => {
@@ -132,7 +128,7 @@ const ChildComponent = () => {
 };
 ```
 
-:white\_check\_mark: Good
+:white_check_mark: Good
 
 ```tsx
 const Component = ({ items }: { items: Array<ComponentTypes> }) =>
@@ -148,7 +144,7 @@ const Component = ({ items }: { items: Array<ComponentTypes> }) =>
 
 With ES6 and arrow functions you can omit the curly braces and the `return` keyword if your component is immediately returning something.
 
-:no\_entry\_sign: Bad
+:no_entry_sign: Bad
 
 ```tsx
 const ChildComponent = () => {
@@ -156,7 +152,7 @@ const ChildComponent = () => {
 };
 ```
 
-:no\_entry\_sign: Bad
+:no_entry_sign: Bad
 
 ```tsx
 const ChildComponent = () => {
@@ -170,13 +166,13 @@ const ChildComponent = () => {
 };
 ```
 
-:white\_check\_mark: Good
+:white_check_mark: Good
 
 ```tsx
 const ChildComponent = () => <div>The Child</div>;
 ```
 
-:white\_check\_mark: Good
+:white_check_mark: Good
 
 ```tsx
 const ChildComponent = () => (
@@ -209,17 +205,15 @@ export default ParentComponent;
 \
 \
 
-
-***
+---
 
 \
-
 
 ## Spread and Destructure
 
 Where possible always destructure props and other objects/arrays where used. This will help in typing and keeping things clear and not hidden behind a root object. If you don't need to destructure out all of the properties of an object, use the `...rest` keyword and pass that in instead like so:
 
-:no\_entry\_sign: Bad
+:no_entry_sign: Bad
 
 ```tsx
 const QuickLinks = ({ items }: { items: Array<ComponentTypes> }) => (
@@ -238,7 +232,7 @@ const QuickLinks = ({ items }: { items: Array<ComponentTypes> }) => (
 );
 ```
 
-:white\_check\_mark: Good
+:white_check_mark: Good
 
 ```tsx
 const QuickLinks = ({ items }: { items: Array<ComponentTypes> }) => (
@@ -255,17 +249,15 @@ If you're not transforming the props names from the parent to the child, then yo
 \
 \
 
-
-***
+---
 
 \
-
 
 ## Small, Focused and DRY
 
 Our components should be broken down into small, reusable functions instead of one gigantic component.
 
-:no\_entry\_sign: Bad
+:no_entry_sign: Bad
 
 ```tsx
 const DataReport = ({ items }: { items: Array<string> }) => (
@@ -284,7 +276,7 @@ const DataReport = ({ items }: { items: Array<string> }) => (
 );
 ```
 
-:white\_check\_mark: Good
+:white_check_mark: Good
 
 ```tsx
 const TableCell = ({ children }) => (

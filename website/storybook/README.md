@@ -250,7 +250,7 @@ Primary.args = {
 
 **Template Definition:** Now that our stories are exported, we move on to defining a master template (`Template`) for our component's stories, and passing in our args.
 
-We can then reuse this template across stories. `Template.bind({})` makes a copy of the function, reducing code duplication. This is a [standard JavaScript technique](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Function/bind) for making a copy of a function, and allows each exported story to set its own properties.
+We can then reuse this template across stories. `Template.bind({})` makes a copy of the function, reducing code duplication. This is a [standard JavaScript technique](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) for making a copy of a function, and allows each exported story to set its own properties.
 
 And finally we spread in our component's props (`...props`), making data available to our component as it would be in the regular app.
 
@@ -296,7 +296,7 @@ export default {
 
 ### Resources
 
-* [Learn Storybook](https://www.learnstorybook.com) - a guided tutorial through building a simple application with Storybook
-* [Component Driven User Interfaces](https://www.componentdriven.org) - learn more about the component-driven approach that Storybook enables
-* [Storybook Addons](https://storybook.js.org/addons) - supercharge Storybook with advanced features and new workflows
-* [Component Story Format](https://storybook.js.org/blog/component-story-format/) - read more about the Component Story Format (CSF), a new way to author stories based on ES6 modules
+- [Learn Storybook](https://www.learnstorybook.com) - a guided tutorial through building a simple application with Storybook
+- [Component Driven User Interfaces](https://www.componentdriven.org) - learn more about the component-driven approach that Storybook enables
+- [Storybook Addons](https://storybook.js.org/addons) - supercharge Storybook with advanced features and new workflows
+- [Component Story Format](https://storybook.js.org/blog/component-story-format/) - read more about the Component Story Format (CSF), a new way to author stories based on ES6 modules

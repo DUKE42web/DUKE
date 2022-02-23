@@ -1,10 +1,6 @@
 # Test.tsx
 
-
-
 #### Code:
-
-
 
 ```typescript
 /*
@@ -22,13 +18,13 @@ There are predefined background options.
 Explanation for the correlating marker
 */
 
-import { render, screen } from '@testing-library/react';
-import { renderWithContext } from 'src/lib/testWrappers';
-import NewsBanner from './index';
-import { compositionFunction } from './composition';
-import { Data } from './data';
-import '@testing-library/jest-dom';
-jest.mock('src/lib/useIntersection');
+import { render, screen } from "@testing-library/react";
+import { renderWithContext } from "src/lib/testWrappers";
+import NewsBanner from "./index";
+import { compositionFunction } from "./composition";
+import { Data } from "./data";
+import "@testing-library/jest-dom";
+jest.mock("src/lib/useIntersection");
 const props = compositionFunction(Data);
 //## Describe: Newsbar Component
 
@@ -37,23 +33,23 @@ const props = compositionFunction(Data);
 // #### it:      should render the body text if the field exists in the data file. else: do not render text
 
 //------------------------------
-describe('News Banner', () => {
+describe("News Banner", () => {
   const props = compositionFunction(Data);
 
-  it('should render NewsBanner component with Title & Image', () => {
+  it("should render NewsBanner component with Title & Image", () => {
     //look up memory router...
     renderWithContext(<NewsBanner {...props} />);
     screen.logTestingPlaygroundURL(); // to launch browser based playground... needs to gafter a render has been called.
-    const title = screen.getByRole('heading', {
+    const title = screen.getByRole("heading", {
       name: /here to help during this difficult time\./i,
     });
-    const img = screen.getByRole('img', {
+    const img = screen.getByRole("img", {
       name: /image alt text/i,
     });
     expect(title).toBeInTheDocument();
     expect(img).toBeInTheDocument();
   });
-  it('renders body text if the data exists on the object', () => {
+  it("renders body text if the data exists on the object", () => {
     const { rerender } = renderWithContext(<NewsBanner {...props} />);
 
     const body = screen.getByText(
@@ -68,25 +64,22 @@ describe('News Banner', () => {
     expect(noBodyText).not.toBeInTheDocument();
   });
 
-  it('renders a cta button if the data is present on the object, and does not render a button otherwise.', () => {
+  it("renders a cta button if the data is present on the object, and does not render a button otherwise.", () => {
     const { rerender } = renderWithContext(<NewsBanner {...props} />); //in each it block scope
-    
-    const ctaButton = screen.getByRole('link', {
+
+    const ctaButton = screen.getByRole("link", {
       name: /view resources/i,
     });
 
     expect(ctaButton).toBeInTheDocument();
     rerender(<NewsBanner {...props} cta={undefined} />);
-    
-    const noCTAButton = screen.queryByRole('link', {
+
+    const noCTAButton = screen.queryByRole("link", {
       name: /view resources/i,
     });
     expect(noCTAButton).not.toBeInTheDocument();
   });
 });
-
-
-
 ```
 
 > end of code

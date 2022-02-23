@@ -32,9 +32,9 @@ Less work, cleaner code, more thinking about your code - doesn't sound too bad, 
 
 When talking about "tests" or "automated tests" (I'll use these terms interchangeably), we can differentiate between three kind of tests:
 
-* **Unit tests** that test one isolated unit/ piece of code (e.g. a function)
-* **Integration tests** which test the combination of features (e.g. a function calling another function)
-* **End-to-End (e2e) or UI tests** which test a full interaction path in your app (e.g. the signup process)
+- **Unit tests** that test one isolated unit/ piece of code (e.g. a function)
+- **Integration tests** which test the combination of features (e.g. a function calling another function)
+- **End-to-End (e2e) or UI tests** which test a full interaction path in your app (e.g. the signup process)
 
 These kind of tests have a different level of complexity to write them and a different frequency with which you'll write them.
 
@@ -165,9 +165,9 @@ Instead, we need some tools that allow us to execute our tests locally, define o
 
 In short, we need three kinds of tools:
 
-* A test runner that executes your tests (`test()`) and summarizes the results
-* An assertion library (`expect()`) that allows you to define your expectations (and check them)
-* An e2e testing tool, often you use a (headless) browser for this
+- A test runner that executes your tests (`test()`) and summarizes the results
+- An assertion library (`expect()`) that allows you to define your expectations (and check them)
+- An e2e testing tool, often you use a (headless) browser for this
 
 The test runner executes your tests and summarizes the results in the terminal. [Mocha](https://mochajs.org) is very popular but [Jest](https://jestjs.io) really is the new star in the JavaScript testing scene.
 
@@ -227,9 +227,9 @@ The "expectable" object which you get then has a bunch of built-in methods that 
 
 `toBe(5)` would check if a value is equal to `5` for example. But you can also check other things like:
 
-* `toBeCalled` => Was a function executed during the test?
-* `not.toBe(5)` => Is the value **not** 5?
-* And much more, all to be found [here](https://jestjs.io/docs/en/expect).
+- `toBeCalled` => Was a function executed during the test?
+- `not.toBe(5)` => Is the value **not** 5?
+- And much more, all to be found [here](https://jestjs.io/docs/en/expect).
 
 You can then execute your tests by running Jest, e.g. by adding a script to your `package.json` file:
 
@@ -286,4 +286,4 @@ The [official docs](https://jestjs.io/docs/en/getting-started) and future conten
 
 </details>
 
-!\[]\(https://res.cloudinary.com/academind-gmbh/image/upload/f\_auto, q\_auto:eco/dpr\_2.0, w\_400, c\_limit, g\_center/v1/academind.com/content/tutorials/javascript-testing-introduction/javascript-different-kinds-of-tests)
+!\[]\(https://res.cloudinary.com/academind-gmbh/image/upload/f\_auto, q_auto:eco/dpr_2.0, w_400, c_limit, g_center/v1/academind.com/content/tutorials/javascript-testing-introduction/javascript-different-kinds-of-tests)

@@ -2,7 +2,7 @@
 
 ## Component Creation - Practical Overview
 
-***
+---
 
 Table of Contents:
 
@@ -12,7 +12,7 @@ Table of Contents:
 4. Definition of Done
 5. Sitecore
 
-***
+---
 
 If you'd prefer to get right to the point and skip the overview, [there's a handy checklist here](../../../Website/creating-components/broken-reference/). Otherwise, read on for an in-depth explanation of how one could approach a workflow via Storybook.
 
@@ -88,15 +88,15 @@ The following section summarizes things into a concise checklist.
 
 ### Checklist
 
-* [ ] Ensure your component exists within Sitecore. If not, create it.
-* [ ] Create a folder in the `/components` directory and within it, an `index.ts` file for your React component.
-* [ ] Add a composition function to the index file of the `/compostion` directory.
-* [ ] Create a `test.ts` file and add some unit test assertions to it.
-* [ ] Add a `data.js` file populated with dummy data (if necessary).
-* [ ] Develop your component with the data from the composition file.
-* [ ] Finish your unit tests.
-* [ ] Submit a PR.
-* [ ] Stretch. It's not part of the component, it's just good for your body.
+- [ ] Ensure your component exists within Sitecore. If not, create it.
+- [ ] Create a folder in the `/components` directory and within it, an `index.ts` file for your React component.
+- [ ] Add a composition function to the index file of the `/compostion` directory.
+- [ ] Create a `test.ts` file and add some unit test assertions to it.
+- [ ] Add a `data.js` file populated with dummy data (if necessary).
+- [ ] Develop your component with the data from the composition file.
+- [ ] Finish your unit tests.
+- [ ] Submit a PR.
+- [ ] Stretch. It's not part of the component, it's just good for your body.
 
 < Previous Next >
 

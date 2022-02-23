@@ -319,12 +319,12 @@ Dynamically generating forms with React and Sitecore JSS
      - `inputMap` is an object with field names as a key and their `dataMap` type as the value. These are basically fields that we've determined to be non-input type
        fields, such as select, checkbox, heading, etc... or fields that are hidden or unimportant
        ```javascript
-       const inputMap: CFMappingType['inputMap'] = {
-         alternatephone: 'phone',
-         'alternate_phone_#': 'phone',
-         captcha: 'recaptcha',
-         checkbox: 'checkbox',
-         checkbox_list: 'checkboxGroup',
+       const inputMap: CFMappingType["inputMap"] = {
+         alternatephone: "phone",
+         "alternate_phone_#": "phone",
+         captcha: "recaptcha",
+         checkbox: "checkbox",
+         checkbox_list: "checkboxGroup",
          // ...
        };
        ```
@@ -333,22 +333,22 @@ Dynamically generating forms with React and Sitecore JSS
        React component that will be dynamically imported, and some of them will contain a 'props' value. Props is an object that contains more details for that particular
        input type such as type, icon, masking function etc..
        ```javascript
-       const dataMap: CFMappingType['dataMap'] = {
+       const dataMap: CFMappingType["dataMap"] = {
          // ...
          input: {
-           file: 'Input',
-           props: { type: 'text' },
+           file: "Input",
+           props: { type: "text" },
          },
          phone: {
-           file: 'Input',
+           file: "Input",
            props: {
-             type: 'tel',
-             icon: 'phone',
+             type: "tel",
+             icon: "phone",
              mask: masks.tel,
            },
          },
          radio: {
-           file: 'RadioGroup',
+           file: "RadioGroup",
          },
          // ...
        };
@@ -357,17 +357,17 @@ Dynamically generating forms with React and Sitecore JSS
      - `regexMap` is an object with either a validationPattern name or input type as the key with the value being an object containing an error message and RegEx pattern
        to be used in validation
        ```javascript
-       const regexMap: CFMappingType['regexMap'] = {
+       const regexMap: CFMappingType["regexMap"] = {
          email: {
-           message: 'Not a valid email format',
+           message: "Not a valid email format",
            value: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
          },
          lettersWhiteSpace: {
-           message: 'Can only be letters and spaces',
+           message: "Can only be letters and spaces",
            value: /^[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ\-]+(\s+[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]+)*$/,
          },
          notSameDigits: {
-           message: 'Can only contain numbers',
+           message: "Can only contain numbers",
            value: /^(\d)\d*(?!\1)\d+$/,
          },
          // ...
@@ -415,15 +415,16 @@ Dynamically generating forms with React and Sitecore JSS
 
    ```typescript
    const getData: GetDataProps = ({ fields, title }) => ({
-     customValidationErrorMsg: fields?.CustomValidationErrorMsg?.value || 'field is required',
+     customValidationErrorMsg:
+       fields?.CustomValidationErrorMsg?.value || "field is required",
      items: parseItems(fields?.InputItems?.value),
-     label: fields?.Label?.value || '',
+     label: fields?.Label?.value || "",
      maxLength: parseInt(fields?.MaximumLength?.value) || 524288,
      minLength: parseInt(fields?.MinimumLength?.value) || 0,
      name: fields?.Name?.value,
      placeholder: fields?.PlaceholderText?.value,
      required: fields?.Required?.value || false,
-     tabs: fields?.Tabs?.value.split('\n') || [],
+     tabs: fields?.Tabs?.value.split("\n") || [],
      title,
      toolTipText: fields?.TooltipText?.value,
    });
@@ -435,8 +436,8 @@ Dynamically generating forms with React and Sitecore JSS
    - validations: Will either be null or an object that contains if it should show on the confirmation screen and the validationPattern if any
 
 ```typescript
-const getValidations: GetValidationProps = (file, fields, regex = '') => {
-  const skipValidation = ['Heading', 'Recaptcha', 'Tabs'];
+const getValidations: GetValidationProps = (file, fields, regex = "") => {
+  const skipValidation = ["Heading", "Recaptcha", "Tabs"];
   let pattern;
 
   if (file && skipValidation.includes(file)) return null;
@@ -444,7 +445,7 @@ const getValidations: GetValidationProps = (file, fields, regex = '') => {
   // Validations will usually come through as a string value from sitecore
   // but can also come through as an array of objects, these have the type 'select'
   // We first need to parse through this array and grab the value of the selected validation pattern
-  if (fields?.ValidationPattern?.type === 'select') {
+  if (fields?.ValidationPattern?.type === "select") {
     pattern = getSelectedValue(fields.ValidationPattern.value);
   } else {
     pattern = fields?.ValidationPattern?.value;
@@ -473,23 +474,36 @@ const getValidations: GetValidationProps = (file, fields, regex = '') => {
         - validate: custom function that passes the field's value through a method that returns a boolean
     ```javascript
     <FormComponent onSubmit={handleSubmit(onSubmit)}>
-      {createdFields.map(({ Component, data, id, props, validations, ...rest }: CFReturnType) => {
-        return (
-          <FieldWrapper columns={props?.columns} key={id}>
-            <Component
-              register={register({
-                pattern: regexPattern(validations),
-                required: isRequired(data),
-                validate: {
-                  match: (value: string) =>
-                    matchingEmails(name.toLowerCase(), value, getValues(['email', 'emailconf'])),
-                },
-              })}
-              {...{ data, errors, name, props, ...rest }}
-            />
-          </FieldWrapper>
-        );
-      })}
+      {createdFields.map(
+        ({
+          Component,
+          data,
+          id,
+          props,
+          validations,
+          ...rest
+        }: CFReturnType) => {
+          return (
+            <FieldWrapper columns={props?.columns} key={id}>
+              <Component
+                register={register({
+                  pattern: regexPattern(validations),
+                  required: isRequired(data),
+                  validate: {
+                    match: (value: string) =>
+                      matchingEmails(
+                        name.toLowerCase(),
+                        value,
+                        getValues(["email", "emailconf"])
+                      ),
+                  },
+                })}
+                {...{ data, errors, name, props, ...rest }}
+              />
+            </FieldWrapper>
+          );
+        }
+      )}
       <Button type="submit" variant="primary">
         submit
       </Button>
@@ -504,11 +518,21 @@ const getValidations: GetValidationProps = (file, fields, regex = '') => {
    - The purpose of these components is to take the `createForm()` generated props that were passed in via the `<SingleStepForm />` and to 'normalize' them into simpler generic props for the `<Input />` for example. Each file will have a Form[Input] component with its related Input component. This Input component will then be used in tests and storybook stories.
 
      ```javascript
-     const FormInput = ({ data, errors, name, props, register, validations }: FormInputProps) => {
+     const FormInput = ({
+       data,
+       errors,
+       name,
+       props,
+       register,
+       validations,
+     }: FormInputProps) => {
        const { mask, type } = props || {};
-       const { label = '', maxLength, required, toolTipText } = data;
+       const { label = "", maxLength, required, toolTipText } = data;
        const propData = {
-         error: { hasError: Boolean(errors[name]?.message), errorMessage: errors[name]?.message },
+         error: {
+           hasError: Boolean(errors[name]?.message),
+           errorMessage: errors[name]?.message,
+         },
          id: label,
          label,
          mask,
@@ -545,33 +569,42 @@ When this array is finally returned back to `<MultiStepForm>`, the form stepper 
 const formModel: Array<ParsedFormModel> = JSON.parse(modelJson.value);
 const createdFields = useMemo(() => createFormInit(formModel, true), []);
 const createdFieldsWithoutTabs = [...createdFields.slice(1), []];
-const createdFieldsOnlyTabFields = [...createdFields[0][0].data.tabs, 'Confirmation'];
+const createdFieldsOnlyTabFields = [
+  ...createdFields[0][0].data.tabs,
+  "Confirmation",
+];
 
 // ... return
 <FormComponent onSubmit={handleFormSubmit}>
   <FormStepper activeIndex={activeIndex} content={createdFieldsOnlyTabFields} />
   {createdFieldsWithoutTabs.map((innerArray, index) =>
-    innerArray.map(({ Component, data, id, props, validations, ...rest }: CFReturnType) => {
-      return (
-        <FieldWrapper
-          className={index === activeIndex ? 'block' : 'hidden'}
-          columns={props?.columns}
-          key={id}
-        >
-          <Component
-            register={register({
-              pattern: regexPattern(validations),
-              required: isRequired(data),
-              validate: {
-                match: (value: string) =>
-                  matchingEmails(name.toLowerCase(), value, getValues(['email', 'emailconf'])),
-              },
-            })}
-            {...{ data, errors, name, props, ...rest }}
-          />
-        </FieldWrapper>
-      );
-    })
+    innerArray.map(
+      ({ Component, data, id, props, validations, ...rest }: CFReturnType) => {
+        return (
+          <FieldWrapper
+            className={index === activeIndex ? "block" : "hidden"}
+            columns={props?.columns}
+            key={id}
+          >
+            <Component
+              register={register({
+                pattern: regexPattern(validations),
+                required: isRequired(data),
+                validate: {
+                  match: (value: string) =>
+                    matchingEmails(
+                      name.toLowerCase(),
+                      value,
+                      getValues(["email", "emailconf"])
+                    ),
+                },
+              })}
+              {...{ data, errors, name, props, ...rest }}
+            />
+          </FieldWrapper>
+        );
+      }
+    )
   )}
   {isLastStep && <ConfirmationStep data={confirmedValues} {...{ fields }} />}
   <ButtonWrapper />

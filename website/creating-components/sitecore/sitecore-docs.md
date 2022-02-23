@@ -10,9 +10,9 @@ The Content Editors appearance and functionality vary depending on the user's ro
 
 The Content Editor's user interface consists of three main areas that you can customize to fit your individual needs when you work in the Content Editor. The three areas are:
 
-* [The ribbon](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/the-content-editor.html#the-ribbon) – the area where all the functionality is available.
-* [The content tree](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/the-content-editor.html#the-content-tree) – the area where all the items are organized.
-* [The content area](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/the-content-editor.html#the-content-area) – the area where you can edit your items.
+- [The ribbon](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/the-content-editor.html#the-ribbon) – the area where all the functionality is available.
+- [The content tree](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/the-content-editor.html#the-content-tree) – the area where all the items are organized.
+- [The content area](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/the-content-editor.html#the-content-area) – the area where you can edit your items.
 
 ![](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243aace28.png)
 
@@ -40,10 +40,11 @@ You can expand and open every group in the Sitecore content tree just as you can
 
 The content area is where you edit an item. When you click an item in the content tree, two tabs appear in the content area:
 
-*   The Content tab, where you can edit any of the item's field values. **Note**
+- The Content tab, where you can edit any of the item's field values. **Note**
 
-    If you do not see a field as expected, on the ribbon, click the View tab, and then select the Standard Fields check box. This shows all the fields from the Standard template on every item that you open.
-* The Search tab, where you can [search through the selected item](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/search-for-an-item.html).
+  If you do not see a field as expected, on the ribbon, click the View tab, and then select the Standard Fields check box. This shows all the fields from the Standard template on every item that you open.
+
+- The Search tab, where you can [search through the selected item](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/search-for-an-item.html).
 
 In the top-right corner of the content area, additional functionality is available that is specific to the item that is selected.
 
@@ -51,11 +52,11 @@ In the top-right corner of the content area, additional functionality is availab
 
 The functionalities are:
 
-* Navigate – navigate to a specific section or field in the list of field values.
-* Language – toggle between the language versions of the item or to create a new language version.
-* Versions – toggle between versions of the item or to create a new version.
-* Validation warnings – move your mouse over the individual icons to see the warnings related to the current item.
-* Edit Profile Cards – edit the profile cards that are associated to the item. This is mostly relevant if you are a marketing user.
+- Navigate – navigate to a specific section or field in the list of field values.
+- Language – toggle between the language versions of the item or to create a new language version.
+- Versions – toggle between versions of the item or to create a new version.
+- Validation warnings – move your mouse over the individual icons to see the warnings related to the current item.
+- Edit Profile Cards – edit the profile cards that are associated to the item. This is mostly relevant if you are a marketing user.
 
 ![](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243b7a777.png)
 

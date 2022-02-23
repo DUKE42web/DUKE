@@ -17,28 +17,33 @@ This section outlines getting the application (for the JSS public site) setup fo
       1. run `npm config set registry https://nexus.duke-energy.com/repository/duke-cne-npm/` on the command line
    3. Run `npm install` on the command line
 3. Setup .jssconfig and .env
+
    1. Add `scjssconfig.json` file (or rename scjssconfig-sample.json → scjssconfig.json)
-      1.  Add:
 
-          ```
-          {
-            "sitecore": {
-              "instancePath": "",
-              "apiKey": "{9F777224-3275-4D56-BD29-371FB3C00821}",
-              "deploySecret": "",
-              "deployUrl": "",
-              "layoutServiceHost": "https://scjsstest.duke-energy.com"
-            }
-          }
-          ```
+      1. Add:
+
+         ```
+         {
+           "sitecore": {
+             "instancePath": "",
+             "apiKey": "{9F777224-3275-4D56-BD29-371FB3C00821}",
+             "deploySecret": "",
+             "deployUrl": "",
+             "layoutServiceHost": "https://scjsstest.duke-energy.com"
+           }
+         }
+         ```
+
 4. Add `.env` file (or rename `.env-sample` → .env)
-   1.  Add:
 
-       ```
-       HTTPS=true
-       ```
+   1. Add:
 
-       This will allow you to use `https://` for development so that jurisdiction cookies will work properly.
+      ```
+      HTTPS=true
+      ```
+
+      This will allow you to use `https://` for development so that jurisdiction cookies will work properly.
+
 5. Setup your `.hosts` file
    1. We need to set the local IP to `local.duke-energy.com` so we can use cookies set by the `.duke-energy.com` domain.
    2. On the command line, run `sudo vim /etc/hosts`

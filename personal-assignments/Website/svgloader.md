@@ -40,13 +40,13 @@ Of the base styles, start with sizing (height, width, padding, margin) and other
 
 That was a lot of words, so let's look at an example.
 
-:no\_entry\_sign: Bad
+:no_entry_sign: Bad
 
 ```jsx
 <div className="text-blue transition-all md:px-32 mt-12 flex bg-black w-20 duration-500 md:block px-24 lg:w-16 lg:px-48" />
 ```
 
-:white\_check\_mark: Good
+:white_check_mark: Good
 
 ```jsx
 <div className="w-20 lg:w-16 mt-12 px-24 md:px-32 lg:px-48 flex md:block text-blue bg-black transition-all duration-500 />
@@ -56,12 +56,12 @@ That may seem a lot to unpack, so let's examine that for a second. Note that the
 
 ### Resources
 
-* [Styled Components](https://styled-components.com) - documentation in case you need to step outside the Tailwind garden
-* [Tailwind Requests](https://confluence.duke-energy.com/display/DEPW/Tailwind+requests) - add to the Tailwind/Electron wishlist!
-* [Electron Docs](https://electron.duke-energy.com/foundation/utilities/utility-first)
-* [Tailwind VSCode Intellisense Plugin](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-* [Nerdcave CheatSheet](https://nerdcave.com/tailwind-cheat-sheet) - some random guy made a really handy cheatsheet for Tailwind CSS. Obviously, our rules won't be on it, but it's a nice quick reference for a lot of the classes.
-* [Tailwind CSS Docs](https://tailwindcss.com/docs) - their official docs are better than most
-* [Configuring Variants](https://v1.tailwindcss.com/docs/configuring-variants) - case in point
+- [Styled Components](https://styled-components.com) - documentation in case you need to step outside the Tailwind garden
+- [Tailwind Requests](https://confluence.duke-energy.com/display/DEPW/Tailwind+requests) - add to the Tailwind/Electron wishlist!
+- [Electron Docs](https://electron.duke-energy.com/foundation/utilities/utility-first)
+- [Tailwind VSCode Intellisense Plugin](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [Nerdcave CheatSheet](https://nerdcave.com/tailwind-cheat-sheet) - some random guy made a really handy cheatsheet for Tailwind CSS. Obviously, our rules won't be on it, but it's a nice quick reference for a lot of the classes.
+- [Tailwind CSS Docs](https://tailwindcss.com/docs) - their official docs are better than most
+- [Configuring Variants](https://v1.tailwindcss.com/docs/configuring-variants) - case in point
 
 React | Typescript | Tailwind | Forms | Unit Tests

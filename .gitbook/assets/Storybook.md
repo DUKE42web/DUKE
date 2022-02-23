@@ -25,7 +25,7 @@ So here's how the initial default PushDownPanel might look:
 ```js
 export const NoIcons = Template.bind();
 NoIcons.args = {
-  items: itemsOptions['3'],
+  items: itemsOptions["3"],
 };
 ```
 
@@ -34,7 +34,7 @@ And then we can add variations based on different states, for example a version 
 ```js
 export const Icons = Template.bind({});
 Icons.args = {
-  items: itemsOptions['5'],
+  items: itemsOptions["5"],
 };
 ```
 
@@ -52,19 +52,19 @@ Most of the time the type of arg will be [inferred automatically](https://storyb
 
 ```js
 export default {
-  title: 'Components/Accordion',
+  title: "Components/Accordion",
   component: AccordionComponent,
   argTypes: {
     theme: {
-      name: 'Theme',
+      name: "Theme",
     },
     closeOthers: {
-      name: 'One Panel Open At A Time',
+      name: "One Panel Open At A Time",
     },
   },
 };
 
-const Template = args => <AccordionComponent {...args} />;
+const Template = (args) => <AccordionComponent {...args} />;
 
 export const Primary = Template.bind({});
 
@@ -156,28 +156,28 @@ Stories exist alongside the other component files as `stories.js`.
 Here's an example of how a typical story might take shape:
 
 ```js
-import React from 'react';
-import MyComponent from './index';
-import { Data } from './data';
-import { MyComponent as MyComponentComposition } from '../../lib/composition';
+import React from "react";
+import MyComponent from "./index";
+import { Data } from "./data";
+import { MyComponent as MyComponentComposition } from "../../lib/composition";
 
 const props = MyComponentComposition({ fields: Data });
 
 export default {
-  title: 'Components/MyComponent',
+  title: "Components/MyComponent",
   component: MyComponent,
   argTypes: {
     backgroundColor: {
       control: {
-        type: 'radio',
-        options: ['white', 'gray'],
+        type: "radio",
+        options: ["white", "gray"],
       },
-      defaultValue: 'white',
+      defaultValue: "white",
     },
   },
 };
 
-const Template = args => <MyComponent {...args} />;
+const Template = (args) => <MyComponent {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

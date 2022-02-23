@@ -5,7 +5,7 @@ Dynamically generating forms with React and Sitecore JSS
 ## Creating the FormField
 
 1. Navigate to page http://local.duke-energy.com:3000/home/products/outdoor-lighting/contact
-   * This page calls the `<SingleStepForm />` component in the layout json from Sitecore which have fields that look like this
+   - This page calls the `<SingleStepForm />` component in the layout json from Sitecore which have fields that look like this
 
 ```js
        {
@@ -25,7 +25,7 @@ Dynamically generating forms with React and Sitecore JSS
 
 1. `<SingleStepForm />` gets rendered via its composition file converts this JSS fields object as its props.
 2. `<SingleStepForm />` checks to make sure that `modelJson.value` exists before parsing it from a string to actual json, creating the variable `formModel`.
-   * `fields.ModelJson` ie: `formModel` contains data for every field and their props. It's an array of objects where each object contains information about that field. After parsing the JSS, `formModel` looks like this: (note - only a few fields are shown as an example here)
+   - `fields.ModelJson` ie: `formModel` contains data for every field and their props. It's an array of objects where each object contains information about that field. After parsing the JSS, `formModel` looks like this: (note - only a few fields are shown as an example here)
 
 ````json
     [
@@ -312,8 +312,8 @@ Dynamically generating forms with React and Sitecore JSS
 ### Side note: Important info
 
 1. Since there is a lot of very important information missing from the `fields.ModelJson`, (input type, hidden fields, etc) from Sitecore we need a way to dynamically figure all of this out the best we can, with what we've been given. This is where `mapping.ts` comes in. This file contains 3 sections:
-   * `inputMap`
-     * `inputMap` is an object with field names as a key and their `dataMap` type as the value. These are basically fields that we've determined to be non-input type fields, such as select, checkbox, heading, etc... or fields that are hidden or unimportant
+   - `inputMap`
+     - `inputMap` is an object with field names as a key and their `dataMap` type as the value. These are basically fields that we've determined to be non-input type fields, such as select, checkbox, heading, etc... or fields that are hidden or unimportant
 
 ```js
 const inputMap: CFMappingType["inputMap"] = {
@@ -326,8 +326,8 @@ const inputMap: CFMappingType["inputMap"] = {
 };
 ```
 
-* `dataMap`
-  * `dataMap` is an object with `inputMap` values as the key and related props as the value. All of these will contain a 'file' value. This is the name of the React component that will be dynamically imported, and some of them will contain a 'props' value. Props is an object that contains more details for that particular input type such as type, icon, masking function etc..
+- `dataMap`
+  - `dataMap` is an object with `inputMap` values as the key and related props as the value. All of these will contain a 'file' value. This is the name of the React component that will be dynamically imported, and some of them will contain a 'props' value. Props is an object that contains more details for that particular input type such as type, icon, masking function etc..
 
 ```js
 const dataMap: CFMappingType["dataMap"] = {
@@ -353,8 +353,8 @@ const dataMap: CFMappingType["dataMap"] = {
 };
 ```
 
-* `regexMap`
-  * `regexMap` is an object with either a validationPattern name or input type as the key with the value being an object containing an error message and RegEx pattern to be used in validation
+- `regexMap`
+  - `regexMap` is an object with either a validationPattern name or input type as the key with the value being an object containing an error message and RegEx pattern to be used in validation
 
 ```js
 const regexMap: CFMappingType["regexMap"] = {
@@ -375,14 +375,16 @@ const regexMap: CFMappingType["regexMap"] = {
 ```
 
 1. Inside `createForm()` it will take the incoming field name and use it to index `inputMap`. At this point one of three things will happen:
-   * It will find a match and return that input type
-   * It will return a null value (these are currently hidden fields or unimportant fields)
-   *   It will return undefined\\
 
-       \
-       If it returns a type we will continue, if it returns a null we return a null out of createForm(), if its undefined we then assume and assign this field with a type 'input'
+   - It will find a match and return that input type
+   - It will return a null value (these are currently hidden fields or unimportant fields)
+   - It will return undefined\\
+
+     \
+     If it returns a type we will continue, if it returns a null we return a null out of createForm(), if its undefined we then assume and assign this field with a type 'input'
+
 2. Now that we have the field type (the `inputType` value), we use this to index `dataMap` and return the file and or props from that
-   * We take this file name and dynamically import that component (ie: 'Input', 'Heading', 'RadioGroup', 'Tabs', etc..)
+   - We take this file name and dynamically import that component (ie: 'Input', 'Heading', 'RadioGroup', 'Tabs', etc..)
 
 ```js
 const { file, props } = dataMap[inputType];
@@ -459,16 +461,16 @@ const getValidations: GetValidationProps = (file, fields, regex = '') => {
 ````
 
 1. `<SingleStepForm />` then iterates through the `createdFields` array and will:
-   * pass the `props.columns` value to `<FieldWrapper />` to determine how wide the field should be in CSS
-   * inside `<FieldWrapper />` it will nest the dynamic `<Component />` that was returned and will pass in some props, those are:
-     * data: The data object returned from `createForm()`
-     * errors: This is an object created by `react-hook-form` that contains key/value pairs of the field name and the error message
-     * name: The name of the field from the data object. `react-hook-form` requires the name prop to exist at this point
-     * props: The props object returned from `createForm()`
-     * register: A function from `react-hook-form` that will eventually get passed all the way down to the input to be called on that input's ref. It has:
-       * pattern: A regex pattern matching validation
-       * required: A boolean or error message
-       * validate: custom function that passes the field's value through a method that returns a boolean
+   - pass the `props.columns` value to `<FieldWrapper />` to determine how wide the field should be in CSS
+   - inside `<FieldWrapper />` it will nest the dynamic `<Component />` that was returned and will pass in some props, those are:
+     - data: The data object returned from `createForm()`
+     - errors: This is an object created by `react-hook-form` that contains key/value pairs of the field name and the error message
+     - name: The name of the field from the data object. `react-hook-form` requires the name prop to exist at this point
+     - props: The props object returned from `createForm()`
+     - register: A function from `react-hook-form` that will eventually get passed all the way down to the input to be called on that input's ref. It has:
+       - pattern: A regex pattern matching validation
+       - required: A boolean or error message
+       - validate: custom function that passes the field's value through a method that returns a boolean
 
 ```js
 <FormComponent onSubmit={handleSubmit(onSubmit)}>
@@ -510,7 +512,7 @@ const getValidations: GetValidationProps = (file, fields, regex = '') => {
 ## Inside the FormField
 
 1. Inside the `/components/Form` folder are all of the FormField components. These components are the default exports from each of these files such as `<FormInput />`
-   * The purpose of these components is to take the `createForm()` generated props that were passed in via the `<SingleStepForm />` and to 'normalize' them into simpler generic props for the `<Input />` for example. Each file will have a Form\[Input] component with its related Input component. This Input component will then be used in tests and storybook stories.
+   - The purpose of these components is to take the `createForm()` generated props that were passed in via the `<SingleStepForm />` and to 'normalize' them into simpler generic props for the `<Input />` for example. Each file will have a Form\[Input] component with its related Input component. This Input component will then be used in tests and storybook stories.
 
 ```js
 const FormInput = ({

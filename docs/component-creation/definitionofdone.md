@@ -2,7 +2,7 @@
 
 ## Component Creation - Definition of Done
 
-***
+---
 
 Table of Contents:
 
@@ -12,7 +12,7 @@ Table of Contents:
 4. Definition of Done
 5. Sitecore
 
-***
+---
 
 ## Our "Definition of Done" for a Component
 
@@ -22,21 +22,21 @@ Lastly, you will need to have written some unit tests to check the core function
 
 ### Checklist
 
-***
+---
 
 In summary, your component should do the following...
 
-* [ ] be properly formatted, following the ESLint, Prettier, and Typescript rules included with our project
-* [ ] have the files necessary to run your component
-* [ ] match the appearance of the Abstract file from the Design team
-* [ ] address any provided Acceptance Criteria
-* [ ] meet WCAG2.1 accessibility requirements
-* [ ] include unit tests
+- [ ] be properly formatted, following the ESLint, Prettier, and Typescript rules included with our project
+- [ ] have the files necessary to run your component
+- [ ] match the appearance of the Abstract file from the Design team
+- [ ] address any provided Acceptance Criteria
+- [ ] meet WCAG2.1 accessibility requirements
+- [ ] include unit tests
 
-***
+---
 
 If you have met all of these requirements, then you, intrepid developer, have a component worthy of submission to PR!
 
-< Previous       Next >
+< Previous Next >
 
 Intro | Technical Overview | Practical Overview | Typescript | Sitecore | Definition of Done | Analytics

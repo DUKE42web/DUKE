@@ -1,29 +1,19 @@
-import React from 'react';
-import {
-    Data
-} from './data';
-import {
-    compositionFunction
-} from './composition';
-import NewsBanner from './index';
+import React from "react";
+import { Data } from "./data";
+import { compositionFunction } from "./composition";
+import NewsBanner from "./index";
 
-const props = compositionFunction( Data ); // props has desired shape of data as storybook substitute for composition function.
-
+const props = compositionFunction(Data); // props has desired shape of data as storybook substitute for composition function.
 
 export default {
-    title: 'components/NewsBanner',
-    component: NewsBanner,
-
+  title: "components/NewsBanner",
+  component: NewsBanner,
 };
-const Template = ( args ) => {
-    return <NewsBanner {
-        ...args
-    }
-    />;
-}
+const Template = (args) => {
+  return <NewsBanner {...args} />;
+};
 
-
-export const Primary = Template.bind( {} );
+export const Primary = Template.bind({});
 Primary.args = {
-    ...props
+  ...props,
 };

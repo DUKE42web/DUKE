@@ -28,7 +28,7 @@ It will be challenging to know in advance the shape of the data that comes to yo
 
 ```tsx
 // MyComponent/composition.tsx
-const MyComponent = sitecoreData => {
+const MyComponent = (sitecoreData) => {
   return sitecoreData;
 };
 ```
@@ -39,7 +39,7 @@ const MyComponent = sitecoreData => {
 /** technically, you would want to provide types in a Typescript file,
  * but we're just trying to get some data here.
  */
-const MyComponent = scData => {
+const MyComponent = (scData) => {
   console.log(scData);
   return <div>{JSON.stringify(scData)}</div>;
 };
@@ -57,10 +57,10 @@ An example of that might look something like this:
 
 ```javascript
 // story.js
-import React from 'react';
-import MyComponent from './index';
-import { MyComponent as MyComponentComposition } from '../../lib/composition';
-import Data from './data';
+import React from "react";
+import MyComponent from "./index";
+import { MyComponent as MyComponentComposition } from "../../lib/composition";
+import Data from "./data";
 
 /**
  * create a variable with data that is in the shape that your component will be
@@ -69,7 +69,7 @@ import Data from './data';
  */
 const props = MyComponentComposition(Data);
 
-const Template = args => <MyComponent {...args} />;
+const Template = (args) => <MyComponent {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

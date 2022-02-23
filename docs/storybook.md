@@ -25,7 +25,7 @@ So here's how the initial default PushDownPanel might look:
 ```js
 export const NoIcons = Template.bind();
 NoIcons.args = {
-  items: itemsOptions['3'],
+  items: itemsOptions["3"],
 };
 ```
 
@@ -34,7 +34,7 @@ And then we can add variations based on different states, for example a version 
 ```js
 export const Icons = Template.bind({});
 Icons.args = {
-  items: itemsOptions['5'],
+  items: itemsOptions["5"],
 };
 ```
 
@@ -50,19 +50,19 @@ Most of the time the type of arg will be [inferred automatically](https://storyb
 
 ```js
 export default {
-  title: 'Components/Accordion',
+  title: "Components/Accordion",
   component: AccordionComponent,
   argTypes: {
     theme: {
-      name: 'Theme',
+      name: "Theme",
     },
     closeOthers: {
-      name: 'One Panel Open At A Time',
+      name: "One Panel Open At A Time",
     },
   },
 };
 
-const Template = args => <AccordionComponent {...args} />;
+const Template = (args) => <AccordionComponent {...args} />;
 
 export const Primary = Template.bind({});
 
@@ -150,28 +150,28 @@ Stories exist alongside the other component files as `stories.js`.
 Here's an example of how a typical story might take shape:
 
 ```js
-import React from 'react';
-import MyComponent from './index';
-import { Data } from './data';
-import { MyComponent as MyComponentComposition } from '../../lib/composition';
+import React from "react";
+import MyComponent from "./index";
+import { Data } from "./data";
+import { MyComponent as MyComponentComposition } from "../../lib/composition";
 
 const props = MyComponentComposition({ fields: Data });
 
 export default {
-  title: 'Components/MyComponent',
+  title: "Components/MyComponent",
   component: MyComponent,
   argTypes: {
     backgroundColor: {
       control: {
-        type: 'radio',
-        options: ['white', 'gray'],
+        type: "radio",
+        options: ["white", "gray"],
       },
-      defaultValue: 'white',
+      defaultValue: "white",
     },
   },
 };
 
-const Template = args => <MyComponent {...args} />;
+const Template = (args) => <MyComponent {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -246,7 +246,7 @@ Primary.args = {
 
 **Template Definition:** Now that our stories are exported, we move on to defining a master template (`Template`) for our component's stories, and passing in our args.
 
-We can then reuse this template across stories. `Template.bind({})` makes a copy of the function, reducing code duplication. This is a [standard JavaScript technique](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Function/bind) for making a copy of a function, and allows each exported story to set its own properties.
+We can then reuse this template across stories. `Template.bind({})` makes a copy of the function, reducing code duplication. This is a [standard JavaScript technique](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) for making a copy of a function, and allows each exported story to set its own properties.
 
 And finally we spread in our component's props (`...props`), making data available to our component as it would be in the regular app.
 
@@ -292,7 +292,7 @@ export default {
 
 ## Resources
 
-* [Learn Storybook](https://www.learnstorybook.com) - a guided tutorial through building a simple application with Storybook
-* [Component Driven User Interfaces](https://www.componentdriven.org) - learn more about the component-driven approach that Storybook enables
-* [Storybook Addons](https://storybook.js.org/addons) - supercharge Storybook with advanced features and new workflows
-* [Component Story Format](https://storybook.js.org/blog/component-story-format/) - read more about the Component Story Format (CSF), a new way to author stories based on ES6 modules
+- [Learn Storybook](https://www.learnstorybook.com) - a guided tutorial through building a simple application with Storybook
+- [Component Driven User Interfaces](https://www.componentdriven.org) - learn more about the component-driven approach that Storybook enables
+- [Storybook Addons](https://storybook.js.org/addons) - supercharge Storybook with advanced features and new workflows
+- [Component Story Format](https://storybook.js.org/blog/component-story-format/) - read more about the Component Story Format (CSF), a new way to author stories based on ES6 modules

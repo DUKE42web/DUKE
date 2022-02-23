@@ -2,7 +2,7 @@
 
 ## Component Creation - Sitecore
 
-***
+---
 
 Table of Contents:
 
@@ -12,7 +12,7 @@ Table of Contents:
 4. Definition of Done
 5. Sitecore
 
-***
+---
 
 ## Sitecore and You
 

@@ -2,7 +2,7 @@
 
 ## Component Creation - Technical Overview
 
-***
+---
 
 Table of Contents:
 
@@ -12,11 +12,11 @@ Table of Contents:
 4. Definition of Done
 5. Sitecore
 
-***
+---
 
 ## A Technical Overview
 
-***
+---
 
 ### Generate Component Factory
 
@@ -346,13 +346,13 @@ Now that you know how components are implemented within our app, how is a compon
 
 Generally, each component you create will consist of at least one of the following items:
 
-* an [`index.tsx` file](../../../Website/creating-components/broken-reference/) - your React file.
-* a [`composition.tsx`](../../../Website/creating-components/broken-reference/) file for transforming incoming data into more concise props
-* a [`test.tsx` file](../../../Website/creating-components/broken-reference/) - a file for your unit tests.
-* a [`types.ts` file](../../../Website/creating-components/broken-reference/) - for Typescript definitions and interfaces
-* a [`stories.js` file](../../../Website/creating-components/broken-reference/) - for Storybook..
-* a [`data.js` file](../../../Website/creating-components/broken-reference/) - for mock Sitecore data.
-* a [📁 containing each of these files](../../../Website/creating-components/broken-reference/) - It's a folder.
+- an [`index.tsx` file](../../../Website/creating-components/broken-reference/) - your React file.
+- a [`composition.tsx`](../../../Website/creating-components/broken-reference/) file for transforming incoming data into more concise props
+- a [`test.tsx` file](../../../Website/creating-components/broken-reference/) - a file for your unit tests.
+- a [`types.ts` file](../../../Website/creating-components/broken-reference/) - for Typescript definitions and interfaces
+- a [`stories.js` file](../../../Website/creating-components/broken-reference/) - for Storybook..
+- a [`data.js` file](../../../Website/creating-components/broken-reference/) - for mock Sitecore data.
+- a [📁 containing each of these files](../../../Website/creating-components/broken-reference/) - It's a folder.
 
 Read on for more detail.
 

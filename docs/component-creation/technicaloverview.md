@@ -2,7 +2,7 @@
 
 ## Component Creation - Technical Overview
 
-***
+---
 
 Table of Contents:
 
@@ -12,11 +12,11 @@ Table of Contents:
 4. Definition of Done
 5. Sitecore
 
-***
+---
 
 ## A Technical Overview
 
-***
+---
 
 ### Generate Component Factory
 
@@ -30,9 +30,9 @@ Sometimes Sitecore references a component in a way that is different from what w
 
 ```ts
 const componentAlias = {
-  HeroCarousel: 'Hero',
-  HeroCarouselNocache: 'Hero',
-  JssAccordion: 'Accordion',
+  HeroCarousel: "Hero",
+  HeroCarouselNocache: "Hero",
+  JssAccordion: "Accordion",
   // ...
 };
 ```
@@ -99,13 +99,13 @@ Now that you know how components are implemented within our app, how is a compon
 
 Generally, each component you create will consist of at least one of the following items:
 
-* an [`index.tsx` file](broken-reference) - your React file.
-* a [`composition.tsx`](broken-reference) file for transforming incoming data into more concise props
-* a [`test.tsx` file](broken-reference) - a file for your unit tests.
-* a [`types.ts` file](broken-reference) - for Typescript definitions and interfaces
-* a [`stories.js` file](broken-reference) - for Storybook..
-* a [`data.js` file](broken-reference) - for mock Sitecore data.
-* a [📁 containing each of these files](broken-reference) - It's a folder.
+- an [`index.tsx` file](broken-reference) - your React file.
+- a [`composition.tsx`](broken-reference) file for transforming incoming data into more concise props
+- a [`test.tsx` file](broken-reference) - a file for your unit tests.
+- a [`types.ts` file](broken-reference) - for Typescript definitions and interfaces
+- a [`stories.js` file](broken-reference) - for Storybook..
+- a [`data.js` file](broken-reference) - for mock Sitecore data.
+- a [📁 containing each of these files](broken-reference) - It's a folder.
 
 Read on for more detail.
 
@@ -155,6 +155,6 @@ Depending on the complexity of your component, this file may not be necessary. F
 
 Of course, all of these files must live somewhere, and that place is in a folder. This folder should of course be named after your component and added to the `/components` directory. Resist the temptaion to take creative liberties with the name of the folder, as this will be the folder that will be imported into the Component Factory (see `/src/temp/componentFactory.js`) and importing a folder named `TheGreatestComponentYouHaveEverFeastedYourMiserableEyeballsOn` for the Modal component won't make a lot of sense out of context, no matter how fitting it seemed in the moment.
 
-< Previous       Next >
+< Previous Next >
 
 Intro | Technical Overview | Practical Overview | Typescript | Sitecore | Definition of Done | Analytics

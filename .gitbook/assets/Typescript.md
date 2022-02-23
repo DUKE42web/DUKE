@@ -198,15 +198,15 @@ type ImageProps = { src: string; alt: string };
 :no_entry_sign: Bad
 
 ```ts
-const FooBar = 'baz';
-const FooBar = () => 'baz';
+const FooBar = "baz";
+const FooBar = () => "baz";
 ```
 
 :white_check_mark: Good
 
 ```ts
-const fooBar = 'baz';
-const fooBar = () => 'baz';
+const fooBar = "baz";
+const fooBar = () => "baz";
 ```
 
 ---
