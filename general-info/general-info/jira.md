@@ -8,22 +8,22 @@
 
 **In this section**
 
-* [Creating a board](https://confluence.atlassian.com/jirasoftwareserver085/creating-a-board-981156209.html)
-* [Configuring a board](https://confluence.atlassian.com/jirasoftwareserver085/configuring-a-board-981156247.html)
-* [Workflows](https://confluence.atlassian.com/jirasoftwareserver085/workflows-981156771.html)
+- [Creating a board](https://confluence.atlassian.com/jirasoftwareserver085/creating-a-board-981156209.html)
+- [Configuring a board](https://confluence.atlassian.com/jirasoftwareserver085/configuring-a-board-981156247.html)
+- [Workflows](https://confluence.atlassian.com/jirasoftwareserver085/workflows-981156771.html)
 
 **Related content**
 
-* [Setting up your workspace](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Setting+up+your+workspace)
-* [Permissions overview](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Permissions+overview)
-* [Creating a board](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Creating+a+board)
-* [Leading an agile project](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Leading+an+agile+project)
-* [What is a board?](https://confluence.atlassian.com/pages/viewpage.action?pageId=981156224)
-* [Plan for the team](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Plan+for+the+team)
-* [Building a backlog](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Building+a+backlog)
-* [Working with issues](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Working+with+issues)
-* [Working in an agile project](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Working+in+an+agile+project)
-* [Doing more with your agile projects](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Doing+more+with+your+agile+projects)
+- [Setting up your workspace](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Setting+up+your+workspace)
+- [Permissions overview](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Permissions+overview)
+- [Creating a board](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Creating+a+board)
+- [Leading an agile project](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Leading+an+agile+project)
+- [What is a board?](https://confluence.atlassian.com/pages/viewpage.action?pageId=981156224)
+- [Plan for the team](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Plan+for+the+team)
+- [Building a backlog](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Building+a+backlog)
+- [Working with issues](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Working+with+issues)
+- [Working in an agile project](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Working+in+an+agile+project)
+- [Doing more with your agile projects](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Doing+more+with+your+agile+projects)
 
 **Still need help?**
 
@@ -85,36 +85,36 @@ Learn more: [Managing components](https://confluence.atlassian.com/adminjiraserv
 
 **On this page**
 
-* [Advanced searching](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-QueryAdvancedsearching)
-* [Understanding advanced searching](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-Understandingadvancedsearching)
-* [Constructing JQL queries](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-ConstructingJQLqueries)
-* [Precedence in JQL queries](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-parenthesesPrecedenceinJQLqueries)
-* [Restricted words and characters](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-restrictionsRestrictedwordsandcharacters)
-* [Performing text searches](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-textPerformingtextsearches)
-* [Reference](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-referenceReference)
-* [Running a saved search](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-Runningasavedsearch)
-* [Next steps](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-Nextsteps)
+- [Advanced searching](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-QueryAdvancedsearching)
+- [Understanding advanced searching](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-Understandingadvancedsearching)
+- [Constructing JQL queries](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-ConstructingJQLqueries)
+- [Precedence in JQL queries](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-parenthesesPrecedenceinJQLqueries)
+- [Restricted words and characters](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-restrictionsRestrictedwordsandcharacters)
+- [Performing text searches](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-textPerformingtextsearches)
+- [Reference](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-referenceReference)
+- [Running a saved search](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-Runningasavedsearch)
+- [Next steps](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#Advancedsearching-Nextsteps)
 
 **In this section**
 
-* [Advanced searching - fields reference](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-fields-reference-981156848.html)
-* [Advanced searching - development fields reference](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-development-fields-reference-981156849.html)
-* [Advanced searching - keywords reference](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-keywords-reference-981156850.html)
-* [Advanced searching - operators reference](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-operators-reference-981156851.html)
-* [Advanced searching - functions reference](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-functions-reference-981156852.html)
+- [Advanced searching - fields reference](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-fields-reference-981156848.html)
+- [Advanced searching - development fields reference](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-development-fields-reference-981156849.html)
+- [Advanced searching - keywords reference](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-keywords-reference-981156850.html)
+- [Advanced searching - operators reference](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-operators-reference-981156851.html)
+- [Advanced searching - functions reference](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-functions-reference-981156852.html)
 
 **Related content**
 
-* [Basic searching](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Basic+searching)
-* [Searching for issues](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Searching+for+issues)
-* [Working with search results](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Working+with+search+results)
-* [Advanced searching - keywords reference](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Advanced+searching+-+keywords+reference)
-* [Advanced searching - fields reference](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Advanced+searching+-+fields+reference)
-* [Search syntax for text fields](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Search+syntax+for+text+fields)
-* [Advanced searching - operators reference](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Advanced+searching+-+operators+reference)
-* [Saving your search as a filter](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Saving+your+search+as+a+filter)
-* [Customize the team board](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Customize+the+team+board)
-* [Advanced searching - functions reference](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Advanced+searching+-+functions+reference)
+- [Basic searching](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Basic+searching)
+- [Searching for issues](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Searching+for+issues)
+- [Working with search results](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Working+with+search+results)
+- [Advanced searching - keywords reference](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Advanced+searching+-+keywords+reference)
+- [Advanced searching - fields reference](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Advanced+searching+-+fields+reference)
+- [Search syntax for text fields](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Search+syntax+for+text+fields)
+- [Advanced searching - operators reference](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Advanced+searching+-+operators+reference)
+- [Saving your search as a filter](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Saving+your+search+as+a+filter)
+- [Customize the team board](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Customize+the+team+board)
+- [Advanced searching - functions reference](https://confluence.atlassian.com/display/JIRASOFTWARESERVER085/Advanced+searching+-+functions+reference)
 
 **Still need help?**
 
@@ -124,31 +124,32 @@ The Atlassian Community is here for you.
 
 The advanced search allows you to build structured queries using the Jira Query Language (JQL) to search for issues. You can specify criteria that cannot be defined in the quick or basic searches (e.g. `ORDER BY` clause).
 
-* If you don't have complex search criteria, you may want to use [quick search](https://confluence.atlassian.com/jirasoftwareserver085/quick-searching-981156830.html) instead.
-* If you are not comfortable with the Jira Query Language (JQL), you may want to use [basic search](https://confluence.atlassian.com/jirasoftwareserver085/basic-searching-981156808.html) instead.
+- If you don't have complex search criteria, you may want to use [quick search](https://confluence.atlassian.com/jirasoftwareserver085/quick-searching-981156830.html) instead.
+- If you are not comfortable with the Jira Query Language (JQL), you may want to use [basic search](https://confluence.atlassian.com/jirasoftwareserver085/basic-searching-981156808.html) instead.
 
 Note, JQL is not a database query language, even though it uses SQL-like syntax.
 
 _Screenshot: Advanced search_
 
-![](https://confluence.atlassian.com/jirasoftwareserver085/files/981156836/981156837/1/1575972955279/advanced\_search2.png)
+![](https://confluence.atlassian.com/jirasoftwareserver085/files/981156836/981156837/1/1575972955279/advanced_search2.png)
 
 **Advanced searching**
 
 1. Navigate to **Issues** (in header) > **Search for issues**.\\
-   * If there are existing search criteria, click the **New filter** button to reset the search criteria.
-   *   If the basic search is shown instead of the advanced search, click **Advanced** (next to the **Search** button).
 
-       [Why can't I switch between basic and advanced search?](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#)
+   - If there are existing search criteria, click the **New filter** button to reset the search criteria.
+   - If the basic search is shown instead of the advanced search, click **Advanced** (next to the **Search** button).
 
-       *
-         *
-       *
-       *
-       *
-       *
-2. **Enter your JQL query. As you type, Jira will offer a list of "auto-complete" suggestions based on the context of your query. Note, auto-complete suggestions only include the first 15 matches, displayed alphabetically, so you may need to enter more text if you can't find a match.** [**Why aren't the auto-complete suggestions being shown?**](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#)
-   *
+     [Why can't I switch between basic and advanced search?](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#)
+
+     - -
+     -
+     -
+     -
+     -
+
+2. #### **Enter your JQL query. As you type, Jira will offer a list of "auto-complete" suggestions based on the context of your query. Note, auto-complete suggestions only include the first 15 matches, displayed alphabetically, so you may need to enter more text if you can't find a match.** [**Why aren't the auto-complete suggestions being shown?**](https://confluence.atlassian.com/jirasoftwareserver085/advanced-searching-981156836.html#)
+   -
 3. Press Enter or click **Search** to run your query. Your search results will display in the issue navigator.
 
 **Understanding advanced searching**
@@ -233,21 +234,21 @@ JQL has a list of reserved characters:
 
 If you wish to use these characters in queries, you need to:
 
-* surround them with quote-marks (you can use either single quote-marks (`'`) or double quote-marks (`"`));\
+- surround them with quote-marks (you can use either single quote-marks (`'`) or double quote-marks (`"`));\
   \*\*and, \*\*
-* if you are searching a **text field** and the character is on the list of [special characters in text searches](https://confluence.atlassian.com/jirasoftwareserver085/search-syntax-for-text-fields-981156853.html), precede them with two backslashes. This will let you run the query that contains a reserved character, but the character itself will be ignored in your query. For more info, see _Special characters_ in [Search syntax for text fields](https://confluence.atlassian.com/jirasoftwareserver085/search-syntax-for-text-fields-981156853.html).
+- if you are searching a **text field** and the character is on the list of [special characters in text searches](https://confluence.atlassian.com/jirasoftwareserver085/search-syntax-for-text-fields-981156853.html), precede them with two backslashes. This will let you run the query that contains a reserved character, but the character itself will be ignored in your query. For more info, see _Special characters_ in [Search syntax for text fields](https://confluence.atlassian.com/jirasoftwareserver085/search-syntax-for-text-fields-981156853.html).
 
 \\
 
 For example:
 
-*
+-
 
 ```
   version = "[example]"
 ```
 
-*
+-
 
 ```
   summary ~ "\\[example\\]"
@@ -277,17 +278,17 @@ Saved searches (also known as [Saving your search as a filter](https://confluenc
 
 To run a filter, e.g. **My Open Issues**, simply click it. The JQL for the advanced search will be set, and the search results will be displayed.
 
-![](https://confluence.atlassian.com/jirasoftwareserver085/files/981156836/981156846/1/1575972956125/saved\_search.png)
+![](https://confluence.atlassian.com/jirasoftwareserver085/files/981156836/981156846/1/1575972956125/saved_search.png)
 
 **Next steps**
 
 Read the following related topics:
 
-* [Searching for issues](https://confluence.atlassian.com/jirasoftwareserver085/searching-for-issues-981156778.html)
-* [Basic searching](https://confluence.atlassian.com/jirasoftwareserver085/basic-searching-981156808.html)
-* [Search syntax for text fields](https://confluence.atlassian.com/jirasoftwareserver085/search-syntax-for-text-fields-981156853.html)
-* [JQL: The most flexible way to search Jira (on the Atlassian blog)](https://blogs.atlassian.com/2013/01/jql-the-most-flexible-way-to-search-jira-14/)
-* [Saving your search as a filter](https://confluence.atlassian.com/jirasoftwareserver085/saving-your-search-as-a-filter-981156854.html)
-* [Working with search results](https://confluence.atlassian.com/jirasoftwareserver085/working-with-search-results-981156915.html)—find out how to use the issue navigator, export your search results, bulk modify issues, and share your search results.
+- [Searching for issues](https://confluence.atlassian.com/jirasoftwareserver085/searching-for-issues-981156778.html)
+- [Basic searching](https://confluence.atlassian.com/jirasoftwareserver085/basic-searching-981156808.html)
+- [Search syntax for text fields](https://confluence.atlassian.com/jirasoftwareserver085/search-syntax-for-text-fields-981156853.html)
+- [JQL: The most flexible way to search Jira (on the Atlassian blog)](https://blogs.atlassian.com/2013/01/jql-the-most-flexible-way-to-search-jira-14/)
+- [Saving your search as a filter](https://confluence.atlassian.com/jirasoftwareserver085/saving-your-search-as-a-filter-981156854.html)
+- [Working with search results](https://confluence.atlassian.com/jirasoftwareserver085/working-with-search-results-981156915.html)—find out how to use the issue navigator, export your search results, bulk modify issues, and share your search results.
 
 </details>

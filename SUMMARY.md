@@ -94,6 +94,14 @@
       * [Disallow function declarations that contain unsafe references inside loop statements (no-loop-func)](website/website/typescript/typescript-rules/disallow-function-declarations-that-contain-unsafe-references-inside-loop-statements-no-loop-func.md)
       * [Disallows usage of void type outside of generic or return types (no-invalid-void-type)](website/website/typescript/typescript-rules/disallows-usage-of-void-type-outside-of-generic-or-return-types-no-invalid-void-type.md)
       * [number, string, or boolean (no-inferrable-types)](website/website/typescript/typescript-rules/number-string-or-boolean-no-inferrable-types.md)
+      * [Disallow function declarations that contain unsafe references inside loop statements (no-loop-func)](website/website/typescript/typescript-rules/disallow-function-declarations-that-contain-unsafe-references-inside-loop-statements-no-loop-func-1.md)
+      * [Disallow the use of custom TypeScript modules and namespaces (no-namespace)](website/website/typescript/typescript-rules/disallow-the-use-of-custom-typescript-modules-and-namespaces-no-namespace.md)
+      * [non-null assertion after an optional chain expression (no-non-null-asserted-optional-chain)](website/website/typescript/typescript-rules/non-null-assertion-after-an-optional-chain-expression-no-non-null-asserted-optional-chain.md)
+      * [Disallows invocation of require() (no-require-imports)](website/website/typescript/typescript-rules/disallows-invocation-of-require-no-require-imports.md)
+      * [postfix operator (no-non-null-assertion)](website/website/typescript/typescript-rules/postfix-operator-no-non-null-assertion.md)
+      * [Disallow the use of custom TypeScript modules and namespaces (no-namespace)](website/website/typescript/typescript-rules/disallow-the-use-of-custom-typescript-modules-and-namespaces-no-namespace-1.md)
+      * [Disallows invocation of require() (no-require-imports)](website/website/typescript/typescript-rules/disallows-invocation-of-require-no-require-imports-1.md)
+      * [Disallow the use of custom TypeScript modules and namespaces (no-namespace)](website/website/typescript/typescript-rules/disallow-the-use-of-custom-typescript-modules-and-namespaces-no-namespace-2.md)
 
 ## 👨💻 💻 Code
 

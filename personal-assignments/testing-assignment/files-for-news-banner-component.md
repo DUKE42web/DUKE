@@ -1,18 +1,18 @@
 # Files For News Banner Component
 
-***
+---
 
 1. <mark style="color:green;">**composition.tsx**</mark>
 
-* finds component corresponding to incoming json and takes the data and returns an object with the desired format.
+- finds component corresponding to incoming json and takes the data and returns an object with the desired format.
 
-1. <mark style="color:green;">**data.js**</mark>
+1. **data.js**
 
-* Dummy Data
+- Dummy Data
 
 <details>
 
-<summary><mark style="color:green;">data.js</mark></summary>
+<summary><mark style="color:green; ">data.js</mark></summary>
 
 ```js
 export const Data = {
@@ -56,11 +56,9 @@ export const Data = {
 
 </details>
 
-* [ ] <mark style="color:green;">**index.tsx**</mark>
+1. <mark style="color:green;">**index.tsx**</mark>
 
-<!---->
-
-* Main Component
+- Main Component
 
 1. <mark style="color:green;">**stories.js**</mark>
 2. <mark style="color:green;">**test.tsx**</mark>
