@@ -32,12 +32,12 @@ _<mark style="color:red;background-color:green;">**Self Link**</mark>_
 
 ### ⁉ Questions
 
-{% content-ref url="questions/page-1.md" %}
-[page-1.md](questions/page-1.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="page-2.md" %}
-[page-2.md](page-2.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 ### Website

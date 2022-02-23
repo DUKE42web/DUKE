@@ -20,11 +20,6 @@
   * [Portal Site Managers](the-company/meet-the-team/portal-site-managers.md)
   * [Duke Energy Acronyms and Terms](the-company/meet-the-team/duke-energy-acronyms-and-terms.md)
 
-## ⁉ Questions
-
-* [❓ Project Questions](page-2.md)
-* [❓ Personal Questions](questions/page-1.md)
-
 ## Website
 
 * [😀 Overview](website/overview.md)
