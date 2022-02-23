@@ -28,7 +28,7 @@
 * [⚒ CREATING COMPONENTS](Website/creating-components/README.md)
   * [ℹ Intro](Website/creating-components/intro.md)
   * [🧑💻 TechnicalOverview](Website/creating-components/technicaloverview.md)
-    * [👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 PracticalOverview](Website/creating-components/practicaloverview.md)
+    * [👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 PracticalOverview](Website/creating-components/practicaloverview.md)
   * [📈 Analytics](Website/creating-components/analytics.md)
   * [📰 Sitecore](website/creating-components/sitecore/README.md)
     * [Sitecore-Docs](website/creating-components/sitecore/sitecore-docs.md)
@@ -90,7 +90,7 @@
 
 * [Duke Energy Manual Audit\_Report](duke-energy-manual-audit\_report.md)
 
-## 👨💻 👨💻 👨💻 Code
+## 👨💻 👨💻 👨💻 👨💻 Code
 
 * [🌬 Tailwind Classes](code/tailwind-classes.md)
 * [Index.tsx](code/index.tsx.md)
