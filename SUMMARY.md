@@ -106,7 +106,7 @@
 
 * [Duke Energy Manual Audit\_Report](duke-energy-manual-audit\_report.md)
 
-## 👨💻 👨💻 👨💻 👨💻 👨💻 👨💻 Code
+## 💻 Code
 
 * [🌬 Tailwind Classes](code/tailwind-classes.md)
 * [Index.tsx](code/index.tsx.md)
