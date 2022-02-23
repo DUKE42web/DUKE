@@ -11,10 +11,10 @@ jobs:
     name: Build and deploy
     runs-on: ubuntu-latest
     env:
-      MY_SECRET: ${{secrets.GH_ACCESS_TOKEN}}
+      MY_SECRET: ${{secrets.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}}
       USER_NAME: bgoonz
       USER_EMAIL: bgoonzbryan.guner@gmail.com
-      BOOK_DIR: your_book_sources_folder_name
+      BOOK_DIR: ./gitbook
 
     steps:
       - name: Checkout 🛎️
