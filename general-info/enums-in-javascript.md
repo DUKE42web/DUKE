@@ -8,8 +8,6 @@
 
 ---
 
-
-
 #### This post will explain how to implement and use <mark style="background-color:blue;">**enumerations**</mark> <mark style="background-color:blue;"></mark><mark style="background-color:blue;"></mark> (or enum types) in Javascript.
 
 ![](https://www.sohamkamani.com/static/fa26842619224d64f417312ef931f764/5a190/banner.drawio.png)

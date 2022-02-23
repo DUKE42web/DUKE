@@ -6,9 +6,7 @@ Dynamically generating forms with React and Sitecore JSS
 
 1.  Navigate to page http://local.duke-energy.com:3000/home/products/outdoor-lighting/contact
 
-
     - This page calls the `<SingleStepForm />` component in the layout json from Sitecore which have fields that look like this
-
 
 ```js
       {
@@ -29,7 +27,6 @@ Dynamically generating forms with React and Sitecore JSS
 2.  `<SingleStepForm />` gets rendered via its composition file converts this JSS fields object as its props.
 
 3.  `<SingleStepForm />` checks to make sure that `modelJson.value` exists before parsing it from a string to actual json, creating the variable `formModel`.
-
 
     - `fields.ModelJson` ie: `formModel` contains data for every field and their props. It's an array of objects where each object contains information
       about that field. After parsing the JSS, `formModel` looks like this: (note - only a few fields are shown as an example here)
