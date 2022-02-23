@@ -102,6 +102,8 @@
       * [Disallow the use of custom TypeScript modules and namespaces (no-namespace)](website/website/typescript/typescript-rules/disallow-the-use-of-custom-typescript-modules-and-namespaces-no-namespace-1.md)
       * [Disallows invocation of require() (no-require-imports)](website/website/typescript/typescript-rules/disallows-invocation-of-require-no-require-imports-1.md)
       * [Disallow the use of custom TypeScript modules and namespaces (no-namespace)](website/website/typescript/typescript-rules/disallow-the-use-of-custom-typescript-modules-and-namespaces-no-namespace-2.md)
+      * [Disallow aliasing this (no-this-alias)](website/website/typescript/typescript-rules/disallow-aliasing-this-no-this-alias.md)
+      * [Disallow throwing literals as exceptions (no-throw-literal)](website/website/typescript/typescript-rules/disallow-throwing-literals-as-exceptions-no-throw-literal.md)
 
 ## 👨💻 💻 Code
 
