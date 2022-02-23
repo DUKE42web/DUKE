@@ -14,7 +14,7 @@ Table of Contents:
 
 ***
 
-If you'd prefer to get right to the point and skip the overview, [there's a handy checklist here](../../../Website/creating-components/broken-reference/). Otherwise, read on for an in-depth explanation of how one could approach a workflow via Storybook.
+If you'd prefer to get right to the point and skip the overview, [there's a handy checklist here](../../../../Website/creating-components/broken-reference/). Otherwise, read on for an in-depth explanation of how one could approach a workflow via Storybook.
 
 ## Workflow - A Practical Overview
 

@@ -41,13 +41,13 @@ Next >
 
 [Intro](intro.md)
 
-[Practical Overview](practicaloverview.md)
+[Practical Overview](technicaloverview/practicaloverview.md)
 
-[Technical Overview](technicaloverview.md)
+[Technical Overview](technicaloverview/)
 
-[Typescript](../../../website/typescript/)
+[Typescript](../typescript/)
 
-[Sitecore](../../../website/creating-components/sitecore/)
+[Sitecore](sitecore/)
 
 [Definition of Done](definitionofdone.md)
 

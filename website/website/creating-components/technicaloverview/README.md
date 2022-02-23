@@ -346,19 +346,19 @@ Now that you know how components are implemented within our app, how is a compon
 
 Generally, each component you create will consist of at least one of the following items:
 
-* an [`index.tsx` file](../../../Website/creating-components/broken-reference/) - your React file.
-* a [`composition.tsx`](../../../Website/creating-components/broken-reference/) file for transforming incoming data into more concise props
-* a [`test.tsx` file](../../../Website/creating-components/broken-reference/) - a file for your unit tests.
-* a [`types.ts` file](../../../Website/creating-components/broken-reference/) - for Typescript definitions and interfaces
-* a [`stories.js` file](../../../Website/creating-components/broken-reference/) - for Storybook..
-* a [`data.js` file](../../../Website/creating-components/broken-reference/) - for mock Sitecore data.
-* a [📁 containing each of these files](../../../Website/creating-components/broken-reference/) - It's a folder.
+* an [`index.tsx` file](../../../../Website/creating-components/broken-reference/) - your React file.
+* a [`composition.tsx`](../../../../Website/creating-components/broken-reference/) file for transforming incoming data into more concise props
+* a [`test.tsx` file](../../../../Website/creating-components/broken-reference/) - a file for your unit tests.
+* a [`types.ts` file](../../../../Website/creating-components/broken-reference/) - for Typescript definitions and interfaces
+* a [`stories.js` file](../../../../Website/creating-components/broken-reference/) - for Storybook..
+* a [`data.js` file](../../../../Website/creating-components/broken-reference/) - for mock Sitecore data.
+* a [📁 containing each of these files](../../../../Website/creating-components/broken-reference/) - It's a folder.
 
 Read on for more detail.
 
 #### `Index.tsx`
 
-The index file will be your main component React file, using Typescript. _At a minimum_, your component will require this file. Since our project uses `Tailwind` , your styles will mainly exist here as well. [See the styles section](../../../Website/creating-components/broken-reference/) for more info.
+The index file will be your main component React file, using Typescript. _At a minimum_, your component will require this file. Since our project uses `Tailwind` , your styles will mainly exist here as well. [See the styles section](../../../../Website/creating-components/broken-reference/) for more info.
 
 #### `Test.tsx`
 
@@ -378,7 +378,7 @@ For more information on writing Typescript within our app, please check out our 
 
 #### `Stories.js`
 
-The `stories.js` file creates a [Storybook](../../../Website/creating-components/broken-reference/) component. To be honest, the paradigm of writing in Storybook can be a little bit tricky to grasp at first if you don't have experience with it. And to be frank, their docs could use some work. So you are encouraged to [check out our documentation for Storybook.](../../../Website/creating-components/broken-reference/).
+The `stories.js` file creates a [Storybook](../../../../Website/creating-components/broken-reference/) component. To be honest, the paradigm of writing in Storybook can be a little bit tricky to grasp at first if you don't have experience with it. And to be frank, their docs could use some work. So you are encouraged to [check out our documentation for Storybook.](../../../../Website/creating-components/broken-reference/).
 
 In essence, however, consider your Storybook file something like an environment for your React component that enables you to run it in isolation from the rest of the app. This makes it easy to preview the functionality and, as a result, developers and designers can easily access the React component without having to navigate to a route to interact with it. This also enables you to view and manipulate it in ways that would be difficult in the context of an entire app.
 

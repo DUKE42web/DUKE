@@ -1,6 +1,6 @@
 ---
 description: 01/27/2022
-cover: ../../.gitbook/assets/launch.jpeg
+cover: ../.gitbook/assets/launch.jpeg
 coverY: 32.09841628959276
 ---
 
