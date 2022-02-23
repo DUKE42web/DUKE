@@ -21,12 +21,12 @@
 * [⚙ Testing](testing/README.md)
   * [🎹 Testing Input](testing/testing-input.md)
 * [⚒ Most Useful](most-useful/README.md)
-  * [🌪 Tailwind Cheatsheet](most-useful/tailwind-classes.md)
+  * [🌪 Tailwind Cheatsheet](tailwind-classes.md)
 
 ## Personal Assignments
 
 * [🕐 Testing Assignment](personal-assignments/testing-assignment.md)
-  * [Files For News Banner Component](personal-assignments/testing-assignment/files-for-news-banner-component/README.md)
+  * [Files For News Banner Component](personal-assignments/testing-assignment/files-for-news-banner-component.md)
     * [Copy of Index.tsx](personal-assignments/testing-assignment/files-for-news-banner-component/index.tsx.md)
     * [Copy of Composition.tsx](personal-assignments/testing-assignment/files-for-news-banner-component/composition.tsx.md)
     * [Copy of Test.tsx](personal-assignments/testing-assignment/files-for-news-banner-component/test.tsx.md)
@@ -78,9 +78,22 @@
       * [Enforces consistent usage of type imports (consistent-type-imports)](website/website/typescript/typescript-rules/enforces-consistent-usage-of-type-imports-consistent-type-imports.md)
       * [Enforce default parameters to be last (default-param-last)](website/website/typescript/typescript-rules/enforce-default-parameters-to-be-last-default-param-last.md)
       * [Require or disallow trailing comma (comma-dangle)](website/website/typescript/typescript-rules/require-or-disallow-trailing-comma-comma-dangle-1.md)
-    * [Require explicit return types on functions and class methods (explicit-function-return-type)](website/website/typescript/require-explicit-return-types-on-functions-and-class-methods-explicit-function-return-type.md)
-    * [Require or disallow spacing between function identifiers and their invocations (func-call-spacing)](website/website/typescript/require-or-disallow-spacing-between-function-identifiers-and-their-invocations-func-call-spacing.md)
-    * [Enforce consistent indentation (indent)](website/website/typescript/enforce-consistent-indentation-indent.md)
+      * [particular method signature syntax. (method-signature-style)](website/website/typescript/typescript-rules/particular-method-signature-syntax.-method-signature-style.md)
+      * [specific member delimiter style for interfaces and type literals (member-delimiter-style)](website/website/typescript/typescript-rules/specific-member-delimiter-style-for-interfaces-and-type-literals-member-delimiter-style.md)
+      * [Disallow duplicate class members (no-dupe-class-members)](website/website/typescript/typescript-rules/disallow-duplicate-class-members-no-dupe-class-members.md)
+      * [Enforce consistent indentation (indent)](website/website/typescript/typescript-rules/enforce-consistent-indentation-indent.md)
+      * [Require or disallow spacing between function identifiers and their invocations (func-call-spacing)](website/website/typescript/typescript-rules/require-or-disallow-spacing-between-function-identifiers-and-their-invocations-func-call-spacing.md)
+      * [Require explicit return types on functions and class methods (explicit-function-return-type)](website/website/typescript/typescript-rules/require-explicit-return-types-on-functions-and-class-methods-explicit-function-return-type.md)
+      * [codebase (naming-convention)](website/website/typescript/typescript-rules/codebase-naming-convention.md)
+      * [Disallow extra non-null assertion (no-extra-non-null-assertion)](website/website/typescript/typescript-rules/disallow-extra-non-null-assertion-no-extra-non-null-assertion.md)
+      * [Disallow the declaration of empty interfaces (no-empty-interface)](website/website/typescript/typescript-rules/disallow-the-declaration-of-empty-interfaces-no-empty-interface.md)
+      * [Disallow the delete operator with computed key expressions (no-dynamic-delete)](website/website/typescript/typescript-rules/disallow-the-delete-operator-with-computed-key-expressions-no-dynamic-delete.md)
+      * [Disallow unnecessary parentheses (no-extra-parens)](website/website/typescript/typescript-rules/disallow-unnecessary-parentheses-no-extra-parens.md)
+      * [for-in loop (no-for-in-array)](website/website/typescript/typescript-rules/for-in-loop-no-for-in-array.md)
+      * [Disallow the use of eval()-like methods (no-implied-eval)](website/website/typescript/typescript-rules/disallow-the-use-of-eval-like-methods-no-implied-eval.md)
+      * [Disallow function declarations that contain unsafe references inside loop statements (no-loop-func)](website/website/typescript/typescript-rules/disallow-function-declarations-that-contain-unsafe-references-inside-loop-statements-no-loop-func.md)
+      * [Disallows usage of void type outside of generic or return types (no-invalid-void-type)](website/website/typescript/typescript-rules/disallows-usage-of-void-type-outside-of-generic-or-return-types-no-invalid-void-type.md)
+      * [number, string, or boolean (no-inferrable-types)](website/website/typescript/typescript-rules/number-string-or-boolean-no-inferrable-types.md)
 
 ## 👨💻 💻 Code
 
