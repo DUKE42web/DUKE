@@ -1,6 +1,3 @@
-# Index.tsx
-
-```tsx
 /*
 - This is a full-width component.
 - It includes a visual, a title, a description, a CTA button and a background.
@@ -58,5 +55,3 @@ const NewsBanner = ({ icon, rounded, title, body,  bgColorClass, cta }: NewsBann
   );
 };
 export default NewsBanner;
-
-```

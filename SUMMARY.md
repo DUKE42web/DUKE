@@ -16,7 +16,7 @@
   * [🌀 Tailwind CSS](docs/tailwind-css.md)
   * [📖 Storybook](docs/storybook.md)
   * [📼 Typescript](docs/typescript.md)
-* [🏃♂ 🏃♂ Project Scrum / Sprints:](project-scrum-sprints.md)
+* [🏃♂ 🏃♂ 🏃♂ Project Scrum / Sprints:](project-scrum-sprints.md)
 * [❓ Questions](questions.md)
 * [🔬 Testing](testing/README.md)
   * [Testing Input](testing/testing-input.md)
@@ -34,8 +34,6 @@
     * [Portal Site Managers](the-company/meet-the-team/portal-site-managers.md)
     * [Duke Energy Acronyms and Terms](the-company/meet-the-team/duke-energy-acronyms-and-terms.md)
 
-## The Company
-
 ## Website
 
 * [🖥 Website](website/website/README.md)
@@ -44,7 +42,7 @@
   * [⚒ CREATING COMPONENTS](personal-assignments/Website/creating-components/README.md)
     * [ℹ Intro](personal-assignments/Website/creating-components/intro.md)
     * [🧑💻 TechnicalOverview](personal-assignments/Website/creating-components/technicaloverview.md)
-      * [👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 PracticalOverview](personal-assignments/Website/creating-components/practicaloverview.md)
+      * [👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 PracticalOverview](personal-assignments/Website/creating-components/practicaloverview.md)
     * [📈 Analytics](personal-assignments/Website/creating-components/analytics.md)
     * [📰 Sitecore](website/creating-components/sitecore/README.md)
       * [Sitecore-Docs](website/creating-components/sitecore/sitecore-docs.md)
@@ -93,7 +91,7 @@
   * [Create React App](general-info/react-notes/create-react-app.md)
 * [Curry VS Functional Composition](general-info/curry-vs-functional-composition.md)
 * [🥑 Airbnb JavaScript Style Guide](general-info/airbnb-javascript-style-guide.md)
-* [🤸♂ 🤸♂ Performance](general-info/performance.md)
+* [🤸♂ 🤸♂ 🤸♂ Performance](general-info/performance.md)
 * [Argv](general-info/argv.md)
 * [Modules](general-info/modules.md)
 * [Enums In Javascript](general-info/enums-in-javascript.md)
@@ -106,11 +104,11 @@
 
 * [Duke Energy Manual Audit\_Report](duke-energy-manual-audit\_report.md)
 
-## 💻 Code
+## 👨💻 Code
 
 * [🌬 Tailwind Classes](code/tailwind-classes.md)
 * [Index.tsx](code/index.tsx.md)
 
 ## Sitecore
 
-* [Sitecore](sitecore/sitecore.md)
+* [🎛 Sitecore](sitecore/sitecore.md)
