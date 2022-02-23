@@ -16,10 +16,24 @@
   * [🌀 Tailwind CSS](docs/tailwind-css.md)
   * [📖 Storybook](docs/storybook.md)
   * [📼 Typescript](docs/typescript.md)
-* [🏃♂ 🏃♂ 🏃♂ 🏃♂ 🏃♂ Project Scrum / Sprints:](project-scrum-sprints.md)
+* [🏃♂ Project Scrum / Sprints:](project-scrum-sprints.md)
 * [❓ Questions](questions.md)
-* [🔬 Testing](testing/README.md)
-  * [Testing Input](testing/testing-input.md)
+* [⚙ Testing](testing/README.md)
+  * [🎹 Testing Input](testing/testing-input.md)
+* [⚒ Most Useful](most-useful/README.md)
+  * [🌪 Tailwind Cheatsheet](most-useful/tailwind-classes.md)
+
+## Personal Assignments
+
+* [🕐 Testing Assignment](personal-assignments/testing-assignment.md)
+  * [Files For News Banner Component](personal-assignments/testing-assignment/files-for-news-banner-component/README.md)
+    * [Copy of Index.tsx](personal-assignments/testing-assignment/files-for-news-banner-component/index.tsx.md)
+    * [Copy of Composition.tsx](personal-assignments/testing-assignment/files-for-news-banner-component/composition.tsx.md)
+    * [Copy of Test.tsx](personal-assignments/testing-assignment/files-for-news-banner-component/test.tsx.md)
+    * [Copy of Stories.js](personal-assignments/testing-assignment/files-for-news-banner-component/stories.js.md)
+    * [Copy of Types.ts](personal-assignments/testing-assignment/files-for-news-banner-component/types.ts.md)
+    * [Copy of Data.js](personal-assignments/testing-assignment/files-for-news-banner-component/data.js.md)
+  * [React Testing Recipes:](personal-assignments/testing-assignment/react-testing-recipes.md)
 
 ## Website
 
@@ -52,24 +66,31 @@
     * [Enums](website/typescript/enums.md)
     * [Types VS Interfaces](website/typescript/types-vs-interfaces-1.md)
     * [Tutorial](website/typescript/tutorial.md)
+    * [Typescript Rules:](website/website/typescript/typescript-rules/README.md)
+      * [Thenable (await-thenable)](website/website/typescript/typescript-rules/thenable-await-thenable.md)
+      * [Enforce consistent brace style for blocks (brace-style)](website/website/typescript/typescript-rules/enforce-consistent-brace-style-for-blocks-brace-style.md)
+      * [Bans specific types from being used (ban-types)](website/website/typescript/typescript-rules/bans-specific-types-from-being-used-ban-types.md)
+      * [Require that member overloads be consecutive (adjacent-overload-signatures)](website/website/typescript/typescript-rules/require-that-member-overloads-be-consecutive-adjacent-overload-signatures.md)
+      * [Enforce consistent brace style for blocks (brace-style)](website/website/typescript/typescript-rules/enforce-consistent-brace-style-for-blocks-brace-style-1.md)
+      * [consistent style (class-literal-property-style)](website/website/typescript/typescript-rules/consistent-style-class-literal-property-style.md)
+      * [Require or disallow trailing comma (comma-dangle)](website/website/typescript/typescript-rules/require-or-disallow-trailing-comma-comma-dangle.md)
+      * [Enforces consistent spacing before and after commas (comma-spacing)](website/website/typescript/typescript-rules/enforces-consistent-spacing-before-and-after-commas-comma-spacing.md)
+      * [Enforces consistent usage of type imports (consistent-type-imports)](website/website/typescript/typescript-rules/enforces-consistent-usage-of-type-imports-consistent-type-imports.md)
+      * [Enforce default parameters to be last (default-param-last)](website/website/typescript/typescript-rules/enforce-default-parameters-to-be-last-default-param-last.md)
+      * [Require or disallow trailing comma (comma-dangle)](website/website/typescript/typescript-rules/require-or-disallow-trailing-comma-comma-dangle-1.md)
+    * [Require explicit return types on functions and class methods (explicit-function-return-type)](website/website/typescript/require-explicit-return-types-on-functions-and-class-methods-explicit-function-return-type.md)
+    * [Require or disallow spacing between function identifiers and their invocations (func-call-spacing)](website/website/typescript/require-or-disallow-spacing-between-function-identifiers-and-their-invocations-func-call-spacing.md)
+    * [Enforce consistent indentation (indent)](website/website/typescript/enforce-consistent-indentation-indent.md)
 
-## Personal Assignments
+## 👨💻 💻 Code
 
-* [🕐 Testing Assignment](personal-assignments/testing-assignment.md)
-  * [Files For News Banner Component](personal-assignments/testing-assignment/files-for-news-banner-component.md)
-  * [React Testing Recipes:](personal-assignments/testing-assignment/react-testing-recipes.md)
-
-## Meetings
-
-* [🗓 Weeks](meetings/week-1/README.md)
-  * [Day 2](meetings/week-1/day-2.md)
-  * [Day 3](meetings/week-1/day-3.md)
-  * [📅 Day 4](meetings/day-4.md)
-  * [🗓 Week 1](meetings/week-2.md)
-  * [🗓 Week 2](meetings/week-3.md)
-  * [🗓 Week 3](meetings/week-4.md)
-  * [🗓 Week 4](meetings/week-5.md)
-  * [🗓 Week 5](meetings/week-6.md)
+* [Code](code/code/README.md)
+  * [Index.tsx](code/code/index.tsx.md)
+  * [Composition.tsx](code/code/composition.tsx.md)
+  * [Data.js](code/code/data.js.md)
+  * [Types.ts](code/code/types.ts.md)
+  * [Stories.js](code/code/stories.js.md)
+  * [Test.tsx](code/code/test.tsx.md)
 
 ## General Info
 
@@ -87,21 +108,19 @@
   * [🥑 Airbnb JavaScript Style Guide](general-info/general-info/airbnb-javascript-style-guide.md)
   * [🤸♂ 🤸♂ Performance](general-info/general-info/performance.md)
 
-## 👨💻 💻 Code
-
-* [Code](code/code/README.md)
-  * [Index.tsx](code/code/index.tsx.md)
-  * [Composition.tsx](code/code/composition.tsx.md)
-  * [Data.js](code/code/data.js.md)
-  * [Types.ts](code/code/types.ts.md)
-  * [Stories.js](code/code/stories.js.md)
-  * [Test.tsx](code/code/test.tsx.md)
-
-***
-
-* [🌬 Tailwind Cheatsheet](tailwind-classes.md)
-
 ## Sitecore
 
 * [🎛 Sitecore](sitecore/sitecore/README.md)
   * [😁 DXT-Solution](sitecore/sitecore/dxt-solution.md)
+
+## Meetings
+
+* [🗓 Weeks](meetings/week-1/README.md)
+  * [Day 2](meetings/week-1/day-2.md)
+  * [Day 3](meetings/week-1/day-3.md)
+  * [📅 Day 4](meetings/day-4.md)
+  * [🗓 Week 1](meetings/week-2.md)
+  * [🗓 Week 2](meetings/week-3.md)
+  * [🗓 Week 3](meetings/week-4.md)
+  * [🗓 Week 4](meetings/week-5.md)
+  * [🗓 Week 5](meetings/week-6.md)

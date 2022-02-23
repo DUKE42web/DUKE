@@ -1,20 +1,8 @@
-# Files For News Banner Component
+# Copy of Data.js
 
----
+#### Code:
 
-1. <mark style="color:green;">**composition.tsx**</mark>
-
-- finds component corresponding to incoming json and takes the data and returns an object with the desired format.
-
-1. **data.js**
-
-- Dummy Data
-
-<details>
-
-<summary><mark style="color:green; ">data.js</mark></summary>
-
-```js
+```typescript
 export const Data = {
   fields: {
     "Icon Path": {
@@ -54,12 +42,4 @@ export const Data = {
 };
 ```
 
-</details>
-
-1. <mark style="color:green;">**index.tsx**</mark>
-
-- Main Component
-
-1. <mark style="color:green;">**stories.js**</mark>
-2. <mark style="color:green;">**test.tsx**</mark>
-3. <mark style="color:green;">**types.ts**</mark>
+> end of code
