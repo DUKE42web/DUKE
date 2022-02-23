@@ -42,86 +42,86 @@ _<mark style="color:red;background-color:green;">**Self Link**</mark>_
 
 ### Website
 
-{% content-ref url="website/website/creating-components/" %}
-[creating-components](website/website/creating-components/)
+{% content-ref url="personal-assignments/Website/creating-components/" %}
+[creating-components](personal-assignments/Website/creating-components/)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/creating-components/intro.md" %}
-[intro.md](website/website/creating-components/intro.md)
+{% content-ref url="personal-assignments/Website/creating-components/intro.md" %}
+[intro.md](personal-assignments/Website/creating-components/intro.md)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/creating-components/technicaloverview/" %}
-[technicaloverview](website/website/creating-components/technicaloverview/)
+{% content-ref url="personal-assignments/Website/creating-components/technicaloverview.md" %}
+[technicaloverview.md](personal-assignments/Website/creating-components/technicaloverview.md)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/creating-components/technicaloverview/practicaloverview.md" %}
-[practicaloverview.md](website/website/creating-components/technicaloverview/practicaloverview.md)
+{% content-ref url="personal-assignments/Website/creating-components/practicaloverview.md" %}
+[practicaloverview.md](personal-assignments/Website/creating-components/practicaloverview.md)
 {% endcontent-ref %}
 
 Website/creating-components/analytics.md" %\}
 
-{% content-ref url="website/website/creating-components/sitecore/" %}
-[sitecore](website/website/creating-components/sitecore/)
+{% content-ref url="website/creating-components/sitecore/" %}
+[sitecore](website/creating-components/sitecore/)
 {% endcontent-ref %}
 
 {% content-ref url="ebsite/creating-components/sitecore/sitecore-docs.md" %}
 [sitecore-docs.md](ebsite/creating-components/sitecore/sitecore-docs.md)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/creating-components/definitionofdone.md" %}
-[definitionofdone.md](website/website/creating-components/definitionofdone.md)
+{% content-ref url="personal-assignments/Website/creating-components/definitionofdone.md" %}
+[definitionofdone.md](personal-assignments/Website/creating-components/definitionofdone.md)
 {% endcontent-ref %}
 
 {% content-ref url="broken-reference/" %}
 [broken-reference](broken-reference/)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/setup.md" %}
-[setup.md](website/website/setup.md)
+{% content-ref url="website/setup.md" %}
+[setup.md](website/setup.md)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/testing.md" %}
-[testing.md](website/website/testing.md)
+{% content-ref url="website/testing.md" %}
+[testing.md](website/testing.md)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/forms.md" %}
-[forms.md](website/website/forms.md)
+{% content-ref url="personal-assignments/Website/forms.md" %}
+[forms.md](personal-assignments/Website/forms.md)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/react.md" %}
-[react.md](website/website/react.md)
+{% content-ref url="personal-assignments/Website/react.md" %}
+[react.md](personal-assignments/Website/react.md)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/storybook/" %}
-[storybook](website/website/storybook/)
+{% content-ref url="website/storybook/" %}
+[storybook](website/storybook/)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/storybook/official-tutorial/" %}
-[official-tutorial](website/website/storybook/official-tutorial/)
+{% content-ref url="website/storybook/official-tutorial/" %}
+[official-tutorial](website/storybook/official-tutorial/)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/storybook/official-tutorial/component-driven-design.md" %}
-[component-driven-design.md](website/website/storybook/official-tutorial/component-driven-design.md)
+{% content-ref url="website/storybook/official-tutorial/component-driven-design.md" %}
+[component-driven-design.md](website/storybook/official-tutorial/component-driven-design.md)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/code-splitting.md" %}
-[code-splitting.md](website/website/code-splitting.md)
+{% content-ref url="personal-assignments/Website/code-splitting.md" %}
+[code-splitting.md](personal-assignments/Website/code-splitting.md)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/svgloader.md" %}
-[svgloader.md](website/website/svgloader.md)
+{% content-ref url="personal-assignments/Website/svgloader.md" %}
+[svgloader.md](personal-assignments/Website/svgloader.md)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/tailwind-css.md" %}
-[tailwind-css.md](website/website/tailwind-css.md)
+{% content-ref url="personal-assignments/Website/tailwind-css.md" %}
+[tailwind-css.md](personal-assignments/Website/tailwind-css.md)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/typescript/" %}
-[typescript](website/website/typescript/)
+{% content-ref url="website/typescript/" %}
+[typescript](website/typescript/)
 {% endcontent-ref %}
 
-{% content-ref url="website/website/unit-tests.md" %}
-[unit-tests.md](website/website/unit-tests.md)
+{% content-ref url="personal-assignments/Website/unit-tests.md" %}
+[unit-tests.md](personal-assignments/Website/unit-tests.md)
 {% endcontent-ref %}
 
 ### Personal Assignments
