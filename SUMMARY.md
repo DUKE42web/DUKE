@@ -16,11 +16,10 @@
   * [🌀 Tailwind CSS](docs/tailwind-css.md)
   * [📖 Storybook](docs/storybook.md)
   * [📼 Typescript](docs/typescript.md)
-* [🏃♂ 🏃♂ 🏃♂ Project Scrum / Sprints:](project-scrum-sprints.md)
+* [🏃♂ 🏃♂ 🏃♂ 🏃♂ Project Scrum / Sprints:](project-scrum-sprints.md)
 * [❓ Questions](questions.md)
 * [🔬 Testing](testing/README.md)
   * [Testing Input](testing/testing-input.md)
-* [After Onboarding Task](after-onboarding-task.md)
 
 ## 📚 Resources
 
@@ -37,12 +36,13 @@
 ## Website
 
 * [🖥 Website](website/website/README.md)
-  * [😀 Overview](website/overview.md)
+  * [😀 Overview](website/website/overview/README.md)
+    * [Duke Energy Manual Audit\_Report](website/website/overview/duke-energy-manual-audit\_report.md)
   * [Live Deploy](website/live-deploy.md)
   * [⚒ CREATING COMPONENTS](personal-assignments/Website/creating-components/README.md)
     * [ℹ Intro](personal-assignments/Website/creating-components/intro.md)
     * [🧑💻 TechnicalOverview](personal-assignments/Website/creating-components/technicaloverview.md)
-      * [🔬 PracticalOverview](personal-assignments/Website/creating-components/practicaloverview.md)
+      * [👨🔬 PracticalOverview](personal-assignments/Website/creating-components/practicaloverview.md)
     * [📈 Analytics](personal-assignments/Website/creating-components/analytics.md)
     * [📰 Sitecore](website/creating-components/sitecore/README.md)
       * [Sitecore-Docs](website/creating-components/sitecore/sitecore-docs.md)
@@ -86,25 +86,21 @@
 
 ## General Info
 
-* [📚 General Info](general-info/general-info.md)
-* [⚛ REACT NOTES](general-info/react-notes/README.md)
-  * [Create React App](general-info/react-notes/create-react-app.md)
-* [Curry VS Functional Composition](general-info/curry-vs-functional-composition.md)
-* [🥑 Airbnb JavaScript Style Guide](general-info/airbnb-javascript-style-guide.md)
-* [🤸♂ 🤸♂ 🤸♂ Performance](general-info/performance.md)
-* [Argv](general-info/argv.md)
-* [Modules](general-info/modules.md)
-* [Enums In Javascript](general-info/enums-in-javascript.md)
-* [Optional Chaning](general-info/optional-chaning.md)
-* [JIRA](general-info/jira.md)
-* [🕸 Webpack](general-info/webpack.md)
-* [Promises](general-info/promises.md)
+* [📚 General Info](general-info/general-info/README.md)
+  * [⚛ REACT NOTES](general-info/general-info/react-notes/README.md)
+    * [Create React App](general-info/general-info/react-notes/create-react-app.md)
+  * [🕸 Webpack](general-info/general-info/webpack.md)
+  * [Curry VS Functional Composition](general-info/general-info/curry-vs-functional-composition.md)
+  * [🥑 Airbnb JavaScript Style Guide](general-info/general-info/airbnb-javascript-style-guide.md)
+  * [🤸♂ 🤸♂ 🤸♂ 🤸♂ Performance](general-info/general-info/performance.md)
+  * [Argv](general-info/general-info/argv.md)
+  * [Modules](general-info/general-info/modules.md)
+  * [Optional Chaning](general-info/general-info/optional-chaning.md)
+  * [Promises](general-info/general-info/promises.md)
+  * [Enums In Javascript](general-info/general-info/enums-in-javascript.md)
+  * [JIRA](general-info/general-info/jira.md)
 
-***
-
-* [Duke Energy Manual Audit\_Report](duke-energy-manual-audit\_report.md)
-
-## 👨💻 Code
+## 👨💻 👨💻 Code
 
 * [🌬 Tailwind Classes](code/tailwind-classes.md)
 * [Index.tsx](code/index.tsx.md)

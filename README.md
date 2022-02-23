@@ -166,20 +166,20 @@ Website/creating-components/analytics.md" %\}
 
 ### General Info
 
-{% content-ref url="general-info/general-info.md" %}
-[general-info.md](general-info/general-info.md)
+{% content-ref url="general-info/general-info/" %}
+[general-info](general-info/general-info/)
 {% endcontent-ref %}
 
 {% content-ref url="resources/links/" %}
 [links](resources/links/)
 {% endcontent-ref %}
 
-{% content-ref url="general-info/argv.md" %}
-[argv.md](general-info/argv.md)
+{% content-ref url="general-info/general-info/argv.md" %}
+[argv.md](general-info/general-info/argv.md)
 {% endcontent-ref %}
 
-{% content-ref url="general-info/optional-chaning.md" %}
-[optional-chaning.md](general-info/optional-chaning.md)
+{% content-ref url="general-info/general-info/optional-chaning.md" %}
+[optional-chaning.md](general-info/general-info/optional-chaning.md)
 {% endcontent-ref %}
 
 {% content-ref url="resources/links/links.md" %}
