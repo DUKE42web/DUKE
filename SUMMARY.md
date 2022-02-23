@@ -21,18 +21,6 @@
 * [🔬 Testing](testing/README.md)
   * [Testing Input](testing/testing-input.md)
 
-## 📚 Resources
-
-* [How To](resources/how-to.md)
-* [📺 Youtube & Videos:](resources/youtube-and-videos.md)
-* [🖇 LINKS](resources/links/README.md)
-  * [🔖 Bookmarks](resources/links/links.md)
-* [🏨 Meet The Company](resources/meet-the-company/README.md)
-  * [🏨 DUKE\_ENERGY](the-company/meet-the-team/README.md)
-    * [Downloads](the-company/meet-the-team/downloads.md)
-    * [Portal Site Managers](the-company/meet-the-team/portal-site-managers.md)
-    * [Duke Energy Acronyms and Terms](the-company/meet-the-team/duke-energy-acronyms-and-terms.md)
-
 ## Website
 
 * [🖥 Website](website/website/README.md)
@@ -70,7 +58,6 @@
 * [🕐 Testing Assignment](personal-assignments/testing-assignment.md)
   * [Files For News Banner Component](personal-assignments/testing-assignment/files-for-news-banner-component.md)
   * [React Testing Recipes:](personal-assignments/testing-assignment/react-testing-recipes.md)
-* [😁 DXT-Solution](personal-assignments/dxt-solution.md)
 
 ## Meetings
 
@@ -92,19 +79,29 @@
   * [🕸 Webpack](general-info/general-info/webpack.md)
   * [Curry VS Functional Composition](general-info/general-info/curry-vs-functional-composition.md)
   * [🥑 Airbnb JavaScript Style Guide](general-info/general-info/airbnb-javascript-style-guide.md)
-  * [🤸♂ 🤸♂ 🤸♂ 🤸♂ Performance](general-info/general-info/performance.md)
+  * [🤸♂ Performance](general-info/general-info/performance.md)
   * [Argv](general-info/general-info/argv.md)
   * [Modules](general-info/general-info/modules.md)
   * [Optional Chaning](general-info/general-info/optional-chaning.md)
-  * [Promises](general-info/general-info/promises.md)
+  * [💍 Promises](general-info/general-info/promises.md)
   * [Enums In Javascript](general-info/general-info/enums-in-javascript.md)
-  * [JIRA](general-info/general-info/jira.md)
+  * [🗣 JIRA](general-info/general-info/jira.md)
 
 ## 👨💻 👨💻 Code
 
-* [🌬 Tailwind Classes](code/tailwind-classes.md)
-* [Index.tsx](code/index.tsx.md)
+* [Code](code/code/README.md)
+  * [Index.tsx](code/code/index.tsx.md)
+  * [Composition.tsx](code/code/composition.tsx.md)
+  * [Data.js](code/code/data.js.md)
+  * [Types.ts](code/code/types.ts.md)
+  * [Stories.js](code/code/stories.js.md)
+  * [Test.tsx](code/code/test.tsx.md)
+
+***
+
+* [🌬 Tailwind Cheatsheet](tailwind-classes.md)
 
 ## Sitecore
 
-* [🎛 Sitecore](sitecore/sitecore.md)
+* [🎛 Sitecore](sitecore/sitecore/README.md)
+  * [😁 DXT-Solution](sitecore/sitecore/dxt-solution.md)

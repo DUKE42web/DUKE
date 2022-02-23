@@ -22,8 +22,8 @@ _<mark style="color:red;background-color:green;">**Self Link**</mark>_
 
 ### The Company
 
-{% content-ref url="the-company/meet-the-team/" %}
-[meet-the-team](the-company/meet-the-team/)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="broken-reference/" %}
@@ -170,8 +170,8 @@ Website/creating-components/analytics.md" %\}
 [general-info](general-info/general-info/)
 {% endcontent-ref %}
 
-{% content-ref url="resources/links/" %}
-[links](resources/links/)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="general-info/general-info/argv.md" %}
@@ -182,8 +182,8 @@ Website/creating-components/analytics.md" %\}
 [optional-chaning.md](general-info/general-info/optional-chaning.md)
 {% endcontent-ref %}
 
-{% content-ref url="resources/links/links.md" %}
-[links.md](resources/links/links.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 ## Nav

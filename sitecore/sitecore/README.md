@@ -4,7 +4,7 @@
 
 <summary>Transcript</summary>
 
-![](<../.gitbook/assets/image (1).png>)Sowa, Bill10:05 AM
+![](<../../.gitbook/assets/image (1).png>)Sowa, Bill10:05 AM
 
 Yep.
 
@@ -146,7 +146,7 @@ Yep.
               * ![Profile picture of Pope, Spencer O.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O11:07 AMYeah, like if someone said, oh, there's an error on this page.
               * Probably wanna.
               * Point that layout host to this environment so that you can most precisely recreate that error.
-              * ![](<../.gitbook/assets/image (1).png>)Sowa, Bill11:07 AMSo.
+              * ![](<../../.gitbook/assets/image (1).png>)Sowa, Bill11:07 AMSo.
               * Yeah. So, thanks again, Spencer. I need to drop again, but we appreciate it. I think that's that's probably good unless there's any additional any or any questions that anybody has.
               * But we can kind of let folks ruminate on this a bit and then come back in another in another meeting and.
               * Uh answer questions or just go ahead and drop questions here in the chat as they come up.
@@ -376,3 +376,5 @@ Website:\
 X will be the server number and Y will be an assigned number 0-9. To get YOUR URLs, refer to the Server Information page. Find you App Pool and it will list your URLs.
 
 </details>
+
+{% file src="../../.gitbook/assets/DXT Environments.pdf" %}
