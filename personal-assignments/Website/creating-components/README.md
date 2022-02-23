@@ -4,8 +4,8 @@
 [intro.md](intro.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../website/creating-components/sitecore/" %}
-[sitecore](../../website/creating-components/sitecore/)
+{% content-ref url="../../../website/creating-components/sitecore/" %}
+[sitecore](../../../website/creating-components/sitecore/)
 {% endcontent-ref %}
 
 {% content-ref url="technicaloverview.md" %}
