@@ -29,10 +29,10 @@
 * [🖇 LINKS](resources/links/README.md)
   * [🔖 Bookmarks](resources/links/links.md)
 * [🏨 Meet The Company](resources/meet-the-company/README.md)
-  * [🏨 DUKE\_ENERGY](resources/meet-the-company/meet-the-team/README.md)
-    * [Downloads](resources/meet-the-company/meet-the-team/downloads.md)
-    * [Portal Site Managers](resources/meet-the-company/meet-the-team/portal-site-managers.md)
-    * [Duke Energy Acronyms and Terms](resources/meet-the-company/meet-the-team/duke-energy-acronyms-and-terms.md)
+  * [🏨 DUKE\_ENERGY](the-company/meet-the-team/README.md)
+    * [Downloads](the-company/meet-the-team/downloads.md)
+    * [Portal Site Managers](the-company/meet-the-team/portal-site-managers.md)
+    * [Duke Energy Acronyms and Terms](the-company/meet-the-team/duke-energy-acronyms-and-terms.md)
 
 ## The Company
 

@@ -28,15 +28,9 @@
 
 [DXT Ninja Turtles - Duke Energy JIRA](https://jiraprod.duke-energy.com/projects/DNT?selectedItem=com.arijea.plugins.easy-agile-user-story-maps\&rapidView=5168)
 
-\[Access required]\(https://dukeenergy.sharepoint.com/sites/O365-AgileDuke/\_layouts/15/AccessDenied.aspx? Source=https%3a%2f%2fdukeenergy.sharepoint.com%2fsites%2fO365-AgileDuke%2fSitePages%2fJIRA.aspx\&correlation=40401aa0-f082-1000-6673-01c7c2da9ad7\&Type=item\&name=ac57e397-1967-4521-a9db-d16ed32707c5\&listItemId=4)
-
 [CI-CD Engineering Self Service](https://cicdengineering-selfservice.apps-corp-ent1-dcpprd.duke-energy.com/login)
 
 [Mail - Guner, Bryan - Outlook](https://outlook.office.com/mail/deeplink?AttachmentId=AAMkADA4ZjI5NGZkLTQzMzEtNDQwNi1iZDJkLTg3MzgxYzExNTgzNgBGAAAAAACWTeuhkN7tQ5l3pRc4Y61FBwAQr3kybx9sTKz3NLnNvanPAAAAAAEMAAANAF6xFQZoR4pJU2jKPBLEAAABz%2FarAAABEgAQAJOX9S9MgfhJoaLBeTO0g3Q%3D\&ItemId=AAMkADA4ZjI5NGZkLTQzMzEtNDQwNi1iZDJkLTg3MzgxYzExNTgzNgBGAAAAAACWTeuhkN7tQ5l3pRc4Y61FBwAQr3kybx9sTKz3NLnNvanPAAAAAAEMAAANAF6xFQZoR4pJU2jKPBLEAAABz%2FarAAA%3D\&AttachmentName=HowtoDocuments.zip)
-
-\[New Hire Setup.docx]\(https://dukeenergy.sharepoint.com/:w:/r/sites/O365-MACUserSupport/\_layouts/15/Doc.aspx?sourcedoc=%7BFC983426-6BDC-437D-B498-124A2244ED2D%7D\&file=New%20Hire%20Setup.docx\&action=default\&mobileredirect=true\&DefaultItemOpen=1\&ct=1643121396781\&wdOrigin=OFFICECOM-WEB. MAIN. OTHER\&cid=fe2e769c-50fd-45ed-bf91-b30570ba98f3)
-
-\[Mac Enrollment.docx]\(https://dukeenergy.sharepoint.com/:w:/r/sites/O365-MACUserSupport/\_layouts/15/Doc.aspx?sourcedoc=%7B5081ED1D-2A14-45CC-88E0-22BD4C2F55A1%7D\&file=Mac%20Enrollment.docx\&action=default\&mobileredirect=true\&DefaultItemOpen=1\&ct=1643121378497\&wdOrigin=OFFICECOM-WEB. MAIN. OTHER\&cid=90394e61-ab5d-4414-944e-91f11ea4a4d7)
 
 [Device Registration](https://jamfpro.duke-energy.com/DeviceRegistration.html?Upn=bryan.guner@duke-energy.com\&UserId=07f93a93-4edd-45c2-817e-b3c14d770992)
 
@@ -52,7 +46,7 @@
 
 [Citrix Receiver | Third Party Notices](https://www2.myapps-duke-energy.com/Citrix/Duke-Energy-MFAWeb/ReceiverThirdPartyNotices.htm)
 
-[Meet the Team! - DUKE](../meet-the-company/meet-the-team/)
+[Meet the Team! - DUKE](../../the-company/meet-the-team/)
 
 [DUKE/Website/creating-components at master - bgoonz/DUKE](https://github.com/bgoonz/DUKE/tree/master/Website/creating-components)
 
@@ -103,8 +97,6 @@
 [Projects - Bitbucket](https://bitbucketp.duke-energy.com/projects)
 
 [Sign in to your account](https://login.microsoftonline.com/common/reprocess?ctx=rQIIAdNiNtIzsFIxMUtOSUw0TtO1NDa21DVJMjPQTUozMNE1SUmxtEhOsTQwTjEvEuIS0Hrw0aHq72SHGQxLIwMkds1exaiZUVJSUGylr59YWpKhl1iSk1hcnJmYp5ecn6ufk5-emaefnJiTk5SYnL2DkfECI-MqJpFE\_6yw5AhT7UDL8DTzgvKSXOOkrFtM\_P6OQBOMQER-UWZV6ixmBX\_vwois-CR\_\_8CstLCKEt8yz5KiyNT0FCeXEo8o3bysTcxsQGty8\_N2MaukGaWZWxoZWugmphkl6ZqYAL2RaGqWqGtoYmaWZJKSZGhgZnSKWSS\_IDUvM0WhoCg\_LTMnVSE1NzEz5wYz4wUWxlcsPAasVhwcXAL8EuwKDD9YGBexAn38oYbhwIXEROc-Mw1tzzd9DKdY9auSvUL1C82rjPw8vPLTjVOdXP2cwnOLI\_WTsiLzUkqdDdOSA43C9Z3CfNNtja0MJ7AxfmBj7mBn2MVJfGDd4hIxMjAy0jUw1DUyVTA0szI2szIwjzrAywAA0\&sessionid=f2f79218-af2b-4439-a56a-1466b4db1062)
-
-[Page 3 - DUKE](https://app.gitbook.com/s/pnAUAWneokvjKD0JGoJK/\~/changes/F9yKTDW3hbHQdh2dVIAA/website/page-3)
 
 [Setup | Testing Library](https://testing-library.com/docs/react-testing-library/setup)
 

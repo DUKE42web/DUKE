@@ -1,9 +1,9 @@
 # 🏨 Meet The Company
 
-{% content-ref url="meet-the-team/" %}
-[meet-the-team](meet-the-team/)
+{% content-ref url="../../the-company/meet-the-team/" %}
+[meet-the-team](../../the-company/meet-the-team/)
 {% endcontent-ref %}
 
-{% content-ref url="meet-the-team/duke-energy-acronyms-and-terms.md" %}
-[duke-energy-acronyms-and-terms.md](meet-the-team/duke-energy-acronyms-and-terms.md)
+{% content-ref url="../../the-company/meet-the-team/duke-energy-acronyms-and-terms.md" %}
+[duke-energy-acronyms-and-terms.md](../../the-company/meet-the-team/duke-energy-acronyms-and-terms.md)
 {% endcontent-ref %}

@@ -18,7 +18,7 @@ _**8. BBP – Budget Billing Plan; MW only; same as Carolinas EPP; offers quarte
 
 _**9. BizTalk – Comparable to Mitem; used for meter reads and start service in MW**_
 
-_<mark style="background-color:orange; ">**10. BP – Business Partner in ISU, equivalent to a customer. An "individual" BP is a person, an "org" BP a business/organizational customer.**</mark>_
+_<mark style="background-color:orange;">**10. BP – Business Partner in ISU, equivalent to a customer. An "individual" BP is a person, an "org" BP a business/organizational customer.**</mark>_
 
 _**11. BPSS – Business Production Support**_
 
@@ -270,6 +270,6 @@ _**134. WRT – Work Request Tool**_
 
 _**135. XDS – Active directory for all Duke User IDs and Email addresses**_
 
-_<mark style="background-color:orange; ">**136. Youtility – Duke public website**</mark>_
+_<mark style="background-color:orange;">**136. Youtility – Duke public website**</mark>_
 
-&#x20; _\*\*\*\*_&#x20;
+_\*\*\*\*_
