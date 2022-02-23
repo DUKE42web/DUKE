@@ -67,7 +67,6 @@
     * [Types VS Interfaces](website/typescript/types-vs-interfaces-1.md)
     * [Tutorial](website/typescript/tutorial.md)
     * [Typescript Rules:](website/website/typescript/typescript-rules/README.md)
-      * [Thenable (await-thenable)](website/website/typescript/typescript-rules/thenable-await-thenable.md)
       * [Enforce consistent brace style for blocks (brace-style)](website/website/typescript/typescript-rules/enforce-consistent-brace-style-for-blocks-brace-style.md)
       * [Bans specific types from being used (ban-types)](website/website/typescript/typescript-rules/bans-specific-types-from-being-used-ban-types.md)
       * [Require that member overloads be consecutive (adjacent-overload-signatures)](website/website/typescript/typescript-rules/require-that-member-overloads-be-consecutive-adjacent-overload-signatures.md)
@@ -104,6 +103,10 @@
       * [Disallow the use of custom TypeScript modules and namespaces (no-namespace)](website/website/typescript/typescript-rules/disallow-the-use-of-custom-typescript-modules-and-namespaces-no-namespace-2.md)
       * [Disallow aliasing this (no-this-alias)](website/website/typescript/typescript-rules/disallow-aliasing-this-no-this-alias.md)
       * [Disallow throwing literals as exceptions (no-throw-literal)](website/website/typescript/typescript-rules/disallow-throwing-literals-as-exceptions-no-throw-literal.md)
+      * [type assertion does not change the type of an expression (no-unnecessary-type-assertion)](website/website/typescript/typescript-rules/type-assertion-does-not-change-the-type-of-an-expression-no-unnecessary-type-assertion.md)
+      * [Disallow the use of type aliases (no-type-alias)](website/website/typescript/typescript-rules/disallow-the-use-of-type-aliases-no-type-alias.md)
+      * [Flags unnecessary equality comparisons against boolean literals (no-unnecessary-boolean-literal-comp](website/website/typescript/typescript-rules/flags-unnecessary-equality-comparisons-against-boolean-literals-no-unnecessary-boolean-literal-comp.md)
+      * [Thenable (await-thenable)](website/website/typescript/typescript-rules/thenable-await-thenable.md)
 
 ## 👨💻 💻 Code
 

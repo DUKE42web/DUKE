@@ -8,7 +8,7 @@ This rule bans specific types and can suggest alternatives. Note that it does no
 
 ## Options
 
-```ts
+```typescript
 type Options = {
   types?: {
     [typeName: string]:
@@ -36,7 +36,7 @@ The rule accepts a single object as options, with the following keys:
 
 Example configuration:
 
-```
+```json
 {
   "@typescript-eslint/ban-types": [
     "error",
@@ -139,7 +139,7 @@ const defaultTypes = {
 
 Examples of **incorrect** code with the default options:
 
-```ts
+```typescript
 // use lower-case primitives for consistency
 const str: String = 'foo';
 const bool: Boolean = true;
