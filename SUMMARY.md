@@ -42,7 +42,7 @@
   * [⚒ CREATING COMPONENTS](personal-assignments/Website/creating-components/README.md)
     * [ℹ Intro](personal-assignments/Website/creating-components/intro.md)
     * [🧑💻 TechnicalOverview](personal-assignments/Website/creating-components/technicaloverview.md)
-      * [👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 👨🔬 PracticalOverview](personal-assignments/Website/creating-components/practicaloverview.md)
+      * [🔬 PracticalOverview](personal-assignments/Website/creating-components/practicaloverview.md)
     * [📈 Analytics](personal-assignments/Website/creating-components/analytics.md)
     * [📰 Sitecore](website/creating-components/sitecore/README.md)
       * [Sitecore-Docs](website/creating-components/sitecore/sitecore-docs.md)
