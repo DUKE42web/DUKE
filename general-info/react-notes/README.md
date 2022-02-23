@@ -10,18 +10,18 @@
 
 A JavaScript library for building user interfaces
 
-***
+---
 
 Welcome to the React documentation! This page will give you an introduction to the 80% of React concepts that you will use on a daily basis.
 
 **You will learn**
 
-* How to create and nest components
-* How to add markup and styles
-* How to display data
-* How to render conditions and lists
-* How to respond to events and update the screen
-* How to share data between components
+- How to create and nest components
+- How to add markup and styles
+- How to display data
+- How to render conditions and lists
+- How to respond to events and update the screen
+- How to share data between components
 
 **Creating and nesting components**
 
@@ -47,7 +47,7 @@ If you have a lot of HTML to port to JSX, you can use an [online converter](http
 
 **Adding styles**
 
-In React, you specify a CSS class with `className`. It works the same way as HTML [`class`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global\_attributes/class) attribute:
+In React, you specify a CSS class with `className`. It works the same way as HTML [`class`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) attribute:
 
 Then you write the CSS rules for it in a separate CSS file:
 
@@ -67,15 +67,15 @@ In the above example, `style={{}}` is not a special syntax, but a regular `{}` o
 
 In React, there is no special syntax for writing conditions. Instead, you’ll use the same techniques as you use when writing regular JavaScript code. For example, you can use an [`if`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement to conditionally include JSX:
 
-If you prefer more compact code, you can use the [conditional `?` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional\_Operator). Unlike `if`, it works inside JSX:
+If you prefer more compact code, you can use the [conditional `?` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator). Unlike `if`, it works inside JSX:
 
-When you don’t need the `else` branch, you can also use a shorter [logical `&&` syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical\_AND#short-circuit\_evaluation):
+When you don’t need the `else` branch, you can also use a shorter [logical `&&` syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND#short-circuit_evaluation):
 
 All of these approaches also work for conditionally specifying attributes. If you’re unfamiliar with some of this JavaScript syntax, you can start by always using `if...else`.
 
 **Rendering lists**
 
-You will rely on JavaScript features like [`for` loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) and the [array `map()` function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Array/map) to render lists of components.
+You will rely on JavaScript features like [`for` loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) and the [array `map()` function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) to render lists of components.
 
 For example, let’s say you have an array of products:
 
@@ -89,7 +89,7 @@ export default function ShoppingList() { const listItems = products.map(product 
 
 return (
 
-* {listItems}
+- {listItems}
 
 ); }
 
@@ -97,29 +97,15 @@ return (
 
 You can respond to events by declaring event handler functions inside your components:
 
-
-
-
-
 ```js
-
-
 function MyButton() {
   function handleClick() {
-    alert('You clicked me!');
+    alert("You clicked me!");
   }
 
-  return (
-    <button onClick={handleClick}>
-      Click me
-    </button>
-  );
+  return <button onClick={handleClick}>Click me</button>;
 }
-
-
 ```
-
-
 
 Notice how `onClick={handleClick}` has no parentheses at the end! Do not _call_ the event handler function: you only need to _pass it down_. React will call your event handler when the user clicks the button.
 
@@ -129,11 +115,7 @@ Often, you’ll want your component to “remember” some information and displ
 
 First, import [`useState`](https://beta.reactjs.org/apis/usestate) from React:
 
-
-
-
-
-```js
+````js
 
 
 
@@ -146,15 +128,9 @@ First, import [`useState`](https://beta.reactjs.org/apis/usestate) from React:
 import { useState } from 'react';
 
 
-```
-
-
+````
 
 Now you can declare a _state variable_ inside your component:
-
-
-
-
 
 ```js
 
@@ -165,19 +141,11 @@ function MyButton() {
 
 ```
 
-
-
 You will get two things from `useState`: the current state (`count`), and the function that lets you update it (`setCount`). You can give them any names, but the convention is to call them like `[something, setSomething]`.
 
 The first time the button is displayed, `count` will be `0` because you passed `0` to `useState()`. When you want to change state, call `setCount()` and pass the new value to it. Clicking this button will increment the counter:
 
-
-
-
-
 ```js
-
-
 function MyButton() {
   const [count, setCount] = useState(0);
 
@@ -185,27 +153,15 @@ function MyButton() {
     setCount(count + 1);
   }
 
-  return (
-    <button onClick={handleClick}>
-      Clicked {count} times
-    </button>
-  );
+  return <button onClick={handleClick}>Clicked {count} times</button>;
 }
-
-
 ```
-
-
 
 React will call your component function again. This time, `count` will be `1`. Then it will be `2`. And so on.
 
 If you render the same component multiple times, each will get its own state. Try clicking each button separately:
 
-
-
-
-
-```js
+````js
 
 
 import { useState } from 'react';
@@ -247,17 +203,11 @@ In the previous example, each button had its own independent counter:
   - MyButton (count: 2)
 
 
-```
-
-
+````
 
 However, you’ll often need components to _share data and always update together_.
 
 To make all buttons display the same `count` and update together, you need to move the state from the individual buttons “upwards” to the closest component containing all of them. In this example, it is `MyApp`:
-
-
-
-
 
 ```js
 
@@ -270,19 +220,11 @@ To make all buttons display the same `count` and update together, you need to mo
 
 ```
 
-
-
 Here’s how you can express this in code.
 
 First, _move the state up_ from `MyButton` into `MyApp`:
 
-
-
-
-
 ```js
-
-
 function MyButton() {
   // ... we're moving code from here ...
 }
@@ -303,21 +245,11 @@ export default function MyApp() {
     </div>
   );
 }
-
-
 ```
-
-
 
 Then, _pass the state down_ from `MyApp` to each `MyButton`, together with the shared click handler. You can pass information to `MyButton` using the JSX curly braces, just like you previously did with built-in tags like `<img>`:
 
-
-
-
-
 ```js
-
-
 export default function MyApp() {
   const [count, setCount] = useState(0);
 
@@ -334,43 +266,21 @@ export default function MyApp() {
     </div>
   );
 }
-
-
 ```
-
-
 
 The information you pass down like this is called _props_. Now the `MyApp` component contains the `count` state and the `handleClick` event handler, and _passes both of them down as props_ to each of the buttons.
 
 Finally, change `MyButton` to _read_ the props you have passed from its parent component:
 
-
-
-
-
 ```js
-
-
 function MyButton({ count, onClick }) {
-  return (
-    <button onClick={onClick}>
-      Clicked {count} times
-    </button>
-  );
+  return <button onClick={onClick}>Clicked {count} times</button>;
 }
-
-
 ```
-
-
 
 When you click the button, the `onClick` handler fires. Each button’s `onClick` prop was set to the `handleClick` function inside `MyApp`, so the code inside of it runs. That code calls `setCount(count + 1)`, incrementing the `count` state variable. The new `count` value is passed as a prop to each button, so they all show the new value.
 
 This is called “lifting state up”. By moving state up, we’ve shared it between components.
-
-
-
-
 
 ```js
 
@@ -392,7 +302,6 @@ return (
 
 ```
 
-
 **Next Steps**
 
 By now, you know the basics of how to write React code!
@@ -407,7 +316,7 @@ Head to [Thinking in React](https://beta.reactjs.org/learn/thinking-in-react) to
 >
 > A JavaScript library for building user interfaces
 
-***
+---
 
 React can change how you think about the designs you look at and the apps you build. Where once you might have seen a forest, after working with React, you will appreciate the individual trees. React makes it easier to think in design systems and UI states. In this tutorial, we’ll guide you through the thought process of building a searchable product data table with React.
 
@@ -419,7 +328,7 @@ The JSON API returns some data that looks like this:
 
 The mockup looks like this:
 
-![](https://beta.reactjs.org/images/docs/s\_thinking-in-react\_ui.png)
+![](https://beta.reactjs.org/images/docs/s_thinking-in-react_ui.png)
 
 To implement a UI in React, you will usually follow the same five steps.
 
@@ -429,15 +338,15 @@ Start by drawing boxes around every component and subcomponent in the mockup and
 
 Depending on your background, you can think about splitting up a design into components in different ways:
 
-* **Programming**—use the same techniques for deciding if you should create a new function or object. One such technique is the [single responsibility principle](https://en.wikipedia.org/wiki/Single\_responsibility\_principle), that is, a component should ideally only do one thing. If it ends up growing, it should be decomposed into smaller subcomponents.
-* **CSS**—consider what you would make class selectors for. (However, components are a bit less granular.)
-* **Design**—consider how you would organize the design’s layers.
+- **Programming**—use the same techniques for deciding if you should create a new function or object. One such technique is the [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle), that is, a component should ideally only do one thing. If it ends up growing, it should be decomposed into smaller subcomponents.
+- **CSS**—consider what you would make class selectors for. (However, components are a bit less granular.)
+- **Design**—consider how you would organize the design’s layers.
 
 If your JSON is well-structured, you’ll often find that it naturally maps to the component structure of your UI. That’s because UI and data models often have the same information architecture—that is, the same shape. Separate your UI into components, where each component matches one piece of your data model.
 
 There are five components on this screen:
 
-![](https://beta.reactjs.org/images/docs/s\_thinking-in-react\_ui\_outline.png)
+![](https://beta.reactjs.org/images/docs/s_thinking-in-react_ui_outline.png)
 
 1. `FilterableProductTable` (grey) contains the entire app.
 2. `SearchBar` (blue) receives the user input.
@@ -449,11 +358,11 @@ If you look at `ProductTable` (lavender), you’ll see that the table header (co
 
 Now that you’ve identified the components in the mockup, arrange them into a hierarchy. Components that appear within another component in the mockup should appear as a child in the hierarchy:
 
-* `FilterableProductTable`
-  * `SearchBar`
-  * `ProductTable`
-    * `ProductCategoryRow`
-    * `ProductRow`
+- `FilterableProductTable`
+  - `SearchBar`
+  - `ProductTable`
+    - `ProductCategoryRow`
+    - `ProductRow`
 
 ### Step 2: Build a static version in React
 
@@ -503,7 +412,7 @@ At this point, you should not be using any state values. That’s for the next s
 
 To make the UI interactive, you need to let users change your underlying data model. You will use _state_ for this.
 
-Think of state as the minimal set of changing data that your app needs to remember. The most important principle for structuring state is to keep it [DRY (Don’t Repeat Yourself](https://en.wikipedia.org/wiki/Don't\_repeat\_yourself)). Figure out the absolute minimal representation of the state your application needs and compute everything else on-demand. For example, if you’re building a shopping list, you can store the items as an array in state. If you want to also display the number of items in the list, don’t store the number of items as another state value—instead, read the length of your array.
+Think of state as the minimal set of changing data that your app needs to remember. The most important principle for structuring state is to keep it [DRY (Don’t Repeat Yourself](https://en.wikipedia.org/wiki/Don't_repeat_yourself)). Figure out the absolute minimal representation of the state your application needs and compute everything else on-demand. For example, if you’re building a shopping list, you can store the items as an array in state. If you want to also display the number of items in the list, don’t store the number of items as another state value—instead, read the length of your array.
 
 Now think of all of the pieces of data in this example application:
 
@@ -514,9 +423,9 @@ Now think of all of the pieces of data in this example application:
 
 Which of these are state? Identify the ones that are not:
 
-* Does it **remain unchanged** over time? If so, it isn’t state.
-* Is it **passed in from a parent** via props? If so, it isn’t state.
-* **Can you compute it** based on existing state or props in your component? If so, it _definitely_ isn’t state!
+- Does it **remain unchanged** over time? If so, it isn’t state.
+- Is it **passed in from a parent** via props? If so, it isn’t state.
+- **Can you compute it** based on existing state or props in your component? If so, it _definitely_ isn’t state!
 
 What’s left is probably state.
 
@@ -547,18 +456,14 @@ In the previous step, you found two pieces of state in this application: the sea
 Now let’s run through our strategy for this state:
 
 1. **Identify components that use state:**
-   * `ProductTable` needs to filter the product list based on that state (search text and checkbox value).
-   * `SearchBar` needs to display that state (search text and checkbox value).
+   - `ProductTable` needs to filter the product list based on that state (search text and checkbox value).
+   - `SearchBar` needs to display that state (search text and checkbox value).
 2. **Find their common parent:** The first parent component both components share is `FilterableProductTable`.
 3. **Decide where the state lives**: We’ll keep the filter text and checked state values in `FilterableProductTable`.
 
 So the state values will live in `FilterableProductTable`.
 
 Add state to the component with the [`useState()` Hook](https://beta.reactjs.org/apis/usestate). Hooks let you “hook into” a component’s [render cycle](https://beta.reactjs.org/learn/render-and-commit). Add two state variables at the top of `FilterableProductTable` and specify the initial state of your application:
-
-
-
-
 
 ```js
 
@@ -570,37 +475,20 @@ function FilterableProductTable({ products }) {
 
 ```
 
-
-
 Then, pass `filterText` and `inStockOnly` to `ProductTable` and `SearchBar` as props:
 
-
-
-
-
 ```js
-
-
 <div>
-  <SearchBar
-    filterText={filterText}
-    inStockOnly={inStockOnly} />
+  <SearchBar filterText={filterText} inStockOnly={inStockOnly} />
   <ProductTable
     products={products}
     filterText={filterText}
-    inStockOnly={inStockOnly} />
+    inStockOnly={inStockOnly}
+  />
 </div>
-
-
 ```
 
-
-
 You can start seeing how your application will behave. Edit the `filterText` initial value from `useState('')` to `useState('fruit')` in the sandbox code below. You’ll see both the search input text and the table update:
-
-
-
-
 
 ```js
 
@@ -640,12 +528,7 @@ export default function App() { return ; }
 
 ```
 
-
 In the sandbox above, `ProductTable` and `SearchBar` read the `filterText` and `inStockOnly` props to render the table, the input, and the checkbox. For example, here is how `SearchBar` populates the input value:
-
-
-
-
 
 ```js
 
@@ -661,8 +544,6 @@ function SearchBar({ filterText, inStockOnly }) {
 
 ```
 
-
-
 Refer to the [Managing State](https://beta.reactjs.org/learn/managing-state) to dive deeper into how React uses state and how you can organize your app with it.
 
 ### Step 5: Add inverse data flow
@@ -672,10 +553,6 @@ Currently your app renders correctly with props and state flowing down the hiera
 React makes this data flow explicit, but it requires a little more typing than two-way data binding. If you try to type or check the box in the example above, you’ll see that React ignores your input. This is intentional. By writing `<input value={filterText} />`, you’ve set the `value` prop of the `input` to always be equal to the `filterText` state passed in from `FilterableProductTable`. Since `filterText` state is never set, the input never changes.
 
 You want to make it so whenever the user changes the form inputs, the state updates to reflect those changes. The state is owned by `FilterableProductTable`, so only it can call `setFilterText` and `setInStockOnly`. To let `SearchBar` update the `FilterableProductTable`’s state, you need to pass these functions down to `SearchBar`:
-
-
-
-
 
 ```js
 
@@ -695,33 +572,18 @@ function FilterableProductTable({ products }) {
 
 ```
 
-
-
 Inside the `SearchBar`, you will add the `onChange` event handlers and set the parent state from them:
 
-
-
-
-
 ```js
-
-
 <input
   type="text"
   value={filterText}
   placeholder="Search..."
-  onChange={(e) => onFilterTextChange(e.target.value)} />
-
-
+  onChange={(e) => onFilterTextChange(e.target.value)}
+/>
 ```
 
-
-
 Now the application fully works!
-
-
-
-
 
 ```js
 
@@ -757,3 +619,4 @@ function SearchBar({ filterText, inStockOnly, onFilterTextChange, onInStockOnlyC
 const PRODUCTS = \[ {category: "Fruits", price: "$1", stocked: true, name: "Apple"}, {category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit"}, {category: "Fruits", price: "$2", stocked: false, name: "Passionfruit"}, {category: "Vegetables", price: "$2", stocked: true, name: "Spinach"}, {category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin"}, {category: "Vegetables", price: "$1", stocked: true, name: "Peas"} ];
 
 export default function App() { return ; }
+```
