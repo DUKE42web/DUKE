@@ -3,11 +3,9 @@ cover: ../../.gitbook/assets/Screen Shot 2022-01-27 at 4.18.39 PM.png
 coverY: 0
 ---
 
-# ⌨ Typescript
+#  Typescript
 
-{% embed url="https://www.typescriptlang.org/docs" %}
 
-## <mark style="color:red;background-color:purple;">`Global types`</mark>
 
 In typescript global types can be declared in a `.d.ts` file and used anywhere without explicitly importing them. Our project's `.d.ts` file is named `project.d.ts` .
 
