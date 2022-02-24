@@ -13,7 +13,7 @@ jobs:
     env:
       MY_SECRET: ${{secrets.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}}
       USER_NAME: bgoonz
-      USER_EMAIL: bgoonzbryan.guner@gmail.com
+      USER_EMAIL: bryan.guner@gmail.com
       BOOK_DIR: ./gitbook
 
     steps:
