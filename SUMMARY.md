@@ -16,7 +16,7 @@
   * [🌀 Tailwind CSS](docs/tailwind-css.md)
   * [📖 Storybook](docs/storybook.md)
   * [📼 Typescript](docs/typescript.md)
-* [🏃♂ 🏃♂ 🏃♂ Project Scrum / Sprints:](project-scrum-sprints.md)
+* [🏃♂ Project Scrum / Sprints:](project-scrum-sprints.md)
 * [❓ Questions](questions.md)
 * [⚙ Testing](testing/README.md)
   * [🎹 Testing Input](testing/testing-input.md)
@@ -173,6 +173,8 @@
 * [📚 General Info](general-info/general-info/README.md)
   * [⚛ REACT NOTES](general-info/general-info/react-notes/README.md)
     * [Create React App](general-info/general-info/react-notes/create-react-app.md)
+    * [React Components](general-info/general-info/react-notes/react-components.md)
+    * [Handling Events](general-info/general-info/react-notes/handling-events.md)
   * [🕸 Webpack](general-info/general-info/webpack.md)
   * [Curry VS Functional Composition](general-info/general-info/curry-vs-functional-composition/README.md)
     * [Argv](general-info/general-info/curry-vs-functional-composition/argv.md)
@@ -183,7 +185,7 @@
   * [Enums In Javascript](general-info/general-info/enums-in-javascript.md)
   * [🗣 JIRA](general-info/general-info/jira.md)
   * [🥑 Airbnb JavaScript Style Guide](general-info/general-info/airbnb-javascript-style-guide.md)
-  * [🤸♂ 🤸♂ 🤸♂ 🤸♂ Performance](general-info/general-info/performance.md)
+  * [🤸♂ Performance](general-info/general-info/performance.md)
 
 ## Sitecore
 
