@@ -16,12 +16,13 @@
   * [🌀 Tailwind CSS](docs/tailwind-css.md)
   * [📖 Storybook](docs/storybook.md)
   * [📼 Typescript](docs/typescript.md)
-* [🏃♂ Project Scrum / Sprints:](project-scrum-sprints.md)
+* [🏃♂ 🏃♂ Project Scrum / Sprints:](project-scrum-sprints.md)
 * [❓ Questions](questions.md)
 * [⚙ Testing](testing/README.md)
   * [🎹 Testing Input](testing/testing-input.md)
 * [⚒ Most Useful](most-useful/README.md)
   * [🌪 Tailwind Cheatsheet](tailwind-classes.md)
+  * [Bookmarks](most-useful/bookmarks.md)
 
 ## Personal Assignments
 
@@ -44,7 +45,7 @@
   * [⚒ CREATING COMPONENTS](personal-assignments/Website/creating-components/README.md)
     * [ℹ Intro](personal-assignments/Website/creating-components/intro.md)
     * [🧑💻 TechnicalOverview](personal-assignments/Website/creating-components/technicaloverview.md)
-      * [👨🔬 👨🔬 PracticalOverview](personal-assignments/Website/creating-components/practicaloverview.md)
+      * [👨🔬 👨🔬 👨🔬 PracticalOverview](personal-assignments/Website/creating-components/practicaloverview.md)
     * [📈 Analytics](personal-assignments/Website/creating-components/analytics.md)
     * [📰 Sitecore](website/creating-components/sitecore/README.md)
       * [Sitecore-Docs](website/creating-components/sitecore/sitecore-docs.md)
@@ -157,7 +158,7 @@
       * [Exhaustiveness checking in switch with union type (switch-exhaustiveness-check)](website/website/typescript/typescript-rules/exhaustiveness-checking-in-switch-with-union-type-switch-exhaustiveness-check.md)
       * [Require consistent spacing around type annotations (type-annotation-spacing)](website/website/typescript/typescript-rules/require-consistent-spacing-around-type-annotations-type-annotation-spacing.md)
 
-## 👨💻 💻 Code
+## 👨💻 👨💻 💻 Code
 
 * [Code](code/code/README.md)
   * [Index.tsx](code/code/index.tsx.md)
@@ -181,7 +182,7 @@
   * [Enums In Javascript](general-info/general-info/enums-in-javascript.md)
   * [🗣 JIRA](general-info/general-info/jira.md)
   * [🥑 Airbnb JavaScript Style Guide](general-info/general-info/airbnb-javascript-style-guide.md)
-  * [🤸♂ 🤸♂ Performance](general-info/general-info/performance.md)
+  * [🤸♂ 🤸♂ 🤸♂ Performance](general-info/general-info/performance.md)
 
 ## Sitecore
 
