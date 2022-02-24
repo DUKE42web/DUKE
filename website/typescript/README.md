@@ -3,9 +3,7 @@ cover: ../../.gitbook/assets/Screen Shot 2022-01-27 at 4.18.39 PM.png
 coverY: 0
 ---
 
-#  Typescript
-
-
+# ⌨ Typescript
 
 In typescript global types can be declared in a `.d.ts` file and used anywhere without explicitly importing them. Our project's `.d.ts` file is named `project.d.ts` .
 
@@ -50,7 +48,7 @@ Required<Pick<ComponentTypes, 'text'>>
 
 Using the stategies above you can select types from the global source and compose them to create a representation of the props in a specific component. While the global types live in `project.d.ts` , component level types should generally be placed in a `types.ts` file within the component directory and imported for use.
 
-_Although ComponentTypes is a_ :white_check\_mark: \_Good starting place, some components may require a type that is more specific and not usefully included in the global declaration._
+_Although ComponentTypes is a_ :white\_check\_mark: \_Good starting place, some components may require a type that is more specific and not usefully included in the global declaration.\_
 
 ***
 

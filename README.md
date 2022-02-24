@@ -16,9 +16,6 @@ _<mark style="color:red;background-color:green;">**Self Link**</mark>_
 [.](./)
 {% endcontent-ref %}
 
-
-
-
 ### Website
 
 {% content-ref url="personal-assignments/Website/creating-components/" %}
@@ -111,8 +108,8 @@ Website/creating-components/analytics.md" %\}
 
 ### Meetings
 
-{% content-ref url="meetings/week-1/" %}
-[week-1](meetings/week-1/)
+{% content-ref url="meetings/week-2.md" %}
+[week-2.md](meetings/week-2.md)
 {% endcontent-ref %}
 
 {% content-ref url="meetings/week-1/day-2.md" %}
@@ -123,8 +120,8 @@ Website/creating-components/analytics.md" %\}
 [day-3.md](meetings/week-1/day-3.md)
 {% endcontent-ref %}
 
-{% content-ref url="meetings/week-2.md" %}
-[week-2.md](meetings/week-2.md)
+{% content-ref url="meetings/week-1/" %}
+[week-1](meetings/week-1/)
 {% endcontent-ref %}
 
 {% content-ref url="meetings/week-3.md" %}
@@ -149,17 +146,16 @@ Website/creating-components/analytics.md" %\}
 [general-info](general-info/general-info/)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="broken-reference/" %}
+[broken-reference](broken-reference/)
 {% endcontent-ref %}
 
-{% content-ref url="general-info/general-info/argv.md" %}
-[argv.md](general-info/general-info/argv.md)
+{% content-ref url="general-info/general-info/curry-vs-functional-composition/argv.md" %}
+[argv.md](general-info/general-info/curry-vs-functional-composition/argv.md)
 {% endcontent-ref %}
 
 {% content-ref url="general-info/general-info/optional-chaning.md" %}
 [optional-chaning.md](general-info/general-info/optional-chaning.md)
 {% endcontent-ref %}
-
 
 ## Nav
