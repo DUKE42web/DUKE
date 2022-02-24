@@ -20,6 +20,7 @@
 * [❓ Questions](questions.md)
 * [⚙ Testing](testing/README.md)
   * [🎹 Testing Input](testing/testing-input.md)
+* [React Testing Library (events)](react-testing-library-events.md)
 * [⚒ Most Useful](most-useful/README.md)
   * [🌪 Tailwind Cheatsheet](tailwind-classes.md)
   * [Bookmarks](most-useful/bookmarks.md)
