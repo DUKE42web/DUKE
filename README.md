@@ -128,8 +128,8 @@ Website/creating-components/analytics.md" %\}
 [week-3.md](meetings/week-3.md)
 {% endcontent-ref %}
 
-{% content-ref url="meetings/week-4.md" %}
-[week-4.md](meetings/week-4.md)
+{% content-ref url="meetings/week-1/week-4/" %}
+[week-4](meetings/week-1/week-4/)
 {% endcontent-ref %}
 
 {% content-ref url="meetings/week-5.md" %}
