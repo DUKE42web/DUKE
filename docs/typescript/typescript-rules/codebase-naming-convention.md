@@ -86,7 +86,7 @@ const defaultOptions: Options = [
 
 ### Format Options
 
-Every single selector can have the same set of format options. For information about how each selector is applied, see ["How does the rule evaluate a name's format?"](broken-reference).
+Every single selector can have the same set of format options. For information about how each selector is applied, see ["How does the rule evaluate a name's format?"](../../../website/website/typescript/typescript-rules/broken-reference/).
 
 #### `format`
 
@@ -138,14 +138,14 @@ The `prefix` / `suffix` options control which prefix/suffix strings must exist f
 
 If these are provided, the identifier must start with one of the provided values. For example, if you provide `{ prefix: ['IFace', 'Class', 'Type'] }`, then the following names are valid: `IFaceFoo`, `ClassBar`, `TypeBaz`, but the name `Bang` is not valid, as it contains none of the prefixes.
 
-**Note:** As [documented above](broken-reference), the prefix is trimmed before format is validated, therefore PascalCase must be used to allow variables such as `isEnabled` using the prefix `is`.
+**Note:** As [documented above](../../../website/website/typescript/typescript-rules/broken-reference/), the prefix is trimmed before format is validated, therefore PascalCase must be used to allow variables such as `isEnabled` using the prefix `is`.
 
 ### Selector Options
 
 * `selector` allows you to specify what types of identifiers to target.
   * Accepts one or array of selectors to define an option block that applies to one or multiple selectors.
   * For example, if you provide `{ selector: ['variable', 'function'] }`, then it will apply the same option to variable and function nodes.
-  * See [Allowed Selectors, Modifiers and Types](broken-reference) below for the complete list of allowed selectors.
+  * See [Allowed Selectors, Modifiers and Types](../../../website/website/typescript/typescript-rules/broken-reference/) below for the complete list of allowed selectors.
 * `modifiers` allows you to specify which modifiers to granularly apply to, such as the accessibility (`private`/`public`/`protected`), or if the thing is `static`, etc.
   * The name must match _all_ of the modifiers.
   * For example, if you provide `{ modifiers: ['private', 'static', 'readonly'] }`, then it will only match something that is `private static readonly`, and something that is just `private` will not match.
@@ -170,7 +170,7 @@ If these are provided, the identifier must start with one of the provided values
     * `array` matches any type assignable to `Array<unknown> | null | undefined`
     * `function` matches any type assignable to `Function | null | undefined`
 
-The ordering of selectors does not matter. The implementation will automatically sort the selectors to ensure they match from most-specific to least specific. It will keep checking selectors in that order until it finds one that matches the name. See ["How does the rule automatically order selectors?"](broken-reference)
+The ordering of selectors does not matter. The implementation will automatically sort the selectors to ensure they match from most-specific to least specific. It will keep checking selectors in that order until it finds one that matches the name. See ["How does the rule automatically order selectors?"](../../../website/website/typescript/typescript-rules/broken-reference/)
 
 #### Allowed Selectors, Modifiers and Types
 
@@ -316,7 +316,7 @@ Then for the code `const x = 1`, the rule will validate the selectors in the fol
 * (4) is tested next as it is a grouped selector.
 * (1) is tested last as it is the base default selector.
 
-Its worth noting that whilst this order is applied, all selectors may not run on a name. This is explained in ["How does the rule evaluate a name's format?"](broken-reference)
+Its worth noting that whilst this order is applied, all selectors may not run on a name. This is explained in ["How does the rule evaluate a name's format?"](../../../website/website/typescript/typescript-rules/broken-reference/)
 
 ### How does the rule evaluate a name's format?
 
@@ -452,7 +452,7 @@ To help with matching, members that cannot specify an accessibility will always 
 
 ### Enforce that boolean variables are prefixed with an allowed verb
 
-**Note:** As [documented above](broken-reference), the prefix is trimmed before format is validated, thus PascalCase must be used to allow variables such as `isEnabled`.
+**Note:** As [documented above](../../../website/website/typescript/typescript-rules/broken-reference/), the prefix is trimmed before format is validated, thus PascalCase must be used to allow variables such as `isEnabled`.
 
 ```json
 {
