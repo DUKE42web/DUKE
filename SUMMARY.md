@@ -16,7 +16,8 @@
   * [🌀 Tailwind CSS](docs/tailwind-css.md)
   * [📖 Storybook](docs/storybook.md)
   * [📼 Typescript](docs/typescript.md)
-* [🏃♂ Project Scrum / Sprints:](project-scrum-sprints.md)
+* [🏃♂ Project Scrum / Sprints:](project-scrum-sprints/README.md)
+  * [🦿 ACCESSIBILITY](project-scrum-sprints/accessibility.md)
 
 ## ☑ Jira Tasks
 
