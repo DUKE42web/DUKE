@@ -48,6 +48,7 @@ In the following example, the QuickLinks component will get a single `items` pro
 
 ```tsx
 // composition/index.js
+
 const QuickLinks = ({ fields }) => {
   const items = fields?.QuickLinkItems?.reduce(
     (acc, curr) => [
@@ -67,6 +68,7 @@ const QuickLinks = ({ fields }) => {
 
 ```tsx
 // components/QuickLinks/index.tsx
+
 const QuickLinks = ({ items }: { items: Array<ComponentTypes> }) => (
   <QuickLinksWrapper>
     {items?.map(({ id, ...rest }, index) => (
@@ -81,7 +83,8 @@ const QuickLinks = ({ items }: { items: Array<ComponentTypes> }) => (
 An important thing to note and best practice is to use optional chaining when reaching into an object. The `(?.)` operator allows you to reach as far down into a nested
 object without first having to validate that the previous step in the chain is valid and exists first.
 
-[MDN - Optional Chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+[MDN - Optional Chaining](https:
+//developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 
 <br />
 <br />
@@ -106,7 +109,8 @@ const Button = () => {
 
 If your return content doesn't have a wrapping div you will need to create a fragment by using a short syntax element `<>` rather than a React `<Fragment>`.
 The only exception is if you need to use a `key` when using a `map`. In these instances you will need to use a `<Fragment>`
-[React Short Syntax](https://reactjs.org/docs/fragments.html#short-syntax)
+[React Short Syntax](https:
+//reactjs.org/docs/fragments.html#short-syntax)
 
 :no_entry_sign: Bad
 
@@ -284,14 +288,18 @@ const DataReport = ({ items }: { items: Array<string> }) => (
 :white_check_mark: Good
 
 ```tsx
+
 const TableCell = ({ children }) => (
   <td className="cell-class">{children}</td>
 );
 
+
 const TableRow = ({ children, isHeader }) => {
-  const class = isHeader ? 'bg-teal-dark text-white' : 'bg-transparent text-teal-dark'
+
+const class = isHeader ? 'bg-teal-dark text-white' : 'bg-transparent text-teal-dark'
   return <tr className={`${class} text-lg`}>{children}</td>
 };
+
 
 const DataReport = ({ items }: { items: Array<string> }) => (
   <table>

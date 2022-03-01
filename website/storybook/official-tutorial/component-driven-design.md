@@ -8,7 +8,9 @@
 
 ---
 
-[![Component Driven](https://www.componentdriven.org/logo-componentdriven.svg)](https://www.componentdriven.org)
+[![Component Driven](https:
+//www.componentdriven.org/logo-componentdriven.svg)](https:
+//www.componentdriven.org)
 
 The development and design practice of building user interfaces with modular components. UIs are built from the "bottom up" starting with basic components then progressively combined to assemble screens.
 
@@ -20,7 +22,9 @@ But UIs become unwieldy as applications grow. Large UIs are brittle, painful to 
 
 Components enable interchangeability by isolating state from application business logic. That way, you can decompose complex screens into simple components. Each component has a well-defined API and fixed series of states that are mocked. This allows components to be taken apart and recomposed to build different UIs.
 
-History: Software engineer [Tom Coleman](https://twitter.com/tmeasday) introduced Component Driven in [2017](https://blog.hichroma.com/component-driven-development-ce1109d56c8e) to describe the shift in UI development toward component architectures and processes. The idea of modular UI has many parallels in software movements such as microservices and containerization. Historical precedents also include lean manufacturing and mass manufacturing circa early 20th century.
+History: Software engineer [Tom Coleman](https:
+//twitter.com/tmeasday) introduced Component Driven in [2017](https:
+//blog.hichroma.com/component-driven-development-ce1109d56c8e) to describe the shift in UI development toward component architectures and processes. The idea of modular UI has many parallels in software movements such as microservices and containerization. Historical precedents also include lean manufacturing and mass manufacturing circa early 20th century.
 
 histogram
 
@@ -30,7 +34,8 @@ Components are standardized, interchangeable building blocks of UIs. They encaps
 
 ### How to be Component Driven
 
-![](https://www.componentdriven.org/component.svg)
+![](https:
+//www.componentdriven.org/component.svg)
 
 Line Copy 7
 
@@ -38,7 +43,9 @@ Line Copy 7
 
 Build each component in isolation and define its relevant states. Start small.
 
-![](https://www.componentdriven.org/composition.svg) ![](https://www.componentdriven.org/composition-stack.svg)
+![](https:
+//www.componentdriven.org/composition.svg) ![](https:
+//www.componentdriven.org/composition-stack.svg)
 
 Line Copy 7
 
@@ -46,7 +53,9 @@ Line Copy 7
 
 Compose small components together to unlock new features while gradually increasing complexity.
 
-![](https://www.componentdriven.org/page.svg) ![](https://www.componentdriven.org/page-stack.svg)
+![](https:
+//www.componentdriven.org/page.svg) ![](https:
+//www.componentdriven.org/page-stack.svg)
 
 Line Copy 7
 
@@ -60,7 +69,9 @@ Settings page
 
 Profile page
 
-![](https://www.componentdriven.org/integrate.svg) ![](https://www.componentdriven.org/integrate-stack.svg)
+![](https:
+//www.componentdriven.org/integrate.svg) ![](https:
+//www.componentdriven.org/integrate-stack.svg)
 
 #### Integrate pages into your project
 
@@ -94,15 +105,18 @@ Docs site
 
 #### Learn More
 
-[Component Driven Development](https://blog.hichroma.com/component-driven-development-ce1109d56c8e)
+[Component Driven Development](https:
+//blog.hichroma.com/component-driven-development-ce1109d56c8e)
 
 A development methodology that anchors the build process around components. It is a process that builds UIs from the "bottom up" by starting at the level of components and ending at the level of pages or screens.
 
-[Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
+[Atomic Design](https:
+//bradfrost.com/blog/post/atomic-web-design/)
 
 Atomic Design is atoms, molecules, organisms, templates, and pages concurrently working together to create effective interface design systems. It is a mental model to help us think of our user interfaces as both a cohesive whole and a collection of parts at the same time.
 
-[Design Systems Handbook](https://www.designbetter.co/design-systems-handbook)
+[Design Systems Handbook](https:
+//www.designbetter.co/design-systems-handbook)
 
 This book guides readers through best practices around planning, designing, building, and implementing a design system, with insights and first-hand experiences from experts who have gone through the journey.
 

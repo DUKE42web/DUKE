@@ -33,6 +33,7 @@ interface Bar {
 }
 
 // an interface with more than one supertype
+
 // in this case the interface can be used as a replacement of a union type.
 interface Baz extends Foo, Bar {}
 ```
@@ -52,7 +53,7 @@ This rule accepts a single object option with the following default configuratio
 }
 ```
 
-* `allowSingleExtends: true` will silence warnings about extending a single interface without adding additional members
+- `allowSingleExtends: true` will silence warnings about extending a single interface without adding additional members
 
 ## When Not To Use It
 
@@ -60,4 +61,5 @@ If you don't care about having empty/meaningless interfaces, then you will not n
 
 ## Compatibility
 
-* TSLint: [no-empty-interface](https://palantir.github.io/tslint/rules/no-empty-interface/)
+- TSLint: [no-empty-interface](https:
+  //palantir.github.io/tslint/rules/no-empty-interface/)

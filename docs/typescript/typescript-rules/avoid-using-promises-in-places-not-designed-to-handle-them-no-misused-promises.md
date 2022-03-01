@@ -7,7 +7,7 @@ This rule forbids using promises in places where the TypeScript compiler allows 
 Examples of **incorrect** code for this rule with `checksConditionals: true`:
 
 ```ts
-const promise = Promise.resolve('value');
+const promise = Promise.resolve("value");
 
 if (promise) {
   // Do something
@@ -23,7 +23,7 @@ while (promise) {
 Examples of **incorrect** code for this rule with `checksVoidReturn: true`:
 
 ```ts
-[1, 2, 3].forEach(async value => {
+[1, 2, 3].forEach(async (value) => {
   await doSomething(value);
 });
 
@@ -33,7 +33,7 @@ new Promise(async (resolve, reject) => {
 });
 
 const eventEmitter = new EventEmitter();
-eventEmitter.on('some-event', async () => {
+eventEmitter.on("some-event", async () => {
   await doSomething();
 });
 ```
@@ -41,7 +41,7 @@ eventEmitter.on('some-event', async () => {
 Examples of **correct** code for this rule:
 
 ```ts
-const promise = Promise.resolve('value');
+const promise = Promise.resolve("value");
 
 if (await promise) {
   // Do something
@@ -63,7 +63,7 @@ new Promise((resolve, reject) => {
 });
 
 const eventEmitter = new EventEmitter();
-eventEmitter.on('some-event', () => {
+eventEmitter.on("some-event", () => {
   doSomething();
 });
 ```
@@ -104,8 +104,9 @@ If you do not use Promises in your codebase or are not concerned with possible m
 
 ## Related to
 
-* `no-floating-promises`
+- `no-floating-promises`
 
 ## Further Reading
 
-* [TypeScript void function assignability](https://github.com/Microsoft/TypeScript/wiki/FAQ#why-are-functions-returning-non-void-assignable-to-function-returning-void)
+- [TypeScript void function assignability](https:
+  //github.com/Microsoft/TypeScript/wiki/FAQ#why-are-functions-returning-non-void-assignable-to-function-returning-void)

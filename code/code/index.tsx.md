@@ -20,6 +20,7 @@ import LazyImage from "src/components/LazyImage";
 import { NewsBannerProps } from "./types";
 import RichText from "src/components/RichText";
 import Button from "src/components/Button";
+
 const NewsBanner = ({
   icon,
   rounded,
@@ -29,7 +30,9 @@ const NewsBanner = ({
   cta,
 }: NewsBannerProps) => {
   const ctaExists = cta?.href && cta?.text;
+
   const iconRounded = rounded ? "rounded-full" : "";
+
   const iconSize = icon?.value?.src?.includes(".svg")
     ? "icon-48 sm:icon-76"
     : "icon-76 sm:icon-122";

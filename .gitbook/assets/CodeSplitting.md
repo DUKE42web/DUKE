@@ -1,6 +1,7 @@
 # Code Splitting
 
-Rather than all code living in a single file, we can split the code up into different files and only load the code that we need for a given page. Here is how we can accomplish this in our project using [loadable-components](https://loadable-components.com/docs/server-side-rendering/).
+Rather than all code living in a single file, we can split the code up into different files and only load the code that we need for a given page. Here is how we can accomplish this in our project using [loadable-components](https:
+//loadable-components.com/docs/server-side-rendering/).
 
 ---
 
@@ -11,6 +12,7 @@ Rather than all code living in a single file, we can split the code up into diff
 Add LoadablePlugin.
 
 ```js
+
 const LoadablePlugin = require('@loadable/webpack-plugin');
 
 ...
@@ -28,13 +30,16 @@ import { ChunkExtractor } from '@loadable/server';
 
 ...
 
+
 const extractor = new ChunkExtractor({
   statsFile: './loadable-stats.json',
 });
 
+
 const jsx = extractor.collectChunks(<AppRoot path={path} Router={StaticRouter} />);
 
 ...
+
 
 const renderedAppHtml = ReactDOMServer.renderToString(jsx);
 
@@ -62,7 +67,9 @@ html = assertReplace(
 Add LoadablePlugin. Then add HtmlWebpackPlugin and alter the webpack config to opt-out of the default CRA behavior that injects compiled chunks into the index.html template. We will control this ourselves manually.
 
 ```js
+
 const LoadablePlugin = require('@loadable/webpack-plugin');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 ...
@@ -70,11 +77,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 webpack: {
   mode: 'development',
   configure: (webpackConfig, { env }) => {
-    // Prevent webpack from injecting script tags into index.html template because
-    // we add the tags via the `@loadable` library for code-splitting. If we didn't
-    // do this the same tags will be added twice.
+
+// Prevent webpack from injecting script tags into index.html template because
+
+// we add the tags via the `@loadable` library for code-splitting. If we didn't
+
+// do this the same tags will be added twice.
     if (env !== 'development') {
-      const htmlWebpackPluginInstance = webpackConfig.plugins.find(
+
+const htmlWebpackPluginInstance = webpackConfig.plugins.find(
         webpackPlugin => webpackPlugin instanceof HtmlWebpackPlugin
       );
       if (htmlWebpackPluginInstance) {
@@ -105,8 +116,10 @@ import { loadableReady } from '@loadable/component';
 ...
 
 loadableReady(() => {
-  // HTML element to place the app into
-  const rootElement = document.getElementById('root');
+
+// HTML element to place the app into
+
+const rootElement = document.getElementById('root');
 
   renderFunction(<AppRoot path={window.location.pathname} Router={BrowserRouter} />, rootElement);
 });

@@ -2,9 +2,10 @@
 
 In TypeScript, type aliases serve three purposes:
 
-* Aliasing other types so that we can refer to them using a simpler name.
+- Aliasing other types so that we can refer to them using a simpler name.
 
 ```ts
+
 // this...
 type Person = {
     firstName: string,
@@ -14,11 +15,12 @@ type Person = {
 
 function addPerson(person : Person) { ... }
 
+
 // is easier to read than this...
 function addPerson(person : { firstName: string, lastName: string, age: number}) { ... }
 ```
 
-* Act sort of like an interface, providing a set of methods and properties that must exist in the objects implementing the type.
+- Act sort of like an interface, providing a set of methods and properties that must exist in the objects implementing the type.
 
 ```ts
 type Person = {
@@ -29,15 +31,18 @@ type Person = {
     talk: () => void
 };
 
+
 // you know person will have 3 properties and 2 methods,
+
 // because the structure has already been defined.
 var person : Person = { ... }
+
 
 // so we can be sure that this will work
 person.walk();
 ```
 
-* Act like mapping tools between types to allow quick modifications.
+- Act like mapping tools between types to allow quick modifications.
 
 ```ts
 type Immutable<T> = { readonly [P in keyof T]: T[P] };
@@ -49,8 +54,9 @@ type Person = {
 
 type ImmutablePerson = Immutable<Person>;
 
-var person: ImmutablePerson = { name: 'John', age: 30 };
-person.name = 'Brad'; // error, readonly property
+var person: ImmutablePerson = { name: "John", age: 30 };
+person.name = "Brad";
+// error, readonly property
 ```
 
 When aliasing, the type alias does not create a new type, it just creates a new name to refer to the original type. So aliasing primitives and other simple types, tuples, unions or intersections can some times be redundant.
@@ -62,8 +68,8 @@ type myString = string;
 
 On the other hand, using a type alias as an interface can limit your ability to:
 
-* Reuse your code: interfaces can be extended or implemented by other types. Type aliases cannot.
-* Debug your code: interfaces create a new name, so is easy to identify the base type of an object while debugging the application.
+- Reuse your code: interfaces can be extended or implemented by other types. Type aliases cannot.
+- Debug your code: interfaces create a new name, so is easy to identify the base type of an object while debugging the application.
 
 Finally, mapping types is an advanced technique and leaving it open can quickly become a pain point in your application.
 
@@ -75,13 +81,14 @@ This rule disallows the use of type aliases in favor of interfaces and simplifie
 
 This rule, in its default state, does not require any argument. If you would like to enable one or more of the following you may pass an object with the options set as follows:
 
-* `allowAliases` set to `"always"` will allow you to do aliasing (Defaults to `"never"`).
-* `allowCallbacks` set to `"always"` will allow you to use type aliases with callbacks (Defaults to `"never"`)
-* `allowConditionalTypes` set to `"always"` will allow you to use type aliases with conditional types (Defaults to `"never"`)
-* `allowConstructors` set to `"always"` will allow you to use type aliases with constructors (Defaults to `"never"`)
-* `allowLiterals` set to `"always"` will allow you to use type aliases with literal objects (Defaults to `"never"`)
-* `allowMappedTypes` set to `"always"` will allow you to use type aliases as mapping tools (Defaults to `"never"`)
-* `allowTupleTypes` set to `"always"` will allow you to use type aliases with tuples (Defaults to `"never"`)
+- `allowAliases` set to `"always"` will allow you to do aliasing (Defaults to `"never"`).
+- `allowCallbacks` set to `"always"` will allow you to use type aliases with callbacks (Defaults to `"never"`)
+- `allowConditionalTypes` set to `"always"` will allow you to use type aliases with conditional types (Defaults to `"never"`)
+- `allow constructors` set to `"always"` will allow you to use type aliases with
+  constructors (Defaults to `"never"`)
+- `allowLiterals` set to `"always"` will allow you to use type aliases with literal objects (Defaults to `"never"`)
+- `allowMappedTypes` set to `"always"` will allow you to use type aliases as mapping tools (Defaults to `"never"`)
+- `allowTupleTypes` set to `"always"` will allow you to use type aliases with tuples (Defaults to `"never"`)
 
 ### `allowAliases`
 
@@ -89,18 +96,18 @@ This applies to primitive types and reference types.
 
 The setting accepts the following values:
 
-* `"always"` or `"never"` to active or deactivate the feature.
-* `"in-unions"`, allows aliasing in union statements, e.g. `type Foo = string | string[];`
-* `"in-intersections"`, allows aliasing in intersection statements, e.g. `type Foo = string & string[];`
-* `"in-unions-and-intersections"`, allows aliasing in union and/or intersection statements.
+- `"always"` or `"never"` to active or deactivate the feature.
+- `"in-unions"`, allows aliasing in union statements, e.g. `type Foo = string | string[];`
+- `"in-intersections"`, allows aliasing in intersection statements, e.g. `type Foo = string & string[];`
+- `"in-unions-and-intersections"`, allows aliasing in union and/or intersection statements.
 
 Examples of **correct** code for the `{ "allowAliases": "always" }` options:
 
 ```ts
 // primitives
-type Foo = 'a';
+type Foo = "a";
 
-type Foo = 'a' | 'b';
+type Foo = "a" | "b";
 
 type Foo = string;
 
@@ -123,7 +130,7 @@ Examples of **incorrect** code for the `{ "allowAliases": "in-unions" }` option:
 
 ```ts
 // primitives
-type Foo = 'a';
+type Foo = "a";
 
 type Foo = string;
 
@@ -142,7 +149,7 @@ Examples of **correct** code for the `{ "allowAliases": "in-unions" }` option:
 
 ```ts
 // primitives
-type Foo = 'a' | 'b';
+type Foo = "a" | "b";
 
 type Foo = string | string[];
 
@@ -157,9 +164,9 @@ Examples of **incorrect** code for the `{ "allowAliases": "in-intersections" }` 
 
 ```ts
 // primitives
-type Foo = 'a';
+type Foo = "a";
 
-type Foo = 'a' | 'b';
+type Foo = "a" | "b";
 
 type Foo = string;
 
@@ -191,7 +198,7 @@ Examples of **incorrect** code for the `{ "allowAliases": "in-unions-and-interse
 
 ```ts
 // primitives
-type Foo = 'a';
+type Foo = "a";
 
 type Foo = string;
 
@@ -206,7 +213,7 @@ Examples of **correct** code for the `{ "allowAliases": "in-unions-and-intersect
 
 ```ts
 // primitives
-type Foo = 'a' | 'b';
+type Foo = "a" | "b";
 
 type Foo = string | string[];
 
@@ -227,7 +234,7 @@ This applies to function types.
 
 The setting accepts the following values:
 
-* `"always"` or `"never"` to active or deactivate the feature.
+- `"always"` or `"never"` to active or deactivate the feature.
 
 Examples of **correct** code for the `{ "allowCallbacks": "always" }` option:
 
@@ -253,15 +260,18 @@ Examples of **correct** code for the `{ "allowConditionalTypes": "always" }` opt
 type Foo<T> = T extends number ? number : null;
 ```
 
-### `allowConstructors`
+### `allow
 
-This applies to constructor types.
+constructors`
+
+This applies to
+constructor types.
 
 The setting accepts the following values:
 
-* `"always"` or `"never"` to active or deactivate the feature.
+- `"always"` or `"never"` to active or deactivate the feature.
 
-Examples of **correct** code for the `{ "allowConstructors": "always" }` option:
+Examples of **correct** code for the `{ "allow constructors": "always" }` option:
 
 ```ts
 type Foo = new () => void;
@@ -273,10 +283,10 @@ This applies to literal types (`type Foo = { ... }`).
 
 The setting accepts the following options:
 
-* `"always"` or `"never"` to active or deactivate the feature.
-* `"in-unions"`, allows literals in union statements, e.g. `type Foo = string | string[];`
-* `"in-intersections"`, allows literals in intersection statements, e.g. `type Foo = string & string[];`
-* `"in-unions-and-intersections"`, allows literals in union and/or intersection statements.
+- `"always"` or `"never"` to active or deactivate the feature.
+- `"in-unions"`, allows literals in union statements, e.g. `type Foo = string | string[];`
+- `"in-intersections"`, allows literals in intersection statements, e.g. `type Foo = string & string[];`
+- `"in-unions-and-intersections"`, allows literals in union and/or intersection statements.
 
 Examples of **correct** code for the `{ "allowLiterals": "always" }` options:
 
@@ -380,10 +390,10 @@ This applies to literal types.
 
 The setting accepts the following values:
 
-* `"always"` or `"never"` to active or deactivate the feature.
-* `"in-unions"`, allows aliasing in union statements, e.g. `type Foo = string | string[];`
-* `"in-intersections"`, allows aliasing in intersection statements, e.g. `type Foo = string & string[];`
-* `"in-unions-and-intersections"`, allows aliasing in union and/or intersection statements.
+- `"always"` or `"never"` to active or deactivate the feature.
+- `"in-unions"`, allows aliasing in union statements, e.g. `type Foo = string | string[];`
+- `"in-intersections"`, allows aliasing in intersection statements, e.g. `type Foo = string & string[];`
+- `"in-unions-and-intersections"`, allows aliasing in union and/or intersection statements.
 
 Examples of **correct** code for the `{ "allowMappedTypes": "always" }` options:
 
@@ -398,8 +408,9 @@ type Foo<T, U> =
 
 type Foo<T, U> = { [P in keyof T]?: T[P] } | { [P in keyof U]?: U[P] };
 
-type Foo<T, U> = { readonly [P in keyof T]: T[P] } &
-  { readonly [P in keyof U]: U[P] };
+type Foo<T, U> = { readonly [P in keyof T]: T[P] } & {
+  readonly [P in keyof U]: U[P];
+};
 
 type Foo<T, U> = { [P in keyof T]?: T[P] } & { [P in keyof U]?: U[P] };
 ```
@@ -411,8 +422,9 @@ type Foo<T> = { readonly [P in keyof T]: T[P] };
 
 type Foo<T> = { [P in keyof T]?: T[P] };
 
-type Foo<T, U> = { readonly [P in keyof T]: T[P] } &
-  { readonly [P in keyof U]: U[P] };
+type Foo<T, U> = { readonly [P in keyof T]: T[P] } & {
+  readonly [P in keyof U]: U[P];
+};
 
 type Foo<T, U> = { [P in keyof T]?: T[P] } & { [P in keyof U]?: U[P] };
 ```
@@ -444,8 +456,9 @@ type Foo<T, U> = { [P in keyof T]?: T[P] } | { [P in keyof U]?: U[P] };
 Examples of **correct** code for the `{ "allowMappedTypes": "in-intersections" }` option:
 
 ```ts
-type Foo<T, U> = { readonly [P in keyof T]: T[P] } &
-  { readonly [P in keyof U]: U[P] };
+type Foo<T, U> = { readonly [P in keyof T]: T[P] } & {
+  readonly [P in keyof U]: U[P];
+};
 
 type Foo<T, U> = { [P in keyof T]?: T[P] } & { [P in keyof U]?: U[P] };
 ```
@@ -467,8 +480,9 @@ type Foo<T, U> =
 
 type Foo<T, U> = { [P in keyof T]?: T[P] } | { [P in keyof U]?: U[P] };
 
-type Foo<T, U> = { readonly [P in keyof T]: T[P] } &
-  { readonly [P in keyof U]: U[P] };
+type Foo<T, U> = { readonly [P in keyof T]: T[P] } & {
+  readonly [P in keyof U]: U[P];
+};
 
 type Foo<T, U> = { [P in keyof T]?: T[P] } & { [P in keyof U]?: U[P] };
 ```
@@ -479,10 +493,10 @@ This applies to tuple types (`type Foo = [number]`).
 
 The setting accepts the following options:
 
-* `"always"` or `"never"` to active or deactivate the feature.
-* `"in-unions"`, allows tuples in union statements, e.g. `type Foo = [string] | [string, string];`
-* `"in-intersections"`, allows tuples in intersection statements, e.g. `type Foo = [string] & [string, string];`
-* `"in-unions-and-intersections"`, allows tuples in union and/or intersection statements.
+- `"always"` or `"never"` to active or deactivate the feature.
+- `"in-unions"`, allows tuples in union statements, e.g. `type Foo = [string] | [string, string];`
+- `"in-intersections"`, allows tuples in intersection statements, e.g. `type Foo = [string] & [string, string];`
+- `"in-unions-and-intersections"`, allows tuples in union and/or intersection statements.
 
 Examples of **correct** code for the `{ "allowTupleTypes": "always" }` options:
 
@@ -554,8 +568,10 @@ When you can't express some shape with an interface or you need to use a union, 
 
 ## Further Reading
 
-* [Advance Types](https://www.typescriptlang.org/docs/handbook/advanced-types.html)
+- [Advance Types](https:
+  //www.typescriptlang.org/docs/handbook/advanced-types.html)
 
 ## Related to
 
-* TSLint: [interface-over-type-literal](https://palantir.github.io/tslint/rules/interface-over-type-literal/)
+- TSLint: [interface-over-type-literal](https:
+  //palantir.github.io/tslint/rules/interface-over-type-literal/)

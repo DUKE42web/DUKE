@@ -1,6 +1,8 @@
 # Enforce that this is used when only this type is returned (prefer-return-this-type)
 
-[Method chaining](https://en.wikipedia.org/wiki/Method\_chaining) is a common pattern in OOP languages and TypeScript provides a special [polymorphic this type](https://www.typescriptlang.org/docs/handbook/2/classes.html#this-types). If any type other than `this` is specified as the return type of these chaining methods, TypeScript will fail to cast it when invoking in subclass.
+[Method chaining](https:
+//en.wikipedia.org/wiki/Method_chaining) is a common pattern in OOP languages and TypeScript provides a special [polymorphic this type](https:
+//www.typescriptlang.org/docs/handbook/2/classes.html#this-types). If any type other than `this` is specified as the return type of these chaining methods, TypeScript will fail to cast it when invoking in subclass.
 
 ```ts
 class Animal {
@@ -12,13 +14,15 @@ class Animal {
 
 class Cat extends Animal {
   meow(): Cat {
-    console.log('Meow~');
+    console.log("Meow~");
     return this;
   }
 }
 
 const cat = new Cat();
+
 // Error: Property 'meow' does not exist on type 'Animal'.
+
 // because `eat` returns `Animal` and not all animals meow.
 cat.eat().meow();
 
@@ -32,12 +36,13 @@ class Animal {
 
 class Cat extends Animal {
   meow(): this {
-    console.log('Meow~');
+    console.log("Meow~");
     return this;
   }
 }
 
 const cat = new Cat();
+
 // no errors. Because `eat` returns `Cat` now
 cat.eat().meow();
 ```

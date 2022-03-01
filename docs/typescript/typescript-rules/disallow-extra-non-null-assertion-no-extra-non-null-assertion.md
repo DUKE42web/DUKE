@@ -6,6 +6,7 @@ Examples of **incorrect** code for this rule:
 
 ```ts
 const foo: { bar: number } | null = null;
+
 const bar = foo!!!.bar;
 ```
 
@@ -25,6 +26,7 @@ Examples of **correct** code for this rule:
 
 ```ts
 const foo: { bar: number } | null = null;
+
 const bar = foo!.bar;
 ```
 

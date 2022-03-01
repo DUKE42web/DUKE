@@ -8,12 +8,14 @@ import { Data } from "./data";
 import { compositionFunction } from "./composition";
 import NewsBanner from "./index";
 
-const props = compositionFunction(Data); // props has desired shape of data as storybook substitute for composition function.
+const props = compositionFunction(Data);
+// props has desired shape of data as storybook substitute for composition function.
 
 export default {
   title: "components/NewsBanner",
   component: NewsBanner,
 };
+
 const Template = (args) => {
   return <NewsBanner {...args} />;
 };

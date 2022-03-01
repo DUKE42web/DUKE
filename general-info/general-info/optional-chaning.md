@@ -12,7 +12,9 @@
 
 ### Introduction to the JavaScript optional chaining operator
 
-The optional chaining operator ( `?.` ) allows you to access the value of a [property](https://www.javascripttutorial.net/javascript-object-properties/) located deep within a chain of [objects](https://www.javascripttutorial.net/javascript-objects/) without explicitly checking if each reference in the chain is `null` or `undefined` .
+The optional chaining operator ( `?.` ) allows you to access the value of a [property](https:
+//www.javascripttutorial.net/javascript-object-properties/) located deep within a chain of [objects](https:
+//www.javascripttutorial.net/javascript-objects/) without explicitly checking if each reference in the chain is `null` or `undefined` .
 
 If one of the references in the chain is `null` or `undefined` , the optional chaining operator ( `?.` ) will short circuit and return `undefined` .
 
@@ -47,7 +49,8 @@ Code language: JavaScript (javascript)
 
 However, if you pass the `id` that is less than or equal to zero or the `id` doesn't exist in the database, the `getUser()` function will return `null` .
 
-Therefore, before accessing the `avatar` property, you need to check if the `user` is not `null` using the [logical operator](https://www.javascripttutorial.net/javascript-logical-operators/) AND:
+Therefore, before accessing the `avatar` property, you need to check if the `user` is not `null` using the [logical operator](https:
+//www.javascripttutorial.net/javascript-logical-operators/) AND:
 
 `let user = getUser(2); let profile = user && user.profile;`
 
@@ -147,7 +150,8 @@ The following illustrates the syntax for using the optional chaining operator wi
 
 Code language: JavaScript (javascript)
 
-The optional chaining operator ( `?.` ) is also helpful if you have a function with optional [callback](https://www.javascripttutorial.net/javascript-callback/):
+The optional chaining operator ( `?.` ) is also helpful if you have a function with optional [callback](https:
+//www.javascripttutorial.net/javascript-callback/):
 
 \`function getUser(id, callback) {
 

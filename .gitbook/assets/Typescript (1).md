@@ -6,13 +6,15 @@ In typescript global types can be declared in a `.d.ts` file and used anywhere w
 
 It contains:
 
-1. Some library types in the form of [triple slash directives](https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html). **These need to be placed at the top of the file.**
+1. Some library types in the form of [triple slash directives](https:
+   //www.typescriptlang.org/docs/handbook/triple-slash-directives.html). **These need to be placed at the top of the file.**
 
 2. Some library module declarations (usually these are included because these libs don't have typings but we still need to use them).
 
 3. Our own global types.
 
-Typescript provides many [Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html) which are useful for manipulating the base types in the global ComponentTypes interface.
+Typescript provides many [Utility Types](https:
+//www.typescriptlang.org/docs/handbook/utility-types.html) which are useful for manipulating the base types in the global ComponentTypes interface.
 
 A few basic ones to know:
 
@@ -22,6 +24,7 @@ Only use the specified Keys from the Type.
 
 ```ts
 Pick<ComponentTypes, 'text'>
+
 // only use 'text' type
 ```
 
@@ -31,7 +34,9 @@ Allows the type to be optional (undefined)
 
 ```ts
 Partial<Pick<ComponentTypes, 'text'>>
+
 // only use 'text' type
+
 // the text type is optional
 ```
 
@@ -41,7 +46,9 @@ Opposite of Partial, the type must be defined
 
 ```ts
 Required<Pick<ComponentTypes, 'text'>>
+
 // only use 'text' type
+
 // the text type is required
 ```
 
@@ -202,6 +209,7 @@ type ImageProps = { src: string; alt: string };
 
 ```ts
 const FooBar = "baz";
+
 const FooBar = () => "baz";
 ```
 
@@ -209,6 +217,7 @@ const FooBar = () => "baz";
 
 ```ts
 const fooBar = "baz";
+
 const fooBar = () => "baz";
 ```
 

@@ -1,6 +1,9 @@
-# Requires that private members are marked as readonly if they're never modified outside of the constr
+# Requires that private members are marked as readonly if they're never modified outside of the
 
-This rule enforces that private members are marked as `readonly` if they're never modified outside of the constructor.
+constr
+
+This rule enforces that private members are marked as `readonly` if they're never modified outside of the
+constructor.
 
 ## Rule Details
 
@@ -10,16 +13,23 @@ Examples of **incorrect** code for this rule:
 
 ```ts
 class Container {
-  // These member variables could be marked as readonly
-  private neverModifiedMember = true;
-  private onlyModifiedInConstructor: number;
 
-  public constructor(
-    onlyModifiedInConstructor: number,
-    // Private parameter properties can also be marked as readonly
+// These member variables could be marked as readonly
+  private neverModifiedMember = true;
+  private onlyModifiedIn
+constructor: number;
+
+  public
+constructor(
+    onlyModifiedIn
+constructor: number,
+
+// Private parameter properties can also be marked as readonly
     private neverModifiedParameter: string,
   ) {
-    this.onlyModifiedInConstructor = onlyModifiedInConstructor;
+    this.onlyModifiedIn
+constructor = onlyModifiedIn
+constructor;
   }
 }
 ```
@@ -35,10 +45,10 @@ class Container {
   protected protectedMember: number;
 
   // This is modified later on by the class
-  private modifiedLater = 'unchanged';
+  private modifiedLater = "unchanged";
 
   public mutate() {
-    this.modifiedLater = 'mutated';
+    this.modifiedLater = "mutated";
   }
 }
 ```
@@ -61,7 +71,7 @@ Example of **correct** code for the `{ "onlyInlineLambdas": true }` options:
 
 ```ts
 class Container {
-  private neverModifiedPrivate = 'unchanged';
+  private neverModifiedPrivate = "unchanged";
 }
 ```
 
@@ -77,4 +87,5 @@ class Container {
 
 ## Related to
 
-* TSLint: ['prefer-readonly'](https://palantir.github.io/tslint/rules/prefer-readonly)
+- TSLint: ['prefer-readonly'](https:
+  //palantir.github.io/tslint/rules/prefer-readonly)

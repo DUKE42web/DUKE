@@ -13,7 +13,7 @@ Examples of **incorrect** code for this rule:
 ```ts
 /*eslint @typescript-eslint/no-throw-literal: "error"*/
 
-throw 'error';
+throw "error";
 
 throw 0;
 
@@ -22,21 +22,21 @@ throw undefined;
 throw null;
 
 const err = new Error();
-throw 'an ' + err;
+throw "an " + err;
 
 const err = new Error();
 throw `${err}`;
 
-const err = '';
+const err = "";
 throw err;
 
 function err() {
-  return '';
+  return "";
 }
 throw err();
 
 const foo = {
-  bar: '',
+  bar: "",
 };
 throw foo.bar;
 ```
@@ -50,6 +50,7 @@ throw new Error();
 
 throw new Error("error");
 
+
 const e = new Error("error");
 throw e;
 
@@ -59,6 +60,7 @@ try {
     throw e;
 }
 
+
 const err = new Error();
 throw err;
 
@@ -67,13 +69,15 @@ function err() {
 }
 throw err();
 
+
 const foo = {
   bar: new Error();
 }
 throw foo.bar;
 
 class CustomError extends Error {
-  // ...
+
+// ...
 };
 throw new CustomError();
 ```
@@ -82,12 +86,14 @@ throw new CustomError();
 
 ```
 {
-  // note you must disable the base rule as it can report incorrect errors
+
+// note you must disable the base rule as it can report incorrect errors
   "no-throw-literal": "off",
   "@typescript-eslint/no-throw-literal": ["error"]
 }
 ```
 
-***
+---
 
-Taken with ❤️ [from ESLint core](https://github.com/eslint/eslint/blob/master/docs/rules/no-throw-literal.md)
+Taken with ❤️ [from ESLint core](https:
+//github.com/eslint/eslint/blob/master/docs/rules/no-throw-literal.md)

@@ -20,7 +20,8 @@ Table of Contents:
 
 The Generate Component Factory (`scripts/generate-component-factory.js`) generates the `/src/temp/componentFactory.js` file which maps React components to JSS components.
 
-The component factory is a mapping between a string name and a React component instance. When the Sitecore Layout service returns a layout definition, it returns named components. This mapping is used to construct the component hierarchy for the layout.
+The component factory is a mapping between a string name and a React component instance. When the Sitecore Layout service returns a layout definition, it returns named components. This mapping is used to
+construct the component hierarchy for the layout.
 
 The default convention uses the parent folder name as the component name, but it is customizable in generateComponentFactory().
 
@@ -31,6 +32,7 @@ const componentAlias = {
   HeroCarousel: "Hero",
   HeroCarouselNocache: "Hero",
   JssAccordion: "Accordion",
+
   // ...
 };
 ```
@@ -61,6 +63,7 @@ To illustrate this, in the following example, the QuickLinks component will get 
 
 ```javascript
 // composition/index.js
+
 const QuickLinks = ({ fields }) => {
   const items = fields?.QuickLinkItems?.reduce(
     (acc, curr) => [
@@ -80,6 +83,7 @@ const QuickLinks = ({ fields }) => {
 
 ```tsx
 // components/QuickLinks/index.tsx
+
 const QuickLinks = ({ items }: { items: Array<ComponentTypes> }) => (
   <QuickLinksWrapper>
     {items?.map(({ id, ...rest }, index) => (
@@ -117,7 +121,9 @@ The index file will be your main component [React](../docs-react) file, using [T
 
 ### `Test.tsx`
 
-The test file is where your unit tests live. [Tests](../docs-tests) are written in React with `Typescript`, using [Jest](https://jestjs.io/en/) and [Enzyme](https://enzymejs.github.io/enzyme/).
+The test file is where your unit tests live. [Tests](../docs-tests) are written in React with `Typescript`, using [Jest](https:
+//jestjs.io/en/) and [Enzyme](https:
+//enzymejs.github.io/enzyme/).
 
 Jest is a popular testing library and Enzyme adds some sugar on top to make writing the tests a little easier.
 
@@ -127,7 +133,8 @@ In all likelihood, you will need a test for every component you write, even if i
 
 ### `Types.ts`
 
-This file is for type definitions and interfaces for [Typescript](https://www.typescriptlang.org/). You can store your component-specific definitions in this file and export them to your index file.
+This file is for type definitions and interfaces for [Typescript](https:
+//www.typescriptlang.org/). You can store your component-specific definitions in this file and export them to your index file.
 
 For more information on writing Typescript within our app, please check out our [Typescript Style Guide](docs-typescript).
 

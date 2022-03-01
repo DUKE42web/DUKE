@@ -25,11 +25,15 @@ import { compositionFunction } from "./composition";
 import { Data } from "./data";
 import "@testing-library/jest-dom";
 jest.mock("src/lib/useIntersection");
+
 const props = compositionFunction(Data);
+
 //## Describe: Newsbar Component
 
 // #### it:
+
 // #### it:      should render a cta button if the data CTA URL filed exists else: do not render cta
+
 // #### it:      should render the body text if the field exists in the data file. else: do not render text
 
 //------------------------------
@@ -39,10 +43,13 @@ describe("News Banner", () => {
   it("should render NewsBanner component with Title & Image", () => {
     //look up memory router...
     renderWithContext(<NewsBanner {...props} />);
-    screen.logTestingPlaygroundURL(); // to launch browser based playground... needs to gafter a render has been called.
+    screen.logTestingPlaygroundURL();
+    // to launch browser based playground... needs to gafter a render has been called.
+
     const title = screen.getByRole("heading", {
       name: /here to help during this difficult time\./i,
     });
+
     const img = screen.getByRole("img", {
       name: /image alt text/i,
     });
@@ -57,7 +64,9 @@ describe("News Banner", () => {
     );
     expect(body).toBeInTheDocument();
     rerender(<NewsBanner {...props} body={undefined} />);
+
     //querry by text will not throw an error if it does not find the element it is looking for.
+
     const noBodyText = screen.queryByText(
       /customers who need additional time to pay any outstanding balance may qualify for financial assistance\. learn how we are taking action to help in response to covid\-19\./i
     );
@@ -65,7 +74,8 @@ describe("News Banner", () => {
   });
 
   it("renders a cta button if the data is present on the object, and does not render a button otherwise.", () => {
-    const { rerender } = renderWithContext(<NewsBanner {...props} />); //in each it block scope
+    const { rerender } = renderWithContext(<NewsBanner {...props} />);
+    //in each it block scope
 
     const ctaButton = screen.getByRole("link", {
       name: /view resources/i,

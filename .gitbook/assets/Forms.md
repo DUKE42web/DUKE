@@ -4,24 +4,25 @@ Dynamically generating forms with React and Sitecore JSS
 
 ## Creating the FormField
 
-1.  Navigate to page http://local.duke-energy.com:3000/home/products/outdoor-lighting/contact
+1.  Navigate to page http:
+    //local.duke-energy.com:3000/home/products/outdoor-lighting/contact
 
-    - This page calls the `<SingleStepForm />` component in the layout json from Sitecore which have fields that look like this
-      ```javascript
-      {
-        componentName: 'ContentMain',
-        content: [{
-            uid: '',
-            componentName: 'Single Step Form',
-            dataSource: '',
-            fields: {
-                ModelJson: {
-                    value: '[ { "title":"Form Name", "fields":{ "Name":{ "label":"Form Name", "type":"input", "value":"Form Name", "name":"Name" }, "Id":{ "label":"Id", "type":"hidden", "value":"", "name":"Id" } }, "fresh":true }, { "title":"Text Input", "fields":{ "FormId":{ "label":"FormId", "type":"hidden", "value":"stepOne", "name":"FormId" }, "Name":{ "label":"Name", "type":"hidden", "value":"textinput", "name":"Name" }, "Id":{ "label":"Id", "type":"input", "value":"fixtureName", "name":"Id" }, "Label":{ "label":"Label", "type":"input", "value":"Fixture Selection", "name":"Label" }, "BackEndLabel":{ "label":"BackEnd Label", "type":"input", "value":"Fixture Selection", "name":"BackEndLabel" }, "Value":{ "label":"Default Value", "type":"input", "value":"", "name":"Value" }, "DefaultValueSource":{ "label":"Default Value Source", "type":"select", "value":[ { "value":"None", "selected":false, "label":"None" }, { "value":"cookie", "selected":true, "label":"Cookie" } ], "name":"DefaultValueSource" }, "DefaultValueKey":{ "label":"Default Value Source Key", "type":"input", "value":"fixtureName", "name":"DefaultValueKey"}]
+        - This page calls the `<SingleStepForm />` component in the layout json from Sitecore which have fields that look like this
+          ```javascript
+          {
+            componentName: 'ContentMain',
+            content: [{
+                uid: '',
+                componentName: 'Single Step Form',
+                dataSource: '',
+                fields: {
+                    ModelJson: {
+                        value: '[ { "title":"Form Name", "fields":{ "Name":{ "label":"Form Name", "type":"input", "value":"Form Name", "name":"Name" }, "Id":{ "label":"Id", "type":"hidden", "value":"", "name":"Id" } }, "fresh":true }, { "title":"Text Input", "fields":{ "FormId":{ "label":"FormId", "type":"hidden", "value":"stepOne", "name":"FormId" }, "Name":{ "label":"Name", "type":"hidden", "value":"textinput", "name":"Name" }, "Id":{ "label":"Id", "type":"input", "value":"fixtureName", "name":"Id" }, "Label":{ "label":"Label", "type":"input", "value":"Fixture Selection", "name":"Label" }, "BackEndLabel":{ "label":"BackEnd Label", "type":"input", "value":"Fixture Selection", "name":"BackEndLabel" }, "Value":{ "label":"Default Value", "type":"input", "value":"", "name":"Value" }, "DefaultValueSource":{ "label":"Default Value Source", "type":"select", "value":[ { "value":"None", "selected":false, "label":"None" }, { "value":"cookie", "selected":true, "label":"Cookie" } ], "name":"DefaultValueSource" }, "DefaultValueKey":{ "label":"Default Value Source Key", "type":"input", "value":"fixtureName", "name":"DefaultValueKey"}]
+                    }
                 }
-            }
-        }]
-      }
-      ```
+            }]
+          }
+          ```
 
 2.  `<SingleStepForm />` gets rendered via its composition file converts this JSS fields object as its props.
 
@@ -274,8 +275,11 @@ Dynamically generating forms with React and Sitecore JSS
 4.  `formModel` then gets passed into `createFormInit()` to process all of this data into something more concise and manageable
 
     ```javascript
-    const createdFields = useMemo(() => createFormInit(formModel, false), []);
+
     ```
+
+const createdFields = useMemo(() => createFormInit(formModel, false), []);
+```
 
     - `createdFields` is memoized to cache the original value and keep it from re-rendering each cycle
     - The `false` parameter signifies that its not to return a multidimensional array, just a single array
@@ -284,13 +288,16 @@ Dynamically generating forms with React and Sitecore JSS
     from `<SingleStepForm />`.
 
     ```typescript
-    const createFormInit: {
-      (arr: Array<ParsedFormModel>, multi: true): CFReturnType[][];
-      (arr: Array<ParsedFormModel>, multi: false): CFReturnType[];
-    } = (arr: Array<ParsedFormModel>, multi: boolean): any => {
-      return multi ? multiStepFormFields(arr) : parseFields(arr);
-    };
+
     ```
+
+const createFormInit: {
+(arr: Array<ParsedFormModel>, multi: true): CFReturnType[][];
+(arr: Array<ParsedFormModel>, multi: false): CFReturnType[];
+} = (arr: Array<ParsedFormModel>, multi: boolean): any => {
+return multi ? multiStepFormFields(arr) : parseFields(arr);
+};
+```
 
     - The `formModel` array will get passed into `parseFields()`
     - `parseFields()` will then run each of the form objects that are inside the `formModel` through yet another and final parser, `createForm()`.
@@ -298,15 +305,19 @@ Dynamically generating forms with React and Sitecore JSS
     - This function uses a Typescript overload to determine the correct return type depending on which `multi` boolean is passed in
 
     ```javascript
-    const parseFields = (arr: Array<ParsedFormModel>) => {
-      const items = arr.reduce((acc: Array<CFReturnType | null>, curr) => {
-        const formField = createForm(curr);
-        return [...acc, formField];
-      }, []);
-      // filter out any null values due to early returns from hidden fields
-      return items.filter(Boolean) as Array<CFReturnType>;
-    };
-    ```
+
+const parseFields = (arr: Array<ParsedFormModel>) => {
+
+const items = arr.reduce((acc: Array<CFReturnType | null>, curr) => {
+
+const formField = createForm(curr);
+return [...acc, formField];
+}, []);
+
+// filter out any null values due to early returns from hidden fields
+return items.filter(Boolean) as Array<CFReturnType>;
+};
+```
 
 <br />
 
@@ -319,60 +330,75 @@ Dynamically generating forms with React and Sitecore JSS
      - `inputMap` is an object with field names as a key and their `dataMap` type as the value. These are basically fields that we've determined to be non-input type
        fields, such as select, checkbox, heading, etc... or fields that are hidden or unimportant
        ```javascript
-       const inputMap: CFMappingType["inputMap"] = {
-         alternatephone: "phone",
-         "alternate_phone_#": "phone",
-         captcha: "recaptcha",
-         checkbox: "checkbox",
-         checkbox_list: "checkboxGroup",
-         // ...
-       };
+
        ```
-   - `dataMap`
-     - `dataMap` is an object with `inputMap` values as the key and related props as the value. All of these will contain a 'file' value. This is the name of the
-       React component that will be dynamically imported, and some of them will contain a 'props' value. Props is an object that contains more details for that particular
-       input type such as type, icon, masking function etc..
-       ```javascript
-       const dataMap: CFMappingType["dataMap"] = {
-         // ...
-         input: {
-           file: "Input",
-           props: { type: "text" },
-         },
-         phone: {
-           file: "Input",
-           props: {
-             type: "tel",
-             icon: "phone",
-             mask: masks.tel,
-           },
-         },
-         radio: {
-           file: "RadioGroup",
-         },
-         // ...
-       };
-       ```
-   - `regexMap`
-     - `regexMap` is an object with either a validationPattern name or input type as the key with the value being an object containing an error message and RegEx pattern
-       to be used in validation
-       ```javascript
-       const regexMap: CFMappingType["regexMap"] = {
-         email: {
-           message: "Not a valid email format",
-           value: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
+
+const inputMap: CFMappingType["inputMap"] = {
+alternatephone: "phone",
+"alternate*phone*#": "phone",
+captcha: "recaptcha",
+checkbox: "checkbox",
+checkbox_list: "checkboxGroup",
+
+// ...
+};
+```
+
+- `dataMap`
+  - `dataMap` is an object with `inputMap` values as the key and related props as the value. All of these will contain a 'file' value. This is the name of the
+    React component that will be dynamically imported, and some of them will contain a 'props' value. Props is an object that contains more details for that particular
+    input type such as type, icon, masking function etc..
+    ```javascript
+
+    ```
+
+const dataMap: CFMappingType["dataMap"] = {
+
+// ...
+input: {
+file: "Input",
+props: { type: "text" },
+},
+phone: {
+file: "Input",
+props: {
+type: "tel",
+icon: "phone",
+mask: masks.tel,
+},
+},
+radio: {
+file: "RadioGroup",
+},
+
+// ...
+};
+```
+
+- `regexMap`
+  - `regexMap` is an object with either a validationPattern name or input type as the key with the value being an object containing an error message and RegEx pattern
+    to be used in validation
+    ```javascript
+
+    ```
+
+const regexMap: CFMappingType["regexMap"] = {
+email: {
+message: "Not a valid email format",
+value: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
          },
          lettersWhiteSpace: {
            message: "Can only be letters and spaces",
            value: /^[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ\-]+(\s+[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]+)*$/,
-         },
-         notSameDigits: {
-           message: "Can only contain numbers",
-           value: /^(\d)\d*(?!\1)\d+$/,
-         },
-         // ...
-       };
-       ```
+},
+notSameDigits: {
+message: "Can only contain numbers",
+value: /^(\d)\d\*(?!\1)\d+$/,
+},
+
+// ...
+};
+```
 
 7. Inside `createForm()` it will take the incoming field name and use it to index `inputMap`. At this point one of three things will happen:
 
@@ -389,51 +415,56 @@ Dynamically generating forms with React and Sitecore JSS
    - We take this file name and dynamically import that component (ie: 'Input', 'Heading', 'RadioGroup', 'Tabs', etc..)
 
    ```javascript
-   const { file, props } = dataMap[inputType];
-   const Component = loadable(() => import(`src/components/Form/${file}`));
+
    ```
+
+const { file, props } = dataMap[inputType];
+
+const Component = loadable(() => import(`src/components/Form/${file}`));
+
+````
 
 9. We then now build our return object which gets added to the array in `parseFields()` and gets sent back to `<SingleStepForm />`
 
-   ```javascript
-   return {
-     Component,
-     data: getData(fields, title),
-     file,
-     formName: fields?.FormId?.value,
-     id: uid(32),
-     props: {
-       columns: getColumnWidth(fields.ColumnWidth?.value),
-       ...props,
-     },
-     validations: getValidations(file, fields, props?.type),
-   };
-   ```
+```javascript
+return {
+  Component,
+  data: getData(fields, title),
+  file,
+  formName: fields?.FormId?.value,
+  id: uid(32),
+  props: {
+    columns: getColumnWidth(fields.ColumnWidth?.value),
+    ...props,
+  },
+  validations: getValidations(file, fields, props?.type),
+};
+````
 
-   - Component: The React component that was dynamically imported
-   - data: An object containing details about the field such as maxLength, minLength, placeholder, required, etc..
+- Component: The React component that was dynamically imported
+- data: An object containing details about the field such as maxLength, minLength, placeholder, required, etc..
 
-   ```typescript
-   const getData: GetDataProps = ({ fields, title }) => ({
-     customValidationErrorMsg:
-       fields?.CustomValidationErrorMsg?.value || "field is required",
-     items: parseItems(fields?.InputItems?.value),
-     label: fields?.Label?.value || "",
-     maxLength: parseInt(fields?.MaximumLength?.value) || 524288,
-     minLength: parseInt(fields?.MinimumLength?.value) || 0,
-     name: fields?.Name?.value,
-     placeholder: fields?.PlaceholderText?.value,
-     required: fields?.Required?.value || false,
-     tabs: fields?.Tabs?.value.split("\n") || [],
-     title,
-     toolTipText: fields?.TooltipText?.value,
-   });
-   ```
+```typescript
+const getData: GetDataProps = ({ fields, title }) => ({
+  customValidationErrorMsg:
+    fields?.CustomValidationErrorMsg?.value || "field is required",
+  items: parseItems(fields?.InputItems?.value),
+  label: fields?.Label?.value || "",
+  maxLength: parseInt(fields?.MaximumLength?.value) || 524288,
+  minLength: parseInt(fields?.MinimumLength?.value) || 0,
+  name: fields?.Name?.value,
+  placeholder: fields?.PlaceholderText?.value,
+  required: fields?.Required?.value || false,
+  tabs: fields?.Tabs?.value.split("\n") || [],
+  title,
+  toolTipText: fields?.TooltipText?.value,
+});
+```
 
-   - file: The name of the component that was dynamically imported
-   - id: A unique id for each field since sitecore doesn't return usable id's
-   - props: The props returned from the `dataMap` lookup along with the column width for each field
-   - validations: Will either be null or an object that contains if it should show on the confirmation screen and the validationPattern if any
+- file: The name of the component that was dynamically imported
+- id: A unique id for each field since sitecore doesn't return usable id's
+- props: The props returned from the `dataMap` lookup along with the column width for each field
+- validations: Will either be null or an object that contains if it should show on the confirmation screen and the validationPattern if any
 
 ```typescript
 const getValidations: GetValidationProps = (file, fields, regex = "") => {
@@ -443,7 +474,9 @@ const getValidations: GetValidationProps = (file, fields, regex = "") => {
   if (file && skipValidation.includes(file)) return null;
 
   // Validations will usually come through as a string value from sitecore
+
   // but can also come through as an array of objects, these have the type 'select'
+
   // We first need to parse through this array and grab the value of the selected validation pattern
   if (fields?.ValidationPattern?.type === "select") {
     pattern = getSelectedValue(fields.ValidationPattern.value);
@@ -455,6 +488,7 @@ const getValidations: GetValidationProps = (file, fields, regex = "") => {
     shouldConfirm: fields?.AppearsOnFormConfirmation?.value,
     validationPattern:
       // 1. by regex in mapping props (phone, ssn)
+
       // 2. by named regex pattern coming from Sitecore
       regexMap[regex] || regexMap[pattern],
   };
@@ -518,31 +552,37 @@ const getValidations: GetValidationProps = (file, fields, regex = "") => {
    - The purpose of these components is to take the `createForm()` generated props that were passed in via the `<SingleStepForm />` and to 'normalize' them into simpler generic props for the `<Input />` for example. Each file will have a Form[Input] component with its related Input component. This Input component will then be used in tests and storybook stories.
 
      ```javascript
-     const FormInput = ({
-       data,
-       errors,
-       name,
-       props,
-       register,
-       validations,
-     }: FormInputProps) => {
-       const { mask, type } = props || {};
-       const { label = "", maxLength, required, toolTipText } = data;
-       const propData = {
-         error: {
-           hasError: Boolean(errors[name]?.message),
-           errorMessage: errors[name]?.message,
-         },
-         id: label,
-         label,
-         mask,
-         maxLength,
-         name,
-         register,
-         required,
-         type,
-         validations,
-       };
+
+     ```
+
+const FormInput = ({
+data,
+errors,
+name,
+props,
+register,
+validations,
+}: FormInputProps) => {
+
+const { mask, type } = props || {};
+
+const { label = "", maxLength, required, toolTipText } = data;
+
+const propData = {
+error: {
+hasError: Boolean(errors[name]?.message),
+errorMessage: errors[name]?.message,
+},
+id: label,
+label,
+mask,
+maxLength,
+name,
+register,
+required,
+type,
+validations,
+};
 
        return (
          <div className="relative">
@@ -567,8 +607,11 @@ When this array is finally returned back to `<MultiStepForm>`, the form stepper 
 
 ```typescript
 const formModel: Array<ParsedFormModel> = JSON.parse(modelJson.value);
+
 const createdFields = useMemo(() => createFormInit(formModel, true), []);
+
 const createdFieldsWithoutTabs = [...createdFields.slice(1), []];
+
 const createdFieldsOnlyTabFields = [
   ...createdFields[0][0].data.tabs,
   "Confirmation",

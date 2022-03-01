@@ -11,8 +11,11 @@ Examples of **incorrect** code for this rule:
 ```ts
 const x = 1 as any,
   y = 1 as any;
+
 const [x] = 1 as any;
+
 const [x] = [] as any[];
+
 const [x] = [1 as any];
 [x] = [1] as [any];
 
@@ -25,9 +28,13 @@ class Foo {
 }
 
 // generic position examples
+
 const x: Set<string> = new Set<any>();
+
 const x: Map<string, string> = new Map<string, any>();
+
 const x: Set<string[]> = new Set<any[]>();
+
 const x: Set<Set<Set<string>>> = new Set<Set<Set<any>>>();
 ```
 
@@ -36,6 +43,7 @@ Examples of **correct** code for this rule:
 ```ts
 const x = 1,
   y = 1;
+
 const [x] = [1];
 [x] = [1] as [number];
 
@@ -48,9 +56,13 @@ class Foo {
 }
 
 // generic position examples
+
 const x: Set<string> = new Set<string>();
+
 const x: Map<string, string> = new Map<string, string>();
+
 const x: Set<string[]> = new Set<string[]>();
+
 const x: Set<Set<Set<string>>> = new Set<Set<Set<string>>>();
 ```
 
@@ -60,11 +72,14 @@ Example of `any` to `unknown` assignment that are allowed.
 
 ```ts
 const x: unknown = y as any;
+
 const x: unknown[] = y as any[];
+
 const x: Set<unknown> = y as Set<any>;
 ```
 
 ## Related to
 
-* `no-explicit-any`
-* TSLint: [`no-unsafe-any`](https://palantir.github.io/tslint/rules/no-unsafe-any/)
+- `no-explicit-any`
+- TSLint: [`no-unsafe-any`](https:
+  //palantir.github.io/tslint/rules/no-unsafe-any/)

@@ -20,14 +20,15 @@ TypeScript FAQ:
 
 > A method and a function property of the same type behave differently. Methods are always bivariant in their argument, while function properties are contravariant in their argument under `strictFunctionTypes`.
 
-See the reasoning behind that in the [TypeScript PR for the compiler option](https://github.com/microsoft/TypeScript/pull/18654).
+See the reasoning behind that in the [TypeScript PR for the compiler option](https:
+//github.com/microsoft/TypeScript/pull/18654).
 
 ## Options
 
 This rule accepts one string option:
 
-* `"property"`: Enforce using property signature for functions. Use this to enforce maximum correctness together with TypeScript's strict mode.
-* `"method"`: Enforce using method signature for functions. Use this if you aren't using TypeScript's strict mode and prefer this style.
+- `"property"`: Enforce using property signature for functions. Use this to enforce maximum correctness together with TypeScript's strict mode.
+- `"method"`: Enforce using method signature for functions. Use this if you aren't using TypeScript's strict mode and prefer this style.
 
 The default is `"property"`.
 
@@ -58,6 +59,7 @@ interface T1 {
 type T2 = {
   func: (arg: boolean) => void;
 };
+
 // this is equivalent to the overload
 interface T3 {
   func: ((arg: number) => void) &

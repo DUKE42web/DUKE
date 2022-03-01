@@ -6,7 +6,7 @@
 >
 > It is very simple to get started with TypeScript, but sometimes we need to think more about the best use case for us. In this case, types or interfaces?
 
-***
+---
 
 The idea of having static type-checking in JavaScript is really fantastic and the adoption of TypeScript is growing more every day.
 
@@ -20,11 +20,16 @@ It is very simple to get started with TypeScript, but sometimes we need to think
 
 Before we jump into the differences between types and interfaces in TypeScript, we need to understand something.
 
-In TypeScript, we have a lot of basic types, such as string, boolean, and number. These are the basic types of TypeScript. You can check the list of all the basic types [here](https://www.typescriptlang.org/docs/handbook/basic-types.html#table-of-contents). Also, in TypeScript, we have advanced types and in these [advanced types](https://www.typescriptlang.org/docs/handbook/advanced-types.html), we have something called [type aliases](https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-aliases). With type aliases, we can create a new name for a type but we don’t define a new type.
+In TypeScript, we have a lot of basic types, such as string, boolean, and number. These are the basic types of TypeScript. You can check the list of all the basic types [here](https:
+//www.typescriptlang.org/docs/handbook/basic-types.html#table-of-contents). Also, in TypeScript, we have advanced types and in these [advanced types](https:
+//www.typescriptlang.org/docs/handbook/advanced-types.html), we have something called [type aliases](https:
+//www.typescriptlang.org/docs/handbook/advanced-types.html#type-aliases). With type aliases, we can create a new name for a type but we don’t define a new type.
 
 We use the `type` keyword to create a new type alias, that’s why some people might get confused and think that it’s creating a new type when they’re only creating a new name for a type. So, when you hear someone talking about the differences between types and interfaces, like in this article, you can assume that this person is talking about type aliases vs interfaces.
 
-We will use the [TypeScript Playground](https://www.typescriptlang.org/play/index.html#) for code examples. The [TypeScript Playground](https://www.typescriptlang.org/play/index.html#) allows us to work and test the latest version of TypeScript (or any other version we want to), and we will save time by using this playground rather than creating a new TypeScript project just for examples.
+We will use the [TypeScript Playground](https:
+//www.typescriptlang.org/play/index.html#) for code examples. The [TypeScript Playground](https:
+//www.typescriptlang.org/play/index.html#) allows us to work and test the latest version of TypeScript (or any other version we want to), and we will save time by using this playground rather than creating a new TypeScript project just for examples.
 
 ### Types vs. interfaces
 
@@ -40,7 +45,8 @@ One thing that’s possible to do with interfaces but are not with types is decl
 
 Let’s imagine that we have two interfaces called `Song`, with different properties:
 
-interface Song { artistName: string; }; interface Song { songName: string; }; const song: Song = { artistName: "Freddie", songName: "The Chain" };
+interface Song { artistName: string; }; interface Song { songName: string; };
+const song: Song = { artistName: "Freddie", songName: "The Chain" };
 
 TypeScript will automatically merge both interfaces declarations into one, so when we use this `Song` interface, we’ll have both properties.
 
@@ -56,7 +62,8 @@ Interfaces in TypeScript can extend classes, this is a very awesome concept that
 
 For example, let’s imagine that we have a class called `Car` and an interface called `NewCar`, we can easily extend this class using an interface:
 
-class Car { printCar = () => { console.log("this is my car") } }; interface NewCar extends Car { name: string; }; class NewestCar implements NewCar { name: "Car"; constructor(engine:string) { this.name = name } printCar = () => { console.log("this is my car") } };
+class Car { printCar = () => { console.log("this is my car") } }; interface NewCar extends Car { name: string; }; class NewestCar implements NewCar { name: "Car";
+constructor(engine:string) { this.name = name } printCar = () => { console.log("this is my car") } };
 
 ### Intersection
 
@@ -80,7 +87,8 @@ interface Man { name: "string" }; interface Woman { name: "string" }; type Perso
 
 #### Tuples
 
-[Tuples](https://www.typescriptlang.org/docs/handbook/basic-types.html#tuple) are a very helpful concept in TypeScript, it brought to us this new data type that includes two sets of values of different data types.
+[Tuples](https:
+//www.typescriptlang.org/docs/handbook/basic-types.html#tuple) are a very helpful concept in TypeScript, it brought to us this new data type that includes two sets of values of different data types.
 
 type Reponse = \[string, number]
 
@@ -98,11 +106,13 @@ This question is really tricky, and the answer to it, you might guess, depends o
 
 Interfaces are better when you need to define a new object or method of an object. For example, in React applications, when you need to define the props that a specific component is going to receive, it’s ideal to use interface over types:
 
-interface TodoProps { name: string; isCompleted: boolean }; const Todo: React.FC\<TodoProps> = ({ name, isCompleted }) => { ... };
+interface TodoProps { name: string; isCompleted: boolean };
+const Todo: React.FC\<TodoProps> = ({ name, isCompleted }) => { ... };
 
 Types are better when you need to create functions, for example. Let’s imagine that we have a function that’s going to return an object called, type alias is more recommended for this approach:
 
-type Person = { name: string, age: number }; type ReturnPerson = ( person: Person ) => Person; const returnPerson: ReturnPerson = (person) => { return person; };
+type Person = { name: string, age: number }; type ReturnPerson = ( person: Person ) => Person;
+const returnPerson: ReturnPerson = (person) => { return person; };
 
 At the end of the day, to decide if you should use a type alias or an interface, you should carefully think and analyze the situation — what you’re working on, the specific code, etc.
 

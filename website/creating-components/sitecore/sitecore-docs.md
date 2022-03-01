@@ -10,29 +10,37 @@ The Content Editors appearance and functionality vary depending on the user's ro
 
 The Content Editor's user interface consists of three main areas that you can customize to fit your individual needs when you work in the Content Editor. The three areas are:
 
-- [The ribbon](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/the-content-editor.html#the-ribbon) – the area where all the functionality is available.
-- [The content tree](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/the-content-editor.html#the-content-tree) – the area where all the items are organized.
-- [The content area](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/the-content-editor.html#the-content-area) – the area where you can edit your items.
+- [The ribbon](https:
+  //doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/the-content-editor.html#the-ribbon) – the area where all the functionality is available.
+- [The content tree](https:
+  //doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/the-content-editor.html#the-content-tree) – the area where all the items are organized.
+- [The content area](https:
+  //doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/the-content-editor.html#the-content-area) – the area where you can edit your items.
 
-![](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243aace28.png)
+![](https:
+//doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243aace28.png)
 
 The ribbon consists of the System menu
 
-![C6753575F5584337A17ABD29B1047594.png](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243ac8b54.png)
+![C6753575F5584337A17ABD29B1047594.png](https:
+//doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243ac8b54.png)
 
 and tabs where all the functionality that you can use in the Content Editor is available.
 
 Depending on your access rights and security settings, the functionalities that are available to you in the ribbon can vary. As a minimum, you can expect to see:
 
-![](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243ad0187.png)
+![](https:
+//doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243ad0187.png)
 
 If you have more extensive access rights, you have access to more commands and more tabs. If you have complete access to the Content Editor or if you are a Sitecore administrator, you will see something like this:
 
-![](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243ad7983.png)
+![](https:
+//doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243ad7983.png)
 
 One of the main features of the Content Editor is the content tree, which presents all the items that are created in your Sitecore installation.
 
-![](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243b0c363.png)
+![](https:
+//doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243b0c363.png)
 
 The Sitecore content tree has a similar structure to the one used in Windows Explorer, however, the Sitecore objects and groups are not represented by standard folder and file icons but by many different icons.
 
@@ -44,11 +52,13 @@ The content area is where you edit an item. When you click an item in the conten
 
   If you do not see a field as expected, on the ribbon, click the View tab, and then select the Standard Fields check box. This shows all the fields from the Standard template on every item that you open.
 
-- The Search tab, where you can [search through the selected item](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/search-for-an-item.html).
+- The Search tab, where you can [search through the selected item](https:
+  //doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/search-for-an-item.html).
 
 In the top-right corner of the content area, additional functionality is available that is specific to the item that is selected.
 
-![](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243b13921.png)
+![](https:
+//doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243b13921.png)
 
 The functionalities are:
 
@@ -58,12 +68,17 @@ The functionalities are:
 - Validation warnings – move your mouse over the individual icons to see the warnings related to the current item.
 - Edit Profile Cards – edit the profile cards that are associated to the item. This is mostly relevant if you are a marketing user.
 
-![](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243b7a777.png)
+![](https:
+//doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243b7a777.png)
 
-![](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243b72f9e.png)
+![](https:
+//doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243b72f9e.png)
 
-![](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243b6b605.png)
+![](https:
+//doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243b6b605.png)
 
-![](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243b40412.png)
+![](https:
+//doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243b40412.png)
 
-![](https://doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243b1a9f1.png)
+![](https:
+//doc.sitecore.com/xp/en/users/102/sitecore-experience-platform/image/161c0243b1a9f1.png)

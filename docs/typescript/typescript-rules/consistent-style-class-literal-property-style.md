@@ -6,7 +6,8 @@ When writing TypeScript applications, it's typically safe to store literal value
 
 This rule aims to ensure that literals exposed by classes are done so consistently, in one of the two style described above. By default this rule prefers the `fields` style as it means JS doesn't have to setup & teardown a function closure.
 
-Note that this rule only checks for constant _literal_ values (string, template string, number, bigint, boolean, regexp, null). It does not check objects or arrays, because a readonly field behaves differently to a getter in those cases. It also does not check functions, as it is a common pattern to use readonly fields with arrow function values as auto-bound methods. This is because these types can be mutated and carry with them more complex implications about their usage.
+Note that this rule only checks for
+constant _literal_ values (string, template string, number, bigint, boolean, regexp, null). It does not check objects or arrays, because a readonly field behaves differently to a getter in those cases. It also does not check functions, as it is a common pattern to use readonly fields with arrow function values as auto-bound methods. This is because these types can be mutated and carry with them more complex implications about their usage.
 
 ### The `fields` style
 
@@ -23,7 +24,7 @@ class Mx {
   // not a literal
   public readonly myField2 = [1, 2, 3];
 
-  private readonly ['myField3'] = 'hello world';
+  private readonly ["myField3"] = "hello world";
 
   public get myField4() {
     return `hello from ${window.location.href}`;
@@ -41,8 +42,8 @@ class Mx {
     return 1;
   }
 
-  private get ['myField2']() {
-    return 'hello world';
+  private get ["myField2"]() {
+    return "hello world";
   }
 }
 ```
@@ -58,7 +59,7 @@ Examples of **correct** code with the `getters` style:
 
 class Mx {
   // no readonly modifier
-  public myField1 = 'hello';
+  public myField1 = "hello";
 
   // not a literal
   public readonly myField2 = [1, 2, 3];
@@ -67,8 +68,8 @@ class Mx {
     return 1;
   }
 
-  private get ['myField4']() {
-    return 'hello world';
+  private get ["myField4"]() {
+    return "hello world";
   }
 }
 ```
@@ -81,7 +82,7 @@ Examples of **incorrect** code with the `getters` style:
 class Mx {
   readonly myField1 = 1;
   readonly myField2 = `hello world`;
-  private readonly myField3 = 'hello world';
+  private readonly myField3 = "hello world";
 }
 ```
 

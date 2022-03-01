@@ -2,13 +2,15 @@
 
 ## Rule Details
 
-This rule extends the base [`eslint/no-dupe-class-members`](https://eslint.org/docs/rules/no-dupe-class-members) rule. It adds support for TypeScript's method overload definitions.
+This rule extends the base [`eslint/no-dupe-class-members`](https:
+//eslint.org/docs/rules/no-dupe-class-members) rule. It adds support for TypeScript's method overload definitions.
 
 ## How to use
 
 ```
 {
-  // note you must disable the base rule as it can report incorrect errors
+
+// note you must disable the base rule as it can report incorrect errors
   "no-dupe-class-members": "off",
   "@typescript-eslint/no-dupe-class-members": ["error"]
 }
@@ -16,6 +18,8 @@ This rule extends the base [`eslint/no-dupe-class-members`](https://eslint.org/d
 
 ## Options
 
-See [`eslint/no-dupe-class-members` options](https://eslint.org/docs/rules/no-dupe-class-members#options).
+See [`eslint/no-dupe-class-members` options](https:
+//eslint.org/docs/rules/no-dupe-class-members#options).
 
-Taken with ❤️ [from ESLint core](https://github.com/eslint/eslint/blob/master/docs/rules/no-dupe-class-members.md)
+Taken with ❤️ [from ESLint core](https:
+//github.com/eslint/eslint/blob/master/docs/rules/no-dupe-class-members.md)

@@ -10,15 +10,19 @@ This rule aims to make code more readable and explicit about who can use which p
 
 ```ts
 type AccessibilityLevel =
-  | 'explicit' // require an accessor (including public)
-  | 'no-public' // don't require public
-  | 'off'; // don't check
+  | "explicit"
+  // require an accessor (including public)
+  | "no-public"
+  // don't require public
+  | "off";
+// don't check
 
 type Options = {
   accessibility?: AccessibilityLevel;
   ignoredMethodNames?: string[];
   overrides?: {
     accessors?: AccessibilityLevel;
+
     constructors?: AccessibilityLevel;
     methods?: AccessibilityLevel;
     properties?: AccessibilityLevel;
@@ -27,23 +31,26 @@ type Options = {
 };
 
 const defaultOptions: Options = {
-  accessibility: 'explicit',
+  accessibility: "explicit",
 };
 ```
 
 ### Configuring in a mixed JS/TS codebase
 
-If you are working on a codebase within which you lint non-TypeScript code (i.e. `.js`/`.jsx`), you should ensure that you should use [ESLint `overrides`](https://eslint.org/docs/user-guide/configuring#disabling-rules-only-for-a-group-of-files) to only enable the rule on `.ts`/`.tsx` files. If you don't, then you will get unfixable lint errors reported within `.js`/`.jsx` files.
+If you are working on a codebase within which you lint non-TypeScript code (i.e. `.js`/`.jsx`), you should ensure that you should use [ESLint `overrides`](https:
+//eslint.org/docs/user-guide/configuring#disabling-rules-only-for-a-group-of-files) to only enable the rule on `.ts`/`.tsx` files. If you don't, then you will get unfixable lint errors reported within `.js`/`.jsx` files.
 
 ```
 {
   "rules": {
-    // disable the rule for all files
+
+// disable the rule for all files
     "@typescript-eslint/explicit-member-accessibility": "off"
   },
   "overrides": [
     {
-      // enable the rule specifically for TypeScript files
+
+// enable the rule specifically for TypeScript files
       "files": ["*.ts", "*.tsx"],
       "rules": {
         "@typescript-eslint/explicit-member-accessibility": ["error"]
@@ -62,7 +69,8 @@ This rule in its default state requires no configuration and will enforce that e
   accessibility: 'explicit',
   overrides: {
     accessors: 'explicit',
-    constructors: 'no-public',
+
+constructors: 'no-public',
     methods: 'explicit',
     properties: 'off',
     parameterProperties: 'explicit'
@@ -80,7 +88,8 @@ class Animal {
     // No accessibility modifier
     this.animalName = name;
   }
-  animalName: string; // No accessibility modifier
+  animalName: string;
+  // No accessibility modifier
   get name(): string {
     // No accessibility modifier
     return this.animalName;
@@ -99,11 +108,14 @@ The following patterns are considered correct with the default options `{ access
 
 ```ts
 class Animal {
-  public constructor(public breed, name) {
-    // Parameter property and constructor
+  public;
+  constructor(public breed, name) {
+    // Parameter property and
+    constructor;
     this.animalName = name;
   }
-  private animalName: string; // Property
+  private animalName: string;
+  // Property
   get name(): string {
     // get accessor
     return this.animalName;
@@ -122,11 +134,14 @@ The following patterns are considered incorrect with the accessibility set to **
 
 ```ts
 class Animal {
-  public constructor(public breed, name) {
-    // Parameter property and constructor
+  public;
+  constructor(public breed, name) {
+    // Parameter property and
+    constructor;
     this.animalName = name;
   }
-  public animalName: string; // Property
+  public animalName: string;
+  // Property
   public get name(): string {
     // get accessor
     return this.animalName;
@@ -146,10 +161,12 @@ The following patterns are considered correct with the accessibility set to **no
 ```ts
 class Animal {
   constructor(protected breed, name) {
-    // Parameter property and constructor
+    // Parameter property and
+    constructor;
     this.name = name;
   }
-  private animalName: string; // Property
+  private animalName: string;
+  // Property
   get name(): string {
     // get accessor
     return this.animalName;
@@ -168,9 +185,9 @@ class Animal {
 
 There are three ways in which an override can be used.
 
-* To disallow the use of public on a given member.
-* To enforce explicit member accessibility when the root has allowed implicit public accessibility
-* To disable any checks on given member type
+- To disallow the use of public on a given member.
+- To enforce explicit member accessibility when the root has allowed implicit public accessibility
+- To disable any checks on given member type
 
 #### Disallow the use of public on a given member
 
@@ -180,7 +197,8 @@ The following patterns are considered incorrect with the example override
 
 ```ts
 class Animal {
-  public constructor(protected animalName) {}
+  public;
+  constructor(protected animalName) {}
   public get name() {
     return this.animalName;
   }
@@ -302,7 +320,8 @@ The following patterns are considered correct with the example override
 
 ```ts
 class Animal {
-  public constructor(protected animalName) {}
+  public;
+  constructor(protected animalName) {}
   public get name() {
     return this.animalName;
   }
@@ -319,13 +338,13 @@ If you want to ignore some specific methods, you can do it by specifying method 
 ```ts
 class Animal {
   get specificMethod() {
-    console.log('No error because you specified this method on option');
+    console.log("No error because you specified this method on option");
   }
   get whateverMethod() {
-    console.log('No error because you specified this method on option');
+    console.log("No error because you specified this method on option");
   }
   public get otherMethod() {
-    console.log('This method comply with this rule');
+    console.log("This method comply with this rule");
   }
 }
 ```
@@ -336,8 +355,10 @@ If you think defaulting to public is a good default, then you should consider us
 
 ## Further Reading
 
-* TypeScript [Accessibility Modifiers](https://www.typescriptlang.org/docs/handbook/classes.html#public-private-and-protected-modifiers)
+- TypeScript [Accessibility Modifiers](https:
+  //www.typescriptlang.org/docs/handbook/classes.html#public-private-and-protected-modifiers)
 
 ## Compatibility
 
-* TSLint: [member-access](http://palantir.github.io/tslint/rules/member-access/)
+- TSLint: [member-access](http:
+  //palantir.github.io/tslint/rules/member-access/)

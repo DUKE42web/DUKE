@@ -40,12 +40,17 @@ SvgLoader
 
 ## Other Resources
 
-[Electron Design System](https://electron.duke-energy.com)
+[Electron Design System](https:
+//electron.duke-energy.com)
 
-[Electron Tailwind CSS docs](http://electron.duke-energy.com/foundation/utilities/utility-first/)
+[Electron Tailwind CSS docs](http:
+//electron.duke-energy.com/foundation/utilities/utility-first/)
 
-[Electron Accessibility Overview](http://electron.duke-energy.com/foundation/accessibility/)
+[Electron Accessibility Overview](http:
+//electron.duke-energy.com/foundation/accessibility/)
 
-[Performance Budget](https://confluence.duke-energy.com/display/DEPW/DXT+Performance+Budget)
+[Performance Budget](https:
+//confluence.duke-energy.com/display/DEPW/DXT+Performance+Budget)
 
-[Code Reviews](https://confluence.duke-energy.com/display/DEPW/Code+Reviews)
+[Code Reviews](https:
+//confluence.duke-energy.com/display/DEPW/Code+Reviews)

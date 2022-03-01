@@ -13,7 +13,8 @@ This rule ensures that you do not include unnecessary comparisons with boolean l
 Examples of **incorrect** code for this rule:
 
 ```ts
-declare const someCondition: boolean;
+declare;
+const someCondition: boolean;
 if (someCondition === true) {
 }
 ```
@@ -21,15 +22,18 @@ if (someCondition === true) {
 Examples of **correct** code for this rule
 
 ```ts
-declare const someCondition: boolean;
+declare;
+const someCondition: boolean;
 if (someCondition) {
 }
 
-declare const someObjectBoolean: boolean | Record<string, unknown>;
+declare;
+const someObjectBoolean: boolean | Record<string, unknown>;
 if (someObjectBoolean === true) {
 }
 
-declare const someStringBoolean: boolean | string;
+declare;
+const someStringBoolean: boolean | string;
 if (someStringBoolean === true) {
 }
 ```
@@ -42,6 +46,7 @@ The rule accepts an options object with the following properties.
 type Options = {
   // if false, comparisons between a nullable boolean variable to `true` will be checked and fixed
   allowComparingNullableBooleansToTrue?: boolean;
+
   // if false, comparisons between a nullable boolean variable to `false` will be checked and fixed
   allowComparingNullableBooleansToFalse?: boolean;
 };
@@ -63,11 +68,13 @@ const defaults = {
 Examples of **incorrect** code for this rule with `{ allowComparingNullableBooleansToTrue: false }`:
 
 ```ts
-declare const someUndefinedCondition: boolean | undefined;
+declare;
+const someUndefinedCondition: boolean | undefined;
 if (someUndefinedCondition === true) {
 }
 
-declare const someNullCondition: boolean | null;
+declare;
+const someNullCondition: boolean | null;
 if (someNullCondition !== true) {
 }
 ```
@@ -75,11 +82,13 @@ if (someNullCondition !== true) {
 Examples of **correct** code for this rule with `{ allowComparingNullableBooleansToTrue: false }`:
 
 ```ts
-declare const someUndefinedCondition: boolean | undefined;
+declare;
+const someUndefinedCondition: boolean | undefined;
 if (someUndefinedCondition) {
 }
 
-declare const someNullCondition: boolean | null;
+declare;
+const someNullCondition: boolean | null;
 if (!someNullCondition) {
 }
 ```
@@ -89,11 +98,13 @@ if (!someNullCondition) {
 Examples of **incorrect** code for this rule with `{ allowComparingNullableBooleansToFalse: false }`:
 
 ```ts
-declare const someUndefinedCondition: boolean | undefined;
+declare;
+const someUndefinedCondition: boolean | undefined;
 if (someUndefinedCondition === false) {
 }
 
-declare const someNullCondition: boolean | null;
+declare;
+const someNullCondition: boolean | null;
 if (someNullCondition !== false) {
 }
 ```
@@ -101,11 +112,13 @@ if (someNullCondition !== false) {
 Examples of **correct** code for this rule with `{ allowComparingNullableBooleansToFalse: false }`:
 
 ```ts
-declare const someUndefinedCondition: boolean | undefined;
+declare;
+const someUndefinedCondition: boolean | undefined;
 if (someUndefinedCondition ?? true) {
 }
 
-declare const someNullCondition: boolean | null;
+declare;
+const someNullCondition: boolean | null;
 if (!(someNullCondition ?? true)) {
 }
 ```
@@ -114,15 +127,16 @@ if (!(someNullCondition ?? true)) {
 
 |           Comparison           | Fixer Output                    | Notes                                                                               |
 | :----------------------------: | ------------------------------- | ----------------------------------------------------------------------------------- |
-|      `booleanVar === true`     | `booleanVar`                    |                                                                                     |
-|      `booleanVar !== true`     | `!booleanVar`                   |                                                                                     |
+|     `booleanVar === true`      | `booleanVar`                    |                                                                                     |
+|     `booleanVar !== true`      | `!booleanVar`                   |                                                                                     |
 |     `booleanVar === false`     | `!booleanVar`                   |                                                                                     |
 |     `booleanVar !== false`     | `booleanVar`                    |                                                                                     |
-|  `nullableBooleanVar === true` | `nullableBooleanVar`            | Only checked/fixed if the `allowComparingNullableBooleansToTrue` option is `false`  |
-|  `nullableBooleanVar !== true` | `!nullableBooleanVar`           | Only checked/fixed if the `allowComparingNullableBooleansToTrue` option is `false`  |
+| `nullableBooleanVar === true`  | `nullableBooleanVar`            | Only checked/fixed if the `allowComparingNullableBooleansToTrue` option is `false`  |
+| `nullableBooleanVar !== true`  | `!nullableBooleanVar`           | Only checked/fixed if the `allowComparingNullableBooleansToTrue` option is `false`  |
 | `nullableBooleanVar === false` | `nullableBooleanVar ?? true`    | Only checked/fixed if the `allowComparingNullableBooleansToFalse` option is `false` |
 | `nullableBooleanVar !== false` | `!(nullableBooleanVar ?? true)` | Only checked/fixed if the `allowComparingNullableBooleansToFalse` option is `false` |
 
 ## Related to
 
-* TSLint: [no-boolean-literal-compare](https://palantir.github.io/tslint/rules/no-boolean-literal-compare)
+- TSLint: [no-boolean-literal-compare](https:
+  //palantir.github.io/tslint/rules/no-boolean-literal-compare)

@@ -8,16 +8,16 @@
 
 Yep.
 
-* Yep, absolutely.
-* Right. So in Jsspublic we have the contents of the content pages, so you've got for each section home, business. And then since this is a development environment, there's a bunch of additional Sections or pages that we created in here just to like just for testing, but in the production environment you wouldn't see a lot of this testing stuff you'd have basically, you're like your main sections of the site so.
-* Uh, you know, let's do. Let's see prod.
-* Or no. Let's do that. Seat dev. So this would be the slash home.
-* So when you go to the slash home page.
-* This is the content. The images don't seem to be.
-* A lot of the images around not showing up here but.
-* You kind of get the idea, but here here's the homepage.
-* Do you have something, Spencer?
-*
+- Yep, absolutely.
+- Right. So in Jsspublic we have the contents of the content pages, so you've got for each section home, business. And then since this is a development environment, there's a bunch of additional Sections or pages that we created in here just to like just for testing, but in the production environment you wouldn't see a lot of this testing stuff you'd have basically, you're like your main sections of the site so.
+- Uh, you know, let's do. Let's see prod.
+- Or no. Let's do that. Seat dev. So this would be the slash home.
+- So when you go to the slash home page.
+- This is the content. The images don't seem to be.
+- A lot of the images around not showing up here but.
+- You kind of get the idea, but here here's the homepage.
+- Do you have something, Spencer?
+-
 
 ```
 * Pope, Spencer O10:06 AMYes. So the structure of.
@@ -27,10 +27,13 @@ Yep.
 * The items in that content tree.
 * Corresponds to.
 * The URL structure.
-* ![Profile picture of Sowa, Bill.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:526113cf-3ef9-4121-a6d5-22d958afe21f/profilepicturev2?displayname=Sowa%2C%20Bill\&size=HR64x64) Sowa, Bill10:06 AMYep.
+* ![Profile picture of Sowa, Bill.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:526113cf-3ef9-4121-a6d5-22d958afe21f/profilepicturev2?displayname=Sowa%2C%20Bill\&size=HR64x64) Sowa, Bill10:06 AMYep.
 * Yeah, it's a little.
-* ![Profile picture of Pope, Spencer O.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O10:06 AMSo.
-* ![Profile picture of Sowa, Bill.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:526113cf-3ef9-4121-a6d5-22d958afe21f/profilepicturev2?displayname=Sowa%2C%20Bill\&size=HR64x64)Sowa, Bill10:06 AMUsing because we have two homes.
+* ![Profile picture of Pope, Spencer O.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O10:06 AMSo.
+* ![Profile picture of Sowa, Bill.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:526113cf-3ef9-4121-a6d5-22d958afe21f/profilepicturev2?displayname=Sowa%2C%20Bill\&size=HR64x64)Sowa, Bill10:06 AMUsing because we have two homes.
 * But home is essentially the.
 * The main.
 * Ah.
@@ -45,20 +48,20 @@ Yep.
 
 \*
 
-* \
+- \
   Approve it and publish it, so it's in this like draft saves draft state right now.
-* So if I go to review.
-* And approved.
-* It's like there's something wrong of an application title.
-* So if I look at the page here.
-* Here it's telling me that I did navigation title.
-* OK, so I'm going to save that.
-* And then I'm going to approve.
-* And then I'm going to publish.
-* So I go to publish and then publish and then publish item.
-* Then it's gonna.
-* Come up with the box here eventually too.
-*
+- So if I go to review.
+- And approved.
+- It's like there's something wrong of an application title.
+- So if I look at the page here.
+- Here it's telling me that I did navigation title.
+- OK, so I'm going to save that.
+- And then I'm going to approve.
+- And then I'm going to publish.
+- So I go to publish and then publish and then publish item.
+- Then it's gonna.
+- Come up with the box here eventually too.
+-
 
 ```
 *
@@ -95,7 +98,8 @@ Yep.
   * Pretty simple.
   * I'm going to add it to the JSS public main placeholder and I will look at that as well. Like what that means. The placeholder means as well.
   * In a moment.
-  * ![Profile picture of Pope, Spencer O.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O10:20 AMThen it's nice just to check that little open properties dialog box immediately.
+  * ![Profile picture of Pope, Spencer O.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O10:20 AMThen it's nice just to check that little open properties dialog box immediately.
   * It's nice to check that that way you don't have to.
   * You know, go back and open it manually.
   *
@@ -107,13 +111,19 @@ Yep.
     * The component and.
     * I don't know.
     * However you see fit just to kind of show like the the relationship between Sitecore and our application.
-    * ![Profile picture of Pope, Spencer O.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O10:33 AMYeah, I can do that.
-    * ![Profile picture of Sowa, Bill.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:526113cf-3ef9-4121-a6d5-22d958afe21f/profilepicturev2?displayname=Sowa%2C%20Bill\&size=HR64x64)Sowa, Bill10:33 AMCool.
-    * ![Profile picture of Pope, Spencer O.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O10:33 AMCan you give me a?
+    * ![Profile picture of Pope, Spencer O.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O10:33 AMYeah, I can do that.
+    * ![Profile picture of Sowa, Bill.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:526113cf-3ef9-4121-a6d5-22d958afe21f/profilepicturev2?displayname=Sowa%2C%20Bill\&size=HR64x64)Sowa, Bill10:33 AMCool.
+    * ![Profile picture of Pope, Spencer O.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O10:33 AMCan you give me a?
     * Where did it? Can you give me write access to the terminal in that shared?
-    * ![Profile picture of Sowa, Bill.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:526113cf-3ef9-4121-a6d5-22d958afe21f/profilepicturev2?displayname=Sowa%2C%20Bill\&size=HR64x64)Sowa, Bill10:33 AMYes.
-    * ![Profile picture of Pope, Spencer O.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O10:33 AMSession.
-    * ![Profile picture of Sowa, Bill.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:526113cf-3ef9-4121-a6d5-22d958afe21f/profilepicturev2?displayname=Sowa%2C%20Bill\&size=HR64x64)Sowa, Bill10:33 AMSo I wanted to get everybody in the shared just because.
+    * ![Profile picture of Sowa, Bill.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:526113cf-3ef9-4121-a6d5-22d958afe21f/profilepicturev2?displayname=Sowa%2C%20Bill\&size=HR64x64)Sowa, Bill10:33 AMYes.
+    * ![Profile picture of Pope, Spencer O.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O10:33 AMSession.
+    * ![Profile picture of Sowa, Bill.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:526113cf-3ef9-4121-a6d5-22d958afe21f/profilepicturev2?displayname=Sowa%2C%20Bill\&size=HR64x64)Sowa, Bill10:33 AMSo I wanted to get everybody in the shared just because.
     * I was like, oh, this might be a good opportunity to maybe get some some traction on using this tool because it's pretty cool for like collaboration.
     * Uhm.
     * K So it should be a.
@@ -135,12 +145,14 @@ Yep.
       * Session I think.
       * Appreciate you.
       * Jump in and Spencer.
-      * ![Profile picture of Pope, Spencer O.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O11:00 AMWell, I'll be honest, I was floundering. I didn't know. I didn't know what I should talk about.
+      * ![Profile picture of Pope, Spencer O.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O11:00 AMWell, I'll be honest, I was floundering. I didn't know. I didn't know what I should talk about.
       *
 
           * \
             Or whatever environment the the issue is occurring in.
-          * ![Profile picture of Sowa, Bill.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:526113cf-3ef9-4121-a6d5-22d958afe21f/profilepicturev2?displayname=Sowa%2C%20Bill\&size=HR64x64)Sowa, Bill11:06 AMDoes that make sense to everyone?
+          * ![Profile picture of Sowa, Bill.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:526113cf-3ef9-4121-a6d5-22d958afe21f/profilepicturev2?displayname=Sowa%2C%20Bill\&size=HR64x64)Sowa, Bill11:06 AMDoes that make sense to everyone?
           * Basically, you can you can grab whatever.
           * You know, data from whatever environment and you want.
           * So right now we're getting it from art from what we're just the environment. We're just looking at that dev environment.
@@ -154,21 +166,28 @@ Yep.
           * Uh, if you want to have like, the the most.
           * If you want to see like if you want to develop against like, what's in actually actually in production, then you can. You can change that layout host to to the production.
           * Uhm. Environment.
-          * ![Profile picture of Pope, Spencer O.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O11:07 AMYeah, like if someone said, oh, there's an error on this page.
+          * ![Profile picture of Pope, Spencer O.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O11:07 AMYeah, like if someone said, oh, there's an error on this page.
           * Probably wanna.
           * Point that layout host to this environment so that you can most precisely recreate that error.
           * ![](<../../.gitbook/assets/image (1).png>)Sowa, Bill11:07 AMSo.
           * Yeah. So, thanks again, Spencer. I need to drop again, but we appreciate it. I think that's that's probably good unless there's any additional any or any questions that anybody has.
           * But we can kind of let folks ruminate on this a bit and then come back in another in another meeting and.
           * Uh answer questions or just go ahead and drop questions here in the chat as they come up.
-          * ![Profile picture of Guest, James.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:735da700-6bad-4bae-9adb-c780cc53cf12/profilepicturev2?displayname=Guest%2C%20James\&size=HR64x64)Guest, James11:08 AMYeah.
+          * ![Profile picture of Guest, James.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:735da700-6bad-4bae-9adb-c780cc53cf12/profilepicturev2?displayname=Guest%2C%20James\&size=HR64x64)Guest, James11:08 AMYeah.
           * Thank you guys. Probably just takes getting our feet wet.
-          * ![Profile picture of Sowa, Bill.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:526113cf-3ef9-4121-a6d5-22d958afe21f/profilepicturev2?displayname=Sowa%2C%20Bill\&size=HR64x64)Sowa, Bill11:08 AMYeah, for sure.
+          * ![Profile picture of Sowa, Bill.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:526113cf-3ef9-4121-a6d5-22d958afe21f/profilepicturev2?displayname=Sowa%2C%20Bill\&size=HR64x64)Sowa, Bill11:08 AMYeah, for sure.
           * Alright. Thanks guys. Talk to you later.
-          * ![Profile picture of Macias, Marcie.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:bc34fee8-4bb2-48d6-92fa-569dbc0ee245/profilepicturev2?displayname=Macias%2C%20Marcie\&size=HR64x64)Macias, Marcie11:08 AMI think you.
-          * ![Profile picture of Guner, Bryan.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:07f93a93-4edd-45c2-817e-b3c14d770992/profilepicturev2?displayname=Guner%2C%20Bryan\&size=HR64x64)Guner, Bryan11:08 AMThanks.
-          * ![Profile picture of Evanoff, Matthew.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:3f7c56de-3459-45cd-ad5c-d1f1e1aaeb74/profilepicturev2?displayname=Evanoff%2C%20Matthew\&size=HR64x64)Evanoff, Matthew11:08 AMHere.
-          * ![Profile picture of Pope, Spencer O.](https://teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O11:08 AMAlright, later.
+          * ![Profile picture of Macias, Marcie.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:bc34fee8-4bb2-48d6-92fa-569dbc0ee245/profilepicturev2?displayname=Macias%2C%20Marcie\&size=HR64x64)Macias, Marcie11:08 AMI think you.
+          * ![Profile picture of Guner, Bryan.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:07f93a93-4edd-45c2-817e-b3c14d770992/profilepicturev2?displayname=Guner%2C%20Bryan\&size=HR64x64)Guner, Bryan11:08 AMThanks.
+          * ![Profile picture of Evanoff, Matthew.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:3f7c56de-3459-45cd-ad5c-d1f1e1aaeb74/profilepicturev2?displayname=Evanoff%2C%20Matthew\&size=HR64x64)Evanoff, Matthew11:08 AMHere.
+          * ![Profile picture of Pope, Spencer O.](https:
+//teams.microsoft.com/api/mt/part/amer-02/beta/users/8:orgid:68a2b934-5d11-4331-a782-a4acfb6a2f66/profilepicturev2?displayname=Pope%2C%20Spencer%20O\&size=HR64x64)Pope, Spencer O11:08 AMAlright, later.
 
           \\
 
@@ -191,11 +210,14 @@ Explains the steps involved in getting a new FED developer up and running using 
 
 Before you start, access the following URL:
 
-[_http://sssd.duke-energy.com/_](http://sssd.duke-energy.com)
+[_http:
+//sssd.duke-energy.com/_](http:
+//sssd.duke-energy.com)
 
 This will display an informational page about all the SSSD servers and your website.
 
-![](file:///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip\_image001.png)
+![](file:
+///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image001.png)
 
 The first thing to do is locate your LAN Id in the “AppPool Name” column. Your AppPool is the same name as your LAN Id. In this example, my LAN Id is “jbartel”.
 
@@ -205,7 +227,8 @@ Also on that line, you will find your Server Name (WADCSSSDD01 - you will need t
 
 A website will have already been setup for you to use (commonly referred to as an SSSD – Sitecore Server Side Development server). Your websites are NOT Sitecore based hence there are not any databases or Sitecore related files. Initially your website is empty (blank). If you access your website before building/publishing, you will get this error:
 
-![](file:///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip\_image002.png)
+![](file:
+///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image002.png)
 
 That is normal since there is not any website files. The next step is to get your local machine/computer setup so you can access the Visual Studio project and get your website build.
 
@@ -215,23 +238,28 @@ That is normal since there is not any website files. The next step is to get you
 
 The first step is getting a local copy of the solution to your computer. All of the solutions are stored in the SVN (Subversion) under the “feature-branches” folder. There will be many different versions so make sure you are grabbing the correct one. For example, this is what you may see when viewing the Feature Branch in the SVN:
 
-![](file:///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip\_image003.png)
+![](file:
+///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image003.png)
 
 All FED related solutions end with the node “-Foundation”. To checkout a branch, just highlight the branch you want, right click, and select Checkout.
 
-![](file:///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip\_image004.png)
+![](file:
+///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image004.png)
 
 You will be prompted where to put the files on your local computer. It is advised that you create a directory called “SVN” in the root of your local computer (C Drive). Then for each checkout, create a directory under the SVN directory specific to that branch (for example Public-v0.50-Foundation). In the Checkout dialog box, select that folder and click Ok.
 
-![](file:///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip\_image005.png)
+![](file:
+///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image005.png)
 
 This will begin the process of copying all the files to your local machine and maintaining source code control. Once that is completed, you will now have all the files from the source code repository for that particular iteration locally on your computer. This directory is where ALL our work will be performed. As you make changes, the status of the directory will change showing that files have changed (red/green icons).
 
-![](file:///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip\_image006.png)
+![](file:
+///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image006.png)
 
 To commit or update your files, select the Public-v0.50-Foundation directory and right click. All the options you need are located in the menu.
 
-![](file:///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip\_image007.png)
+![](file:
+///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image007.png)
 
 SVN can be a bit tricky but once you have done it a few times, you will find it very simple to use.
 
@@ -247,7 +275,9 @@ There are few tools that need to be installed locally in order to facilitate the
 
 **4.1 Node.js**
 
-Node.js is required for the use of some of the tools. You can go to their website ([https://nodejs.org](https://nodejs.org)) and download the Windows .exe installer. You should coordinate with your team and use the same versions across all team members.
+Node.js is required for the use of some of the tools. You can go to their website ([https:
+//nodejs.org](https:
+//nodejs.org)) and download the Windows .exe installer. You should coordinate with your team and use the same versions across all team members.
 
 Once installed, you will have access to the NPM (NodeJS Package Manager).
 
@@ -273,7 +303,9 @@ This will install grunt globally as well.
 
 **4.4 Ruby**
 
-Ruby is a programming language that is required in order to run SASS. Download Ruby from the Ruby website ([https://www.ruby-lang.org](https://www.ruby-lang.org)). Again, make sure you get the correct version. All team members should be running the same versions of the software.
+Ruby is a programming language that is required in order to run SASS. Download Ruby from the Ruby website ([https:
+//www.ruby-lang.org](https:
+//www.ruby-lang.org)). Again, make sure you get the correct version. All team members should be running the same versions of the software.
 
 Once installed, you will be able to install SASS.
 
@@ -283,7 +315,9 @@ SASS stands for Syntactically Awesome Style Sheets. To install SASS, open Ruby c
 
 **gem install sass**
 
-Most likely you will get an error. These are proxy errors. To get around this issue, you will need to download the SASS gem file locally. Download the gem file from the Ruby Gems website ([https://rubygems.org/](https://rubygems.org)). On the website, click Gems and find the correct SASS gem file.
+Most likely you will get an error. These are proxy errors. To get around this issue, you will need to download the SASS gem file locally. Download the gem file from the Ruby Gems website ([https:
+//rubygems.org/](https:
+//rubygems.org)). On the website, click Gems and find the correct SASS gem file.
 
 Once you have the file, place it in the Ruby root directory on your computer (for instance, c:\ruby22). Then from the Ruby command prompt, enter the command:
 
@@ -331,7 +365,8 @@ Once the solution is on your local machine, open up VS and then open the solutio
 
 In the Solution Explorer, right click on the gruntfile.js and select Task Runner Explorer.
 
-![](file:///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip\_image008.png)
+![](file:
+///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image008.png)
 
 We want to ensure that the four (4) grunt tasks:
 
@@ -345,11 +380,13 @@ We want to ensure that the four (4) grunt tasks:
 
 are setup to run BEFORE the build. From the Task Runner dialog, right click on each of the tasks and add it to Before Build binding.
 
-![](file:///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip\_image009.png)
+![](file:
+///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image009.png)
 
 Once completed, the dialog should show the following:
 
-![](file:///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip\_image010.png)
+![](file:
+///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image010.png)
 
 All the bindings are setup. When you build and/or publish the solution, all four (4) of these tasks will automatically be run.
 
@@ -361,11 +398,13 @@ Press Cntl-Shft-B or right-click the solution and select Build. You may get erro
 
 Once you are confident that everything is good, you can publish to your SSSD. The easiest way to publish is to add the Web One Click Publish toolbar. Right click on the toolbar (not menu) and from the popup, select Web Once Click Publish:
 
-![](file:///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip\_image011.png)
+![](file:
+///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image011.png)
 
 Now on your toolbar, you should see a publishing option. Select the option for YOUR SSSD and click the publish button:
 
-![](file:///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip\_image012.png)
+![](file:
+///Users/BGuner/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image012.png)
 
 If it completes successfully, you should be able to open a browser and go to your SSSD website.
 
@@ -374,7 +413,8 @@ If it completes successfully, you should be able to open a browser and go to you
 Server Information Page\
 Contains the server name, app pool name, process id, url(s), and status for YOUR website listed for YOUR LAN Id (the app pool is the same as your LAN Id). You can access that page here:
 
-http://sssd.duke-energy.com/
+http:
+//sssd.duke-energy.com/
 
 Website File Share:\
 \\\ \<server name> \\\<your lanid>
@@ -382,7 +422,9 @@ Website File Share:\
 Get the server name from the Server Information Page.
 
 Website:\
-[_http://sssdX-pY.duke-energy.com_](http://sssdx-py.duke-energy.com)\
+[_http:
+//sssdX-pY.duke-energy.com_](http:
+//sssdx-py.duke-energy.com)\
 \\
 
 X will be the server number and Y will be an assigned number 0-9. To get YOUR URLs, refer to the Server Information page. Find you App Pool and it will list your URLs.

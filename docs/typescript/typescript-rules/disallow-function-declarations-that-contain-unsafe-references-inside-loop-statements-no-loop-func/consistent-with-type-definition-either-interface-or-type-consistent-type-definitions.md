@@ -20,14 +20,15 @@ interface T2 {
 
 This rule accepts one string option:
 
-* `"interface"`: enforce using `interface`s for object type definitions.
-* `"type"`: enforce using `type`s for object type definitions.
+- `"interface"`: enforce using `interface`s for object type definitions.
+- `"type"`: enforce using `type`s for object type definitions.
 
 For example:
 
 ```
 {
-  // Use type for object definitions
+
+// Use type for object definitions
   "@typescript-eslint/consistent-type-definitions": ["error", "type"]
 }
 ```
@@ -71,4 +72,5 @@ If you specifically want to use an interface or type literal for stylistic reaso
 
 ## Compatibility
 
-* TSLint: [interface-over-type-literal](https://palantir.github.io/tslint/rules/interface-over-type-literal/)
+- TSLint: [interface-over-type-literal](https:
+  //palantir.github.io/tslint/rules/interface-over-type-literal/)

@@ -7,7 +7,8 @@ export const Data = {
   fields: {
     "Icon Path": {
       value: {
-        src: "https://scdev13.duke-energy.com/_/media/images/flipboard/flipboard-electric-vehicle.jpg",
+        src: "https:
+//scdev13.duke-energy.com/_/media/images/flipboard/flipboard-electric-vehicle.jpg",
         alt: "Image Alt Text",
       },
     },

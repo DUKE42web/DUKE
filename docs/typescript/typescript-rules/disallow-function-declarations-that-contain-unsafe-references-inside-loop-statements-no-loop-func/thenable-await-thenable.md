@@ -7,18 +7,18 @@ This rule disallows awaiting a value that is not a "Thenable" (an object which h
 Examples of **incorrect** code for this rule:
 
 ```ts
-await 'value';
+await "value";
 
-const createValue = () => 'value';
+const createValue = () => "value";
 await createValue();
 ```
 
 Examples of **correct** code for this rule:
 
 ```ts
-await Promise.resolve('value');
+await Promise.resolve("value");
 
-const createValue = async () => 'value';
+const createValue = async () => "value";
 await createValue();
 ```
 
@@ -28,4 +28,5 @@ If you want to allow code to `await` non-Promise values. This is generally not p
 
 ## Related to
 
-* TSLint: ['await-promise'](https://palantir.github.io/tslint/rules/await-promise)
+- TSLint: ['await-promise'](https:
+  //palantir.github.io/tslint/rules/await-promise)

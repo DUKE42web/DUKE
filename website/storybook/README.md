@@ -1,6 +1,7 @@
 # 📖 Storybook
 
-{% embed url="https://storybook.js.org" %}
+{% embed url="https:
+//storybook.js.org" %}
 
 ## Storybook
 
@@ -50,7 +51,9 @@ Story definitions can be further improved to take advantage of Storybook's "args
 
 A story is a component with a set of arguments (props), and these arguments can be altered and composed dynamically. This gives Storybook its power (they even refer to this as a _superpower_ in their docs!), allowing us essentially to live edit our components.
 
-Most of the time the type of arg will be [inferred automatically](https://storybook.js.org/docs/react/api/argtypes#automatic-argtype-inference), however we can use ArgTypes to further configure the behavior of our args, constraining the values they can take and generating relevant UI controls.
+Most of the time the type of arg will be [inferred automatically](https:
+//storybook.js.org/docs/react/api/argtypes#automatic-argtype-inference), however we can use ArgTypes to further configure the behavior of our args,
+constraining the values they can take and generating relevant UI controls.
 
 ```js
 export default {
@@ -141,11 +144,13 @@ argTypes: {
 
 ### A11y and Other Addons
 
-Addons are plugins that extend Storybook's core functionality, packaged as NPM modules. Once [installed and registered](https://storybook.js.org/docs/react/addons/install-addons) they will appear in the addons panel, a reserved place in the Storybook UI below the main component.
+Addons are plugins that extend Storybook's core functionality, packaged as NPM modules. Once [installed and registered](https:
+//storybook.js.org/docs/react/addons/install-addons) they will appear in the addons panel, a reserved place in the Storybook UI below the main component.
 
 One such addon we use is the Accessibility addon, which helps to make our UI components more accessible. Simply select the Accessibility tab from the aforementioned addons panel, and there you will see any Violations, Passes and Incomplete requirements pertaining to accessibility.
 
-We also use the Viewport [toolbar](https://storybook.js.org/docs/react/get-started/browse-stories#toolbar) item, which allows us to adjust the dimensions of the iframe our stories are rendered in, making it nice to test responsive UIs.
+We also use the Viewport [toolbar](https:
+//storybook.js.org/docs/react/get-started/browse-stories#toolbar) item, which allows us to adjust the dimensions of the iframe our stories are rendered in, making it nice to test responsive UIs.
 
 ### Anatomy of a Story
 
@@ -200,6 +205,7 @@ import { Data } from './data';
 
 import { MyComponent as MyComponentComposition } from '../../lib/composition';
 
+
 const props = MyComponentComposition({ fields: Data });
 
 ...
@@ -240,6 +246,7 @@ In the example above, we're setting `backgroundColor` as a radio button so the u
 ```js
 ...
 
+
 const Template = args => <MyComponent {...args} />;
 
 export const Primary = Template.bind({});
@@ -250,7 +257,8 @@ Primary.args = {
 
 **Template Definition:** Now that our stories are exported, we move on to defining a master template (`Template`) for our component's stories, and passing in our args.
 
-We can then reuse this template across stories. `Template.bind({})` makes a copy of the function, reducing code duplication. This is a [standard JavaScript technique](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) for making a copy of a function, and allows each exported story to set its own properties.
+We can then reuse this template across stories. `Template.bind({})` makes a copy of the function, reducing code duplication. This is a [standard JavaScript technique](https:
+//developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) for making a copy of a function, and allows each exported story to set its own properties.
 
 And finally we spread in our component's props (`...props`), making data available to our component as it would be in the regular app.
 
@@ -271,7 +279,9 @@ Again we have a nifty function for that! Here's an example of both `storybookCus
 
 import { storybookCustomArgs, createStoryOptions } from 'src/lib/helpers';
 
+
 const props = BulletedOverviewComposition(Data);
+
 const itemsToShow = createStoryOptions(props.items);
 
 export default {
@@ -296,7 +306,11 @@ export default {
 
 ### Resources
 
-- [Learn Storybook](https://www.learnstorybook.com) - a guided tutorial through building a simple application with Storybook
-- [Component Driven User Interfaces](https://www.componentdriven.org) - learn more about the component-driven approach that Storybook enables
-- [Storybook Addons](https://storybook.js.org/addons) - supercharge Storybook with advanced features and new workflows
-- [Component Story Format](https://storybook.js.org/blog/component-story-format/) - read more about the Component Story Format (CSF), a new way to author stories based on ES6 modules
+- [Learn Storybook](https:
+  //www.learnstorybook.com) - a guided tutorial through building a simple application with Storybook
+- [Component Driven User Interfaces](https:
+  //www.componentdriven.org) - learn more about the component-driven approach that Storybook enables
+- [Storybook Addons](https:
+  //storybook.js.org/addons) - supercharge Storybook with advanced features and new workflows
+- [Component Story Format](https:
+  //storybook.js.org/blog/component-story-format/) - read more about the Component Story Format (CSF), a new way to author stories based on ES6 modules

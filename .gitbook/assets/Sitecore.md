@@ -32,7 +32,8 @@ When a page exists within Sitecore, it is made available to our application via 
 
 ## Basic Instructions for Creating a Component
 
-1. Navigate to [Sitecore](http://scdev25.duke-energy.com/sitecore) and login. From there, expand "sitecore > Layout > Renderings > Custom > Common" and you can see the available renderings. If you need a rendering to map to your component that isn't already available here, you can create one.
+1. Navigate to [Sitecore](http:
+   //scdev25.duke-energy.com/sitecore) and login. From there, expand "sitecore > Layout > Renderings > Custom > Common" and you can see the available renderings. If you need a rendering to map to your component that isn't already available here, you can create one.
 
 2. Create a Rendering. Within the appropriate folder under `/sitecore/layout/renderings`, create a new `Json Rendering`. This will most likely be within the Custom/Common folder, and can be done either by right-clicking the folder and selecting Insert > Json Rendering or selecting the folder you want to create a rendering in and then pressing the `Json Rendering` button from the options.
 

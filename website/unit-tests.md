@@ -8,9 +8,11 @@
 
 #### React Testing Library
 
-[`React Testing Library` ](https://github.com/testing-library/react-testing-library)builds on top of `DOM Testing Library` by adding APIs for working with React components.
+[`React Testing Library` ](https:
+//github.com/testing-library/react-testing-library)builds on top of `DOM Testing Library` by adding APIs for working with React components.
 
-Projects created with [`Create React App` ](https://create-react-app.dev)have out of the box support for **React Testing Library**. If that is not the case, you can add it via `npm` like so:
+Projects created with [`Create React App` ](https:
+//create-react-app.dev)have out of the box support for **React Testing Library**. If that is not the case, you can add it via `npm` like so:
 
 ```
 npm install --save-dev @testing-library/react
@@ -18,30 +20,38 @@ npm install --save-dev @testing-library/react
 
 Copy
 
-- [React Testing Library on GitHub](https://github.com/testing-library/react-testing-library)
+- [React Testing Library on GitHub](https:
+  //github.com/testing-library/react-testing-library)
 
-**The problem**[**​**](https://testing-library.com/docs/react-testing-library/intro/#the-problem)
+**The problem**[**​**](https:
+//testing-library.com/docs/react-testing-library/intro/#the-problem)
 
 You want to write maintainable tests for your React components. As a part of this goal, you want your tests to avoid including implementation details of your components and rather focus on making your tests give you the confidence for which they are intended. As part of this, you want your testbase to be maintainable in the long run so refactors of your components (changes to implementation but not functionality) don't break your tests and slow you and your team down.
 
-**This solution**[**​**](https://testing-library.com/docs/react-testing-library/intro/#this-solution)
+**This solution**[**​**](https:
+//testing-library.com/docs/react-testing-library/intro/#this-solution)
 
 The `React Testing Library` is a very light-weight solution for testing React components. It provides light utility functions on top of `react-dom` and `react-dom/test-utils` , in a way that encourages better testing practices. Its primary guiding principle is:
 
-[The more your tests resemble the way your software is used, the more confidence they can give you.](https://testing-library.com/docs/guiding-principles)
+[The more your tests resemble the way your software is used, the more confidence they can give you.](https:
+//testing-library.com/docs/guiding-principles)
 
 So rather than dealing with instances of rendered React components, your tests will work with actual DOM nodes. The utilities this library provides facilitate querying the DOM in the same way the user would. Finding form elements by their label text (just like a user would), finding links and buttons from their text (like a user would). It also exposes a recommended way to find elements by a `data-testid` as an "escape hatch" for elements where the text content and label do not make sense or is not practical.
 
 This library encourages your applications to be more accessible and allows you to get your tests closer to using your components the way a user will, which allows your tests to give you more confidence that your application will work when a real user uses it.
 
-This library is a replacement for [Enzyme](http://airbnb.io/enzyme/). While you _can_ follow these guidelines using Enzyme itself, enforcing this is harder because of all the extra utilities that Enzyme provides (utilities which facilitate testing implementation details). Read more about this in [the FAQ](https://testing-library.com/docs/react-testing-library/faq).
+This library is a replacement for [Enzyme](http:
+//airbnb.io/enzyme/). While you _can_ follow these guidelines using Enzyme itself, enforcing this is harder because of all the extra utilities that Enzyme provides (utilities which facilitate testing implementation details). Read more about this in [the FAQ](https:
+//testing-library.com/docs/react-testing-library/faq).
 
 **What this library is not**:
 
 1. A test runner or framework
-2. Specific to a testing framework (though we recommend Jest as our preference, the library works with any framework. See [Using Without Jest](https://testing-library.com/docs/react-testing-library/setup#using-without-jest))
+2. Specific to a testing framework (though we recommend Jest as our preference, the library works with any framework. See [Using Without Jest](https:
+   //testing-library.com/docs/react-testing-library/setup#using-without-jest))
 
-NOTE: This library is built on top of [`DOM Testing Library` ](https://testing-library.com/docs/dom-testing-library/intro)which is where most of the logic behind the queries is.
+NOTE: This library is built on top of [`DOM Testing Library` ](https:
+//testing-library.com/docs/dom-testing-library/intro)which is where most of the logic behind the queries is.
 
 \\
 
@@ -49,7 +59,9 @@ NOTE: This library is built on top of [`DOM Testing Library` ](https://testing-l
 
 Creating Unit Tests for the DXT Application
 
-Our unit testing utilizes the [Jest Testing Framework](https://jestjs.io) and [Enzyme](https://enzymejs.github.io/enzyme/).
+Our unit testing utilizes the [Jest Testing Framework](https:
+//jestjs.io) and [Enzyme](https:
+//enzymejs.github.io/enzyme/).
 
 This document is not intended to tell you how to use these technologies, but instead how we use them in our environment.
 
@@ -105,6 +117,7 @@ Unit tests should be testing the behavior of the component, not its implementati
 For example this would not be a good test, as all you are testing is if React is showing/hiding the div properly:
 
 ```tsx
+
 const ComponentName(showDiv: boolean) {
   return (showDiv && <div class="js-test">Some Text</div>);
 }
@@ -112,7 +125,8 @@ const ComponentName(showDiv: boolean) {
 ...
 
 it('Test div Exists', () => {
-	const wrapper = shallow(<ComponentName showDiv={true} />);
+
+const wrapper = shallow(<ComponentName showDiv={true} />);
 	expect(wrapper.find('.js-test').exists()).toBeTruthy();
 }
 ```
@@ -122,22 +136,28 @@ Where as this would be a good test, as you are testing the logic in the isVisibl
 :white_check_mark: Good
 
 ```tsx
+
 const isVisible(someData: MyType) {
   let visible = true;
-  // Some logic here using someData
-  // That changes the value of visible
+
+// Some logic here using someData
+
+// That changes the value of visible
   return visible;
 }
 
+
 const ComponentName({someData}: MyType) {
-  const shouldShow = isVisible(someData);
+
+const shouldShow = isVisible(someData);
   return (shouldShow && <div>Some Text</div>);
 }
 
 ...
 
 it('Test div Exists', () => {
-	const wrapper = shallow(<ComponentName someData={...} />);
+
+const wrapper = shallow(<ComponentName someData={...} />);
 	expect(wrapper.find('.js-test').exists()).toBeTruthy();
 }
 ```
@@ -176,7 +196,8 @@ You should also run all of the tests, including the new tests you wrote for your
 
 ## Mocks
 
-See: [Jest Mocks](https://jestjs.io/docs/en/jest-object#mock-modules)
+See: [Jest Mocks](https:
+//jestjs.io/docs/en/jest-object#mock-modules)
 
 Mocks can be used in situations where we have methods that are required for the component we are testing to function. Because we are writing unit tests, and not integration tests, these methods should be mocked with their expected results.
 
@@ -239,6 +260,7 @@ When mounting your components in your unit tests, Enzyme will allow you to mount
 ```tsx
 import { mount } from 'enzyme';
 ...
+
 const wrapper = mount(<ComponenetName data={Data}/>);
 ```
 
@@ -249,6 +271,7 @@ This will mount the component regularly with all its subcomponents.
 ```tsx
 import { shallow } from 'enzyme';
 ...
+
 const wrapper = shallow(<ComponenetName data={Data}/>);
 ```
 
@@ -266,7 +289,7 @@ console.log(wrapper.debug());
 
 Your unit tests can be run inside of the Chrome debugger, giving you the benefits you normally get from that experience, such as stepping through your code and viewing variables.
 
-To run your code in the Chrome debugger, drop a `debugger;` statement in your tests, then open this URL in Chrome `chrome://inspect/#devices` and click the link labeled _Open dedicated DevTools for Node_.
+To run your code in the Chrome debugger, drop a `debugger;` statement in your tests, then open this URL in Chrome `chrome: //inspect/#devices` and click the link labeled _Open dedicated DevTools for Node_.
 
 This will bring up a debug window.
 
@@ -294,11 +317,17 @@ You will want to import and use the same types used in your component to create 
 
 ## Resources
 
-- [React Testing](https://reactjs.org/docs/testing.html)
-- [React Testing Recipes](https://reactjs.org/docs/testing-recipes.html)
-- [Jest Testing Framework](https://jestjs.io)
-- [Jest Mocks](https://jestjs.io/docs/en/jest-object#mock-modules)
-- [Jest Testing React](https://jestjs.io/docs/en/tutorial-react)
-- [Enzyme](https://enzymejs.github.io/enzyme/)
+- [React Testing](https:
+  //reactjs.org/docs/testing.html)
+- [React Testing Recipes](https:
+  //reactjs.org/docs/testing-recipes.html)
+- [Jest Testing Framework](https:
+  //jestjs.io)
+- [Jest Mocks](https:
+  //jestjs.io/docs/en/jest-object#mock-modules)
+- [Jest Testing React](https:
+  //jestjs.io/docs/en/tutorial-react)
+- [Enzyme](https:
+  //enzymejs.github.io/enzyme/)
 
 React | Typescript | Tailwind | Forms | Unit Tests

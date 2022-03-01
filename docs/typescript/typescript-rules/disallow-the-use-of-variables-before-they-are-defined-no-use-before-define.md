@@ -2,13 +2,15 @@
 
 ## Rule Details
 
-This rule extends the base [`eslint/no-use-before-define`](https://eslint.org/docs/rules/no-use-before-define) rule. It adds support for `type`, `interface` and `enum` declarations.
+This rule extends the base [`eslint/no-use-before-define`](https:
+//eslint.org/docs/rules/no-use-before-define) rule. It adds support for `type`, `interface` and `enum` declarations.
 
 ## How to use
 
 ```
 {
-  // note you must disable the base rule as it can report incorrect errors
+
+// note you must disable the base rule as it can report incorrect errors
   "no-use-before-define": "off",
   "@typescript-eslint/no-use-before-define": ["error"]
 }
@@ -16,7 +18,8 @@ This rule extends the base [`eslint/no-use-before-define`](https://eslint.org/do
 
 ## Options
 
-See [`eslint/no-use-before-define` options](https://eslint.org/docs/rules/no-use-before-define#options). This rule adds the following options:
+See [`eslint/no-use-before-define` options](https:
+//eslint.org/docs/rules/no-use-before-define#options). This rule adds the following options:
 
 ```ts
 interface Options extends BaseNoUseBeforeDefineOptions {
@@ -94,6 +97,8 @@ enum Enum {}
 
 ### Other Options
 
-See [`eslint/no-use-before-define` options](https://eslint.org/docs/rules/no-use-before-define#options).
+See [`eslint/no-use-before-define` options](https:
+//eslint.org/docs/rules/no-use-before-define#options).
 
-Taken with ❤️ [from ESLint core](https://github.com/eslint/eslint/blob/master/docs/rules/no-use-before-define.md)
+Taken with ❤️ [from ESLint core](https:
+//github.com/eslint/eslint/blob/master/docs/rules/no-use-before-define.md)

@@ -13,7 +13,9 @@ foo?.bar!;
 foo?.bar()!;
 
 // Prior to TS3.9, foo?.bar!.baz meant (foo?.bar).baz - i.e. the non-null assertion is applied to the entire chain so far.
+
 // For TS3.9 and greater, the non-null assertion is only applied to the property itself, so it's safe.
+
 // The following is incorrect code if you're using less than TS3.9
 foo?.bar!.baz;
 foo?.bar!();
@@ -43,5 +45,7 @@ If you are not using TypeScript 3.7 (or greater), then you will not need to use 
 
 ## Further Reading
 
-* [TypeScript 3.7 Release Notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html)
-* [Optional Chaining Proposal](https://github.com/tc39/proposal-optional-chaining/)
+- [TypeScript 3.7 Release Notes](https:
+  //www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html)
+- [Optional Chaining Proposal](https:
+  //github.com/tc39/proposal-optional-chaining/)

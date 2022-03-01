@@ -166,7 +166,8 @@ Size threshold at which splitting is enforced and other restrictions (minRemaini
 
 `number = 0`
 
-`splitChunks.minRemainingSize` option was introduced in webpack 5 to avoid zero sized modules by ensuring that the minimum size of the chunk which remains after splitting is above a limit. Defaults to `0` in ['development' mode](https://webpack.js.org/configuration/mode/#mode-development). For other cases `splitChunks.minRemainingSize` defaults to the value of `splitChunks.minSize` so it doesn't need to be specified manually except for the rare cases where deep control is required.
+`splitChunks.minRemainingSize` option was introduced in webpack 5 to avoid zero sized modules by ensuring that the minimum size of the chunk which remains after splitting is above a limit. Defaults to `0` in ['development' mode](https:
+//webpack.js.org/configuration/mode/#mode-development). For other cases `splitChunks.minRemainingSize` defaults to the value of `splitChunks.minSize` so it doesn't need to be specified manually except for the rare cases where deep control is required.
 
 #### splitChunks.layer
 
@@ -214,14 +215,15 @@ Providing a string or a function allows you to use a custom name. Specifying eit
 
 If you choose to specify a function, you may find the `chunk.name` and `chunk.hash` properties (where `chunk` is an element of the `chunks` array) particularly useful in choosing a name for your chunk.
 
-If the `splitChunks.name` matches an [entry point](https://webpack.js.org/configuration/entry-context/#entry) name, the entry point will be removed.
+If the `splitChunks.name` matches an [entry point](https:
+//webpack.js.org/configuration/entry-context/#entry) name, the entry point will be removed.
 
 **main.js**
 
-```
-import _ from 'lodash';
+```typescript
+import _ from "lodash";
 
-console.log(_.join(['Hello', 'webpack'], ' '));
+console.log(_.join(["Hello", "webpack"], " "));
 ```
 
 **webpack.config.js**
@@ -236,11 +238,13 @@ module.exports = {
           test: /[\\/]node_modules[\\/]/,
 
           name(module, chunks, cacheGroupKey) {
-            const moduleFileName = module
+
+const moduleFileName = module
               .identifier()
               .split('/')
               .reduceRight((item) => item);
-            const allChunksNames = chunks.map((item) => item.name).join('~');
+
+const allChunksNames = chunks.map((item) => item.name).join('~');
             return `${cacheGroupKey}-${allChunksNames}-${moduleFileName}`;
           },
           chunks: 'all',
@@ -354,7 +358,8 @@ module.exports = {
           test(module) {
 
 
-            const path = require('path');
+
+const path = require('path');
             return (
               module.resource &&
               module.resource.endsWith('.svg') &&
@@ -373,7 +378,8 @@ module.exports = {
 };
 ```
 
-In order to see what information is available in `module` and `chunks` objects, you can put `debugger;` statement in the callback. Then [run your webpack build in debug mode](https://webpack.js.org/contribute/debugging/#devtools) to inspect the parameters in Chromium DevTools.
+In order to see what information is available in `module` and `chunks` objects, you can put `debugger;` statement in the callback. Then [run your webpack build in debug mode](https:
+//webpack.js.org/contribute/debugging/#devtools) to inspect the parameters in Chromium DevTools.
 
 Providing a `RegExp` to `{cacheGroup}.test`:
 
@@ -399,7 +405,8 @@ module.exports = {
 
 `string` `function (pathData, assetInfo) => string`
 
-Allows to override the filename when and only when it's an initial chunk. All placeholders available in [`output.filename`](https://webpack.js.org/configuration/output/#outputfilename) are also available here.
+Allows to override the filename when and only when it's an initial chunk. All placeholders available in [`output.filename`](https:
+//webpack.js.org/configuration/output/#outputfilename) are also available here.
 
 **webpack.config.js**
 
@@ -463,7 +470,11 @@ module.exports = {
 
 `boolean = false`
 
-Tells webpack to ignore [`splitChunks.minSize`](https://webpack.js.org/concepts/#splitchunksminsize), [`splitChunks.minChunks`](https://webpack.js.org/concepts/#splitchunksminchunks), [`splitChunks.maxAsyncRequests`](https://webpack.js.org/concepts/#splitchunksmaxasyncrequests) and [`splitChunks.maxInitialRequests`](https://webpack.js.org/concepts/#splitchunksmaxinitialrequests) options and always create chunks for this cache group.
+Tells webpack to ignore [`splitChunks.minSize`](https:
+//webpack.js.org/concepts/#splitchunksminsize), [`splitChunks.minChunks`](https:
+//webpack.js.org/concepts/#splitchunksminchunks), [`splitChunks.maxAsyncRequests`](https:
+//webpack.js.org/concepts/#splitchunksmaxasyncrequests) and [`splitChunks.maxInitialRequests`](https:
+//webpack.js.org/concepts/#splitchunksmaxinitialrequests) options and always create chunks for this cache group.
 
 **webpack.config.js**
 
@@ -509,12 +520,12 @@ module.exports = {
 
 #### Defaults: Example 1
 
-```
-import('./a');
+```typescript
+import("./a");
 ```
 
-```
-import 'react';
+```typescript
+import "react";
 ```
 
 **Result:** A separate chunk would be created containing `react`. At the import call this chunk is loaded in parallel to the original chunk containing `./a`.
@@ -530,19 +541,18 @@ What's the reasoning behind this? `react` probably won't change as often as your
 
 #### Defaults: Example 2
 
+```typescript
+import("./a");
+import("./b");
 ```
 
-import('./a');
-import('./b');
+```typescript
+import "./helpers";
 ```
 
-```
-import './helpers';
-```
-
-```
-import './helpers';
-import './more-helpers';
+```typescript
+import "./helpers";
+import "./more-helpers";
 ```
 
 **Result:** A separate chunk would be created containing `./helpers` and all dependencies of it. At the import calls this chunk is loaded in parallel to the original chunks.

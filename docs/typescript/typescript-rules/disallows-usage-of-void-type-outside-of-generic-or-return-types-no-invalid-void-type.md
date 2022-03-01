@@ -97,7 +97,8 @@ type AllowedVoidUnion = void | Ex.Mx.Tx<void>;
 
 #### `allowAsThisParameter`
 
-This option allows specifying a `this` parameter of a function to be `void` when set to `true`. This pattern can be useful to explicitly label function types that do not use a `this` argument. [See the TypeScript docs for more information](https://www.typescriptlang.org/docs/handbook/functions.html#this-parameters-in-callbacks).
+This option allows specifying a `this` parameter of a function to be `void` when set to `true`. This pattern can be useful to explicitly label function types that do not use a `this` argument. [See the TypeScript docs for more information](https:
+//www.typescriptlang.org/docs/handbook/functions.html#this-parameters-in-callbacks).
 
 This option is `false` by default.
 
@@ -117,4 +118,5 @@ If you don't care about if `void` is used with other types, or in invalid places
 
 ## Compatibility
 
-* TSLint: [invalid-void](https://palantir.github.io/tslint/rules/invalid-void/)
+- TSLint: [invalid-void](https:
+  //palantir.github.io/tslint/rules/invalid-void/)

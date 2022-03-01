@@ -2,7 +2,8 @@
 
 ## Rule Details
 
-This rule extends the base [`eslint/default-param-last`](https://eslint.org/docs/rules/default-param-last) rule. It adds support for optional parameters.
+This rule extends the base [`eslint/default-param-last`](https:
+//eslint.org/docs/rules/default-param-last) rule. It adds support for optional parameters.
 
 Examples of **incorrect** code for this rule:
 
@@ -42,7 +43,8 @@ class Foo {
 
 ```
 {
-  // note you must disable the base rule as it can report incorrect errors
+
+// note you must disable the base rule as it can report incorrect errors
   "default-param-last": "off",
   "@typescript-eslint/default-param-last": ["error"]
 }
@@ -50,6 +52,8 @@ class Foo {
 
 ## Options
 
-See [`eslint/default-param-last` options](https://eslint.org/docs/rules/default-param-last#options).
+See [`eslint/default-param-last` options](https:
+//eslint.org/docs/rules/default-param-last#options).
 
-Taken with ❤️ [from ESLint core](https://github.com/eslint/eslint/blob/master/docs/rules/default-param-last.md)
+Taken with ❤️ [from ESLint core](https:
+//github.com/eslint/eslint/blob/master/docs/rules/default-param-last.md)

@@ -2,7 +2,9 @@
 
 ## Creating Unit Tests for the DXT Application
 
-Our unit testing utilizes the [Jest Testing Framework](https://jestjs.io/) and [Enzyme](https://enzymejs.github.io/enzyme/).
+Our unit testing utilizes the [Jest Testing Framework](https:
+//jestjs.io/) and [Enzyme](https:
+//enzymejs.github.io/enzyme/).
 
 This document is not intended to tell you how to use these technologies, but instead how we use them in our environment.
 
@@ -59,6 +61,7 @@ For example this would not be a good test, as all you are testing is if React is
 
 ```tsx
 
+
 const ComponentName(showDiv: boolean) {
   return (showDiv && <div class="js-test">Some Text</div>);
 }
@@ -66,7 +69,8 @@ const ComponentName(showDiv: boolean) {
 ...
 
 it('Test div Exists', () => {
-	const wrapper = shallow(<ComponentName showDiv={true} />);
+
+const wrapper = shallow(<ComponentName showDiv={true} />);
 	expect(wrapper.find('.js-test').exists()).toBeTruthy();
 }
 ```
@@ -76,22 +80,28 @@ Where as this would be a good test, as you are testing the logic in the isVisibl
 :white_check_mark: Good
 
 ```tsx
+
 const isVisible(someData: MyType) {
   let visible = true;
-  // Some logic here using someData
-  // That changes the value of visible
+
+// Some logic here using someData
+
+// That changes the value of visible
   return visible;
 }
 
+
 const ComponentName({someData}: MyType) {
-  const shouldShow = isVisible(someData);
+
+const shouldShow = isVisible(someData);
   return (shouldShow && <div>Some Text</div>);
 }
 
 ...
 
 it('Test div Exists', () => {
-	const wrapper = shallow(<ComponentName someData={...} />);
+
+const wrapper = shallow(<ComponentName someData={...} />);
 	expect(wrapper.find('.js-test').exists()).toBeTruthy();
 }
 ```
@@ -130,7 +140,8 @@ You should also run all of the tests, including the new tests you wrote for your
 
 ## Mocks
 
-See: [Jest Mocks](https://jestjs.io/docs/en/jest-object#mock-modules)
+See: [Jest Mocks](https:
+//jestjs.io/docs/en/jest-object#mock-modules)
 
 Mocks can be used in situations where we have methods that are required for the component we are testing to function. Because we are writing unit tests, and not integration tests, these methods should be mocked with their expected results.
 
@@ -193,6 +204,7 @@ When mounting your components in your unit tests, Enzyme will allow you to mount
 ```tsx
 import { mount } from 'enzyme';
 ...
+
 const wrapper = mount(<ComponenetName data={Data}/>);
 ```
 
@@ -203,6 +215,7 @@ This will mount the component regularly with all its subcomponents.
 ```tsx
 import { shallow } from 'enzyme';
 ...
+
 const wrapper = shallow(<ComponenetName data={Data}/>);
 ```
 
@@ -220,7 +233,7 @@ console.log(wrapper.debug());
 
 Your unit tests can be run inside of the Chrome debugger, giving you the benefits you normally get from that experience, such as stepping through your code and viewing variables.
 
-To run your code in the Chrome debugger, drop a `debugger;` statement in your tests, then open this URL in Chrome `chrome://inspect/#devices` and click the link labeled _Open dedicated DevTools for Node_.
+To run your code in the Chrome debugger, drop a `debugger;` statement in your tests, then open this URL in Chrome `chrome: //inspect/#devices` and click the link labeled _Open dedicated DevTools for Node_.
 
 ![Setup Chrome Debugging](./UnitTests-chrome-debug.png)
 
@@ -252,11 +265,17 @@ You will want to import and use the same types used in your component to create 
 
 ## Resources
 
-- [React Testing](https://reactjs.org/docs/testing.html)
-- [React Testing Recipes](https://reactjs.org/docs/testing-recipes.html)
-- [Jest Testing Framework](https://jestjs.io/)
-- [Jest Mocks](https://jestjs.io/docs/en/jest-object#mock-modules)
-- [Jest Testing React](https://jestjs.io/docs/en/tutorial-react)
-- [Enzyme](https://enzymejs.github.io/enzyme/)
+- [React Testing](https:
+  //reactjs.org/docs/testing.html)
+- [React Testing Recipes](https:
+  //reactjs.org/docs/testing-recipes.html)
+- [Jest Testing Framework](https:
+  //jestjs.io/)
+- [Jest Mocks](https:
+  //jestjs.io/docs/en/jest-object#mock-modules)
+- [Jest Testing React](https:
+  //jestjs.io/docs/en/tutorial-react)
+- [Enzyme](https:
+  //enzymejs.github.io/enzyme/)
 
 [React](./React.md) | [Typescript](./Typescript.md) | [Tailwind](./Tailwind.md) | [Forms](./Forms.md) | [Unit Tests](./UnitTests.md)

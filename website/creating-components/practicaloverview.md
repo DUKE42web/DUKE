@@ -30,6 +30,7 @@ It will be challenging to know in advance the shape of the data that comes to yo
 
 ```tsx
 // MyComponent/composition.tsx
+
 const MyComponent = (sitecoreData) => {
   return sitecoreData;
 };
@@ -41,6 +42,7 @@ const MyComponent = (sitecoreData) => {
 /** technically, you would want to provide types in a Typescript file,
  * but we're just trying to get some data here.
  */
+
 const MyComponent = (scData) => {
   console.log(scData);
   return <div>{JSON.stringify(scData)}</div>;
@@ -69,6 +71,7 @@ import Data from "./data";
  * expecting, as it would be from your composition file.
  * Again, this is necessary since the composition function is not called by Storybook.
  */
+
 const props = MyComponentComposition(Data);
 
 const Template = (args) => <MyComponent {...args} />;

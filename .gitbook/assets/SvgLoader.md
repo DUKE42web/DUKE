@@ -80,6 +80,7 @@ and then the test..
 ```typescript
 it("should change the text color class if given a color prop", async () => {
   render(<SvgLoader color="gray" name="Arrow" />);
+
   const mounted = await waitFor(() => expect(screen.getByTestId("svg")));
   mounted &&
     expect(screen.getByTestId("svg")).toHaveAttribute("class", "text-gray");

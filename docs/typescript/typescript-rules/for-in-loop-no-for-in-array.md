@@ -10,7 +10,8 @@ A for-in loop (`for (var k in o)`) iterates over the properties of an Object. Wh
 
 ```js
 array.forEach((value, index) => { ... });
-for (const [index, value] of array.entries()) { ... }
+for (
+const [index, value] of array.entries()) { ... }
 for (let i = 0; i < array.length; i++) { ... }
 ```
 
@@ -36,4 +37,5 @@ If you want to iterate through a loop using the indices in an array as strings, 
 
 ## Related to
 
-* TSLint: ['no-for-in-array'](https://palantir.github.io/tslint/rules/no-for-in-array/)
+- TSLint: ['no-for-in-array'](https:
+  //palantir.github.io/tslint/rules/no-for-in-array/)

@@ -2,17 +2,19 @@
 
 ## Rule Details
 
-This rule extends the base [`eslint/no-magic-numbers`](https://eslint.org/docs/rules/no-magic-numbers) rule. It adds support for:
+This rule extends the base [`eslint/no-magic-numbers`](https:
+//eslint.org/docs/rules/no-magic-numbers) rule. It adds support for:
 
-* numeric literal types (`type T = 1`),
-* `enum` members (`enum Foo { bar = 1 }`),
-* `readonly` class properties (`class Foo { readonly bar = 1 }`).
+- numeric literal types (`type T = 1`),
+- `enum` members (`enum Foo { bar = 1 }`),
+- `readonly` class properties (`class Foo { readonly bar = 1 }`).
 
 ## How to use
 
 ```
 {
-  // note you must disable the base rule as it can report incorrect errors
+
+// note you must disable the base rule as it can report incorrect errors
   "no-magic-numbers": "off",
   "@typescript-eslint/no-magic-numbers": [
     "error",
@@ -25,7 +27,8 @@ This rule extends the base [`eslint/no-magic-numbers`](https://eslint.org/docs/r
 
 ## Options
 
-See [`eslint/no-magic-numbers` options](https://eslint.org/docs/rules/no-magic-numbers#options). This rule adds the following options:
+See [`eslint/no-magic-numbers` options](https:
+//eslint.org/docs/rules/no-magic-numbers#options). This rule adds the following options:
 
 ```ts
 interface Options extends BaseNoMagicNumbersOptions {
@@ -114,4 +117,5 @@ class Foo {
 }
 ```
 
-Taken with ❤️ [from ESLint core](https://github.com/eslint/eslint/blob/master/docs/rules/no-magic-numbers.md)
+Taken with ❤️ [from ESLint core](https:
+//github.com/eslint/eslint/blob/master/docs/rules/no-magic-numbers.md)

@@ -1,18 +1,16 @@
 # Copy of Index.tsx
 
-* This is a full-width component.
-* It includes a visual, a title, a description, a CTA button and a background.
-* A title is required
-* Text that exceeds the available content space will be truncated.
-* The visual is required. An icon or image may be used as the supporting visual.
-* The height for the banner should be determined by the height of the content plus the top and bottom spacing. Therefore, banners including icons and images will vary in height.
-* On desktop, the max height of the banner with an icon is 140px. The max height of the banner with an image is 170px on desktop.
-* On mobile, the max height of the banner with an icon is 296px. The max height of the banner with an image is 324px on mobile.
-* The description and CTA button are optional.
-* The content area should be centered horizontally when when the CTA is not displayed.
-* There are predefined background options.
-
-
+- This is a full-width component.
+- It includes a visual, a title, a description, a CTA button and a background.
+- A title is required
+- Text that exceeds the available content space will be truncated.
+- The visual is required. An icon or image may be used as the supporting visual.
+- The height for the banner should be determined by the height of the content plus the top and bottom spacing. Therefore, banners including icons and images will vary in height.
+- On desktop, the max height of the banner with an icon is 140px. The max height of the banner with an image is 170px on desktop.
+- On mobile, the max height of the banner with an icon is 296px. The max height of the banner with an image is 324px on mobile.
+- The description and CTA button are optional.
+- The content area should be centered horizontally when when the CTA is not displayed.
+- There are predefined background options.
 
 ```tsx
 import { Text } from "@sitecore-jss/sitecore-jss-react";
@@ -21,6 +19,7 @@ import LazyImage from "src/components/LazyImage";
 import { NewsBannerProps } from "./types";
 import RichText from "src/components/RichText";
 import Button from "src/components/Button";
+
 const NewsBanner = ({
   icon,
   rounded,
@@ -30,7 +29,9 @@ const NewsBanner = ({
   cta,
 }: NewsBannerProps) => {
   const ctaExists = cta?.href && cta?.text;
+
   const iconRounded = rounded ? "rounded-full" : "";
+
   const iconSize = icon?.value?.src?.includes(".svg")
     ? "icon-48 sm:icon-76"
     : "icon-76 sm:icon-122";

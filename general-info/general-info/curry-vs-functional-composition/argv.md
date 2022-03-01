@@ -16,8 +16,12 @@ Below examples illustrate the use of **process.argv property** in Node.js:
 
 ```javascript
 // Node.js program to demonstrate the
+
 // process.argv Property
+
 // Include process module
-const process = require("process"); // Printing process.argv property value
+
+const process = require("process");
+// Printing process.argv property value
 console.log(process.argv);
 ```

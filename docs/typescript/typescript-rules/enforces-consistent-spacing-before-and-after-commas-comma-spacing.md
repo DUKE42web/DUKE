@@ -2,13 +2,15 @@
 
 ## Rule Details
 
-This rule extends the base [`eslint/comma-spacing`](https://eslint.org/docs/rules/comma-spacing) rule. It adds support for trailing comma in a types parameters list.
+This rule extends the base [`eslint/comma-spacing`](https:
+//eslint.org/docs/rules/comma-spacing) rule. It adds support for trailing comma in a types parameters list.
 
 ## How to use
 
 ```
 {
-  // note you must disable the base rule as it can report incorrect errors
+
+// note you must disable the base rule as it can report incorrect errors
   "comma-spacing": "off",
   "@typescript-eslint/comma-spacing": ["error"]
 }
@@ -16,6 +18,8 @@ This rule extends the base [`eslint/comma-spacing`](https://eslint.org/docs/rule
 
 ## Options
 
-See [`eslint/comma-spacing` options](https://eslint.org/docs/rules/comma-spacing#options).
+See [`eslint/comma-spacing` options](https:
+//eslint.org/docs/rules/comma-spacing#options).
 
-Taken with ❤️ [from ESLint core](https://github.com/eslint/eslint/blob/master/docs/rules/comma-spacing.md)
+Taken with ❤️ [from ESLint core](https:
+//github.com/eslint/eslint/blob/master/docs/rules/comma-spacing.md)

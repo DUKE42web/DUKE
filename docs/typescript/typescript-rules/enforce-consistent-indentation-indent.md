@@ -1,16 +1,20 @@
 # Enforce consistent indentation (indent)
 
-## PLEASE READ THIS ISSUE BEFORE USING THIS RULE [#1824](https://github.com/typescript-eslint/typescript-eslint/issues/1824)
+## PLEASE READ THIS ISSUE BEFORE USING THIS RULE [#1824](https:
+
+//github.com/typescript-eslint/typescript-eslint/issues/1824)
 
 ## Rule Details
 
-This rule extends the base [`eslint/indent`](https://eslint.org/docs/rules/indent) rule. It adds support for TypeScript nodes.
+This rule extends the base [`eslint/indent`](https:
+//eslint.org/docs/rules/indent) rule. It adds support for TypeScript nodes.
 
 ## How to use
 
 ```
 {
-  // note you must disable the base rule as it can report incorrect errors
+
+// note you must disable the base rule as it can report incorrect errors
   "indent": "off",
   "@typescript-eslint/indent": ["error"]
 }
@@ -18,6 +22,8 @@ This rule extends the base [`eslint/indent`](https://eslint.org/docs/rules/inden
 
 ## Options
 
-See [`eslint/indent` options](https://eslint.org/docs/rules/indent#options).
+See [`eslint/indent` options](https:
+//eslint.org/docs/rules/indent#options).
 
-Taken with ❤️ [from ESLint core](https://github.com/eslint/eslint/blob/master/docs/rules/indent.md)
+Taken with ❤️ [from ESLint core](https:
+//github.com/eslint/eslint/blob/master/docs/rules/indent.md)

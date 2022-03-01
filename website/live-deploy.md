@@ -1,10 +1,13 @@
 # Live Deploy
 
-[https://www.duke-energy.com/home/products](https://www.duke-energy.com/home/products)
+[https:
+//www.duke-energy.com/home/products](https:
+//www.duke-energy.com/home/products)
 
 \[9:44 PM] Sparks, Carlton
 
-Backdoor Sign In Page: [Sign In to Your Account (duke-energy.com)](https://p-auth.duke-energy.com/my-account/backdoor/backdoor-sign-in)
+Backdoor Sign In Page: [Sign In to Your Account (duke-energy.com)](https:
+//p-auth.duke-energy.com/my-account/backdoor/backdoor-sign-in)
 
 Sign In to Your Account
 
@@ -42,7 +45,9 @@ I found two broken links on the home page... I don't know if that's subject to c
 
 \[9:49 PM] Nixon, Valerie
 
-authenticated speedpay takes the user to guest QA link: [Duke Energy (speedpay.com)](https://batinternet.speedpay.com/duke/#/login/guest) //batinternet.speedpay.com/duke/#/login/guest
+authenticated speedpay takes the user to guest QA link: [Duke Energy (speedpay.com)](https:
+//batinternet.speedpay.com/duke/#/login/guest)
+//batinternet.speedpay.com/duke/#/login/guest
 
 \\
 
@@ -51,12 +56,16 @@ authenticated speedpay takes the user to guest QA link: [Duke Energy (speedpay.c
 So.....We updated the URLs as instructed in pilot, but I get the below screen when deep linking. Funny thing is that PROD - where we did not make the config change, works. We were told to update our URLs
 
 Pilot/Prod change:\
-"deep-link.baseurl": "https://duke-energy.com",\
-"deep-link.legacy.baseurl": "https://duke-energy.com",
+"deep-link.baseurl": "https:
+//duke-energy.com",\
+"deep-link.legacy.baseurl": "https:
+//duke-energy.com",
 
 to:\
-"deep-link.baseurl": "https://auth.duke-energy.com",\
-"deep-link.legacy.baseurl": "https://auth.duke-energy.com",
+"deep-link.baseurl": "https:
+//auth.duke-energy.com",\
+"deep-link.legacy.baseurl": "https:
+//auth.duke-energy.com",
 
 \\
 
@@ -70,7 +79,9 @@ like 2
 
 \[9:54 PM] Sparks, Carlton
 
-\--[https://www.duke-energy.com/home/products/online-savings-store?utm_source=myher\&utm_medium=direct-mail\&utm_campaign=oss_hero-oss_2020-aug_2041\&utm_content=oss_dm_myher_creativehero_2020-aug#main-content](https://www.duke-energy.com/home/products/online-savings-store#main-content)
+\--[https:
+//www.duke-energy.com/home/products/online-savings-store?utm_source=myher\&utm_medium=direct-mail\&utm_campaign=oss_hero-oss_2020-aug_2041\&utm_content=oss_dm_myher_creativehero_2020-aug#main-content](https:
+//www.duke-energy.com/home/products/online-savings-store#main-content)
 
 Online Savings Store - Duke Energy
 

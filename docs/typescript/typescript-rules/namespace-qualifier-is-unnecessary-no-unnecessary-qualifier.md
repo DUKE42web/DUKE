@@ -9,14 +9,15 @@ Examples of **incorrect** code for this rule:
 ```ts
 namespace A {
   export type B = number;
+
   const x: A.B = 3;
 }
 ```
 
 ```ts
 namespace A {
-  export const x = 3;
-  export const y = A.x;
+  export const x = 3;export constort
+const y = A.x;
 }
 ```
 
@@ -31,6 +32,7 @@ enum A {
 namespace A {
   export namespace B {
     export type T = number;
+
     const x: A.B.T = 3;
   }
 }
@@ -64,6 +66,7 @@ namespace X {
   export type T = number;
   namespace Y {
     type T = string;
+
     const x: X.T = 0;
   }
 }
@@ -75,4 +78,5 @@ If you don't care about having unneeded namespace or enum qualifiers, then you d
 
 ## Further Reading
 
-* TSLint: [no-unnecessary-qualifier](https://palantir.github.io/tslint/rules/no-unnecessary-qualifier/)
+- TSLint: [no-unnecessary-qualifier](https:
+  //palantir.github.io/tslint/rules/no-unnecessary-qualifier/)

@@ -2,13 +2,15 @@
 
 ## Rule Details
 
-This rule extends the base [`eslint/no-extra-semi`](https://eslint.org/docs/rules/no-extra-semi) rule. It adds support for class properties.
+This rule extends the base [`eslint/no-extra-semi`](https:
+//eslint.org/docs/rules/no-extra-semi) rule. It adds support for class properties.
 
 ## How to use
 
 ```
 {
-  // note you must disable the base rule as it can report incorrect errors
+
+// note you must disable the base rule as it can report incorrect errors
   "no-extra-semi": "off",
   "@typescript-eslint/no-extra-semi": ["error"]
 }
@@ -16,6 +18,8 @@ This rule extends the base [`eslint/no-extra-semi`](https://eslint.org/docs/rule
 
 ## Options
 
-See [`eslint/no-extra-semi` options](https://eslint.org/docs/rules/no-extra-semi#options).
+See [`eslint/no-extra-semi` options](https:
+//eslint.org/docs/rules/no-extra-semi#options).
 
-Taken with ❤️ [from ESLint core](https://github.com/eslint/eslint/blob/master/docs/rules/no-extra-semi.md)
+Taken with ❤️ [from ESLint core](https:
+//github.com/eslint/eslint/blob/master/docs/rules/no-extra-semi.md)

@@ -1,6 +1,7 @@
 # codebase (naming-convention)
 
-Enforcing naming conventions helps keep the codebase consistent, and reduces overhead when thinking about how to name a variable. Additionally, a well-designed style guide can help communicate intent, such as by enforcing all private properties begin with an `_`, and all global-level constants are written in `UPPER_CASE`.
+Enforcing naming conventions helps keep the codebase consistent, and reduces overhead when thinking about how to name a variable. Additionally, a well-designed style guide can help communicate intent, such as by enforcing all private properties begin with an `_`, and all global-level
+constants are written in `UPPER_CASE`.
 
 There are many different rules that have existed over time, but they have had the problem of not having enough granularity, meaning it was hard to have a well defined style guide, and most of the time you needed 3 or more rules at once to enforce different conventions, hoping they didn't conflict.
 
@@ -19,12 +20,12 @@ type Options = {
   // format options
   format:
     | (
-        | 'camelCase'
-        | 'strictCamelCase'
-        | 'PascalCase'
-        | 'StrictPascalCase'
-        | 'snake_case'
-        | 'UPPER_CASE'
+        | "camelCase"
+        | "strictCamelCase"
+        | "PascalCase"
+        | "StrictPascalCase"
+        | "snake_case"
+        | "UPPER_CASE"
       )[]
     | null;
   custom?: {
@@ -32,19 +33,19 @@ type Options = {
     match: boolean;
   };
   leadingUnderscore?:
-    | 'forbid'
-    | 'require'
-    | 'requireDouble'
-    | 'allow'
-    | 'allowDouble'
-    | 'allowSingleOrDouble';
+    | "forbid"
+    | "require"
+    | "requireDouble"
+    | "allow"
+    | "allowDouble"
+    | "allowSingleOrDouble";
   trailingUnderscore?:
-    | 'forbid'
-    | 'require'
-    | 'requireDouble'
-    | 'allow'
-    | 'allowDouble'
-    | 'allowSingleOrDouble';
+    | "forbid"
+    | "require"
+    | "requireDouble"
+    | "allow"
+    | "allowDouble"
+    | "allowSingleOrDouble";
   prefix?: string[];
   suffix?: string[];
 
@@ -56,30 +57,32 @@ type Options = {
         regex: string;
         match: boolean;
       };
+
   // the allowed values for these are dependent on the selector - see below
   modifiers?: Modifiers<Selector>[];
   types?: Types<Selector>[];
 }[];
 
 // the default config is similar to ESLint's camelcase rule but more strict
+
 const defaultOptions: Options = [
   {
-    selector: 'default',
-    format: ['camelCase'],
-    leadingUnderscore: 'allow',
-    trailingUnderscore: 'allow',
+    selector: "default",
+    format: ["camelCase"],
+    leadingUnderscore: "allow",
+    trailingUnderscore: "allow",
   },
 
   {
-    selector: 'variable',
-    format: ['camelCase', 'UPPER_CASE'],
-    leadingUnderscore: 'allow',
-    trailingUnderscore: 'allow',
+    selector: "variable",
+    format: ["camelCase", "UPPER_CASE"],
+    leadingUnderscore: "allow",
+    trailingUnderscore: "allow",
   },
 
   {
-    selector: 'typeLike',
-    format: ['PascalCase'],
+    selector: "typeLike",
+    format: ["PascalCase"],
   },
 ];
 ```
@@ -92,12 +95,12 @@ Every single selector can have the same set of format options. For information a
 
 The `format` option defines the allowed formats for the identifier. This option accepts an array of the following values, and the identifier can match any of them:
 
-* `camelCase` - standard camelCase format - no underscores are allowed between characters, and consecutive capitals are allowed (i.e. both `myID` and `myId` are valid).
-* `strictCamelCase` - same as `camelCase`, but consecutive capitals are not allowed (i.e. `myId` is valid, but `myID` is not).
-* `PascalCase` - same as `camelCase`, except the first character must be upper-case.
-* `StrictPascalCase` - same as `strictCamelCase`, except the first character must be upper-case.
-* `snake_case` - standard snake\_case format - all characters must be lower-case, and underscores are allowed.
-* `UPPER_CASE` - same as `snake_case`, except all characters must be upper-case.
+- `camelCase` - standard camelCase format - no underscores are allowed between characters, and consecutive capitals are allowed (i.e. both `myID` and `myId` are valid).
+- `strictCamelCase` - same as `camelCase`, but consecutive capitals are not allowed (i.e. `myId` is valid, but `myID` is not).
+- `PascalCase` - same as `camelCase`, except the first character must be upper-case.
+- `StrictPascalCase` - same as `strictCamelCase`, except the first character must be upper-case.
+- `snake_case` - standard snake_case format - all characters must be lower-case, and underscores are allowed.
+- `UPPER_CASE` - same as `snake_case`, except all characters must be upper-case.
 
 Instead of an array, you may also pass `null`. This signifies "this selector shall not have its format checked". This can be useful if you want to enforce no particular format for a specific selector, after applying a group selector.
 
@@ -105,8 +108,8 @@ Instead of an array, you may also pass `null`. This signifies "this selector sha
 
 The `custom` option defines a custom regex that the identifier must (or must not) match. This option allows you to have a bit more finer-grained control over identifiers, letting you ban (or force) certain patterns and substrings. Accepts an object with the following properties:
 
-* `regex` - a string that is then passed into RegExp to create a new regular expression: `new RegExp(regex)`
-* `match` - true if the identifier _must_ match the `regex`, false if the identifier _must not_ match the `regex`.
+- `regex` - a string that is then passed into RegExp to create a new regular expression: `new RegExp(regex)`
+- `match` - true if the identifier _must_ match the `regex`, false if the identifier _must not_ match the `regex`.
 
 ### `filter`
 
@@ -116,8 +119,8 @@ You can use this to include or exclude specific identifiers from specific config
 
 Accepts an object with the following properties:
 
-* `regex` - a string that is then passed into RegExp to create a new regular expression: `new RegExp(regex)`
-* `match` - true if the identifier _must_ match the `regex`, false if the identifier _must not_ match the `regex`.
+- `regex` - a string that is then passed into RegExp to create a new regular expression: `new RegExp(regex)`
+- `match` - true if the identifier _must_ match the `regex`, false if the identifier _must not_ match the `regex`.
 
 Alternatively, `filter` accepts a regular expression (anything accepted into `new RegExp(filter)`). In this case, it's treated as if you had passed an object with the regex and `match: true`.
 
@@ -125,12 +128,12 @@ Alternatively, `filter` accepts a regular expression (anything accepted into `ne
 
 The `leadingUnderscore` / `trailingUnderscore` options control whether leading/trailing underscores are considered valid. Accepts one of the following values:
 
-* `forbid` - a leading/trailing underscore is not allowed at all.
-* `require` - a single leading/trailing underscore must be included.
-* `requireDouble` - two leading/trailing underscores must be included.
-* `allow` - existence of a single leading/trailing underscore is not explicitly enforced.
-* `allowDouble` - existence of a double leading/trailing underscore is not explicitly enforced.
-* `allowSingleOrDouble` - existence of a single or a double leading/trailing underscore is not explicitly enforced.
+- `forbid` - a leading/trailing underscore is not allowed at all.
+- `require` - a single leading/trailing underscore must be included.
+- `requireDouble` - two leading/trailing underscores must be included.
+- `allow` - existence of a single leading/trailing underscore is not explicitly enforced.
+- `allowDouble` - existence of a double leading/trailing underscore is not explicitly enforced.
+- `allowSingleOrDouble` - existence of a single or a double leading/trailing underscore is not explicitly enforced.
 
 #### `prefix` / `suffix`
 
@@ -142,33 +145,32 @@ If these are provided, the identifier must start with one of the provided values
 
 ### Selector Options
 
-* `selector` allows you to specify what types of identifiers to target.
-  * Accepts one or array of selectors to define an option block that applies to one or multiple selectors.
-  * For example, if you provide `{ selector: ['variable', 'function'] }`, then it will apply the same option to variable and function nodes.
-  * See [Allowed Selectors, Modifiers and Types](../../../website/website/typescript/typescript-rules/broken-reference/) below for the complete list of allowed selectors.
-* `modifiers` allows you to specify which modifiers to granularly apply to, such as the accessibility (`private`/`public`/`protected`), or if the thing is `static`, etc.
-  * The name must match _all_ of the modifiers.
-  * For example, if you provide `{ modifiers: ['private', 'static', 'readonly'] }`, then it will only match something that is `private static readonly`, and something that is just `private` will not match.
-  * The following `modifiers` are allowed:
-    * `const` - matches a variable declared as being `const` (`const x = 1`).
-    * `destructured` - matches a variable declared via an object destructuring pattern (`const {x, z = 2}`).
-      * Note that this does not match renamed destructured properties (`const {x: y, a: b = 2}`).
-    * `global` - matches a variable/function declared in the top-level scope.
-    * `exported` - matches anything that is exported from the module.
-    * `unused` - matches anything that is not used.
-    * `requiresQuotes` - matches any name that requires quotes as it is not a valid identifier (i.e. has a space, a dash, etc in it).
-    * `public` - matches any member that is either explicitly declared as `public`, or has no visibility modifier (i.e. implicitly public).
-    * `readonly`, `static`, `abstract`, `protected`, `private` - matches any member explicitly declared with the given modifier.
-* `types` allows you to specify which types to match. This option supports simple, primitive types only (`boolean`, `string`, `number`, `array`, `function`).
-  * The name must match _one_ of the types.
-  * _**NOTE - Using this option will require that you lint with type information.**_
-  * For example, this lets you do things like enforce that `boolean` variables are prefixed with a verb.
-  * The following `types` are allowed:
-    * `boolean` matches any type assignable to `boolean | null | undefined`
-    * `string` matches any type assignable to `string | null | undefined`
-    * `number` matches any type assignable to `number | null | undefined`
-    * `array` matches any type assignable to `Array<unknown> | null | undefined`
-    * `function` matches any type assignable to `Function | null | undefined`
+- `selector` allows you to specify what types of identifiers to target.
+  - Accepts one or array of selectors to define an option block that applies to one or multiple selectors.
+  - For example, if you provide `{ selector: ['variable', 'function'] }`, then it will apply the same option to variable and function nodes.
+  - See [Allowed Selectors, Modifiers and Types](../../../website/website/typescript/typescript-rules/broken-reference/) below for the complete list of allowed selectors.
+- `modifiers` allows you to specify which modifiers to granularly apply to, such as the accessibility (`private`/`public`/`protected`), or if the thing is `static`, etc.
+  - The name must match _all_ of the modifiers.
+  - For example, if you provide `{ modifiers: ['private', 'static', 'readonly'] }`, then it will only match something that is `private static readonly`, and something that is just `private` will not match.
+  - The following `modifiers` are allowed:
+    _ ` const` - matches a variable declared as being ` const` (` const x = 1`).
+    _ `destructured` - matches a variable declared via an object destructuring pattern (` const {x, z = 2}`).
+    _ Note that this does not match renamed destructured properties (` const {x: y, a: b = 2}`).
+    _ `global` - matches a variable/function declared in the top-level scope.
+    _ `exported` - matches anything that is exported from the module.
+    _ `unused` - matches anything that is not used.
+    _ `requiresQuotes` - matches any name that requires quotes as it is not a valid identifier (i.e. has a space, a dash, etc in it).
+    _ `public` - matches any member that is either explicitly declared as `public`, or has no visibility modifier (i.e. implicitly public). \* `readonly`, `static`, `abstract`, `protected`, `private` - matches any member explicitly declared with the given modifier.
+- `types` allows you to specify which types to match. This option supports simple, primitive types only (`boolean`, `string`, `number`, `array`, `function`).
+  - The name must match _one_ of the types.
+  - _**NOTE - Using this option will require that you lint with type information.**_
+  - For example, this lets you do things like enforce that `boolean` variables are prefixed with a verb.
+  - The following `types` are allowed:
+    - `boolean` matches any type assignable to `boolean | null | undefined`
+    - `string` matches any type assignable to `string | null | undefined`
+    - `number` matches any type assignable to `number | null | undefined`
+    - `array` matches any type assignable to `Array<unknown> | null | undefined`
+    - `function` matches any type assignable to `Function | null | undefined`
 
 The ordering of selectors does not matter. The implementation will automatically sort the selectors to ensure they match from most-specific to least specific. It will keep checking selectors in that order until it finds one that matches the name. See ["How does the rule automatically order selectors?"](../../../website/website/typescript/typescript-rules/broken-reference/)
 
@@ -180,80 +182,80 @@ There are two types of selectors, individual selectors, and grouped selectors.
 
 Individual Selectors match specific, well-defined sets. There is no overlap between each of the individual selectors.
 
-* `variable` - matches any `var` / `let` / `const` variable name.
-  * Allowed `modifiers`: `const`, `destructured`, `global`, `exported`, `unused`.
-  * Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
-* `function` - matches any named function declaration or named function expression.
-  * Allowed `modifiers`: `global`, `exported`, `unused`.
-  * Allowed `types`: none.
-* `parameter` - matches any function parameter. Does not match parameter properties.
-  * Allowed `modifiers`: `destructured`, `unused`.
-  * Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
-* `classProperty` - matches any class property. Does not match properties that have direct function expression or arrow function expression values.
-  * Allowed `modifiers`: `abstract`, `private`, `protected`, `public`, `readonly`, `requiresQuotes`, `static`.
-  * Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
-* `objectLiteralProperty` - matches any object literal property. Does not match properties that have direct function expression or arrow function expression values.
-  * Allowed `modifiers`: `public`, `requiresQuotes`.
-  * Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
-* `typeProperty` - matches any object type property. Does not match properties that have direct function expression or arrow function expression values.
-  * Allowed `modifiers`: `public`, `readonly`, `requiresQuotes`.
-  * Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
-* `parameterProperty` - matches any parameter property.
-  * Allowed `modifiers`: `private`, `protected`, `public`, `readonly`.
-  * Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
-* `classMethod` - matches any class method. Also matches properties that have direct function expression or arrow function expression values. Does not match accessors.
-  * Allowed `modifiers`: `abstract`, `private`, `protected`, `public`, `requiresQuotes`, `static`.
-  * Allowed `types`: none.
-* `objectLiteralMethod` - matches any object literal method. Also matches properties that have direct function expression or arrow function expression values. Does not match accessors.
-  * Allowed `modifiers`: `public`, `requiresQuotes`.
-  * Allowed `types`: none.
-* `typeMethod` - matches any object type method. Also matches properties that have direct function expression or arrow function expression values. Does not match accessors.
-  * Allowed `modifiers`: `public`, `requiresQuotes`.
-  * Allowed `types`: none.
-* `accessor` - matches any accessor.
-  * Allowed `modifiers`: `abstract`, `private`, `protected`, `public`, `requiresQuotes`, `static`.
-  * Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
-* `enumMember` - matches any enum member.
-  * Allowed `modifiers`: `requiresQuotes`.
-  * Allowed `types`: none.
-* `class` - matches any class declaration.
-  * Allowed `modifiers`: `abstract`, `exported`, `unused`.
-  * Allowed `types`: none.
-* `interface` - matches any interface declaration.
-  * Allowed `modifiers`: `exported`, `unused`.
-  * Allowed `types`: none.
-* `typeAlias` - matches any type alias declaration.
-  * Allowed `modifiers`: `exported`, `unused`.
-  * Allowed `types`: none.
-* `enum` - matches any enum declaration.
-  * Allowed `modifiers`: `exported`, `unused`.
-  * Allowed `types`: none.
-* `typeParameter` - matches any generic type parameter declaration.
-  * Allowed `modifiers`: `unused`.
-  * Allowed `types`: none.
+- `variable` - matches any `var` / `let` / ` const` variable name.
+  - Allowed `modifiers`: ` const`, `destructured`, `global`, `exported`, `unused`.
+  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
+- `function` - matches any named function declaration or named function expression.
+  - Allowed `modifiers`: `global`, `exported`, `unused`.
+  - Allowed `types`: none.
+- `parameter` - matches any function parameter. Does not match parameter properties.
+  - Allowed `modifiers`: `destructured`, `unused`.
+  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
+- `classProperty` - matches any class property. Does not match properties that have direct function expression or arrow function expression values.
+  - Allowed `modifiers`: `abstract`, `private`, `protected`, `public`, `readonly`, `requiresQuotes`, `static`.
+  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
+- `objectLiteralProperty` - matches any object literal property. Does not match properties that have direct function expression or arrow function expression values.
+  - Allowed `modifiers`: `public`, `requiresQuotes`.
+  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
+- `typeProperty` - matches any object type property. Does not match properties that have direct function expression or arrow function expression values.
+  - Allowed `modifiers`: `public`, `readonly`, `requiresQuotes`.
+  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
+- `parameterProperty` - matches any parameter property.
+  - Allowed `modifiers`: `private`, `protected`, `public`, `readonly`.
+  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
+- `classMethod` - matches any class method. Also matches properties that have direct function expression or arrow function expression values. Does not match accessors.
+  - Allowed `modifiers`: `abstract`, `private`, `protected`, `public`, `requiresQuotes`, `static`.
+  - Allowed `types`: none.
+- `objectLiteralMethod` - matches any object literal method. Also matches properties that have direct function expression or arrow function expression values. Does not match accessors.
+  - Allowed `modifiers`: `public`, `requiresQuotes`.
+  - Allowed `types`: none.
+- `typeMethod` - matches any object type method. Also matches properties that have direct function expression or arrow function expression values. Does not match accessors.
+  - Allowed `modifiers`: `public`, `requiresQuotes`.
+  - Allowed `types`: none.
+- `accessor` - matches any accessor.
+  - Allowed `modifiers`: `abstract`, `private`, `protected`, `public`, `requiresQuotes`, `static`.
+  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
+- `enumMember` - matches any enum member.
+  - Allowed `modifiers`: `requiresQuotes`.
+  - Allowed `types`: none.
+- `class` - matches any class declaration.
+  - Allowed `modifiers`: `abstract`, `exported`, `unused`.
+  - Allowed `types`: none.
+- `interface` - matches any interface declaration.
+  - Allowed `modifiers`: `exported`, `unused`.
+  - Allowed `types`: none.
+- `typeAlias` - matches any type alias declaration.
+  - Allowed `modifiers`: `exported`, `unused`.
+  - Allowed `types`: none.
+- `enum` - matches any enum declaration.
+  - Allowed `modifiers`: `exported`, `unused`.
+  - Allowed `types`: none.
+- `typeParameter` - matches any generic type parameter declaration.
+  - Allowed `modifiers`: `unused`.
+  - Allowed `types`: none.
 
 **Group Selectors**
 
 Group Selectors are provided for convenience, and essentially bundle up sets of individual selectors.
 
-* `default` - matches everything.
-  * Allowed `modifiers`: all modifiers.
-  * Allowed `types`: none.
-* `variableLike` - matches the same as `variable`, `function` and `parameter`.
-  * Allowed `modifiers`: `unused`.
-  * Allowed `types`: none.
-* `memberLike` - matches the same as `property`, `parameterProperty`, `method`, `accessor`, `enumMember`.
-  * Allowed `modifiers`: `private`, `protected`, `public`, `static`, `readonly`, `abstract`, `requiresQuotes`.
-  * Allowed `types`: none.
-* `typeLike` - matches the same as `class`, `interface`, `typeAlias`, `enum`, `typeParameter`.
-  * Allowed `modifiers`: `abstract`, `unused`.
-  * Allowed `types`: none.
-* `property` - matches the same as `classProperty`, `objectLiteralProperty`, `typeProperty`.
-  * Allowed `modifiers`: `private`, `protected`, `public`, `static`, `readonly`, `abstract`, `requiresQuotes`.
-  * Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
-* `method` - matches the same as `classMethod`, `objectLiteralMethod`, `typeMethod`.
-  * Allowed `modifiers`: `private`, `protected`, `public`, `static`, `readonly`, `abstract`, `requiresQuotes`.
-  * Allowed `types`: none.
+- `default` - matches everything.
+  - Allowed `modifiers`: all modifiers.
+  - Allowed `types`: none.
+- `variableLike` - matches the same as `variable`, `function` and `parameter`.
+  - Allowed `modifiers`: `unused`.
+  - Allowed `types`: none.
+- `memberLike` - matches the same as `property`, `parameterProperty`, `method`, `accessor`, `enumMember`.
+  - Allowed `modifiers`: `private`, `protected`, `public`, `static`, `readonly`, `abstract`, `requiresQuotes`.
+  - Allowed `types`: none.
+- `typeLike` - matches the same as `class`, `interface`, `typeAlias`, `enum`, `typeParameter`.
+  - Allowed `modifiers`: `abstract`, `unused`.
+  - Allowed `types`: none.
+- `property` - matches the same as `classProperty`, `objectLiteralProperty`, `typeProperty`.
+  - Allowed `modifiers`: `private`, `protected`, `public`, `static`, `readonly`, `abstract`, `requiresQuotes`.
+  - Allowed `types`: `boolean`, `string`, `number`, `function`, `array`.
+- `method` - matches the same as `classMethod`, `objectLiteralMethod`, `typeMethod`.
+  - Allowed `modifiers`: `private`, `protected`, `public`, `static`, `readonly`, `abstract`, `requiresQuotes`.
+  - Allowed `types`: none.
 
 ## FAQ
 
@@ -302,19 +304,19 @@ For example, if you provide the following config:
 
 ```ts
 [
-  /* 1 */ { selector: 'default', format: ['camelCase'] },
-  /* 2 */ { selector: 'variable', format: ['snake_case'] },
-  /* 3 */ { selector: 'variable', types: ['boolean'], format: ['UPPER_CASE'] },
-  /* 4 */ { selector: 'variableLike', format: ['PascalCase'] },
+  /* 1 */ { selector: "default", format: ["camelCase"] },
+  /* 2 */ { selector: "variable", format: ["snake_case"] },
+  /* 3 */ { selector: "variable", types: ["boolean"], format: ["UPPER_CASE"] },
+  /* 4 */ { selector: "variableLike", format: ["PascalCase"] },
 ];
 ```
 
-Then for the code `const x = 1`, the rule will validate the selectors in the following order: `3`, `2`, `4`, `1`. To clearly spell it out:
+Then for the code ` const x = 1`, the rule will validate the selectors in the following order: `3`, `2`, `4`, `1`. To clearly spell it out:
 
-* (3) is tested first because it has `types` and is an individual selector.
-* (2) is tested next because it is an individual selector.
-* (4) is tested next as it is a grouped selector.
-* (1) is tested last as it is the base default selector.
+- (3) is tested first because it has `types` and is an individual selector.
+- (2) is tested next because it is an individual selector.
+- (4) is tested next as it is a grouped selector.
+- (1) is tested last as it is the base default selector.
 
 Its worth noting that whilst this order is applied, all selectors may not run on a name. This is explained in ["How does the rule evaluate a name's format?"](../../../website/website/typescript/typescript-rules/broken-reference/)
 
@@ -364,7 +366,7 @@ Name: `_IMyInterface` Selector:
    1. for each format...
       1. `format = 'UPPER_CASE'`
          1. check format → fail.
-            * Important to note that if you supply multiple formats - the name only needs to match _one_ of them!
+            - Important to note that if you supply multiple formats - the name only needs to match _one_ of them!
       2. `format = 'StrictPascalCase'`
          1. check format → success.
 8. _**success**_
@@ -468,7 +470,7 @@ To help with matching, members that cannot specify an accessibility will always 
 }
 ```
 
-### Enforce that all variables are either in camelCase or UPPER\_CASE
+### Enforce that all variables are either in camelCase or UPPER_CASE
 
 ```json
 {
@@ -482,7 +484,9 @@ To help with matching, members that cannot specify an accessibility will always 
 }
 ```
 
-### Enforce that all const variables are in UPPER\_CASE
+### Enforce that all
+
+const variables are in UPPER_CASE
 
 ```json
 {
@@ -490,7 +494,8 @@ To help with matching, members that cannot specify an accessibility will always 
     "error",
     {
       "selector": "variable",
-      "modifiers": ["const"],
+      "modifiers": ["
+const"],
       "format": ["UPPER_CASE"]
     }
   ]
@@ -589,7 +594,8 @@ If you have a small and known list of exceptions, you can use the `filter` optio
       "selector": "property",
       "format": ["strictCamelCase"],
       "filter": {
-        // you can expand this regex to add more allowed names
+
+// you can expand this regex to add more allowed names
         "regex": "^(Property-Name-One|Property-Name-Two)$",
         "match": false
       }
@@ -608,7 +614,8 @@ You can use the `filter` option to ignore names with specific characters:
       "selector": "property",
       "format": ["strictCamelCase"],
       "filter": {
-        // you can expand this regex as you find more cases that require quoting that you want to allow
+
+// you can expand this regex as you find more cases that require quoting that you want to allow
         "regex": "[- ]",
         "match": false
       }
@@ -617,7 +624,8 @@ You can use the `filter` option to ignore names with specific characters:
 }
 ```
 
-Note that there is no way to ignore any name that is quoted - only names that are required to be quoted. This is intentional - adding quotes around a name is not an escape hatch for proper naming. If you want an escape hatch for a specific name - you should can use an [`eslint-disable` comment](https://eslint.org/docs/user-guide/configuring#disabling-rules-with-inline-comments).
+Note that there is no way to ignore any name that is quoted - only names that are required to be quoted. This is intentional - adding quotes around a name is not an escape hatch for proper naming. If you want an escape hatch for a specific name - you should can use an [`eslint-disable` comment](https:
+//eslint.org/docs/user-guide/configuring#disabling-rules-with-inline-comments).
 
 ### Ignore destructured names
 

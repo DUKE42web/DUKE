@@ -4,19 +4,25 @@ Deleting dynamically computed keys can be dangerous and in some cases not well o
 
 ## Rule Details
 
-Using the `delete` operator on keys that aren't runtime constants could be a sign that you're using the wrong data structures. Using `Object`s with added and removed keys can cause occasional edge case bugs, such as if a key is named `"hasOwnProperty"`. Consider using a `Map` or `Set` if you’re storing collections of objects.
+Using the `delete` operator on keys that aren't runtime
+constants could be a sign that you're using the wrong data structures. Using `Object`s with added and removed keys can cause occasional edge case bugs, such as if a key is named `"hasOwnProperty"`. Consider using a `Map` or `Set` if you’re storing collections of objects.
 
 Examples of **correct** code with this rule:
 
 ```ts
+
 const container: { [i: string]: number } = {
   /* ... */
 };
 
-// Constant runtime lookups by string index
+
+//
+constant runtime lookups by string index
 delete container.aaa;
 
-// Constants that must be accessed by []
+
+//
+constants that must be accessed by []
 delete container[7];
 delete container['-Infinity'];
 ```
@@ -24,11 +30,15 @@ delete container['-Infinity'];
 Examples of **incorrect** code with this rule:
 
 ```ts
-// Can be replaced with the constant equivalents, such as container.aaa
+
+// Can be replaced with the
+constant equivalents, such as container.aaa
 delete container['aaa'];
 delete container['Infinity'];
 
+
 // Dynamic, difficult-to-reason-about lookups
+
 const name = 'name';
 delete container[name];
 delete container[name.toUpperCase()];
@@ -42,4 +52,5 @@ Do not consider this rule as performance advice before profiling your code's bot
 
 ## Related to
 
-* TSLint: [no-dynamic-delete](https://palantir.github.io/tslint/rules/no-dynamic-delete)
+- TSLint: [no-dynamic-delete](https:
+  //palantir.github.io/tslint/rules/no-dynamic-delete)

@@ -20,7 +20,7 @@ var fn = function () {
 };
 
 // Should indicate that a string is returned
-var arrowFn = () => 'test';
+var arrowFn = () => "test";
 
 class Test {
   // Should indicate that no value is returned (void)
@@ -44,7 +44,7 @@ var fn = function (): number {
 };
 
 // A return value of type string
-var arrowFn = (): string => 'test';
+var arrowFn = (): string => "test";
 
 class Test {
   // No return value should be expected (void)
@@ -60,40 +60,52 @@ The rule accepts an options object with the following properties:
 
 ```ts
 type Options = {
-  // if true, only functions which are part of a declaration will be checked
+
+// if true, only functions which are part of a declaration will be checked
   allowExpressions?: boolean;
-  // if true, type annotations are also allowed on the variable of a function expression rather than on the function directly
+
+// if true, type annotations are also allowed on the variable of a function expression rather than on the function directly
   allowTypedFunctionExpressions?: boolean;
-  // if true, functions immediately returning another function expression will not be checked
+
+// if true, functions immediately returning another function expression will not be checked
   allowHigherOrderFunctions?: boolean;
-  // if true, arrow functions immediately returning a `as const` value will not be checked
-  allowDirectConstAssertionInArrowFunctions?: boolean;
-  // if true, concise arrow functions that start with the void keyword will not be checked
+
+// if true, arrow functions immediately returning a `as
+const` value will not be checked
+  allowDirect
+constAssertionInArrowFunctions?: boolean;
+
+// if true, concise arrow functions that start with the void keyword will not be checked
   allowConciseArrowFunctionExpressionsStartingWithVoid?: boolean;
 };
+
 
 const defaults = {
   allowExpressions: false,
   allowTypedFunctionExpressions: true,
   allowHigherOrderFunctions: true,
-  allowDirectConstAssertionInArrowFunctions: true,
+  allowDirect
+constAssertionInArrowFunctions: true,
   allowConciseArrowFunctionExpressionsStartingWithVoid: false,
 };
 ```
 
 ### Configuring in a mixed JS/TS codebase
 
-If you are working on a codebase within which you lint non-TypeScript code (i.e. `.js`/`.jsx`), you should ensure that you should use [ESLint `overrides`](https://eslint.org/docs/user-guide/configuring#disabling-rules-only-for-a-group-of-files) to only enable the rule on `.ts`/`.tsx` files. If you don't, then you will get unfixable lint errors reported within `.js`/`.jsx` files.
+If you are working on a codebase within which you lint non-TypeScript code (i.e. `.js`/`.jsx`), you should ensure that you should use [ESLint `overrides`](https:
+//eslint.org/docs/user-guide/configuring#disabling-rules-only-for-a-group-of-files) to only enable the rule on `.ts`/`.tsx` files. If you don't, then you will get unfixable lint errors reported within `.js`/`.jsx` files.
 
 ```
 {
   "rules": {
-    // disable the rule for all files
+
+// disable the rule for all files
     "@typescript-eslint/explicit-function-return-type": "off"
   },
   "overrides": [
     {
-      // enable the rule specifically for TypeScript files
+
+// enable the rule specifically for TypeScript files
       "files": ["*.ts", "*.tsx"],
       "rules": {
         "@typescript-eslint/explicit-function-return-type": ["error"]
@@ -118,11 +130,11 @@ export default () => {};
 Examples of **correct** code for this rule with `{ allowExpressions: true }`:
 
 ```ts
-node.addEventListener('click', () => {});
+node.addEventListener("click", () => {});
 
-node.addEventListener('click', function () {});
+node.addEventListener("click", function () {});
 
-const foo = arr.map(i => i * i);
+const foo = arr.map((i) => i * i);
 ```
 
 ### `allowTypedFunctionExpressions`
@@ -130,10 +142,10 @@ const foo = arr.map(i => i * i);
 Examples of **incorrect** code for this rule with `{ allowTypedFunctionExpressions: true }`:
 
 ```ts
-let arrowFn = () => 'test';
+let arrowFn = () => "test";
 
 let funcExpr = function () {
-  return 'test';
+  return "test";
 };
 
 let objectProp = {
@@ -201,19 +213,23 @@ function fn() {
 }
 ```
 
-### `allowDirectConstAssertionInArrowFunctions`
+### `allowDirect
 
-Examples of **incorrect** code for this rule with `{ allowDirectConstAssertionInArrowFunctions: true }`:
+constAssertionInArrowFunctions`
+
+Examples of **incorrect** code for this rule with `{ allowDirect constAssertionInArrowFunctions: true }`:
 
 ```ts
-const func = (value: number) => ({ type: 'X', value } as any);
-const func = (value: number) => ({ type: 'X', value } as Action);
+const func = (value: number) => ({ type: "X", value } as any);
+
+const func = (value: number) => ({ type: "X", value } as Action);
 ```
 
-Examples of **correct** code for this rule with `{ allowDirectConstAssertionInArrowFunctions: true }`:
+Examples of **correct** code for this rule with `{ allowDirect constAssertionInArrowFunctions: true }`:
 
 ```ts
-const func = (value: number) => ({ foo: 'bar', value } as const);
+const func = (value: number) => ({ foo: "bar", value } as const);
+
 const func = () => x as const;
 ```
 
@@ -241,4 +257,5 @@ If you don't wish to prevent calling code from using function return values in u
 
 ## Further Reading
 
-* TypeScript [Functions](https://www.typescriptlang.org/docs/handbook/functions.html#function-types)
+- TypeScript [Functions](https:
+  //www.typescriptlang.org/docs/handbook/functions.html#function-types)

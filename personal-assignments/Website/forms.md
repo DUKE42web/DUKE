@@ -4,7 +4,8 @@ Dynamically generating forms with React and Sitecore JSS
 
 ## Creating the FormField
 
-1. Navigate to page http://local.duke-energy.com:3000/home/products/outdoor-lighting/contact
+1. Navigate to page http:
+   //local.duke-energy.com:3000/home/products/outdoor-lighting/contact
    - This page calls the `<SingleStepForm />` component in the layout json from Sitecore which have fields that look like this
 
 ```js
@@ -272,7 +273,8 @@ Dynamically generating forms with React and Sitecore JSS
 
 
 ```js
-    const createdFields = useMemo(() => createFormInit(formModel, false), []);
+
+const createdFields = useMemo(() => createFormInit(formModel, false), []);
 ````
 
 ```
@@ -283,7 +285,8 @@ Dynamically generating forms with React and Sitecore JSS
 5\. `createFormInit()` is a 'factory' for both `<SingleStepForm />` and `<MultiStepForm />`. We will focus on what happens if this is called from `<SingleStepForm />`.
 
 ````typescript
-    const createFormInit: {
+
+const createFormInit: {
       (arr: Array<ParsedFormModel>, multi: true): CFReturnType[][];
       (arr: Array<ParsedFormModel>, multi: false): CFReturnType[];
     } = (arr: Array<ParsedFormModel>, multi: boolean): any => {
@@ -297,12 +300,16 @@ Dynamically generating forms with React and Sitecore JSS
 
 
 ```js
-    const parseFields = (arr: Array < ParsedFormModel > ) => {
-        const items = arr.reduce((acc: Array < CFReturnType | null > , curr) => {
-            const formField = createForm(curr);
+
+const parseFields = (arr: Array < ParsedFormModel > ) => {
+
+const items = arr.reduce((acc: Array < CFReturnType | null > , curr) => {
+
+const formField = createForm(curr);
             return [...acc, formField];
         }, []);
-        // filter out any null values due to early returns from hidden fields
+
+// filter out any null values due to early returns from hidden fields
         return items.filter(Boolean) as Array < CFReturnType > ;
     };
 ````
@@ -322,6 +329,7 @@ const inputMap: CFMappingType["inputMap"] = {
   captcha: "recaptcha",
   checkbox: "checkbox",
   checkbox_list: "checkboxGroup",
+
   // ...
 };
 ```
@@ -349,6 +357,7 @@ const dataMap: CFMappingType["dataMap"] = {
   radio: {
     file: "RadioGroup",
   },
+
   // ...
 };
 ```
@@ -370,6 +379,7 @@ const regexMap: CFMappingType["regexMap"] = {
     message: "Can only contain numbers",
     value: /^(\d)\d*(?!\1)\d+$/,
   },
+
   // ...
 };
 ```
@@ -388,6 +398,7 @@ const regexMap: CFMappingType["regexMap"] = {
 
 ```js
 const { file, props } = dataMap[inputType];
+
 const Component = loadable(() => import(`src/components/Form/${file}`));
 ```
 
@@ -414,7 +425,8 @@ return {
 ```
 
 ````typescript
-    const getData: GetDataProps = ({ fields, title }) => ({
+
+const getData: GetDataProps = ({ fields, title }) => ({
       customValidationErrorMsg: fields?.CustomValidationErrorMsg?.value || 'field is required',
       items: parseItems(fields?.InputItems?.value),
       label: fields?.Label?.value || '',
@@ -435,15 +447,20 @@ return {
     - validations: Will either be null or an object that contains if it should show on the confirmation screen and the validationPattern if any
 
 ```typescript
+
 const getValidations: GetValidationProps = (file, fields, regex = '') => {
-  const skipValidation = ['Heading', 'Recaptcha', 'Tabs'];
+
+const skipValidation = ['Heading', 'Recaptcha', 'Tabs'];
   let pattern;
 
   if (file && skipValidation.includes(file)) return null;
 
-  // Validations will usually come through as a string value from sitecore
-  // but can also come through as an array of objects, these have the type 'select'
-  // We first need to parse through this array and grab the value of the selected validation pattern
+
+// Validations will usually come through as a string value from sitecore
+
+// but can also come through as an array of objects, these have the type 'select'
+
+// We first need to parse through this array and grab the value of the selected validation pattern
   if (fields?.ValidationPattern?.type === 'select') {
     pattern = getSelectedValue(fields.ValidationPattern.value);
   } else {
@@ -453,8 +470,10 @@ const getValidations: GetValidationProps = (file, fields, regex = '') => {
   return {
     shouldConfirm: fields?.AppearsOnFormConfirmation?.value,
     validationPattern:
-      // 1. by regex in mapping props (phone, ssn)
-      // 2. by named regex pattern coming from Sitecore
+
+// 1. by regex in mapping props (phone, ssn)
+
+// 2. by named regex pattern coming from Sitecore
       regexMap[regex] || regexMap[pattern],
   };
 };
@@ -524,7 +543,9 @@ const FormInput = ({
   validations,
 }: FormInputProps) => {
   const { mask, type } = props || {};
+
   const { label = "", maxLength, required, toolTipText } = data;
+
   const propData = {
     error: {
       hasError: Boolean(errors[name]?.message),
@@ -564,8 +585,11 @@ When this array is finally returned back to `<MultiStepForm>` , the form stepper
 
 ```typescript
 const formModel: Array<ParsedFormModel> = JSON.parse(modelJson.value);
+
 const createdFields = useMemo(() => createFormInit(formModel, true), []);
+
 const createdFieldsWithoutTabs = [...createdFields.slice(1), []];
+
 const createdFieldsOnlyTabFields = [
   ...createdFields[0][0].data.tabs,
   "Confirmation",

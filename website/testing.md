@@ -4,8 +4,11 @@ description: In Jest
 
 # 🧪 Testing
 
-{% embed url="https://www.youtube.com/watch?v=r9HdJ8P6GQI" %}
-'[https://www.youtube.com/watch?v=r9HdJ8P6GQI](https://www.youtube.com/watch?v=r9HdJ8P6GQI)'
+{% embed url="https:
+//www.youtube.com/watch?v=r9HdJ8P6GQI" %}
+'[https:
+//www.youtube.com/watch?v=r9HdJ8P6GQI](https:
+//www.youtube.com/watch?v=r9HdJ8P6GQI)'
 {% endembed %}
 
 <details>
@@ -44,17 +47,18 @@ Here's an example:
 
 Consider this function which we use in our app - it'll take `name` and `age` as an input and return some text that contains these two parameters.
 
-```
+```typescript
 const generateText = (name, age) => {
-  return `${name} (${age} years old)`
-}
+  return `${name} (${age} years old)`;
+};
 ```
 
 Here's a fitting unit test:
 
 ```
 test('should output name and age', () => {
-  const text = generateText('Max', 29)
+
+const text = generateText('Max', 29)
   expect(text).toBe('Max (29 years old)')
 })
 ```
@@ -63,10 +67,10 @@ This test will check whether the `generateText` function does return the expecte
 
 If we now change the `generateText` function, let's say like this:
 
-```
+```typescript
 const generateText = (name, age) => {
-  return `${age} (${age} years old)`
-}
+  return `${age} (${age} years old)`;
+};
 ```
 
 Then our test will fail. Because this function would return `'29 (29 years old)'` instead of `'Max (29 years old)'` .
@@ -98,7 +102,8 @@ Here's a fitting integration test:
 
 ```
 test('should generate a valid text output', () => {
-  const text = checkAndGenerate('Max', 29)
+
+const text = checkAndGenerate('Max', 29)
   expect(text).toBe('Max (29 years old)')
 })
 ```
@@ -138,17 +143,20 @@ First of all, let me show you what a test would look like:
 
 ```
 test('should create an element with text and correct class', async () => {
-  const browser = await puppeteer.launch({
+
+const browser = await puppeteer.launch({
     headless: true,
   })
-  const page = await browser.newPage()
+
+const page = await browser.newPage()
   await page.goto('localhost:3000/your-page')
   await page.click('input#name')
   await page.type('input#name', 'Anna')
   await page.click('input#age')
   await page.type('input#age', '28')
   await page.click('#btnAddUser')
-  const finalText = await page.$eval('.user-item', el => el.textContent)
+
+const finalText = await page.$eval('.user-item', el => el.textContent)
   expect(finalText).toBe('Anna (28 years old)')
 }, 10000)
 ```
@@ -169,21 +177,27 @@ In short, we need three kinds of tools:
 - An assertion library (`expect()`) that allows you to define your expectations (and check them)
 - An e2e testing tool, often you use a (headless) browser for this
 
-The test runner executes your tests and summarizes the results in the terminal. [Mocha](https://mochajs.org) is very popular but [Jest](https://jestjs.io) really is the new star in the JavaScript testing scene.
+The test runner executes your tests and summarizes the results in the terminal. [Mocha](https:
+//mochajs.org) is very popular but [Jest](https:
+//jestjs.io) really is the new star in the JavaScript testing scene.
 
 The code above and the project shown in the video also use Jest. It's easy to use, well-documented and very powerful.
 
-You can install Jest into your project (assuming you're using [npm](https://npmjs.com) for managing it) by running:
+You can install Jest into your project (assuming you're using [npm](https:
+//npmjs.com) for managing it) by running:
 
 ```
 npm install --save-dev jest
 ```
 
-You also need to be able to define your `expect` ations and check them. Assertion libraries like [Chai](https://www.chaijs.com) help you with that.
+You also need to be able to define your `expect` ations and check them. Assertion libraries like [Chai](https:
+//www.chaijs.com) help you with that.
 
 But here, we also can use Jest! And that's the cool thing about it. Besides being powerful and all that, it's also not just a test runner but test runner + assertion library combined. Another reason for its popularity.
 
-For e2e-testing, [Selenium](https://www.seleniumhq.org) is pretty popular but [Puppeteer](https://pptr.dev) is even more popular.
+For e2e-testing, [Selenium](https:
+//www.seleniumhq.org) is pretty popular but [Puppeteer](https:
+//pptr.dev) is even more popular.
 
 Puppeteer is a headless version of the Google Chrome browser. And it's even developed by the Google Chrome team. It's meant to be used as a headless version of Chrome (though you can even run it with an UI attached) and it's great for automated testing.
 
@@ -203,14 +217,15 @@ With Jest, you can define a new test with the `test` function. It's globally ava
 
 Example:
 
-```
+```typescript
 // inside util.test.js - which should test functions defined in util.js
-const { generateText } = require('./util')
 
-test('should output name and age', () => {
-  const text = generateText('Max', 29)
-  expect(text).toBe('Max (29 years old)')
-})
+const { generateText } = require("./util");
+
+test("should output name and age", () => {
+  const text = generateText("Max", 29);
+  expect(text).toBe("Max (29 years old)");
+});
 ```
 
 Here, we first of all import the functions we want to test. Jest supports these Node-style imports, it does **not** support ES module imports by default.
@@ -229,7 +244,8 @@ The "expectable" object which you get then has a bunch of built-in methods that 
 
 - `toBeCalled` => Was a function executed during the test?
 - `not.toBe(5)` => Is the value **not** 5?
-- And much more, all to be found [here](https://jestjs.io/docs/en/expect).
+- And much more, all to be found [here](https:
+  //jestjs.io/docs/en/expect).
 
 You can then execute your tests by running Jest, e.g. by adding a script to your `package.json` file:
 
@@ -255,23 +271,25 @@ As you saw earlier in the article, there also is no syntactical difference betwe
 
 For e2e-tests, the general approach of using `test` and `expect` also doesn't change. But we have some additional code in our tests since we use external tools (like Puppeteer) to control the browser:
 
-```
-const puppeteer = require('puppeteer')
+```typescript
+const puppeteer = require("puppeteer");
 
-test('should create an element with text and correct class', async () => {
+test("should create an element with text and correct class", async () => {
   const browser = await puppeteer.launch({
     headless: true,
-  })
-  const page = await browser.newPage()
-  await page.goto('localhost:4000/your-page')
-  await page.click('input#name')
-  await page.type('input#name', 'Anna')
-  await page.click('input#age')
-  await page.type('input#age', '28')
-  await page.click('#btnAddUser')
-  const finalText = await page.$eval('.user-item', el => el.textContent)
-  expect(finalText).toBe('Anna (28 years old)')
-}, 10000)
+  });
+
+  const page = await browser.newPage();
+  await page.goto("localhost:4000/your-page");
+  await page.click("input#name");
+  await page.type("input#name", "Anna");
+  await page.click("input#age");
+  await page.type("input#age", "28");
+  await page.click("#btnAddUser");
+
+  const finalText = await page.$eval(".user-item", (el) => el.textContent);
+  expect(finalText).toBe("Anna (28 years old)");
+}, 10000);
 ```
 
 We launch a browser (that can be controlled via the test) with `puppeteer.launch` . This browser object can then be used to create new pages ( `newPage()` ), navigate to different URLs ( `goto()` ) and interact with the page (e.g. `click()` ).
@@ -282,8 +300,10 @@ Now that you know what testing is about, how it works, which tools you need and 
 
 There are more complex testing scenarios (e.g. async code, Http requests) that you'll be facing in your projects.
 
-The [official docs](https://jestjs.io/docs/en/getting-started) and future content here on Academind should be helpful for mastering testing though.
+The [official docs](https:
+//jestjs.io/docs/en/getting-started) and future content here on Academind should be helpful for mastering testing though.
 
 </details>
 
-!\[]\(https://res.cloudinary.com/academind-gmbh/image/upload/f\_auto, q_auto:eco/dpr_2.0, w_400, c_limit, g_center/v1/academind.com/content/tutorials/javascript-testing-introduction/javascript-different-kinds-of-tests)
+!\[]\(https:
+//res.cloudinary.com/academind-gmbh/image/upload/f_auto, q_auto:eco/dpr_2.0, w_400, c_limit, g_center/v1/academind.com/content/tutorials/javascript-testing-introduction/javascript-different-kinds-of-tests)

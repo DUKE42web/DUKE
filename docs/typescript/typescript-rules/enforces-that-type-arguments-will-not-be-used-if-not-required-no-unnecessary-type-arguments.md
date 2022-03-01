@@ -49,4 +49,5 @@ class Impl implements I<string> {}
 
 ## Related to
 
-* TSLint: [use-default-type-parameter](https://palantir.github.io/tslint/rules/use-default-type-parameter)
+- TSLint: [use-default-type-parameter](https:
+  //palantir.github.io/tslint/rules/use-default-type-parameter)

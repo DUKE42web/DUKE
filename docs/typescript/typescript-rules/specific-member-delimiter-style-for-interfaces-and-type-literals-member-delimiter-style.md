@@ -2,46 +2,46 @@
 
 Enforces a consistent member delimiter style in interfaces and type literals. There are three member delimiter styles primarily used in TypeScript:
 
-* Semicolon style (default, preferred in TypeScript).
+- Semicolon style (default, preferred in TypeScript).
 
 ```ts
 interface Foo {
-    name: string;
-    greet(): void;
+  name: string;
+  greet(): void;
 }
 
 type Bar = {
-    name: string;
-    greet(): void;
-}
+  name: string;
+  greet(): void;
+};
 ```
 
-* Comma style (JSON style).
+- Comma style (JSON style).
 
 ```ts
 interface Foo {
-    name: string,
-    greet(): void,
+  name: string;
+  greet(): void;
 }
 
 type Bar = {
-    name: string,
-    greet(): void,
-}
+  name: string;
+  greet(): void;
+};
 ```
 
-* Line break (none) style.
+- Line break (none) style.
 
 ```ts
 interface Foo {
-    name: string
-    greet(): void
+  name: string;
+  greet(): void;
 }
 
 type Bar = {
-    name: string
-    greet(): void
-}
+  name: string;
+  greet(): void;
+};
 ```
 
 The rule also enforces the presence (or absence) of the delimiter in the last member of the interface and/or type literal. Finally, this rule can enforce separate delimiter syntax for single line declarations.
@@ -55,11 +55,11 @@ This rule aims to standardize the way interface and type literal members are del
 ```ts
 interface BaseConfig {
   multiline?: {
-    delimiter?: 'none' | 'semi' | 'comma';
+    delimiter?: "none" | "semi" | "comma";
     requireLast?: boolean;
   };
   singleline?: {
-    delimiter?: 'semi' | 'comma';
+    delimiter?: "semi" | "comma";
     requireLast?: boolean;
   };
 }
@@ -68,7 +68,7 @@ type Config = BaseConfig & {
     interface?: BaseConfig;
     typeLiteral?: BaseConfig;
   };
-  multilineDetection?: 'brackets' | 'last-member';
+  multilineDetection?: "brackets" | "last-member";
 };
 ```
 
@@ -92,24 +92,24 @@ Default config:
 
 `multilineDetection` determines what counts as multiline
 
-* `"brackets"` (default) any newlines in the type or interface make it multiline.
-* `"last-member"` if the last member of the interface is on the same line as the last bracket, it is counted as a single line.
+- `"brackets"` (default) any newlines in the type or interface make it multiline.
+- `"last-member"` if the last member of the interface is on the same line as the last bracket, it is counted as a single line.
 
 ### `delimiter`
 
 Accepts three values (or two for `singleline`):
 
-* `comma` - each member should be delimited with a comma (`,`).
-* `semi` - each member should be delimited with a semicolon (`;`).
-* `none` - each member should be delimited with nothing.
-  * NOTE - this is not an option for `singleline` because having no delimiter between members on a single line is a syntax error in TS.
+- `comma` - each member should be delimited with a comma (`,`).
+- `semi` - each member should be delimited with a semicolon (`;`).
+- `none` - each member should be delimited with nothing.
+  - NOTE - this is not an option for `singleline` because having no delimiter between members on a single line is a syntax error in TS.
 
 ### `requireLast`
 
 Determines whether or not the last member in the `interface`/`type` should have a delimiter:
 
-* `true` - the last member _**must**_ have a delimiter.
-* `false` - the last member _**must not**_ have a delimiter.
+- `true` - the last member _**must**_ have a delimiter.
+- `false` - the last member _**must not**_ have a delimiter.
 
 ### `overrides`
 
@@ -145,47 +145,49 @@ Examples of **incorrect** code for this rule with the default config:
 ```ts
 // missing semicolon delimiter
 interface Foo {
-    name: string
-    greet(): string
+  name: string;
+  greet(): string;
 }
 
 // using incorrect delimiter
 interface Bar {
-    name: string,
-    greet(): string,
+  name: string;
+  greet(): string;
 }
 
 // missing last member delimiter
 interface Baz {
-    name: string;
-    greet(): string
+  name: string;
+  greet(): string;
 }
 
 // incorrect delimiter
-type FooBar = { name: string, greet(): string }
+type FooBar = { name: string; greet(): string };
 
 // last member should not have delimiter
-type FooBar = { name: string; greet(): string; }
+type FooBar = { name: string; greet(): string };
 ```
 
 Examples of **correct** code for this rule with the default config:
 
 ```ts
 interface Foo {
-    name: string;
-    greet(): string;
+  name: string;
+  greet(): string;
 }
 
-interface Foo { name: string }
+interface Foo {
+  name: string;
+}
 
 type Bar = {
-    name: string;
-    greet(): string;
-}
+  name: string;
+  greet(): string;
+};
 
-type Bar = { name: string }
+type Bar = { name: string };
 
-type FooBar = { name: string; greet(): string }
+type FooBar = { name: string; greet(): string };
 ```
 
 ## When Not To Use It

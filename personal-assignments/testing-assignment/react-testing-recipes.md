@@ -4,20 +4,32 @@ Common testing patterns for React components.
 
 > Note:
 >
-> This page assumes you're using [Jest](https://jestjs.io) as a test runner. If you use a different test runner, you may need to adjust the API, but the overall shape of the solution will likely be the same. Read more details on setting up a testing environment on the [Testing Environments](https://reactjs.org/docs/testing-environments.html) page.
+> This page assumes you're using [Jest](https:
+> //jestjs.io) as a test runner. If you use a different test runner, you may need to adjust the API, but the overall shape of the solution will likely be the same. Read more details on setting up a testing environment on the [Testing Environments](https:
+> //reactjs.org/docs/testing-environments.html) page.
 
 On this page, we will primarily use function components. However, these testing strategies don't depend on implementation details, and work just as well for class components too.
 
-- [Setup/Teardown](https://reactjs.org/docs/testing-recipes.html#setup--teardown)
-- [`act()`](https://reactjs.org/docs/testing-recipes.html#act)
-- [Rendering](https://reactjs.org/docs/testing-recipes.html#rendering)
-- [Data Fetching](https://reactjs.org/docs/testing-recipes.html#data-fetching)
-- [Mocking Modules](https://reactjs.org/docs/testing-recipes.html#mocking-modules)
-- [Events](https://reactjs.org/docs/testing-recipes.html#events)
-- [Timers](https://reactjs.org/docs/testing-recipes.html#timers)
-- [Snapshot Testing](https://reactjs.org/docs/testing-recipes.html#snapshot-testing)
-- [Multiple Renderers](https://reactjs.org/docs/testing-recipes.html#multiple-renderers)
-- [Something Missing?](https://reactjs.org/docs/testing-recipes.html#something-missing)
+- [Setup/Teardown](https:
+  //reactjs.org/docs/testing-recipes.html#setup--teardown)
+- [`act()`](https:
+  //reactjs.org/docs/testing-recipes.html#act)
+- [Rendering](https:
+  //reactjs.org/docs/testing-recipes.html#rendering)
+- [Data Fetching](https:
+  //reactjs.org/docs/testing-recipes.html#data-fetching)
+- [Mocking Modules](https:
+  //reactjs.org/docs/testing-recipes.html#mocking-modules)
+- [Events](https:
+  //reactjs.org/docs/testing-recipes.html#events)
+- [Timers](https:
+  //reactjs.org/docs/testing-recipes.html#timers)
+- [Snapshot Testing](https:
+  //reactjs.org/docs/testing-recipes.html#snapshot-testing)
+- [Multiple Renderers](https:
+  //reactjs.org/docs/testing-recipes.html#multiple-renderers)
+- [Something Missing?](https:
+  //reactjs.org/docs/testing-recipes.html#something-missing)
 
 ---
 
@@ -27,18 +39,16 @@ For each test, we usually want to render our React tree to a DOM element that's 
 
 A common way to do it is to use a pair of `beforeEach` and `afterEach` blocks so that they'll always run and isolate the effects of a test to itself:
 
-```
+```typescript
 import { unmountComponentAtNode } from "react-dom";
 
 let container = null;
 beforeEach(() => {
-
   container = document.createElement("div");
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-
   unmountComponentAtNode(container);
   container.remove();
   container = null;
@@ -51,15 +61,18 @@ You may use a different pattern, but keep in mind that we want to execute the cl
 
 #### `act()`
 
-When writing UI tests, tasks like rendering, user events, or data fetching can be considered as "units" of interaction with a user interface. `react-dom/test-utils` provides a helper called [ `act()` ](https://reactjs.org/docs/test-utils.html#act) that makes sure all updates related to these "units" have been processed and applied to the DOM before you make any assertions:
+When writing UI tests, tasks like rendering, user events, or data fetching can be considered as "units" of interaction with a user interface. `react-dom/test-utils` provides a helper called [ `act()` ](https:
+//reactjs.org/docs/test-utils.html#act) that makes sure all updates related to these "units" have been processed and applied to the DOM before you make any assertions:
 
 This helps make your tests run closer to what real users would experience when using your application. The rest of these examples use `act()` to make these guarantees.
 
-You might find using `act()` directly a bit too verbose. To avoid some of the boilerplate, you could use a library like [React Testing Library](https://testing-library.com/react), whose helpers are wrapped with `act()` .
+You might find using `act()` directly a bit too verbose. To avoid some of the boilerplate, you could use a library like [React Testing Library](https:
+//testing-library.com/react), whose helpers are wrapped with `act()` .
 
 > Note:
 >
-> The name `act` comes from the [Arrange-Act-Assert](http://wiki.c2.com/?ArrangeActAssert) pattern.
+> The name `act` comes from the [Arrange-Act-Assert](http:
+> //wiki.c2.com/?ArrangeActAssert) pattern.
 
 ---
 
@@ -67,8 +80,7 @@ You might find using `act()` directly a bit too verbose. To avoid some of the bo
 
 Commonly, you might want to test whether a component renders correctly for given props. Consider a simple component that renders a message based on a prop:
 
-```
-
+```typescript
 import React from "react";
 
 export default function Hello(props) {
@@ -82,8 +94,7 @@ export default function Hello(props) {
 
 We can write a test for this component:
 
-```
-
+```typescript
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
@@ -92,20 +103,21 @@ import Hello from "./hello";
 
 let container = null;
 beforeEach(() => {
-
   container = document.createElement("div");
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-
   unmountComponentAtNode(container);
   container.remove();
   container = null;
 });
 
 it("renders with or without a name", () => {
-  act(() => {    render(<Hello />, container);  });  expect(container.textContent).toBe("Hey, stranger");
+  act(() => {
+    render(<Hello />, container);
+  });
+  expect(container.textContent).toBe("Hey, stranger");
   act(() => {
     render(<Hello name="Jenny" />, container);
   });
@@ -122,7 +134,8 @@ it("renders with or without a name", () => {
 
 #### Data Fetching
 
-Instead of calling real APIs in all your tests, you can mock requests with dummy data. Mocking data fetching with "fake" data prevents flaky tests due to an unavailable backend, and makes them run faster. Note: you may still want to run a subset of tests using an ["end-to-end"](https://reactjs.org/docs/testing-environments.html#end-to-end-tests-aka-e2e-tests) framework that tells whether the whole app is working together.
+Instead of calling real APIs in all your tests, you can mock requests with dummy data. Mocking data fetching with "fake" data prevents flaky tests due to an unavailable backend, and makes them run faster. Note: you may still want to run a subset of tests using an ["end-to-end"](https:
+//reactjs.org/docs/testing-environments.html#end-to-end-tests-aka-e2e-tests) framework that tells whether the whole app is working together.
 
 ```js
 import React, { useState, useEffect } from "react";
@@ -156,8 +169,7 @@ export default function User(props) {
 
 We can write tests for it:
 
-```
-
+```typescript
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
@@ -165,20 +177,27 @@ import User from "./user";
 
 let container = null;
 beforeEach(() => {
-
   container = document.createElement("div");
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-
   unmountComponentAtNode(container);
   container.remove();
   container = null;
 });
 
 it("renders user data", async () => {
-  const fakeUser = {    name: "Joni Baez",    age: "32",    address: "123, Charming Avenue"  };  jest.spyOn(global, "fetch").mockImplementation(() =>    Promise.resolve({      json: () => Promise.resolve(fakeUser)    })  );
+  const fakeUser = {
+    name: "Joni Baez",
+    age: "32",
+    address: "123, Charming Avenue",
+  };
+  jest
+    .spyOn(global, "fetch")
+    .mockImplementation(() =>
+      Promise.resolve({ json: () => Promise.resolve(fakeUser) })
+    );
 
   await act(async () => {
     render(<User id="123" />, container);
@@ -188,7 +207,8 @@ it("renders user data", async () => {
   expect(container.querySelector("strong").textContent).toBe(fakeUser.age);
   expect(container.textContent).toContain(fakeUser.address);
 
-    global.fetch.mockRestore();});
+  global.fetch.mockRestore();
+});
 ```
 
 ---
@@ -199,8 +219,7 @@ Some modules might not work well inside a testing environment, or may not be as 
 
 Consider a `Contact` component that embeds a third-party `GoogleMap` component:
 
-```
-
+```typescript
 import React from "react";
 
 import { LoadScript, GoogleMap } from "react-google-maps";
@@ -235,7 +254,7 @@ export default function Contact(props) {
 
 If we don't want to load this component in our tests, we can mock out the dependency itself to a dummy component, and run our tests:
 
-```
+```typescript
 
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
@@ -260,13 +279,15 @@ afterEach(() => {
 });
 
 it("should render contact information", () => {
-  const center = { lat: 0, long: 0 };
+
+const center = { lat: 0, long: 0 };
   act(() => {
     render(
       <Contact
         name="Joni Baez"
         email="test@example.com"
-        site="http://test.com"
+        site="http:
+//test.com"
         center={center}
       />,
       container
@@ -279,7 +300,8 @@ it("should render contact information", () => {
 
   expect(
     container.querySelector('[data-testid="site"]').getAttribute("href")
-  ).toEqual("http://test.com");
+  ).toEqual("http:
+//test.com");
 
   expect(container.querySelector('[data-testid="map"]').textContent).toEqual(
     "0:0"
@@ -293,8 +315,7 @@ it("should render contact information", () => {
 
 We recommend dispatching real DOM events on DOM elements, and then asserting on the result. Consider a `Toggle` component:
 
-```
-
+```typescript
 import React, { useState } from "react";
 
 export default function Toggle(props) {
@@ -302,7 +323,7 @@ export default function Toggle(props) {
   return (
     <button
       onClick={() => {
-        setState(previousState => !previousState);
+        setState((previousState) => !previousState);
         props.onChange(!state);
       }}
       data-testid="toggle"
@@ -315,8 +336,7 @@ export default function Toggle(props) {
 
 We could write tests for it:
 
-```
-
+```typescript
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
@@ -325,11 +345,10 @@ import Toggle from "./toggle";
 
 let container = null;
 beforeEach(() => {
-
   container = document.createElement("div");
-  document.body.appendChild(container);});
+  document.body.appendChild(container);
+});
 afterEach(() => {
-
   unmountComponentAtNode(container);
   container.remove();
   container = null;
@@ -340,7 +359,6 @@ it("changes value when clicked", () => {
   act(() => {
     render(<Toggle onChange={onChange} />, container);
   });
-
 
   const button = document.querySelector("[data-testid=toggle]");
   expect(button.innerHTML).toBe("Turn on");
@@ -354,18 +372,21 @@ it("changes value when clicked", () => {
   act(() => {
     for (let i = 0; i < 5; i++) {
       button.dispatchEvent(new MouseEvent("click", { bubbles: true }));
-    }  });
+    }
+  });
 
   expect(onChange).toHaveBeenCalledTimes(6);
   expect(button.innerHTML).toBe("Turn on");
 });
 ```
 
-Different DOM events and their properties are described in [MDN](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent). Note that you need to pass `{ bubbles: true }` in each event you create for it to reach the React listener because React automatically delegates events to the root.
+Different DOM events and their properties are described in [MDN](https:
+//developer.mozilla.org/en-US/docs/Web/API/MouseEvent). Note that you need to pass `{ bubbles: true }` in each event you create for it to reach the React listener because React automatically delegates events to the root.
 
 > Note:
 >
-> React Testing Library offers a [more concise helper](https://testing-library.com/docs/dom-testing-library/api-events) for firing events.
+> React Testing Library offers a [more concise helper](https:
+> //testing-library.com/docs/dom-testing-library/api-events) for firing events.
 
 ---
 
@@ -373,8 +394,7 @@ Different DOM events and their properties are described in [MDN](https://develop
 
 Your code might use timer-based functions like `setTimeout` to schedule more work in the future. In this example, a multiple choice panel waits for a selection and advances, timing out if a selection isn't made in 5 seconds:
 
-```
-
+```typescript
 import React, { useEffect } from "react";
 
 export default function Card(props) {
@@ -387,7 +407,7 @@ export default function Card(props) {
     };
   }, [props.onSelect]);
 
-  return [1, 2, 3, 4].map(choice => (
+  return [1, 2, 3, 4].map((choice) => (
     <button
       key={choice}
       data-testid={choice}
@@ -399,7 +419,8 @@ export default function Card(props) {
 }
 ```
 
-We can write tests for this component by leveraging [Jest's timer mocks](https://jestjs.io/docs/en/timer-mocks), and testing the different states it can be in.
+We can write tests for this component by leveraging [Jest's timer mocks](https:
+//jestjs.io/docs/en/timer-mocks), and testing the different states it can be in.
 
 ```js
 import React from "react";
@@ -479,12 +500,13 @@ You can use fake timers only in some tests. Above, we enabled them by calling `j
 
 #### Snapshot Testing
 
-Frameworks like Jest also let you save "snapshots" of data with [ `toMatchSnapshot` / `toMatchInlineSnapshot` ](https://jestjs.io/docs/en/snapshot-testing). With these, we can "save" the rendered component output and ensure that a change to it has to be explicitly committed as a change to the snapshot.
+Frameworks like Jest also let you save "snapshots" of data with [ `toMatchSnapshot` / `toMatchInlineSnapshot` ](https:
+//jestjs.io/docs/en/snapshot-testing). With these, we can "save" the rendered component output and ensure that a change to it has to be explicitly committed as a change to the snapshot.
 
-In this example, we render a component and format the rendered HTML with the [ `pretty` ](https://www.npmjs.com/package/pretty) package, before saving it as an inline snapshot:
+In this example, we render a component and format the rendered HTML with the [ `pretty` ](https:
+//www.npmjs.com/package/pretty) package, before saving it as an inline snapshot:
 
-```
-
+```typescript
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
@@ -494,13 +516,11 @@ import Hello from "./hello";
 
 let container = null;
 beforeEach(() => {
-
   container = document.createElement("div");
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-
   unmountComponentAtNode(container);
   container.remove();
   container = null;
@@ -511,26 +531,23 @@ it("should render a greeting", () => {
     render(<Hello />, container);
   });
 
-  expect(    pretty(container.innerHTML)  ).toMatchInlineSnapshot();
+  expect(pretty(container.innerHTML)).toMatchInlineSnapshot();
   act(() => {
     render(<Hello name="Jenny" />, container);
   });
 
-  expect(
-    pretty(container.innerHTML)
-  ).toMatchInlineSnapshot();
+  expect(pretty(container.innerHTML)).toMatchInlineSnapshot();
 
   act(() => {
     render(<Hello name="Margaret" />, container);
   });
 
-  expect(
-    pretty(container.innerHTML)
-  ).toMatchInlineSnapshot();
+  expect(pretty(container.innerHTML)).toMatchInlineSnapshot();
 });
 ```
 
-It's typically better to make more specific assertions than to use snapshots. These kinds of tests include implementation details so they break easily, and teams can get desensitized to snapshot breakages. Selectively [mocking some child components](https://reactjs.org/docs/testing-recipes.html#mocking-modules) can help reduce the size of snapshots and keep them readable for the code review.
+It's typically better to make more specific assertions than to use snapshots. These kinds of tests include implementation details so they break easily, and teams can get desensitized to snapshot breakages. Selectively [mocking some child components](https:
+//reactjs.org/docs/testing-recipes.html#mocking-modules) can help reduce the size of snapshots and keep them readable for the code review.
 
 ---
 
@@ -538,7 +555,7 @@ It's typically better to make more specific assertions than to use snapshots. Th
 
 In rare cases, you may be running a test on a component that uses multiple renderers. For example, you may be running snapshot tests on a component with `react-test-renderer` , that internally uses `ReactDOM.render` inside a child component to render some content. In this scenario, you can wrap updates with `act()` s corresponding to their renderers.
 
-```
+```typescript
 import { act as domAct } from "react-dom/test-utils";
 import { act as testAct, create } from "react-test-renderer";
 

@@ -10,7 +10,8 @@
 
 JavaScript has had modules for a long time. However, they were implemented via libraries, not built into the language. ES6 is the first time that JavaScript has built-in modules.
 
-ES6 modules are stored in files. There is exactly one module per file and one file per module. You have two ways of exporting things from a module. [These two ways can be mixed](http://exploringjs.com/es6/ch_modules.html#sec_mixing-named-and-default-exports), but it is usually better to use them separately.
+ES6 modules are stored in files. There is exactly one module per file and one file per module. You have two ways of exporting things from a module. [These two ways can be mixed](http:
+//exploringjs.com/es6/ch_modules.html#sec_mixing-named-and-default-exports), but it is usually better to use them separately.
 
 **16.1.1 Multiple named exports**
 
@@ -75,14 +76,17 @@ This approach to modules avoids global variables, the only things that are globa
 
 It is impressive how well ES5 module systems work without explicit support from the language. The two most important (and unfortunately incompatible) standards are:
 
-- **CommonJS Modules:** The dominant implementation of this standard is [in Node.js](http://nodejs.org/api/modules.html) (Node.js modules have a few features that go beyond CommonJS). Characteristics:
+- **CommonJS Modules:** The dominant implementation of this standard is [in Node.js](http:
+  //nodejs.org/api/modules.html) (Node.js modules have a few features that go beyond CommonJS). Characteristics:
   - Compact syntax
   - Designed for synchronous loading and servers
-- **Asynchronous Module Definition (AMD):** The most popular implementation of this standard is [RequireJS](http://requirejs.org). Characteristics:
+- **Asynchronous Module Definition (AMD):** The most popular implementation of this standard is [RequireJS](http:
+  //requirejs.org). Characteristics:
   - Slightly more complicated syntax, enabling AMD to work without eval() (or a compilation step)
   - Designed for asynchronous loading and browsers
 
-The above is but a simplified explanation of ES5 modules. If you want more in-depth material, take a look at "[Writing Modular JavaScript With AMD, CommonJS & ES Harmony](http://addyosmani.com/writing-modular-js/)" by Addy Osmani.
+The above is but a simplified explanation of ES5 modules. If you want more in-depth material, take a look at "[Writing Modular JavaScript With AMD, CommonJS & ES Harmony](http:
+//addyosmani.com/writing-modular-js/)" by Addy Osmani.
 
 **16.2.2 ECMAScript 6 modules**
 
@@ -104,7 +108,8 @@ The ES6 module standard has two parts:
 
 #### 16.3 The basics of ES6 modules
 
-There are two kinds of exports: named exports (several per module) and default exports (one per module). [As explained later](http://exploringjs.com/es6/ch_modules.html#sec_mixing-named-and-default-exports), it is possible use both at the same time, but usually best to keep them separate.
+There are two kinds of exports: named exports (several per module) and default exports (one per module). [As explained later](http:
+//exploringjs.com/es6/ch_modules.html#sec_mixing-named-and-default-exports), it is possible use both at the same time, but usually best to keep them separate.
 
 **16.3.1 Named exports (several per module)**
 
@@ -122,7 +127,8 @@ If you want to, you can also import the whole module and refer to its named expo
 
 ```
 
-**The same code in CommonJS syntax:** For a while, I tried several clever strategies to be less redundant with my module exports in Node.js. Now I prefer the following simple but slightly verbose style that is reminiscent of the [revealing module pattern](http://christianheilmann.com/2007/08/22/again-with-the-module-pattern-reveal-something-to-the-world/):
+**The same code in CommonJS syntax:** For a while, I tried several clever strategies to be less redundant with my module exports in Node.js. Now I prefer the following simple but slightly verbose style that is reminiscent of the [revealing module pattern](http:
+//christianheilmann.com/2007/08/22/again-with-the-module-pattern-reveal-something-to-the-world/):
 
 ```
 
@@ -193,7 +199,8 @@ That is equivalent to:
 
 ```
 
-The statement in line A is an _export clause_ (which is explained in [a later section](http://exploringjs.com/es6/ch_modules.html#sec_all-exporting-styles)).
+The statement in line A is an _export clause_ (which is explained in [a later section](http:
+//exploringjs.com/es6/ch_modules.html#sec_all-exporting-styles)).
 
 **16.3.2.2.1 Why two default export styles?**
 
@@ -231,7 +238,8 @@ The imports of an ES6 module are read-only views on the exported entities. That 
 
 ```
 
-How that works under the hood is explained [in a later section](http://exploringjs.com/es6/ch_modules.html#sec_imports-as-views-on-exports).
+How that works under the hood is explained [in a later section](http:
+//exploringjs.com/es6/ch_modules.html#sec_imports-as-views-on-exports).
 
 Imports as views have the following advantages:
 
@@ -241,9 +249,11 @@ Imports as views have the following advantages:
 
 **16.3.6 Support for cyclic dependencies**
 
-Two modules A and B are [cyclically dependent](http://en.wikipedia.org/wiki/Circular_dependency) on each other if both A (possibly indirectly/transitively) imports B and B imports A. If possible, cyclic dependencies should be avoided, they lead to A and B being _tightly coupled_ -- they can only be used and evolved together.
+Two modules A and B are [cyclically dependent](http:
+//en.wikipedia.org/wiki/Circular*dependency) on each other if both A (possibly indirectly/transitively) imports B and B imports A. If possible, cyclic dependencies should be avoided, they lead to A and B being \_tightly coupled* -- they can only be used and evolved together.
 
-Why support cyclic dependencies, then? Occasionally, you can't get around them, which is why support for them is an important feature. [A later section](http://exploringjs.com/es6/ch_modules.html#sec_rationale-cyclic-dependencies) has more information.
+Why support cyclic dependencies, then? Occasionally, you can't get around them, which is why support for them is an important feature. [A later section](http:
+//exploringjs.com/es6/ch_modules.html#sec_rationale-cyclic-dependencies) has more information.
 
 Let's see how CommonJS and ECMAScript 6 handle cyclic dependencies.
 
@@ -293,7 +303,8 @@ This code works, because, as explained in the previous section, imports are view
 
 **16.4.1 Importing styles**
 
-ECMAScript 6 provides several styles of importing^[2](http://exploringjs.com/es6/leanpub-endnotes.html#fn-modules_1)^:
+ECMAScript 6 provides several styles of importing^[2](http:
+//exploringjs.com/es6/leanpub-endnotes.html#fn-modules_1)^:
 
 - Default import:
 
@@ -341,7 +352,8 @@ There are only two ways to combine these styles and the order in which they appe
 
 **16.4.2 Named exporting styles: inline versus clause**
 
-There are [two ways](http://www.ecma-international.org/ecma-262/6.0/#sec-exports) in which you can export named things inside modules.
+There are [two ways](http:
+//www.ecma-international.org/ecma-262/6.0/#sec-exports) in which you can export named things inside modules.
 
 On one hand, you can mark declarations with the keyword `export`.
 
@@ -369,7 +381,8 @@ Re-exporting means adding another module's exports to those of the current modul
 
 ```
 
-Default exports are ignored^[3](http://exploringjs.com/es6/leanpub-endnotes.html#fn-modules_2)^ by `export *`.
+Default exports are ignored^[3](http:
+//exploringjs.com/es6/leanpub-endnotes.html#fn-modules_2)^ by `export *`.
 
 Or you can be more selective (optionally while renaming):
 
@@ -393,7 +406,8 @@ The following statement makes the named export `myFunc` of module `foo` the defa
 
 **16.4.4 All exporting styles**
 
-ECMAScript 6 provides several styles of exporting^[4](http://exploringjs.com/es6/leanpub-endnotes.html#fn-modules_3)^:
+ECMAScript 6 provides several styles of exporting^[4](http:
+//exploringjs.com/es6/leanpub-endnotes.html#fn-modules_3)^:
 
 - Re-exporting:
 
@@ -522,21 +536,26 @@ In addition to the declarative syntax for working with modules, there is also a 
 
 #### The module loader API is not part of the ES6 standard
 
-It will be specified in a separate document, the "JavaScript Loader Standard", that will be evolved more dynamically than the language specification. [The repository for that document](https://github.com/whatwg/loader/) states:
+It will be specified in a separate document, the "JavaScript Loader Standard", that will be evolved more dynamically than the language specification. [The repository for that document](https:
+//github.com/whatwg/loader/) states:
 
 > \[The JavaScript Loader Standard] consolidates work on the ECMAScript module loading semantics with the integration points of Web browsers, as well as Node.js.
 
 #### The module loader API is work in progress
 
-As you can see in [the repository of the JavaScript Loader Standard](https://github.com/whatwg/loader/), the module loader API is still work in progress. Everything you read about it in this book is tentative. To get an impression of what the API may look like, you can take a look at [the ES6 Module Loader Polyfill](https://github.com/ModuleLoader/es6-module-loader) on GitHub.
+As you can see in [the repository of the JavaScript Loader Standard](https:
+//github.com/whatwg/loader/), the module loader API is still work in progress. Everything you read about it in this book is tentative. To get an impression of what the API may look like, you can take a look at [the ES6 Module Loader Polyfill](https:
+//github.com/ModuleLoader/es6-module-loader) on GitHub.
 
 **16.5.1 Loaders**
 
-Loaders handle resolving _module specifiers_ (the string IDs at the end of `import-from`), loading modules, etc. Their constructor is `Reflect.Loader`. Each platform keeps a default instance in the global variable `System` (the _system loader_), which implements its specific style of module loading.
+Loaders handle resolving _module specifiers_ (the string IDs at the end of `import-from`), loading modules, etc. Their
+constructor is `Reflect.Loader`. Each platform keeps a default instance in the global variable `System` (the _system loader_), which implements its specific style of module loading.
 
 **16.5.2 Loader method: importing modules**
 
-You can programmatically import a module, via an API based on [Promises](http://exploringjs.com/es6/ch_promises.html#ch_promises):
+You can programmatically import a module, via an API based on [Promises](http:
+//exploringjs.com/es6/ch_promises.html#ch_promises):
 
 ```
 
@@ -544,7 +563,8 @@ You can programmatically import a module, via an API based on [Promises](http://
 
 `System.import()` enables you to:
 
-- Use modules inside `<script>` elements (where module syntax is not supported, consult [the section on modules versus scripts](http://exploringjs.com/es6/ch_modules.html#sec_modules-vs-scripts) for details).
+- Use modules inside `<script>` elements (where module syntax is not supported, consult [the section on modules versus scripts](http:
+  //exploringjs.com/es6/ch_modules.html#sec_modules-vs-scripts) for details).
 - Load modules conditionally.
 
 `System.import()` retrieves a single module, you can use `Promise.all()` to import several modules:
@@ -601,15 +621,18 @@ This is an overview of the differences, details are explained later:
 
 **16.6.1.1 Scripts**
 
-Scripts are the traditional browser way to embed JavaScript and to refer to external JavaScript files. Scripts have an [internet media type](http://en.wikipedia.org/wiki/Internet_media_type) that is used as:
+Scripts are the traditional browser way to embed JavaScript and to refer to external JavaScript files. Scripts have an [internet media type](http:
+//en.wikipedia.org/wiki/Internet_media_type) that is used as:
 
 - The content type of JavaScript files delivered via a web server.
 - The value of the attribute `type` of `<script>` elements. Note that for HTML5, the recommendation is to omit the `type` attribute in `<script>` elements if they contain or refer to JavaScript.
 
 The following are the most important values:
 
-- `text/javascript`: is a legacy value and used as the default if you omit the `type` attribute in a script tag. It is [the safest choice](http://stackoverflow.com/questions/359895/what-are-the-most-likely-causes-of-javascript-errors-in-ie8/703590#703590) for Internet Explorer 8 and earlier.
-- `application/javascript`: is [recommended](http://tools.ietf.org/html/rfc4329#section-7) for current browsers.
+- `text/javascript`: is a legacy value and used as the default if you omit the `type` attribute in a script tag. It is [the safest choice](http:
+  //stackoverflow.com/questions/359895/what-are-the-most-likely-causes-of-javascript-errors-in-ie8/703590#703590) for Internet Explorer 8 and earlier.
+- `application/javascript`: is [recommended](http:
+  //tools.ietf.org/html/rfc4329#section-7) for current browsers.
 
 Scripts are normally loaded or executed synchronously. The JavaScript thread stops until the code has been loaded or executed.
 
@@ -661,12 +684,15 @@ More realistic example is a module that installs something, e.g. a polyfill in g
 
 #### Sources of this section
 
-- "[Modules: Status Update](https://github.com/rwaldron/tc39-notes/blob/master/es6/2013-09/modules.pdf)", slides by David Herman.
-- "[Modules vs Scripts](https://mail.mozilla.org/pipermail/es-discuss/2013-November/034869.html)", an email by David Herman.
+- "[Modules: Status Update](https:
+  //github.com/rwaldron/tc39-notes/blob/master/es6/2013-09/modules.pdf)", slides by David Herman.
+- "[Modules vs Scripts](https:
+  //mail.mozilla.org/pipermail/es-discuss/2013-November/034869.html)", an email by David Herman.
 
 #### 16.7 Details: imports as views on exports
 
-The code in this section is available [on GitHub](https://github.com/rauschma/imports-are-views-demo).
+The code in this section is available [on GitHub](https:
+//github.com/rauschma/imports-are-views-demo).
 
 Imports work differently in CommonJS and ES6:
 
@@ -695,8 +721,9 @@ If you access the value via the exports object, it is still copied once, on expo
 
 In contrast to CommonJS, imports are views on exported values. In other words, every import is a live connection to the exported data. Imports are read-only:
 
-- Unqualified imports (`import x from 'foo'`) are like `const`-declared variables.
-- The properties of a module object `foo` (`import * as foo from 'foo'`) are like the properties of a [frozen object](http://speakingjs.com/es5/ch17.html#freezing_objects).
+- Unqualified imports (`import x from 'foo'`) are like ` const`-declared variables.
+- The properties of a module object `foo` (`import * as foo from 'foo'`) are like the properties of a [frozen object](http:
+  //speakingjs.com/es5/ch17.html#freezing_objects).
 
 The following code demonstrates how imports are like views:
 
@@ -720,7 +747,8 @@ Note that while you can't change the values of imports, you can change the objec
 
 Why introduce such a relatively complicated mechanism for importing that deviates from established practices?
 
-- Cyclic dependencies: The main advantage is that it supports [cyclic dependencies](http://exploringjs.com/es6/ch_modules.html#sec_cyclic-dependencies) even for unqualified imports.
+- Cyclic dependencies: The main advantage is that it supports [cyclic dependencies](http:
+  //exploringjs.com/es6/ch_modules.html#sec_cyclic-dependencies) even for unqualified imports.
 - Qualified and unqualified imports work the same. In CommonJS, they don't: a qualified import provides direct access to a property of a module's export object, an unqualified import is a copy of it.
 - You can split code into multiple modules and it will continue to work (as long as you don't try to change the values of imports).
 - On the flip side, _module folding_, combining multiple modules into a single module becomes simpler, too.
@@ -736,7 +764,8 @@ How do imports work as views of exports under the hood? Exports are managed via 
 
 After you have imported an entity, that entity is always accessed via a pointer that has the two components _module_ and _local name_. In other words, that pointer refers to a _binding_ (the storage space of a variable) inside a module.
 
-Let's examine the export names and local names created by various kinds of exporting. The following table ([adapted from the ES6 spec](http://www.ecma-international.org/ecma-262/6.0/#table-42)) gives an overview, subsequent sections have more details.
+Let's examine the export names and local names created by various kinds of exporting. The following table ([adapted from the ES6 spec](http:
+//www.ecma-international.org/ecma-262/6.0/#table-42)) gives an overview, subsequent sections have more details.
 
 | Statement                        | Local name    | Export name |
 | -------------------------------- | ------------- | ----------- |
@@ -859,11 +888,20 @@ This section gives pointers into the ECMAScript 2015 (ES6) language specificatio
 
 Managing imports:
 
-- [CreateImportBinding()](http://www.ecma-international.org/ecma-262/6.0/#sec-createimportbinding) creates local bindings for imports.
-- [GetBindingValue()](http://www.ecma-international.org/ecma-262/6.0/#sec-module-environment-records-getbindingvalue-n-s) is used to access them.
-- [ModuleDeclarationInstantiation()](http://www.ecma-international.org/ecma-262/6.0/#sec-moduledeclarationinstantiation) sets up the environment of a module (compare: [FunctionDeclarationInstantiation()](http://www.ecma-international.org/ecma-262/6.0/#sec-functiondeclarationinstantiation), [BlockDeclarationInstantiation()](http://www.ecma-international.org/ecma-262/6.0/#sec-blockdeclarationinstantiation)).
+- [CreateImportBinding()](http:
+  //www.ecma-international.org/ecma-262/6.0/#sec-createimportbinding) creates local bindings for imports.
+- [GetBindingValue()](http:
+  //www.ecma-international.org/ecma-262/6.0/#sec-module-environment-records-getbindingvalue-n-s) is used to access them.
+- [ModuleDeclarationInstantiation()](http:
+  //www.ecma-international.org/ecma-262/6.0/#sec-moduledeclarationinstantiation) sets up the environment of a module (compare: [FunctionDeclarationInstantiation()](http:
+  //www.ecma-international.org/ecma-262/6.0/#sec-functiondeclarationinstantiation), [BlockDeclarationInstantiation()](http:
+  //www.ecma-international.org/ecma-262/6.0/#sec-blockdeclarationinstantiation)).
 
-The export names and local names created by the various kinds of exports are shown in [table 42](http://www.ecma-international.org/ecma-262/6.0/#table-42) in the section "[Source Text Module Records](http://www.ecma-international.org/ecma-262/6.0/#sec-source-text-module-records)". The section "[Static Semantics: ExportEntries](http://www.ecma-international.org/ecma-262/6.0/#sec-exports-static-semantics-exportentries)" has more details. You can see that export entries are set up statically (before evaluating the module), evaluating export statements is described in the section "[Runtime Semantics: Evaluation](http://www.ecma-international.org/ecma-262/6.0/#sec-exports-runtime-semantics-evaluation)".
+The export names and local names created by the various kinds of exports are shown in [table 42](http:
+//www.ecma-international.org/ecma-262/6.0/#table-42) in the section "[Source Text Module Records](http:
+//www.ecma-international.org/ecma-262/6.0/#sec-source-text-module-records)". The section "[Static Semantics: ExportEntries](http:
+//www.ecma-international.org/ecma-262/6.0/#sec-exports-static-semantics-exportentries)" has more details. You can see that export entries are set up statically (before evaluating the module), evaluating export statements is described in the section "[Runtime Semantics: Evaluation](http:
+//www.ecma-international.org/ecma-262/6.0/#sec-exports-runtime-semantics-evaluation)".
 
 #### 16.8 Design goals for ES6 modules
 
@@ -878,7 +916,8 @@ The following subsections explain these goals.
 
 **16.8.1 Default exports are favored**
 
-The module syntax suggesting that the default export "is" the module may seem a bit strange, but it makes sense if you consider that one major design goal was to make default exports as convenient as possible. Quoting [David Herman](http://esdiscuss.org/topic/moduleimport#content-0):
+The module syntax suggesting that the default export "is" the module may seem a bit strange, but it makes sense if you consider that one major design goal was to make default exports as convenient as possible. Quoting [David Herman](http:
+//esdiscuss.org/topic/moduleimport#content-0):
 
 > ECMAScript 6 favors the single/default export style, and gives the sweetest syntax to importing the default. Importing named exports can and even should be slightly less concise.
 
@@ -921,7 +960,8 @@ Reason #3 will remain compelling. It can only be achieved with a module format t
 
 **16.8.2.2 Benefit: compact bundling, no custom bundle format**
 
-[The module bundler Rollup](https://github.com/rollup/rollup) proved that ES6 modules can be combined efficiently, because they all fit into a single scope (after renaming variables to eliminate name clashes). This is possible due to two characteristics of ES6 modules:
+[The module bundler Rollup](https:
+//github.com/rollup/rollup) proved that ES6 modules can be combined efficiently, because they all fit into a single scope (after renaming variables to eliminate name clashes). This is possible due to two characteristics of ES6 modules:
 
 - Their static structure means that the bundle format does not have to account for conditionally loaded modules (a common technique for doing so is putting module code in functions).
 - Imports being read-only views on exports means that you don't have to copy exports, you can refer to them directly.
@@ -970,7 +1010,8 @@ Additionally, any access of named imports (such as `lib.foo`) can also be checke
 
 **16.8.2.5 Benefit: ready for macros**
 
-Macros are still on the roadmap for JavaScript's future. If a JavaScript engine supports macros, you can add new syntax to it via a library. [Sweet.js](http://sweetjs.org) is an experimental macro system for JavaScript. The following is an example from the Sweet.js website: a macro for classes.
+Macros are still on the roadmap for JavaScript's future. If a JavaScript engine supports macros, you can add new syntax to it via a library. [Sweet.js](http:
+//sweetjs.org) is an experimental macro system for JavaScript. The following is an example from the Sweet.js website: a macro for classes.
 
 ```
 
@@ -980,9 +1021,11 @@ For macros, a JavaScript engine performs a preprocessing step before compilation
 
 **16.8.2.6 Benefit: ready for types**
 
-Static type checking imposes constraints similar to macros: it can only be done if type definitions can be found statically. Again, types can only be imported from modules if they have a static structure.
+Static type checking imposes
+constraints similar to macros: it can only be done if type definitions can be found statically. Again, types can only be imported from modules if they have a static structure.
 
-Types are appealing because they enable statically typed fast dialects of JavaScript in which performance-critical code can be written. One such dialect is [Low-Level JavaScript](http://lljs.org) (LLJS).
+Types are appealing because they enable statically typed fast dialects of JavaScript in which performance-critical code can be written. One such dialect is [Low-Level JavaScript](http:
+//lljs.org) (LLJS).
 
 **16.8.2.7 Benefit: supporting other languages**
 
@@ -990,7 +1033,8 @@ If you want to support compiling languages with macros and static types to JavaS
 
 **16.8.2.8 Source of this section**
 
-- "[Static module resolution](http://calculist.org/blog/2012/06/29/static-module-resolution/)" by David Herman
+- "[Static module resolution](http:
+  //calculist.org/blog/2012/06/29/static-module-resolution/)" by David Herman
 
 **16.8.3 Support for both synchronous and asynchronous loading**
 
@@ -1002,17 +1046,22 @@ Support for cyclic dependencies was a key goal for ES6 modules. Here is why:
 
 Cyclic dependencies are not inherently evil. Especially for objects, you sometimes even want this kind of dependency. For example, in some trees (such as DOM documents), parents refer to children and children refer back to parents. In libraries, you can usually avoid cyclic dependencies via careful design. In a large system, though, they can happen, especially during refactoring. Then it is very useful if a module system supports them, because the system doesn't break while you are refactoring.
 
-[The Node.js documentation acknowledges the importance of cyclic dependencies](http://nodejs.org/api/modules.html#modules_cycles) and [Rob Sayre provides additional evidence](https://mail.mozilla.org/pipermail/es-discuss/2014-July/038250.html):
+[The Node.js documentation acknowledges the importance of cyclic dependencies](http:
+//nodejs.org/api/modules.html#modules_cycles) and [Rob Sayre provides additional evidence](https:
+//mail.mozilla.org/pipermail/es-discuss/2014-July/038250.html):
 
-> Data point: I once implemented a system like \[ECMAScript 6 modules] for Firefox. I got [asked](https://bugzilla.mozilla.org/show_bug.cgi?id=384168#c7) for cyclic dependency support 3 weeks after shipping.
+> Data point: I once implemented a system like \[ECMAScript 6 modules] for Firefox. I got [asked](https:
+> //bugzilla.mozilla.org/show_bug.cgi?id=384168#c7) for cyclic dependency support 3 weeks after shipping.
 >
-> That system that Alex Fritze invented and I worked on is not perfect, and the syntax isn't very pretty. But [it's still getting used](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Using) 7 years later, so it must have gotten something right.
+> That system that Alex Fritze invented and I worked on is not perfect, and the syntax isn't very pretty. But [it's still getting used](https:
+> //developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Using) 7 years later, so it must have gotten something right.
 
 #### 16.9 FAQ: modules
 
 **16.9.1 Can I use a variable to specify from which module I want to import?**
 
-The `import` statement is completely static: its module specifier is always fixed. If you want to dynamically determine what module to load, you need to use [the programmatic loader API](http://exploringjs.com/es6/ch_modules.html#sec_module-loader-api):
+The `import` statement is completely static: its module specifier is always fixed. If you want to dynamically determine what module to load, you need to use [the programmatic loader API](http:
+//exploringjs.com/es6/ch_modules.html#sec_module-loader-api):
 
 ```
 
@@ -1020,7 +1069,8 @@ The `import` statement is completely static: its module specifier is always fixe
 
 **16.9.2 Can I import a module conditionally or on demand?**
 
-Import statements must always be at the top level of modules. That means that you can't nest them inside `if` statements, functions, etc. Therefore, you have to use [the programmatic loader API](http://exploringjs.com/es6/ch_modules.html#sec_module-loader-api) if you want to load a module conditionally or on demand:
+Import statements must always be at the top level of modules. That means that you can't nest them inside `if` statements, functions, etc. Therefore, you have to use [the programmatic loader API](http:
+//exploringjs.com/es6/ch_modules.html#sec_module-loader-api) if you want to load a module conditionally or on demand:
 
 ```
 
@@ -1046,11 +1096,14 @@ Therefore, you can't do something like this in ES6:
 
 **16.9.5 Are named exports necessary? Why not default-export objects?**
 
-You may be wondering -- why do we need named exports if we could simply default-export objects (like in CommonJS)? The answer is that you can't enforce a static structure via objects and lose all of the associated advantages (which are explained [in this chapter](http://exploringjs.com/es6/ch_modules.html#static-module-structure)).
+You may be wondering -- why do we need named exports if we could simply default-export objects (like in CommonJS)? The answer is that you can't enforce a static structure via objects and lose all of the associated advantages (which are explained [in this chapter](http:
+//exploringjs.com/es6/ch_modules.html#static-module-structure)).
 
 **16.9.6 Can I `eval()` the code of module?**
 
-No, you can't. Modules are too high-level a construct for `eval()`. The [module loader API](http://exploringjs.com/es6/ch_modules.html#sec_module-loader-api) provides the means for creating modules from strings. Syntactically, `eval()` accepts scripts (which don't allow `import` and `export`), not modules.
+No, you can't. Modules are too high-level a
+construct for `eval()`. The [module loader API](http:
+//exploringjs.com/es6/ch_modules.html#sec_module-loader-api) provides the means for creating modules from strings. Syntactically, `eval()` accepts scripts (which don't allow `import` and `export`), not modules.
 
 #### 16.10 Advantages of ECMAScript 6 modules
 
@@ -1062,10 +1115,14 @@ At first glance, having modules built into ECMAScript 6 may seem like a boring f
 
 ES6 modules will also -- hopefully -- end the fragmentation between the currently dominant standards CommonJS and AMD. Having a single, native standard for modules means:
 
-- No more UMD ([Universal Module Definition](https://github.com/umdjs/umd)): UMD is a name for patterns that enable the same file to be used by several module systems (e.g. both CommonJS and AMD). Once ES6 is the only module standard, UMD becomes obsolete.
+- No more UMD ([Universal Module Definition](https:
+  //github.com/umdjs/umd)): UMD is a name for patterns that enable the same file to be used by several module systems (e.g. both CommonJS and AMD). Once ES6 is the only module standard, UMD becomes obsolete.
 - New browser APIs become modules instead of global variables or properties of `navigator`.
 - No more objects-as-namespaces: Objects such as `Math` and `JSON` serve as namespaces for functions in ECMAScript 5. In the future, such functionality can be provided via modules.
 
 #### 16.11 Further reading
 
-- **CommonJS versus ES6:** "[JavaScript Modules](http://jsmodules.io)" (by [Yehuda Katz](https://github.com/wycats/jsmodules)) is a quick intro to ECMAScript 6 modules. Especially interesting is a [second page](http://jsmodules.io/cjs.html) where CommonJS modules are shown side by side with their ECMAScript 6 versions.
+- **CommonJS versus ES6:** "[JavaScript Modules](http:
+  //jsmodules.io)" (by [Yehuda Katz](https:
+  //github.com/wycats/jsmodules)) is a quick intro to ECMAScript 6 modules. Especially interesting is a [second page](http:
+  //jsmodules.io/cjs.html) where CommonJS modules are shown side by side with their ECMAScript 6 versions.

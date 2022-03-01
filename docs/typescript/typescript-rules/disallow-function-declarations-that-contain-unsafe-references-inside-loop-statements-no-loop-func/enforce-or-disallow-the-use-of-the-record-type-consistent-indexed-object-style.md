@@ -16,7 +16,7 @@ type Foo = Record<string, unknown>;
 
 ## Options
 
-* `"record"`: Set to `"record"` to only allow the `Record` type. Set to `"index-signature"` to only allow index signatures. (Defaults to `"record"`)
+- `"record"`: Set to `"record"` to only allow the `Record` type. Set to `"index-signature"` to only allow index signatures. (Defaults to `"record"`)
 
 For example:
 

@@ -10,6 +10,7 @@ Examples of **incorrect** code for this rule:
 
 ```ts
 const foo = 3;
+
 const bar = foo!;
 ```
 
@@ -19,17 +20,20 @@ const foo = <3>3;
 
 ```ts
 type Foo = 3;
+
 const foo = <Foo>3;
 ```
 
 ```ts
 type Foo = 3;
+
 const foo = 3 as Foo;
 ```
 
 ```ts
 function foo(x: number): number {
-  return x!; // unnecessary non-null
+  return x!;
+  // unnecessary non-null
 }
 ```
 
@@ -44,7 +48,7 @@ const foo = 3 as number;
 ```
 
 ```ts
-const foo = 'foo' as const;
+const foo = "foo" as const;
 ```
 
 ```ts
@@ -61,6 +65,7 @@ For example, with `@typescript-eslint/no-unnecessary-type-assertion: ["error", {
 
 ```ts
 type Foo = 3;
+
 const foo: Foo = 3;
 ```
 
@@ -70,4 +75,5 @@ If you don't care about having no-op type assertions in your code, then you can 
 
 ## Related to
 
-* TSLint: ['no-unnecessary-type-assertion\`](https://palantir.github.io/tslint/rules/no-unnecessary-type-assertion/)
+- TSLint: ['no-unnecessary-type-assertion\`](https:
+  //palantir.github.io/tslint/rules/no-unnecessary-type-assertion/)

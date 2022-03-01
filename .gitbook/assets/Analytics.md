@@ -5,8 +5,10 @@ Adding analytics to a component is pretty straightforward,
 First set up your analytics object in your `composition` method:
 
 ```typescript
+
 const { compositionFunction, component } = Composition(NavCard)(({ fields, params }) => {
-  const items = fields?.items.reduce(
+
+const items = fields?.items.reduce(
     (acc: Parameters<typeof NavCard>[0]['items'], curr: typeof fields) => {
       return [
         {
@@ -32,6 +34,7 @@ Then import the `track` object from `src/lib/Analytics` into your component, and
 ```typescript
 import track from 'src/lib/Analytics';
 ...
+
 const ComponentName = ({
   ...
   analytics,

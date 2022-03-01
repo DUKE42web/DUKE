@@ -10,7 +10,8 @@
 
 #### This post will explain how to implement and use <mark style="background-color:blue;">**enumerations**</mark> <mark style="background-color:blue;"></mark><mark style="background-color:blue;"></mark> (or enum types) in Javascript.
 
-![](https://www.sohamkamani.com/static/fa26842619224d64f417312ef931f764/5a190/banner.drawio.png)
+![](https:
+//www.sohamkamani.com/static/fa26842619224d64f417312ef931f764/5a190/banner.drawio.png)
 
 Enums are types that contain only a limited number of fixed values, as opposed to types like `Number` or `String` which can have a wide range of values.
 
@@ -20,19 +21,25 @@ Let’s look at different ways of implementing this type of data:
 
 ### Naive Implementation
 
-The simplest way to implement enums for season options is to create a constant for each season:
+The simplest way to implement enums for season options is to create a
+constant for each season:
 
-```
-const Summer = 0
-const Autumn = 1
-const Winter = 2
-const Spring = 3
+```typescript
+const Summer = 0;
 
+const Autumn = 1;
 
-const Summer = "summer"
-const Autumn = "autumn"
-const Winter = "winter"
-const Spring = "spring"
+const Winter = 2;
+
+const Spring = 3;
+
+const Summer = "summer";
+
+const Autumn = "autumn";
+
+const Winter = "winter";
+
+const Spring = "spring";
 ```
 
 While this would work for small codebases, we will face a few immediate issues:
@@ -42,11 +49,15 @@ While this would work for small codebases, we will face a few immediate issues:
 
 ```javascript
 const Summer = 0;
+
 const Autumn = 1;
+
 const Winter = 2;
+
 const Spring = 3;
 
 const Apples = 0;
+
 const Oranges = 1;
 
 console.log(Summer === Apples);
@@ -56,51 +67,54 @@ console.log(Summer === Apples);
 
 ### Enums with Symbols
 
-[Symbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) let us define values that are guaranteed not to collide with one another.
+[Symbols](https:
+//developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) let us define values that are guaranteed not to collide with one another.
 
 For example:
 
-```
-const Summer1 = Symbol("summer")
-const Summer2 = Symbol("summer")
+```typescript
+const Summer1 = Symbol("summer");
 
+const Summer2 = Symbol("summer");
 
+console.log(Summer1 === Summer2);
 
-console.log(Summer1 === Summer2)
-
-
-console.log(Summer1)
+console.log(Summer1);
 ```
 
 We can define our enums using Symbols to ensure that they are not duplicated:
 
-```
-const Summer = Symbol("summer")
-const Autumn = Symbol("autumn")
-const Winter = Symbol("winter")
-const Spring = Symbol("spring")
+```typescript
+const Summer = Symbol("summer");
 
-let season = Spring
+const Autumn = Symbol("autumn");
+
+const Winter = Symbol("winter");
+
+const Spring = Symbol("spring");
+
+let season = Spring;
 
 switch (season) {
-case Summer:
-console.log('the season is summer')
-break;
-case Winter:
-console.log('the season is winter')
-break;
-case Spring:
-console.log('the season is spring')
-break;
-case Autumn:
-console.log('the season is autumn')
-break;
-default:
-console.log('season not defined')
+  case Summer:
+    console.log("the season is summer");
+    break;
+  case Winter:
+    console.log("the season is winter");
+    break;
+  case Spring:
+    console.log("the season is spring");
+    break;
+  case Autumn:
+    console.log("the season is autumn");
+    break;
+  default:
+    console.log("season not defined");
 }
 ```
 
-Using Symbols ensures that the only way we can assign an enum value is by using the constants that we defined initially.
+Using Symbols ensures that the only way we can assign an enum value is by using the
+constants that we defined initially.
 
 ### Enums with Classes
 
@@ -118,7 +132,8 @@ class Season {
   static Winter = new Season("winter")
   static Spring = new Season("spring")
 
-  constructor(name) {
+
+constructor(name) {
     this.name = name
   }
 }
@@ -134,7 +149,8 @@ console.log(Symbol('something') instanceof Season)
 
 
 
-console.log(season.constructor.name)
+console.log(season.
+constructor.name)
 ```
 
 ### Listing All Possible Enum Values
@@ -149,6 +165,8 @@ Object.keys(Season).forEach(season => console.log("season:", season))
 
 In general, enums are helpful if there are a **definite** number of **fixed** values for any one variable\_
 
-For example, the [crypto](https://nodejs.org/api/crypto.html#crypto) standard library for Node.js has a [list of supported algorithms](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/create-hmac/index.d.ts#L15), that can be considered an enum group.
+For example, the [crypto](https:
+//nodejs.org/api/crypto.html#crypto) standard library for Node.js has a [list of supported algorithms](https:
+//github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/create-hmac/index.d.ts#L15), that can be considered an enum group.
 
 Using enums in Javascript correctly will lead to better code that is more stable, easier to read and less error prone.

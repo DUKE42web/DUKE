@@ -15,7 +15,8 @@
 
   You will be creating a NewsBanner component.
 
-  - View the component [design](https://app.abstract.com/projects/7d33aa49-f1f0-47eb-971d-893d6457bcbc/branches/9556131a-d820-4925-8e56-968513c820b5/commits/latest/files/56AED96A-C786-42FD-8B75-CFA17F1BE644/layers/2CFCCB94-B674-49E3-B0CD-E73E9BEEAB81?collectionId=e0eaf804-c52c-4f76-9ae9-c8643bd687e3&collectionLayerId=26c85763-39d5-411c-991b-ed946c19bf50) in abstract
+  - View the component [design](https:
+    //app.abstract.com/projects/7d33aa49-f1f0-47eb-971d-893d6457bcbc/branches/9556131a-d820-4925-8e56-968513c820b5/commits/latest/files/56AED96A-C786-42FD-8B75-CFA17F1BE644/layers/2CFCCB94-B674-49E3-B0CD-E73E9BEEAB81?collectionId=e0eaf804-c52c-4f76-9ae9-c8643bd687e3&collectionLayerId=26c85763-39d5-411c-991b-ed946c19bf50) in abstract
   - Ask questions about the design if you have any
   - Go to `./src/components/NewsBanner`
   - Start building out the component, reference the `./docs` to understand the files to create and how to use them (composition, data, index, stories, test, types)
@@ -44,7 +45,8 @@
 
 ![](<../.gitbook/assets/Screen Shot 2022-01-27 at 12.59.02 AM.png>)
 
-{% embed url="https://share.goabstract.com/2b800eac-7c18-47bb-ba7c-16266b03146c?collectionLayerId=26c85763-39d5-411c-991b-ed946c19bf50&mode=design&sha=latest" %}
+{% embed url="https:
+//share.goabstract.com/2b800eac-7c18-47bb-ba7c-16266b03146c?collectionLayerId=26c85763-39d5-411c-991b-ed946c19bf50&mode=design&sha=latest" %}
 Abstract Sketch
 {% endembed %}
 
@@ -71,7 +73,8 @@ git checkout -b onboarding-yourname
 
 You will be creating a NewsBanner component.
 
-- View the component [design](https://app.abstract.com/projects/7d33aa49-f1f0-47eb-971d-893d6457bcbc/branches/9556131a-d820-4925-8e56-968513c820b5/commits/latest/files/56AED96A-C786-42FD-8B75-CFA17F1BE644/layers/2CFCCB94-B674-49E3-B0CD-E73E9BEEAB81?collectionId=e0eaf804-c52c-4f76-9ae9-c8643bd687e3&collectionLayerId=26c85763-39d5-411c-991b-ed946c19bf50) in abstract
+- View the component [design](https:
+  //app.abstract.com/projects/7d33aa49-f1f0-47eb-971d-893d6457bcbc/branches/9556131a-d820-4925-8e56-968513c820b5/commits/latest/files/56AED96A-C786-42FD-8B75-CFA17F1BE644/layers/2CFCCB94-B674-49E3-B0CD-E73E9BEEAB81?collectionId=e0eaf804-c52c-4f76-9ae9-c8643bd687e3&collectionLayerId=26c85763-39d5-411c-991b-ed946c19bf50) in abstract
 - Ask questions about the design if you have any
 - Go to `./src/components/NewsBanner`
 - Start building out the component, reference the `./docs` to understand the files to create and how to use them (composition, data, index, stories, test, types)

@@ -1,14 +1,14 @@
 # Files For News Banner Component
 
-***
+---
 
 1. <mark style="color:green;">**composition.tsx**</mark>
 
-* finds component corresponding to incoming json and takes the data and returns an object with the desired format.
+- finds component corresponding to incoming json and takes the data and returns an object with the desired format.
 
 1. <mark style="color:green;">**data.js**</mark>
 
-* Dummy Data
+- Dummy Data
 
 <details>
 
@@ -19,7 +19,8 @@ export const Data = {
   fields: {
     "Icon Path": {
       value: {
-        src: "https://scdev13.duke-energy.com/_/media/images/flipboard/flipboard-electric-vehicle.jpg",
+        src: "https:
+//scdev13.duke-energy.com/_/media/images/flipboard/flipboard-electric-vehicle.jpg",
         alt: "Image Alt Text",
       },
     },
@@ -56,11 +57,11 @@ export const Data = {
 
 </details>
 
-* [ ] <mark style="color:green;">**index.tsx**</mark>
+- [ ] <mark style="color:green;">**index.tsx**</mark>
 
 <!---->
 
-* Main Component
+- Main Component
 
 1. <mark style="color:green;">**stories.js**</mark>
 2. <mark style="color:green;">**test.tsx**</mark>
