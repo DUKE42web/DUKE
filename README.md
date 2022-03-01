@@ -108,16 +108,16 @@ Website/creating-components/analytics.md" %\}
 
 ### Meetings
 
-{% content-ref url="meetings/week-2.md" %}
-[week-2.md](meetings/week-2.md)
+{% content-ref url="meetings/week-1/week-2/" %}
+[week-2](meetings/week-1/week-2/)
 {% endcontent-ref %}
 
-{% content-ref url="meetings/week-1/day-2.md" %}
-[day-2.md](meetings/week-1/day-2.md)
+{% content-ref url="meetings/week-1/week-2/day-2.md" %}
+[day-2.md](meetings/week-1/week-2/day-2.md)
 {% endcontent-ref %}
 
-{% content-ref url="meetings/week-1/day-3.md" %}
-[day-3.md](meetings/week-1/day-3.md)
+{% content-ref url="meetings/week-1/week-2/day-3.md" %}
+[day-3.md](meetings/week-1/week-2/day-3.md)
 {% endcontent-ref %}
 
 {% content-ref url="meetings/week-1/" %}

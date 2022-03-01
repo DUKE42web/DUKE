@@ -23,6 +23,40 @@ Email \<input id="email" type="email" aria-invalid="true" aria-describedby="emai
 
 
 
+\[11:25 AM] Guest, James
+
+[https://accessible360.com/accessible360-blog/use-aria-label-screen-reader-text/](https://accessible360.com/accessible360-blog/use-aria-label-screen-reader-text/)
+
+Should I use an aria-label or screen-reader only text?
+
+Every now and then a developer needs to include special content that should be seen by screen reader users, but not by anyone else. But what is the best way to convey this information? In some case...
+
+\
+
+
+\[11:28 AM]
+
+11:28 AM Meeting ended: 1h 1m 17s
+
+\
+
+
+\[11:29 AM] Greufe, Chris
+
+Guest, James [https://v2.tailwindcss.com/docs/screen-readers#class-reference](https://v2.tailwindcss.com/docs/screen-readers#class-reference)
+
+Screen Readers - Tailwind CSS
+
+Utilities for improving accessibility with screen readers.
+
+\
+
+
+\[11:30 AM] Greufe, Chris
+
+It has all the goodies in the `sr-only` class, minus the prefix stuff from the article you posted. The prefixes are not needed in 2022 ... thank goodness.
+
+\
 
 
 
