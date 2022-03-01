@@ -203,5 +203,6 @@
   * [🗓 Week 2](meetings/week-3.md)
   * [🗓 Week 3](meetings/week-4.md)
     * [Day 1](meetings/week-1/week-4/day-1.md)
+  * [Day 2](meetings/week-1/day-2-1.md)
   * [🗓 Week 4](meetings/week-5.md)
   * [🗓 Week 5](meetings/week-6.md)
