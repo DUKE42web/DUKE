@@ -1,2 +1,2 @@
-# ✅ Jira Tickets
+# Jira Tickets
 
