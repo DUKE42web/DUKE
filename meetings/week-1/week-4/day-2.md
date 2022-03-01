@@ -66,3 +66,9 @@ It has all the goodies in the `sr-only` class, minus the prefix stuff from the a
 ![](<../../../.gitbook/assets/image (1).png>)
 
 ![](../../../.gitbook/assets/E15F807D-C137-45F5-8C32-FCC94B77A110.png)
+
+
+
+
+
+Checkbox, Text Area, Select, RadioGroup&#x20;
