@@ -45,7 +45,7 @@ Next >
 
 [Technical Overview](technicaloverview.md)
 
-[Typescript](../../../typescript/)
+[Typescript](../../../docs/typescript/)
 
 [Sitecore](../../../website/creating-components/sitecore/)
 

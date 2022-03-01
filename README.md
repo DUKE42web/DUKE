@@ -92,8 +92,8 @@ Website/creating-components/analytics.md" %\}
 [tailwind-css.md](personal-assignments/Website/tailwind-css.md)
 {% endcontent-ref %}
 
-{% content-ref url="typescript/" %}
-[typescript](typescript/)
+{% content-ref url="docs/typescript/" %}
+[typescript](docs/typescript/)
 {% endcontent-ref %}
 
 {% content-ref url="personal-assignments/Website/unit-tests.md" %}
