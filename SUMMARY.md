@@ -21,8 +21,8 @@
 
 ## ☑ Jira Tasks
 
-* [Jira Tickets](jira-tasks/jira-tickets/README.md)
-  * [2654-a11y-Audit-Form-Errors](jira-tasks/jira-tickets/2654-a11y-audit-form-errors.md)
+* [✅ Jira Tickets](jira-tasks/jira-tickets/README.md)
+  * [⛔ 2654-a11y-Audit-Form-Errors](jira-tasks/jira-tickets/2654-a11y-audit-form-errors.md)
 
 ***
 
